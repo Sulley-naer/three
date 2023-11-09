@@ -10,9 +10,13 @@ header {
   border-bottom: 1px solid #4a4a4a;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 header .logo {
   float: left;
+}
+header nav {
+  float: right;
 }
 .banner {
   width: 100%;
