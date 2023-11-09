@@ -1,7 +1,7 @@
 @media screen and (max-width: 990px) {
-  body {
+  /*   body {
     font-size: 12px;
-  }
+  } */
   .navbar-nav {
     display: block;
   }
@@ -119,6 +119,29 @@ header nav .navbar-brand {
 }
 .SmartDesk {
   padding-top: 2.5rem;
+}
+.SmartDesk > .products {
+  padding: 0 10%;
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.SmartDesk > .products .product {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.SmartDesk > .products .product .product-img {
+  transform: scale(0.6);
+  margin-bottom: 0.5rem;
+}
+.SmartDesk > .products .product .product-name {
+  margin-bottom: -0.5rem;
+  color: #101010;
+}
+.SmartDesk > .products .product .products-introduce {
+  font-size: small;
+  color: var(--text-gray);
 }
 .footbox {
   width: 100%;

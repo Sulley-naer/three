@@ -1,7 +1,7 @@
 @media screen and (max-width: 990px) {
-  body {
+  /*   body {
     font-size: 12px;
-  }
+  } */
 
   .navbar-nav {
     display: block;
@@ -47,6 +47,7 @@
     transform: scale(.9);
   }
 }
+
 @media screen and (max-width: 550px) {
   .foot-content>.col-2 {
     transform: scale(.8);
@@ -141,9 +142,39 @@ header {
   background-size: cover;
   position: relative;
 }
+
 //智能总台
-.SmartDesk{
-  padding-top:2.5rem ;
+.SmartDesk {
+  padding-top: 2.5rem;
+
+  >.products {
+    padding: 0 10%;
+    padding-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .product {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .product-img {
+        transform: scale(.6);
+        margin-bottom: .5rem;
+      }
+
+      .product-name {
+        margin-bottom: -.5rem;
+        color: #101010;
+
+      }
+
+      .products-introduce {
+        font-size: small;
+        color: var(--text-gray);
+      }
+    }
+  }
 }
 
 .footbox {
