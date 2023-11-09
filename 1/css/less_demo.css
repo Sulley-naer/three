@@ -117,6 +117,9 @@ header nav .navbar-brand {
   background-size: cover;
   position: relative;
 }
+.SmartDesk {
+  padding-top: 2.5rem;
+}
 .footbox {
   width: 100%;
   padding: 0 10%;
