@@ -22,14 +22,25 @@
     transform: scale(0.6);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 775px) {
+  .foot-logo {
+    display: none;
+  }
+  .foot-content {
+    width: 100% !important;
+  }
   .foot-content > .col-2 {
-    transform: scale(0.5);
+    transform: scale(1);
   }
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 620px) {
   .foot-content > .col-2 {
-    transform: scale(0.4);
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 550px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
   }
 }
 :root {
