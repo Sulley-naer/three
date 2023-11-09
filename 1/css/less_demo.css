@@ -16,7 +16,46 @@ header .logo {
   float: left;
 }
 header nav {
-  float: right;
+  background: transparent !important;
+  padding: 0;
+  height: 100%;
+}
+header nav .collapse {
+  padding: 0 14px;
+}
+header nav .collapse > ul,
+header nav .collapse > li {
+  align-items: center;
+  background: transparent;
+}
+header nav .collapse > ul .dropdown-menu,
+header nav .collapse > li .dropdown-menu {
+  background: rgba(67, 67, 67, 0.171);
+}
+header nav .collapse > ul > li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3.5rem;
+}
+header nav .collapse > ul > li:hover,
+header nav .collapse > ul > li:focus {
+  background: #00000020;
+}
+header nav .collapse > ul > li > a {
+  height: 3.5rem;
+  line-height: 2.5rem;
+  color: #9f9f9f;
+}
+header nav .collapse > ul > li > a:hover,
+header nav .collapse > ul > li > a:focus {
+  color: #fff;
+}
+header nav .navbar-brand {
+  background: #00000020;
+  padding: 14px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
 }
 .banner {
   width: 100%;
