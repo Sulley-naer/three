@@ -32,3 +32,8 @@ body::-webkit-scrollbar {
     background-color: hsl(0deg 0% 75% / 45%);
     margin: auto;
 }
+
+*::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
