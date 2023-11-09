@@ -1,3 +1,26 @@
+@media screen and (max-width: 1312px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1212px) {
+  body {
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 1999px) {
+  body {
+    font-size: 6px;
+  }
+}
+li {
+  list-style: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
 header {
   width: 100%;
   padding: 0 10%;
@@ -21,4 +44,58 @@ header .logo {
   background: url(../../picture/home-banner-algorithm.jpg) no-repeat center;
   background-size: cover;
   position: relative;
+}
+.footbox {
+  width: 100%;
+  height: 40%;
+  padding: 0 10%;
+  background: url(../../images/AiSafety-trait-bg.jpg);
+  background-size: cover;
+}
+.footbox > .mask {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(5, 22, 65, 0.9);
+  z-index: 1;
+}
+.footbox > .foot-top {
+  height: 60%;
+  border-bottom: 1px solid #ffffff;
+  z-index: 2;
+}
+.footbox > .foot-top .foot-logo {
+  width: 40%;
+  z-index: 2;
+}
+.footbox > .foot-top .foot-body {
+  width: 60%;
+  z-index: 2;
+}
+.footbox > .foot-top .foot-body > ul li {
+  transition: all 0 !important;
+  color: #d2d2d2;
+  line-height: 2rem;
+}
+.footbox > .foot-top .foot-body > ul li > a {
+  color: #969696;
+  font-size: 0.8rem;
+}
+.footbox > .foot-top .foot-body > ul li:hover a {
+  color: #d2d2d2;
+}
+.footbox > .foot-top .foot-body > ul li:nth-child(1) {
+  margin-bottom: 1rem;
+}
+.footbox > .foot-btn {
+  height: 40%;
+}
+.footbox > .foot-btn > .cop {
+  z-index: 2;
+  font-size: smaller;
+  line-height: 0.7rem;
+}
+.footbox > .foot-btn > .cop > p {
+  color: #969696;
 }
