@@ -8,11 +8,6 @@
     font-size: 8px;
   }
 }
-@media screen and (min-width: 1999px) {
-  body {
-    font-size: 6px;
-  }
-}
 li {
   list-style: none;
 }
