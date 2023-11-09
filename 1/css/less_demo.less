@@ -2,15 +2,15 @@
   body {
     font-size: 12px;
   }
-  .navbar-nav{
+  .navbar-nav {
     display: block;
   }
-  .dropdown-menu{
+  .dropdown-menu {
     z-index: 999;
   }
   .navbar-nav .dropdown-menu {
     position: absolute;
-}
+  }
 }
 @media screen and (max-width: 1312px) {
   /* body {
@@ -28,12 +28,12 @@
   } */
 }
 
-:root{
-  --text-gray:rgb(159, 159, 159);
-  --text-gray-hover:rgb(255, 255, 255);
+:root {
+  --text-gray: rgb(159, 159, 159);
+  --text-gray-hover: rgb(255, 255, 255);
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -50,45 +50,91 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .logo {
     float: left;
   }
 
-  nav{
+  nav {
     background: transparent !important;
     padding: 0;
     height: 100%;
 
-    .collapse{
+    .collapse {
       padding: 0 14px;
-      >ul,>li{
+      > ul,
+      > li {
         align-items: center;
         background: transparent;
-        .dropdown-menu{
-          background: rgba(67, 67, 67, 0.171);
+        .ai {
+          background: rgb(32, 128, 213);
+          a {
+            color: #fff;
+          }
+          &:hover{
+            background: rgb(32, 128, 213);
+          }
+        }
+        .dropdown-menu {
+          background: #00000020;
+          border-radius: 0;
+          padding: 1rem !important;
+          width: auto !important;
+          > li {
+            width: max-content;
+            margin: 0;
+          }
+          dl {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 16em;
+            dt {
+              color: var(--text-gray) !important;
+              font-weight: normal;
+              font-size: 16px;
+              width: 100%;
+              width: fit-content;
+              padding: 1rem;
+            }
+            dd {
+              width: 100%;
+              text-indent: 40px;
+              padding: 1rem;
+
+              a {
+                color: var(--text-gray) !important;
+                font-size: small;
+              }
+            }
+            & dt:hover,
+            dd:hover {
+              background: #0000001f;
+            }
+          }
         }
       }
-      >ul>li{
+      > ul > li {
         padding-left: 1rem;
         padding-right: 1rem;
         height: 3.5rem;
-        &:hover,&:focus{
+        &:hover,
+        &:focus {
           background: #00000020;
         }
-        >a{
+        > a {
           height: 3.5rem;
           line-height: 2.5rem;
           color: var(--text-gray);
-          &:hover,&:focus{
+          &:hover,
+          &:focus {
             color: #fff;
           }
-          
         }
       }
-
     }
 
-    .navbar-brand{
+    .navbar-brand {
       background: #00000020;
       padding: 14px;
       padding-left: 2rem;
@@ -106,39 +152,39 @@ header {
   background-size: cover;
   position: relative;
 }
-.footbox{
+.footbox {
   width: 100%;
   padding: 0 10%;
-  background:url(../../picture/footer-bg.jpg);
+  background: url(../../picture/footer-bg.jpg);
   background-size: cover;
-  >.foot-top{
+  > .foot-top {
     width: 100%;
     height: 60%;
     border-bottom: 1px solid #ffffff29;
-    .foot-logo{
+    .foot-logo {
       width: 40%;
       height: 100%;
       padding-top: 2.5rem;
     }
-    .foot-content{
+    .foot-content {
       width: 60%;
       color: #fff;
       display: flex;
       justify-content: space-between;
       margin-top: 1rem;
-      >dl{
+      > dl {
         white-space: nowrap;
-        >dt{
+        > dt {
           margin-bottom: 2em;
           color: #dedede;
         }
-        >dd{
+        > dd {
           margin-bottom: 1em;
           font-size: 14px;
-          >a{
+          > a {
             text-decoration: none;
-            color:var(--text-gray);
-            &:focus{
+            color: var(--text-gray);
+            &:focus {
               color: #fff;
             }
           }
@@ -146,35 +192,35 @@ header {
       }
     }
   }
-  >.about-me{
+  > .about-me {
     display: flex;
     width: 100%;
     height: 40%;
     justify-content: space-between;
-    >.cop{
+    > .cop {
       font-size: smaller;
-      line-height: .7rem;
+      line-height: 0.7rem;
       padding-top: 1.25rem;
-      >p{
+      > p {
         color: var(--text-gray);
-        >a{
+        > a {
           color: var(--text-gray);
-          &:focus{
-          color: #fff;
+          &:focus {
+            color: #fff;
+          }
         }
       }
-      }
-      .mt-4{
+      .mt-4 {
         margin-top: 2rem !important;
       }
     }
-    .ewm{
+    .ewm {
       padding-top: 1.25rem;
       text-align: end;
       display: block;
       width: 100px;
       position: relative;
-      p{
+      p {
         white-space: nowrap;
         margin-left: 1em;
         color: var(--text-gray);

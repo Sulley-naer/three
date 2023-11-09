@@ -64,9 +64,62 @@ header nav .collapse > li {
   align-items: center;
   background: transparent;
 }
+header nav .collapse > ul .ai,
+header nav .collapse > li .ai {
+  background: #2080d5;
+}
+header nav .collapse > ul .ai a,
+header nav .collapse > li .ai a {
+  color: #fff;
+}
+header nav .collapse > ul .ai:hover,
+header nav .collapse > li .ai:hover {
+  background: #2080d5;
+}
 header nav .collapse > ul .dropdown-menu,
 header nav .collapse > li .dropdown-menu {
-  background: rgba(67, 67, 67, 0.171);
+  background: #00000020;
+  border-radius: 0;
+  padding: 1rem !important;
+  width: auto !important;
+}
+header nav .collapse > ul .dropdown-menu > li,
+header nav .collapse > li .dropdown-menu > li {
+  width: max-content;
+  margin: 0;
+}
+header nav .collapse > ul .dropdown-menu dl,
+header nav .collapse > li .dropdown-menu dl {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 16em;
+}
+header nav .collapse > ul .dropdown-menu dl dt,
+header nav .collapse > li .dropdown-menu dl dt {
+  color: var(--text-gray) !important;
+  font-weight: normal;
+  font-size: 16px;
+  width: 100%;
+  width: fit-content;
+  padding: 1rem;
+}
+header nav .collapse > ul .dropdown-menu dl dd,
+header nav .collapse > li .dropdown-menu dl dd {
+  width: 100%;
+  text-indent: 40px;
+  padding: 1rem;
+}
+header nav .collapse > ul .dropdown-menu dl dd a,
+header nav .collapse > li .dropdown-menu dl dd a {
+  color: var(--text-gray) !important;
+  font-size: small;
+}
+header nav .collapse > ul .dropdown-menu dl dt:hover,
+header nav .collapse > li .dropdown-menu dl dt:hover,
+header nav .collapse > ul .dropdown-menu dl dd:hover,
+header nav .collapse > li .dropdown-menu dl dd:hover {
+  background: #0000001f;
 }
 header nav .collapse > ul > li {
   padding-left: 1rem;
