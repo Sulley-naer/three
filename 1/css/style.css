@@ -37,3 +37,8 @@ body::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
+
+a{
+    text-decoration: none !important;
+    color:inherit;
+}
