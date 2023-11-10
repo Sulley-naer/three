@@ -98,6 +98,8 @@ header nav .collapse > li .dropdown-menu {
   border-radius: 0;
   padding: 1rem !important;
   width: auto !important;
+  max-height: 600px;
+  overflow: scroll;
 }
 header nav .collapse > ul .dropdown-menu > li,
 header nav .collapse > li .dropdown-menu > li {
@@ -162,12 +164,25 @@ header nav .navbar-brand {
   padding-right: 2rem;
   color: white;
 }
-.banner {
+.swiper {
   width: 100%;
   height: 70%;
-  padding: 0 10%;
-  background: url(../../picture/home-banner-algorithm.jpg) no-repeat center;
-  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+.swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper .swiper-slide .swiper-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper .swiper-slide .swiper-img img {
+  width: 100%;
+  height: 70%;
   position: relative;
 }
 .SmartDesk {
