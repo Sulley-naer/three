@@ -108,6 +108,7 @@
   --text-gray: rgb(159, 159, 159);
   --text-gray-hover: rgb(255, 255, 255);
   --text-lighter: rgb(210, 210, 210);
+  --header-bg-down: #000000b5;
   --bili-pink: rgb(255, 50, 114);
   --bili-blue: rgb(0, 174, 236);
 }
@@ -247,7 +248,7 @@ header {
 
 .swiper {
   width: 100%;
-  height: 80%;
+  height: 67%;
   position: relative;
   padding: 0;
   /* <-- 自定义swiper组件 --> */
@@ -289,13 +290,22 @@ header {
     background-position-y: bottom;
     display: flex;
     align-items: center;
+    position: relative;
+    .mark {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #ffffff33;
+    }
     content {
       display: block;
       padding: 0 10%;
       width: 100%;
       height: 55%;
       color: var(--text-gray);
-      // background: black;
+      z-index: 2;
       > h1 {
         color: var(--text-gray-hover);
         i {
@@ -316,6 +326,7 @@ header {
         border-radius: 25px;
         padding: 0px 33px;
         background: var(--head-bg);
+        background: #00000025;
         outline: none;
         border: none;
         display: flex;
@@ -328,6 +339,7 @@ header {
         }
         &:hover {
           background: var(--head-bg-hover);
+          background: #00000045;
         }
       }
     }

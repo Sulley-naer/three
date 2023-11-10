@@ -89,6 +89,7 @@
   --text-gray: #9f9f9f;
   --text-gray-hover: #ffffff;
   --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
   --bili-pink: #ff3272;
   --bili-blue: #00aeec;
 }
@@ -219,7 +220,7 @@ header nav .navbar-brand {
 }
 .swiper {
   width: 100%;
-  height: 80%;
+  height: 67%;
   position: relative;
   padding: 0;
   /* <-- 自定义swiper组件 --> */
@@ -253,11 +254,19 @@ header nav .navbar-brand {
 .swiper .swiper-slide {
   width: 100%;
   height: 100%;
-  position: relative;
   background-size: cover;
   background-position-y: bottom;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.swiper .swiper-slide .mark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff33;
 }
 .swiper .swiper-slide content {
   display: block;
@@ -265,6 +274,7 @@ header nav .navbar-brand {
   width: 100%;
   height: 55%;
   color: var(--text-gray);
+  z-index: 2;
 }
 .swiper .swiper-slide content > h1 {
   color: var(--text-gray-hover);
@@ -286,6 +296,7 @@ header nav .navbar-brand {
   border-radius: 25px;
   padding: 0px 33px;
   background: var(--head-bg);
+  background: #00000025;
   outline: none;
   border: none;
   display: flex;
@@ -299,6 +310,7 @@ header nav .navbar-brand {
 }
 .swiper .swiper-slide content .learn-more:hover {
   background: var(--head-bg-hover);
+  background: #00000045;
 }
 .SmartDesk {
   width: 100%;
