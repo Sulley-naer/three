@@ -334,6 +334,7 @@ header nav .navbar-brand {
   color: #fff;
   width: 55%;
   font-size: smaller;
+  margin-bottom: 0;
 }
 .footbox {
   width: 100%;
