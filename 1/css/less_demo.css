@@ -148,7 +148,7 @@ header nav .collapse > li .ai:hover {
 }
 header nav .collapse > ul .dropdown-menu,
 header nav .collapse > li .dropdown-menu {
-  background: #00000020;
+  background: #00000055;
   border-radius: 0;
   padding: 1rem !important;
   width: auto !important;
