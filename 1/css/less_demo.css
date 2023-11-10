@@ -364,6 +364,7 @@ header nav .navbar-brand {
   background: url(../../images/solution-bg.jpg);
   background-size: cover;
   padding: 0 10%;
+  height: max-content;
 }
 .introduce .AiTechnology {
   position: relative;
@@ -442,7 +443,7 @@ header nav .navbar-brand {
   color: #fff;
 }
 .introduce .practice .practice-body p {
-  padding-top: 1rem;
+  padding: 1rem 0;
   color: #fff;
   width: 55%;
   font-size: smaller;
