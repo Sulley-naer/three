@@ -328,6 +328,9 @@ header nav .navbar-brand {
   align-items: center;
   flex-direction: column;
 }
+.SmartDesk > .products .product:hover {
+  background: var(--head-bg);
+}
 .SmartDesk > .products .product .product-img {
   transform: scale(0.6);
   margin-bottom: 0.5rem;

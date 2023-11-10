@@ -357,12 +357,13 @@ header {
     padding-top: 2.5rem;
     display: flex;
     justify-content: center;
-
     .product {
       display: flex;
       align-items: center;
       flex-direction: column;
-
+      &:hover {
+        background: var(--head-bg);
+      }
       .product-img {
         transform: scale(0.6);
         margin-bottom: 0.5rem;
