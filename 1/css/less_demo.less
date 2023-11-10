@@ -108,6 +108,8 @@
   --text-gray: rgb(159, 159, 159);
   --text-gray-hover: rgb(255, 255, 255);
   --text-lighter: rgb(210, 210, 210);
+  --bili-pink: rgb(255, 50, 114);
+  --bili-blue: rgb(0, 174, 236);
 }
 
 li {
@@ -139,7 +141,7 @@ header {
 
     .collapse {
       padding: 0 14px;
-      >ul>li{
+      > ul > li {
         padding: 29px 0;
         display: flex;
         align-items: center;
@@ -248,6 +250,36 @@ header {
   height: 80%;
   position: relative;
   padding: 0;
+  /* <-- 自定义swiper组件 --> */
+  .swiper-pagination > span {
+    width: 2em !important;
+    height: 4px !important;
+    transform: skewX(-45deg);
+    // background: white;
+    background: var(--bili-blue);
+    border-radius: 0;
+    background-color: #66d7fb !important;
+  }
+  .swiper-scrollbar {
+    // bottom: -5% !important;
+    background: var(--bili-blue);
+    background-color: #12aae16b;
+
+    .swiper-scrollbar-drag {
+      background-color: rgb(255, 255, 255);
+      background-color: var(--bili-blue);
+    }
+  }
+  .swiper-button-prev {
+    color: var(--text-lighter) !important;
+    color: var(--bili-blue) !important;
+  }
+  .swiper-button-next {
+    color: var(--text-lighter) !important;
+    color: var(--bili-pink) !important;
+    color: #66d7fb !important;
+    color: var(--bili-blue) !important;
+  }
 
   .swiper-slide {
     width: 100%;

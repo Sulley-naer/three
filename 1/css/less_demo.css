@@ -89,6 +89,8 @@
   --text-gray: #9f9f9f;
   --text-gray-hover: #ffffff;
   --text-lighter: #d2d2d2;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
 }
 li {
   list-style: none;
@@ -220,6 +222,33 @@ header nav .navbar-brand {
   height: 80%;
   position: relative;
   padding: 0;
+  /* <-- 自定义swiper组件 --> */
+}
+.swiper .swiper-pagination > span {
+  width: 2em !important;
+  height: 4px !important;
+  transform: skewX(-45deg);
+  background: var(--bili-blue);
+  border-radius: 0;
+  background-color: #66d7fb !important;
+}
+.swiper .swiper-scrollbar {
+  background: var(--bili-blue);
+  background-color: #12aae16b;
+}
+.swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: #ffffff;
+  background-color: var(--bili-blue);
+}
+.swiper .swiper-button-prev {
+  color: var(--text-lighter) !important;
+  color: var(--bili-blue) !important;
+}
+.swiper .swiper-button-next {
+  color: var(--text-lighter) !important;
+  color: var(--bili-pink) !important;
+  color: #66d7fb !important;
+  color: var(--bili-blue) !important;
 }
 .swiper .swiper-slide {
   width: 100%;

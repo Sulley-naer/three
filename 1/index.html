@@ -444,6 +444,7 @@
 </html>
 
 <script src="../bootstrap/swiper/swiper-bundle.min.js"></script>
+
 <script>
   var mySwiper = new Swiper('.swiper', {
     direction: 'horizontal', // 垂直切换选项 vertical/horizontal 竖/横
@@ -463,12 +464,23 @@
       prevEl: '.swiper-button-prev',
     },
     //自动切换
-    /*     autoplay: {
-          delay: 3000,
-          stopOnLastSlide: false,
-          disableOnInteraction: true,
-        }, */
-  })
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: true,
+    },
+    // 设置淡入淡出效果
+    effect: 'fade',
+    fadeEffect: {
+      /* crossFade: true */     // 开启交叉淡出 白光
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar', // 指定滚动条的容器
+      draggable: true, // 设置滚动条是否可拖动
+      hide: false, // 设置滚动条是否自动隐藏
+      snapOnRelease: true // 设置滚动条是否在释放时对齐
+    }
+  });
   //img变为背景
   $('.swiper-slide').each(function (index, item) {
     $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
