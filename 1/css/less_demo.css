@@ -1,7 +1,4 @@
 @media screen and (max-width: 990px) {
-  /*   body {
-    font-size: 12px;
-  } */
   .navbar-nav {
     display: block;
   }
@@ -9,17 +6,22 @@
     z-index: 999;
   }
   .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-  .dropdown-menu {
     position: fixed !important;
-    top: 5% !important;
-    left: 50% !important;
+    top: 40%;
+    left: 61%;
   }
 }
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
     transform: scale(0.8);
+  }
+  .cop {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 950px) {
+  .cop {
+    transform: scale(0.6);
   }
 }
 @media screen and (max-width: 835px) {
@@ -41,14 +43,39 @@
     transform: scale(1);
   }
 }
+@media screen and (max-width: 700px) {
+  .products {
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 550px) {
+  .products {
+    transform: scale(0.6);
+  }
+}
 @media screen and (max-width: 620px) {
   .foot-content > .col-2 {
     transform: scale(0.9);
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
+  .products {
+    transform: scale(0.6);
+  }
+}
+@media screen and (max-width: 480px) {
   .foot-content > .col-2 {
-    transform: scale(0.8);
+    transform: scale(0.6);
+  }
+  .products {
+    transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-nav .dropdown-menu {
+    position: fixed !important;
+    top: 6.5% !important;
+    left: 2% !important;
   }
 }
 @media screen and (max-width: 360px) {
@@ -232,8 +259,28 @@ header nav .navbar-brand {
   padding: 0 10%;
 }
 .introduce .AiTechnology {
+  position: relative;
   padding-top: 4rem;
   text-align: center;
+  padding-bottom: 4rem;
+}
+.introduce .AiTechnology::after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.introduce .AiTechnology::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology .AiTechnology-title h3 {
   color: #dedede;
@@ -258,6 +305,41 @@ header nav .navbar-brand {
   padding-top: 0.8rem;
   color: var(--text-gray);
   width: max-content;
+}
+.introduce .practice {
+  padding-top: 4rem;
+}
+.introduce .practice .practice-title {
+  text-align: center;
+}
+.introduce .practice .practice-title h3 {
+  color: #dedede;
+}
+.introduce .practice .practice-title p {
+  transform: scale(0.8);
+}
+.introduce .practice .practice-title p span {
+  color: var(--text-gray);
+  padding: 0 0.7rem;
+}
+.introduce .practice .practice-title p a {
+  color: var(--text-gray);
+}
+.introduce .practice .practice-title p a:hover,
+.introduce .practice .practice-title p a:nth-child(1) {
+  color: var(--text-gray-hover);
+}
+.introduce .practice .practice-body {
+  padding-top: 3rem;
+}
+.introduce .practice .practice-body h3 {
+  color: #fff;
+}
+.introduce .practice .practice-body p {
+  padding-top: 1rem;
+  color: #fff;
+  width: 55%;
+  font-size: smaller;
 }
 .footbox {
   width: 100%;

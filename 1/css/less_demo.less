@@ -1,8 +1,4 @@
 @media screen and (max-width: 990px) {
-  /*   body {
-    font-size: 12px;
-  } */
-
   .navbar-nav {
     display: block;
   }
@@ -12,14 +8,9 @@
   }
 
   .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-
-  .dropdown-menu {
     position: fixed !important;
-    // left: none;
-    top: 5% !important;
-    left: 50% !important;
+    top: 40%;
+    left: 61%;
   }
 }
 
@@ -27,11 +18,25 @@
   .foot-content > .col-2 {
     transform: scale(0.8);
   }
+
+  .cop {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .cop {
+    transform: scale(0.6);
+  }
 }
 
 @media screen and (max-width: 835px) {
   .foot-content > .col-2 {
     transform: scale(0.6);
+  }
+
+  .products {
+    transform: scale(0.9);
   }
 }
 
@@ -49,23 +54,51 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .products {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .products {
+    transform: scale(0.6);
+  }
+}
+
 @media screen and (max-width: 620px) {
   .foot-content > .col-2 {
     transform: scale(0.9);
   }
 }
 
-@media screen and (max-width: 550px) {
-  .foot-content > .col-2 {
-    transform: scale(0.8);
+@media screen and (max-width: 500px) {
+  .products {
+    transform: scale(0.6);
   }
 }
 
-@media screen and (max-width: 414px) {
-  .dropdown-menu {
+@media screen and (max-width: 480px) {
+  .foot-content > .col-2 {
+    transform: scale(0.6);
+  }
+
+  .products {
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-nav .dropdown-menu {
     position: fixed !important;
-    top: 25% !important;
-    left: 59% !important;
+    top: 6.5% !important;
+    left: 2% !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .products {
+    transform: scale(0.4);
   }
 }
 
@@ -128,6 +161,7 @@ header {
           width: auto !important;
           max-height: 600px;
           overflow: scroll;
+
           > li {
             width: max-content;
             margin: 0;
@@ -227,13 +261,15 @@ header {
 
 //智能总台
 .SmartDesk {
+  width: 100%;
+  padding: 0 10%;
   padding-top: 2.5rem;
 
   > .products {
     padding: 0 10%;
     padding-top: 2.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     .product {
       display: flex;
@@ -258,6 +294,122 @@ header {
   }
 }
 
+//introduce
+.introduce {
+  background: url(../../images/solution-bg.jpg);
+  background-size: cover;
+  padding: 0 10%;
+
+  .AiTechnology {
+    position: relative;
+    padding-top: 4rem;
+    text-align: center;
+    padding-bottom: 4rem;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        to right,
+        rgb(47, 77, 165),
+        rgb(91, 166, 228)
+      );
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30%;
+      height: 2px;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+    }
+
+    .AiTechnology-title {
+      h3 {
+        color: #dedede;
+      }
+
+      p {
+        transform: scale(0.8);
+        color: #d3d3d354;
+      }
+    }
+
+    .AiTechnology-images {
+      display: flex;
+      justify-content: center;
+
+      .AiTechnology-img {
+        padding: 8% 12%;
+        margin: 0.05rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(
+          160deg,
+          rgba(16, 52, 117, 0.8),
+          rgba(33, 67, 193, 0.8)
+        );
+
+        p {
+          padding-top: 0.8rem;
+          color: var(--text-gray);
+          width: max-content;
+        }
+      }
+    }
+  }
+
+  .practice {
+    padding-top: 4rem;
+
+    .practice-title {
+      text-align: center;
+
+      h3 {
+        color: #dedede;
+      }
+
+      p {
+        transform: scale(0.8);
+
+        span {
+          color: var(--text-gray);
+          padding: 0 0.7rem;
+        }
+
+        a {
+          color: var(--text-gray);
+
+          &:hover,
+          &:nth-child(1) {
+            color: var(--text-gray-hover);
+          }
+        }
+      }
+    }
+    .practice-body {
+      padding-top: 3rem;
+      h3 {
+        color: #fff;
+      }
+      p {
+        padding-top: 1rem;
+        color: #fff;
+        width: 55%;
+        font-size: smaller;
+      }
+    }
+  }
+}
+
+//foot
 .footbox {
   width: 100%;
   padding: 0 10%;
