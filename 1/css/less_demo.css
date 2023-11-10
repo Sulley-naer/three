@@ -48,6 +48,13 @@
     transform: scale(0.8);
   }
 }
+@media screen and (max-width: 414px) {
+  .dropdown-menu {
+    position: fixed !important;
+    top: 25% !important;
+    left: 59% !important;
+  }
+}
 :root {
   --text-gray: #9f9f9f;
   --text-gray-hover: #ffffff;
