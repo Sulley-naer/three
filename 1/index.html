@@ -267,6 +267,8 @@
 
     <!-- 如果需要滚动条 -->
     <div class="swiper-scrollbar"></div>
+    <!-- 显示自动切换时间 -->
+    <div class="autoplay-progress"></div>
   </div>
 
 
@@ -468,18 +470,26 @@
       delay: 3000,
       stopOnLastSlide: false,
       disableOnInteraction: true,
+      //显示时间下一次自动切换的时间
     },
     // 设置淡入淡出效果
     effect: 'fade',
     fadeEffect: {
       /* crossFade: true */     // 开启交叉淡出 白光
     },
+    //滚动条效果
     scrollbar: {
       el: '.swiper-scrollbar', // 指定滚动条的容器
       draggable: true, // 设置滚动条是否可拖动
-      hide: false, // 设置滚动条是否自动隐藏
+      hide: true, // 设置滚动条是否自动隐藏
       snapOnRelease: true // 设置滚动条是否在释放时对齐
-    }
+    },
+    //滚轮控制
+    mousewheel: {
+      enabled: true, // 开启滚轮控制
+      sensitivity: 0.5 // 设置滚轮灵敏度
+    },
+
   });
   //img变为背景
   $('.swiper-slide').each(function (index, item) {
