@@ -11,6 +11,11 @@
   .navbar-nav .dropdown-menu {
     position: absolute;
   }
+  .dropdown-menu {
+    position: fixed !important;
+    top: 5% !important;
+    left: 50% !important;
+  }
 }
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
