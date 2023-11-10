@@ -14,31 +14,24 @@
   .navbar-nav .dropdown-menu {
     position: absolute;
   }
+
+  .dropdown-menu {
+    position: fixed !important;
+    // left: none;
+    top: 5% !important;
+    left: 50% !important;
+  }
 }
 
 @media screen and (max-width: 1110px) {
-  .foot-content>.col-2 {
+  .foot-content > .col-2 {
     transform: scale(0.8);
-  }
-
-  .cop {
-    transform: scale(.8);
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .cop {
-    transform: scale(.6);
   }
 }
 
 @media screen and (max-width: 835px) {
-  .foot-content>.col-2 {
+  .foot-content > .col-2 {
     transform: scale(0.6);
-  }
-
-  .products {
-    transform: scale(.9);
   }
 }
 
@@ -50,49 +43,29 @@
   .foot-content {
     width: 100% !important;
 
-    >.col-2 {
+    > .col-2 {
       transform: scale(1);
     }
   }
 }
 
-@media screen and (max-width: 700px) {
-  .products {
-    transform: scale(.7);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .products {
-    transform: scale(.6);
-  }
-}
-
 @media screen and (max-width: 620px) {
-  .foot-content>.col-2 {
+  .foot-content > .col-2 {
     transform: scale(0.9);
   }
 }
 
-@media screen and (max-width: 500px) {
-  .products {
-    transform: scale(0.6);
+@media screen and (max-width: 550px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
   }
 }
 
-@media screen and (max-width: 480px) {
-  .foot-content>.col-2 {
-    transform: scale(0.6);
-  }
-
-  .products {
-    transform: scale(0.5);
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .products {
-    transform: scale(.4);
+@media screen and (max-width: 414px) {
+  .dropdown-menu {
+    position: fixed !important;
+    top: 25% !important;
+    left: 59% !important;
   }
 }
 
@@ -131,8 +104,8 @@ header {
     .collapse {
       padding: 0 14px;
 
-      >ul,
-      >li {
+      > ul,
+      > li {
         align-items: center;
         background: transparent;
 
@@ -155,8 +128,7 @@ header {
           width: auto !important;
           max-height: 600px;
           overflow: scroll;
-
-          >li {
+          > li {
             width: max-content;
             margin: 0;
           }
@@ -195,7 +167,7 @@ header {
         }
       }
 
-      >ul>li {
+      > ul > li {
         padding-left: 1rem;
         padding-right: 1rem;
         height: 3.5rem;
@@ -205,7 +177,7 @@ header {
           background: #00000020;
         }
 
-        >a {
+        > a {
           height: 3.5rem;
           line-height: 2.5rem;
           color: var(--text-gray);
@@ -255,15 +227,13 @@ header {
 
 //智能总台
 .SmartDesk {
-  width: 100%;
-  padding: 0 10%;
   padding-top: 2.5rem;
 
-  >.products {
+  > .products {
     padding: 0 10%;
     padding-top: 2.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     .product {
       display: flex;
@@ -288,121 +258,13 @@ header {
   }
 }
 
-//introduce
-.introduce {
-  background: url(../../images/solution-bg.jpg);
-  background-size: cover;
-  padding: 0 10%;
-
-  .AiTechnology {
-    position: relative;
-    padding-top: 4rem;
-    text-align: center;
-    padding-bottom: 4rem;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 30%;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(to right, rgb(47, 77, 165), rgb(91, 166, 228));
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 30%;
-      height: 2px;
-      bottom: 0;
-      right: 0;
-      background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
-    }
-
-    .AiTechnology-title {
-      h3 {
-        color: #dedede;
-      }
-
-      p {
-        transform: scale(.8);
-        color: #d3d3d354;
-      }
-    }
-
-    .AiTechnology-images {
-      display: flex;
-      justify-content: center;
-
-      .AiTechnology-img {
-        padding: 8% 12%;
-        margin: .05rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: linear-gradient(160deg, rgba(16, 52, 117, .8), rgba(33, 67, 193, .8));
-
-        p {
-          padding-top: .8rem;
-          color: var(--text-gray);
-          width: max-content;
-        }
-      }
-    }
-  }
-
-  .practice {
-    padding-top: 4rem;
-
-    .practice-title {
-      text-align: center;
-
-      h3 {
-        color: #dedede;
-      }
-
-      p {
-        transform: scale(.8);
-
-        span {
-          color: var(--text-gray);
-          padding: 0 .7rem;
-        }
-
-        a {
-          color: var(--text-gray);
-
-          &:hover,
-          &:nth-child(1) {
-            color: var(--text-gray-hover);
-          }
-        }
-      }
-    }
-    .practice-body{
-      padding-top: 3rem;
-      h3{
-        color: #fff;
-      }
-      p{
-        padding-top: 1rem;
-        color: #fff;
-        width: 55%;
-        font-size: smaller;
-      }
-    }
-  }
-}
-
-//foot
 .footbox {
   width: 100%;
   padding: 0 10%;
   background: url(../../picture/footer-bg.jpg);
   background-size: cover;
 
-  >.foot-top {
+  > .foot-top {
     width: 100%;
     height: 60%;
     border-bottom: 1px solid #ffffff29;
@@ -420,19 +282,19 @@ header {
       justify-content: space-between;
       margin-top: 1rem;
 
-      >dl {
+      > dl {
         white-space: nowrap;
 
-        >dt {
+        > dt {
           margin-bottom: 2em;
           color: #dedede;
         }
 
-        >dd {
+        > dd {
           margin-bottom: 1em;
           font-size: 14px;
 
-          >a {
+          > a {
             text-decoration: none;
             color: var(--text-gray);
 
@@ -445,21 +307,21 @@ header {
     }
   }
 
-  >.about-me {
+  > .about-me {
     display: flex;
     width: 100%;
     height: 40%;
     justify-content: space-between;
 
-    >.cop {
+    > .cop {
       font-size: smaller;
       line-height: 0.7rem;
       padding-top: 1.25rem;
 
-      >p {
+      > p {
         color: var(--text-gray);
 
-        >a {
+        > a {
           color: var(--text-gray);
 
           &:focus {
