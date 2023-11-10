@@ -84,3 +84,7 @@ $(document).ready(function () {
     }
   );
 });
+
+$('.practice-title>p>a').click(function () { 
+  $(this).addClass('active').siblings().removeClass('active')
+})

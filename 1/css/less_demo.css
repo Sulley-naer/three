@@ -325,8 +325,7 @@ header nav .navbar-brand {
 .introduce .practice .practice-title p a {
   color: var(--text-gray);
 }
-.introduce .practice .practice-title p a:hover,
-.introduce .practice .practice-title p a:nth-child(1) {
+.introduce .practice .practice-title p .active {
   color: var(--text-gray-hover);
 }
 .introduce .practice .practice-body {
