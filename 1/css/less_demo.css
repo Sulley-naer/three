@@ -1,7 +1,4 @@
 @media screen and (max-width: 990px) {
-  /*   body {
-    font-size: 12px;
-  } */
   .navbar-nav {
     display: block;
   }
@@ -9,7 +6,9 @@
     z-index: 999;
   }
   .navbar-nav .dropdown-menu {
-    position: absolute;
+    position: fixed !important;
+    top: 40%;
+    left: 61%;
   }
 }
 @media screen and (max-width: 1110px) {
@@ -70,6 +69,13 @@
   }
   .products {
     transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-nav .dropdown-menu {
+    position: fixed !important;
+    top: 6.5% !important;
+    left: 2% !important;
   }
 }
 @media screen and (max-width: 360px) {
