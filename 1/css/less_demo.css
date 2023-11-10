@@ -16,6 +16,14 @@
   .foot-content > .col-2 {
     transform: scale(0.8);
   }
+  .cop {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 950px) {
+  .cop {
+    transform: scale(0.6);
+  }
 }
 @media screen and (max-width: 835px) {
   .foot-content > .col-2 {
@@ -36,14 +44,32 @@
     transform: scale(1);
   }
 }
+@media screen and (max-width: 700px) {
+  .products {
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 550px) {
+  .products {
+    transform: scale(0.6);
+  }
+}
 @media screen and (max-width: 620px) {
   .foot-content > .col-2 {
     transform: scale(0.9);
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
+  .products {
+    transform: scale(0.6);
+  }
+}
+@media screen and (max-width: 480px) {
   .foot-content > .col-2 {
-    transform: scale(0.8);
+    transform: scale(0.6);
+  }
+  .products {
+    transform: scale(0.5);
   }
 }
 @media screen and (max-width: 360px) {
