@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/less_demo.css" />
   <link rel="stylesheet" href="css/less_demo.less" />
 
+  <link rel="stylesheet" href="../bootstrap/swiper/swiper-bundle.css">
   <!-- <link rel="stylesheet" href="../bootstrap/fullPage.js-4.0.20/dist/fullpage.css"> -->
 </head>
 
@@ -223,7 +224,39 @@
       </div>
     </nav>
   </header>
-  <div class="container-fluid banner"></div>
+
+  <div class="container-fluid swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <source src="../picture/home-banner-algorithm.jpg">
+      </div>
+      <div class="swiper-slide">
+        <source src="../picture/home-banner-algorithm.jpg">
+      </div>
+      <div class="swiper-slide">
+        <source src="../picture/home-banner-algorithm.jpg">
+      </div>
+      <div class="swiper-slide">
+        <source src="../picture/home-banner-algorithm.jpg">
+      </div>
+      <div class="swiper-slide">
+        <source src="../picture/home-banner-algorithm.jpg">
+      </div>
+      <div class="swiper-slide">
+        <source src="../picture/home-banner-algorithm.jpg">
+      </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
 
   <div class="SmartDesk">
     <h4 class="text-center">AI智能解决方案，人工智能中台</h4>
@@ -386,3 +419,34 @@
 <!-- <script src="../bootstrap/fullPage.js-4.0.20/dist/fullpage.js"></script> -->
 
 </html>
+<script src="../bootstrap/swiper/swiper-bundle.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper', {
+    direction: 'horizontal', // 垂直切换选项 vertical/horizontal 竖/横
+    loop: true, // 循环模式选项
+
+    // loopAdditionalSlides: 6, // 在循环模式下，前后需要复制的slide个数
+    // loopedSlides: 6, // 在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数(等于原来slide个数) 有bug
+
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // 分页器是否可点击
+    },
+    // 如果需要前进后退按钮 
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    //自动切换
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: true,
+    },
+  })
+  //img变为背景
+  $('.swiper-slide').each(function (index, item) {
+    $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
+  })
+</script>
