@@ -20,12 +20,14 @@
   .foot-content>.col-2 {
     transform: scale(0.8);
   }
-  .cop{
+
+  .cop {
     transform: scale(.8);
   }
 }
+
 @media screen and (max-width: 950px) {
-  .cop{
+  .cop {
     transform: scale(.6);
   }
 }
@@ -34,7 +36,8 @@
   .foot-content>.col-2 {
     transform: scale(0.6);
   }
-  .products{
+
+  .products {
     transform: scale(.9);
   }
 }
@@ -76,17 +79,19 @@
     transform: scale(0.6);
   }
 }
+
 @media screen and (max-width: 480px) {
   .foot-content>.col-2 {
-      transform: scale(0.6);
-    }
+    transform: scale(0.6);
+  }
+
   .products {
     transform: scale(0.5);
   }
 }
 
 @media screen and (max-width: 360px) {
-  .products{
+  .products {
     transform: scale(.4);
   }
 }
@@ -126,8 +131,8 @@ header {
     .collapse {
       padding: 0 14px;
 
-      > ul,
-      > li {
+      >ul,
+      >li {
         align-items: center;
         background: transparent;
 
@@ -150,7 +155,8 @@ header {
           width: auto !important;
           max-height: 600px;
           overflow: scroll;
-          > li {
+
+          >li {
             width: max-content;
             margin: 0;
           }
@@ -189,7 +195,7 @@ header {
         }
       }
 
-      > ul > li {
+      >ul>li {
         padding-left: 1rem;
         padding-right: 1rem;
         height: 3.5rem;
@@ -199,7 +205,7 @@ header {
           background: #00000020;
         }
 
-        > a {
+        >a {
           height: 3.5rem;
           line-height: 2.5rem;
           color: var(--text-gray);
@@ -289,8 +295,30 @@ header {
   padding: 0 10%;
 
   .AiTechnology {
+    position: relative;
     padding-top: 4rem;
     text-align: center;
+    padding-bottom: 4rem;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to right, rgb(47, 77, 165), rgb(91, 166, 228));
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30%;
+      height: 2px;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+    }
 
     .AiTechnology-title {
       h3 {
@@ -313,12 +341,54 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: linear-gradient(160deg,rgba(16,52,117,.8),rgba(33,67,193,.8));
-        p{
+        background: linear-gradient(160deg, rgba(16, 52, 117, .8), rgba(33, 67, 193, .8));
+
+        p {
           padding-top: .8rem;
           color: var(--text-gray);
           width: max-content;
         }
+      }
+    }
+  }
+
+  .practice {
+    padding-top: 4rem;
+
+    .practice-title {
+      text-align: center;
+
+      h3 {
+        color: #dedede;
+      }
+
+      p {
+        transform: scale(.8);
+
+        span {
+          color: var(--text-gray);
+          padding: 0 .7rem;
+        }
+
+        a {
+          color: var(--text-gray);
+
+          &:hover,
+          &:nth-child(1) {
+            color: var(--text-gray-hover);
+          }
+        }
+      }
+    }
+    .practice-body{
+      padding-top: 3rem;
+      h3{
+        color: #fff;
+      }
+      p{
+        padding-top: 1rem;
+        color: #fff;
+        width: 66%;
       }
     }
   }
