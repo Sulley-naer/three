@@ -84,8 +84,11 @@
   }
 }
 :root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
   --text-gray: #9f9f9f;
   --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
 }
 li {
   list-style: none;
@@ -93,7 +96,7 @@ li {
 header {
   width: 100%;
   padding: 0 10%;
-  background: rgba(3, 21, 75, 0.137);
+  background: var(--head-bg);
   margin: auto;
   height: 3.75rem;
   position: fixed;
@@ -115,6 +118,11 @@ header nav {
 header nav .collapse {
   padding: 0 14px;
 }
+header nav .collapse > ul > li {
+  padding: 29px 0;
+  display: flex;
+  align-items: center;
+}
 header nav .collapse > ul,
 header nav .collapse > li {
   align-items: center;
@@ -123,6 +131,9 @@ header nav .collapse > li {
 header nav .collapse > ul .ai,
 header nav .collapse > li .ai {
   background: #2080d5;
+  padding: 30px;
+  display: flex;
+  align-items: center;
 }
 header nav .collapse > ul .ai a,
 header nav .collapse > li .ai a {
@@ -206,7 +217,7 @@ header nav .navbar-brand {
 }
 .swiper {
   width: 100%;
-  height: 70%;
+  height: 80%;
   position: relative;
   padding: 0;
 }
@@ -214,16 +225,51 @@ header nav .navbar-brand {
   width: 100%;
   height: 100%;
   position: relative;
+  background-size: cover;
+  background-position-y: bottom;
+  display: flex;
+  align-items: center;
 }
-.swiper .swiper-slide .swiper-img {
+.swiper .swiper-slide content {
+  display: block;
+  padding: 0 10%;
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 55%;
+  color: var(--text-gray);
 }
-.swiper .swiper-slide .swiper-img img {
-  width: 100%;
-  height: 70%;
-  position: relative;
+.swiper .swiper-slide content > h1 {
+  color: var(--text-gray-hover);
+}
+.swiper .swiper-slide content > h1 i {
+  font-style: normal;
+  font-weight: lighter;
+  font-size: smaller;
+  vertical-align: baseline;
+}
+.swiper .swiper-slide content > * {
+  margin-top: 1em;
+  color: var(--text-lighter);
+}
+.swiper .swiper-slide content .learn-more {
+  margin-top: 2.5rem;
+  min-width: 10rem;
+  height: 3em;
+  border-radius: 25px;
+  padding: 0px 33px;
+  background: var(--head-bg);
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.swiper .swiper-slide content .learn-more i {
+  width: 15px;
+  height: 15px;
+  display: flex;
+}
+.swiper .swiper-slide content .learn-more:hover {
+  background: var(--head-bg-hover);
 }
 .SmartDesk {
   width: 100%;
