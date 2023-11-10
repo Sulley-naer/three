@@ -45,6 +45,9 @@ $(document).ready(function () {
     img.eq($(this).index("dt")).attr("src", src);
   });
 
+  $(function(){
+    $(".AiTechnology-introduce").hide();
+  })
   $(".AiTechnology-img").hover(
     function () {
       $(this).children("p").css("color", "var(--text-gray-hover)");
@@ -62,9 +65,13 @@ $(document).ready(function () {
       $(this).css(
         "background",
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
-      );
+        );
+        $(".AiTechnology-img").click(function(){
+          $(this).children(".AiTechnology-introduce").fadeIn(200);
+        })
     },
     function () {
+      $(".AiTechnology-introduce").fadeOut(200);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(
         "background",
