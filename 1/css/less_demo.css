@@ -332,7 +332,8 @@ header nav .navbar-brand {
 .introduce .practice .practice-body p {
   padding-top: 1rem;
   color: #fff;
-  width: 66%;
+  width: 55%;
+  font-size: smaller;
 }
 .footbox {
   width: 100%;
