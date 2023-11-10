@@ -1,4 +1,12 @@
+@media screen and (max-width: 1415px) {
+  #friend {
+    display: none;
+  }
+}
 @media screen and (max-width: 990px) {
+  #friend {
+    display: flex;
+  }
   .navbar-nav {
     display: block;
   }
@@ -7,8 +15,8 @@
   }
   .navbar-nav .dropdown-menu {
     position: fixed !important;
-    top: 40%;
-    left: 61%;
+    top: 7%;
+    left: 0%;
   }
 }
 @media screen and (max-width: 1110px) {
@@ -51,6 +59,9 @@
 @media screen and (max-width: 550px) {
   .products {
     transform: scale(0.6);
+  }
+  .navbar-brand {
+    display: none;
   }
 }
 @media screen and (max-width: 620px) {
@@ -112,6 +123,12 @@ header {
 }
 header .logo {
   float: left;
+}
+header .navbar {
+  align-content: space-around;
+}
+header .act {
+  align-content: baseline;
 }
 header nav {
   background: transparent !important;

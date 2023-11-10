@@ -96,4 +96,8 @@ $(window).scroll(function(){
   else {
     $('header').css('background', 'var(--header-bg)')
   }
-  })
+})
+  
+$('.navbar-toggler').click(function () { 
+  $('.navbar').toggleClass('act')
+})
