@@ -134,6 +134,12 @@
     transform: scale(0.4);
   }
 }
+@media screen and (max-width: 600px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.4);
+    font-size: large;
+  }
+}
 :root {
   --head-bg: rgba(3, 21, 75, 0.137);
   --head-bg-hover: rgba(3, 21, 75, 0.3);
