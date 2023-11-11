@@ -11,6 +11,16 @@
     left: 61%;
   }
 }
+@media screen and (max-width: 1500px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.8);
+  }
+}
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
     transform: scale(0.8);
@@ -18,9 +28,24 @@
   .cop {
     transform: scale(0.8);
   }
+  .AiTechnology-introduce p {
+    transform: scale(0.7);
+  }
+  .AiTechnology-introduce .tz a {
+    transform: scale(0.7);
+  }
 }
 @media screen and (max-width: 950px) {
   .cop {
+    transform: scale(0.6);
+  }
+  .AiTechnology-introduce {
+    justify-content: flex-end;
+  }
+  .AiTechnology-introduce p {
+    transform: scale(0.6);
+  }
+  .AiTechnology-introduce .tz a {
     transform: scale(0.6);
   }
 }
@@ -42,10 +67,19 @@
   .foot-content > .col-2 {
     transform: scale(1);
   }
+  .AiTechnology-introduce p {
+    transform: scale(0.5);
+  }
+  .AiTechnology-introduce .tz a {
+    transform: scale(0.5);
+  }
 }
 @media screen and (max-width: 700px) {
   .products {
     transform: scale(0.7);
+  }
+  .AiTechnology-introduce .tz {
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 550px) {
@@ -57,6 +91,16 @@
   }
   .practice-body p {
     font-size: 0.6rem !important;
+  }
+  .AiTechnology-introduce {
+    padding-top: 5%;
+  }
+  .AiTechnology-introduce p {
+    transform: scale(0.4);
+  }
+  .AiTechnology-introduce .tz {
+    padding: 0.5%;
+    transform: scale(0.4);
   }
 }
 @media screen and (max-width: 620px) {
@@ -82,6 +126,12 @@
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
+  }
+  .AiTechnology-introduce p {
+    transform: scale(0.3);
+  }
+  .AiTechnology-introduce .tz a {
+    transform: scale(0.3);
   }
 }
 @media screen and (max-width: 360px) {
@@ -404,14 +454,14 @@ header nav .navbar-brand {
   margin-bottom: 0;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .tz {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .tz a {
   padding: 0.2rem 0.5rem;
-  margin-top: 0.5rem;
+  width: max-content;
   font-size: 0.8rem;
   color: var(--text-gray-hover);
   text-align: center;
