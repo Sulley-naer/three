@@ -480,7 +480,7 @@ header {
       width: 30%;
       height: 2px;
       bottom: 0;
-      left: 0;
+      left: -13%;
       background: linear-gradient(
         to right,
         rgb(47, 77, 165),
@@ -494,7 +494,7 @@ header {
       width: 30%;
       height: 2px;
       bottom: 0;
-      right: 0;
+      right: -13%;
       background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
     }
 
@@ -703,7 +703,7 @@ header {
     }
     .swiper-pagination {
       .swiper-pagination-bullet {
-        width: 120px !important;
+        width: calc(100% / 3) !important;
         transform: none;
         background: var(--bili-blue) !important;
         margin: 0;
@@ -739,13 +739,14 @@ header {
         max-width: 80%;
         transform: translateX(-100%);
         opacity: 0;
-        span{
+        span {
           font-size: 1.5rem;
+          font-weight: bold;
+          vertical-align: sub;
         }
         li {
           margin-top: 0.5em;
           font-size: small;
-          font-weight: bold;
         }
       }
     }
@@ -774,13 +775,14 @@ header {
         max-width: 80%;
         transform: translateX(100%);
         opacity: 0;
-        span{
+        span {
           font-size: 1.5rem;
+          font-weight: bold;
+          vertical-align: sub;
         }
         li {
           margin-top: 0.5em;
           font-size: small;
-          font-weight: bold;
         }
       }
     }

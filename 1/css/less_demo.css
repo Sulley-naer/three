@@ -418,7 +418,7 @@ header nav .navbar-brand {
   width: 30%;
   height: 2px;
   bottom: 0;
-  left: 0;
+  left: -13%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology::before {
@@ -427,7 +427,7 @@ header nav .navbar-brand {
   width: 30%;
   height: 2px;
   bottom: 0;
-  right: 0;
+  right: -13%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology .AiTechnology-title h3 {
@@ -595,7 +595,7 @@ header nav .navbar-brand {
   justify-content: space-around;
 }
 .banner .swiper .swiper-pagination .swiper-pagination-bullet {
-  width: 120px !important;
+  width: calc(100% / 3) !important;
   transform: none;
   background: var(--bili-blue) !important;
   margin: 0;
@@ -633,11 +633,12 @@ header nav .navbar-brand {
 }
 .banner .container-fluid .left .card span {
   font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: sub;
 }
 .banner .container-fluid .left .card li {
   margin-top: 0.5em;
   font-size: small;
-  font-weight: bold;
 }
 .banner .container-fluid .md {
   width: calc(100% / 3);
@@ -666,11 +667,12 @@ header nav .navbar-brand {
 }
 .banner .container-fluid .right .card span {
   font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: sub;
 }
 .banner .container-fluid .right .card li {
   margin-top: 0.5em;
   font-size: small;
-  font-weight: bold;
 }
 .adbox {
   margin-top: 2rem;
