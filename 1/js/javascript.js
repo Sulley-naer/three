@@ -45,9 +45,56 @@ $(document).ready(function () {
     img.eq($(this).index("dt")).attr("src", src);
   });
 
-  $(function(){
+  //隐藏子元素
+  $(function () {
     $(".AiTechnology-introduce").hide();
-  })
+  });
+  //隐藏span
+  function AiTechnologyIntroduceBorderNone() {
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(0)
+      .stop()
+      .animate({ width: "0%" }, 800);
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(1)
+      .stop()
+      .animate({ width: "0%" }, 800);
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(2)
+      .stop()
+      .animate({ height: "0%" }, 800);
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(3)
+      .stop()
+      .animate({ height: "0%" }, 800);
+  }
+  //缓慢显示span
+  function AiTechnologyIntroduceBorderBlock() {
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(0)
+      .stop()
+      .animate({ width: "100%" }, 1000);
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(1)
+      .stop()
+      .animate({ width: "100%" }, 1000);
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(2)
+      .stop()
+      .animate({ height: "100%" }, 1000);
+    $(".AiTechnology-introduce-border")
+      .children("span")
+      .eq(3)
+      .stop()
+      .animate({ height: "100%" }, 1000);
+  }
   $(".AiTechnology-img").hover(
     function () {
       $(this).children("p").css("color", "var(--text-gray-hover)");
@@ -65,13 +112,21 @@ $(document).ready(function () {
       $(this).css(
         "background",
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
-        );
-        $(".AiTechnology-img").click(function(){
-          $(this).children(".AiTechnology-introduce").fadeIn(200);
-        })
+      );
+      $(".AiTechnology-img").click(function () {
+        $(".AiTechnology-introduce").stop().fadeOut(200);
+        $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
+        $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
+        $(this).find("span").eq(1).stop().animate({ width: "100%" }, 1000);
+        $(this).find("span").eq(2).stop().animate({ height: "100%" }, 1000);
+        $(this).find("span").eq(3).stop().animate({ height: "100%" }, 1000);
+      });
     },
     function () {
-      $(".AiTechnology-introduce").fadeOut(200);
+      $(this).find("span").eq(0).stop().animate({ width: "0%" }, 1000);
+      $(this).find("span").eq(1).stop().animate({ width: "0%" }, 1000);
+      $(this).find("span").eq(2).stop().animate({ height: "0%" }, 1000);
+      $(this).find("span").eq(3).stop().animate({ height: "0%" }, 1000);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(
         "background",
@@ -90,8 +145,10 @@ $(document).ready(function () {
       $(this).children("img").attr("src", src);
     }
   );
-});
 
-$('.practice-title>p>a').click(function () { 
-  $(this).addClass('active').siblings().removeClass('active')
-})
+  $(".practice-title>p>a").click(function () {
+    var index = $(this).index();
+    /*     $(".practice-body").eq(index-1).show(200).siblings(".practice-body").hide(0);*/
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+});
