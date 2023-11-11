@@ -517,6 +517,106 @@ header {
   }
 }
 
+.adbox {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: url(../images/title-divide-line.png) no-repeat;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translateY(-50%) rotate(180deg);
+    width: 30%;
+    height: 2px;
+    top: 0;
+    right: 0;
+    background: url(../images/title-divide-line.png) no-repeat;
+  }
+
+  > div {
+    margin: 1rem auto 0 auto;
+    .ad {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .at {
+    display: flex;
+  }
+
+  .w-15 {
+    width: 15%;
+  }
+
+  @media screen and (max-width: 1642px) {
+    .w-15 {
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: 910px) {
+    .w-15 {
+      width: 30%;
+    }
+  }
+  @media screen and (max-width: 965px) {
+    .w-15 {
+      width: 50%;
+    }
+  }
+
+  .active {
+    color: skyblue;
+    transition: all 0.3s;
+  }
+
+  & picture {
+    /* // background: #00000009; */
+    width: 75%;
+    height: 150px;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    display: none !important;
+    & div {
+      border-radius: 25px;
+      overflow: hidden;
+    }
+  }
+
+  .act {
+    display: flex !important;
+
+    > div > img {
+      animation-name: dm;
+      animation-duration: 0.5s;
+    }
+  }
+}
+@keyframes dm {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 //foot
 .footbox {
   width: 100%;

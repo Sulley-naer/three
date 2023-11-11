@@ -101,3 +101,12 @@ $(window).scroll(function(){
 $('.navbar-toggler').click(function () { 
   $('.navbar').toggleClass('act')
 })
+
+$(".ad").click(function () {
+    $(this).toggleClass("active").siblings().removeClass("active");
+    $(".at")
+      .eq($(this).index(".ad"))
+      .addClass("act")
+      .siblings()
+      .removeClass("act");
+  });
