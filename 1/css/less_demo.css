@@ -1,4 +1,12 @@
+@media screen and (max-width: 1415px) {
+  #friend {
+    display: none;
+  }
+}
 @media screen and (max-width: 990px) {
+  #friend {
+    display: flex;
+  }
   .navbar-nav {
     display: block;
   }
@@ -7,8 +15,8 @@
   }
   .navbar-nav .dropdown-menu {
     position: fixed !important;
-    top: 40%;
-    left: 61%;
+    top: 7%;
+    left: 0%;
   }
 }
 @media screen and (max-width: 1500px) {
@@ -86,21 +94,8 @@
   .products {
     transform: scale(0.6);
   }
-  .practice-body h3 {
-    font-size: 0.8rem;
-  }
-  .practice-body p {
-    font-size: 0.6rem !important;
-  }
-  .AiTechnology-introduce {
-    padding-top: 5%;
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.4);
-  }
-  .AiTechnology-introduce .tz {
-    padding: 0.5%;
-    transform: scale(0.4);
+  .navbar-brand {
+    display: none;
   }
 }
 @media screen and (max-width: 620px) {
@@ -145,6 +140,7 @@
   --text-gray: #9f9f9f;
   --text-gray-hover: #ffffff;
   --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
   --bili-pink: #ff3272;
   --bili-blue: #00aeec;
 }
@@ -167,6 +163,12 @@ header {
 }
 header .logo {
   float: left;
+}
+header .navbar {
+  align-content: space-around;
+}
+header .act {
+  align-content: baseline;
 }
 header nav {
   background: transparent !important;
@@ -203,7 +205,7 @@ header nav .collapse > li .ai:hover {
 }
 header nav .collapse > ul .dropdown-menu,
 header nav .collapse > li .dropdown-menu {
-  background: #00000020;
+  background: #00000055;
   border-radius: 0;
   padding: 1rem !important;
   width: auto !important;
@@ -275,7 +277,7 @@ header nav .navbar-brand {
 }
 .swiper {
   width: 100%;
-  height: 80%;
+  height: 67%;
   position: relative;
   padding: 0;
   /* <-- 自定义swiper组件 --> */
@@ -309,11 +311,19 @@ header nav .navbar-brand {
 .swiper .swiper-slide {
   width: 100%;
   height: 100%;
-  position: relative;
   background-size: cover;
   background-position-y: bottom;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.swiper .swiper-slide .mark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff33;
 }
 .swiper .swiper-slide content {
   display: block;
@@ -321,6 +331,7 @@ header nav .navbar-brand {
   width: 100%;
   height: 55%;
   color: var(--text-gray);
+  z-index: 2;
 }
 .swiper .swiper-slide content > h1 {
   color: var(--text-gray-hover);
@@ -342,6 +353,7 @@ header nav .navbar-brand {
   border-radius: 25px;
   padding: 0px 33px;
   background: var(--head-bg);
+  background: #00000025;
   outline: none;
   border: none;
   display: flex;
@@ -355,6 +367,7 @@ header nav .navbar-brand {
 }
 .swiper .swiper-slide content .learn-more:hover {
   background: var(--head-bg-hover);
+  background: #00000045;
 }
 .SmartDesk {
   width: 100%;
@@ -372,6 +385,9 @@ header nav .navbar-brand {
   align-items: center;
   flex-direction: column;
 }
+.SmartDesk > .products .product:hover {
+  background: var(--head-bg);
+}
 .SmartDesk > .products .product .product-img {
   transform: scale(0.6);
   margin-bottom: 0.5rem;
@@ -388,6 +404,7 @@ header nav .navbar-brand {
   background: url(../../images/solution-bg.jpg);
   background-size: cover;
   padding: 0 10%;
+  height: max-content;
 }
 .introduce .AiTechnology {
   position: relative;
@@ -536,7 +553,7 @@ header nav .navbar-brand {
   color: #fff;
 }
 .introduce .practice .practice-body p {
-  padding-top: 1rem;
+  padding: 1rem 0;
   color: #fff;
   width: 55%;
   font-size: smaller;
