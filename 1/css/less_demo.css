@@ -559,6 +559,119 @@ header nav .navbar-brand {
   font-size: smaller;
   margin-bottom: 0;
 }
+.banner {
+  position: relative;
+  height: 50rem;
+  width: 100%;
+  padding: 0 10%;
+  background: #fff;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  top: 10%;
+  left: 0;
+  background: url(../../images/title-divide-line.png) no-repeat;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  top: 10%;
+  right: 0;
+  background: url(../../images/title-divide-line.png) no-repeat;
+  transform: rotate(180deg);
+}
+.banner .swiper {
+  width: 30%;
+  height: 8rem;
+}
+.banner .swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.banner .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 120px !important;
+  transform: none;
+  background: var(--bili-blue) !important;
+  margin: 0;
+  border-radius: 6px;
+}
+.banner .container-fluid {
+  height: calc(100% - 128px);
+  background: url(../../images/build-bgimg.jpg) no-repeat center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+}
+.banner .container-fluid .left {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
+}
+.banner .container-fluid .left:hover .card {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+}
+.banner .container-fluid .left .card {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: max-content;
+  max-width: 80%;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.banner .container-fluid .left .card span {
+  font-size: 1.5rem;
+}
+.banner .container-fluid .left .card li {
+  margin-top: 0.5em;
+  font-size: small;
+  font-weight: bold;
+}
+.banner .container-fluid .md {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
+}
+.banner .container-fluid .right {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
+}
+.banner .container-fluid .right:hover .card {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+}
+.banner .container-fluid .right .card {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: max-content;
+  max-width: 80%;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.banner .container-fluid .right .card span {
+  font-size: 1.5rem;
+}
+.banner .container-fluid .right .card li {
+  margin-top: 0.5em;
+  font-size: small;
+  font-weight: bold;
+}
 .adbox {
   margin-top: 2rem;
   padding: 2rem 0;

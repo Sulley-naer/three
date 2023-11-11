@@ -668,6 +668,125 @@ header {
   }
 }
 
+.banner {
+  position: relative;
+  height: 50rem;
+  width: 100%;
+  padding: 0 10%;
+  background: #fff;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    top: 10%;
+    left: 0;
+    background: url(../../images/title-divide-line.png) no-repeat;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    top: 10%;
+    right: 0;
+    background: url(../../images/title-divide-line.png) no-repeat;
+    transform: rotate(180deg);
+  }
+  .swiper {
+    width: 30%;
+    height: 8rem;
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 120px !important;
+        transform: none;
+        background: var(--bili-blue) !important;
+        margin: 0;
+        border-radius: 6px;
+      }
+    }
+  }
+  .container-fluid {
+    height: calc(100% - 128px);
+    background: url(../../images/build-bgimg.jpg) no-repeat center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    .left {
+      width: calc(100% / 3);
+      height: 100%;
+      // background: #555;
+      position: relative;
+      &:hover .card {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .card {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        width: max-content;
+        max-width: 80%;
+        transform: translateX(-100%);
+        opacity: 0;
+        span{
+          font-size: 1.5rem;
+        }
+        li {
+          margin-top: 0.5em;
+          font-size: small;
+          font-weight: bold;
+        }
+      }
+    }
+    .md {
+      width: calc(100% / 3);
+      height: 100%;
+      // background: #000;
+      position: relative;
+    }
+    .right {
+      width: calc(100% / 3);
+      height: 100%;
+      // background: #555;
+      position: relative;
+      &:hover .card {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .card {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        width: max-content;
+        max-width: 80%;
+        transform: translateX(100%);
+        opacity: 0;
+        span{
+          font-size: 1.5rem;
+        }
+        li {
+          margin-top: 0.5em;
+          font-size: small;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 .adbox {
   margin-top: 2rem;
   padding: 2rem 0;
