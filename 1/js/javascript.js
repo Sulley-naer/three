@@ -173,7 +173,7 @@ $(document).ready(function () {
   })
 })
 
-$('.banner>div>div[class=left]').mouseover(function () { 
+/* $('.banner>div>div[class=left]').mouseover(function () { 
   $(this).parent().css('background', 'url(../../images/build-bgimg-l.jpg) no-repeat center center')
   $(this).mouseleave(function () {
     $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center')
@@ -192,9 +192,9 @@ $('.banner>div>div[class=md]').mouseover(function () {
   $(this).mouseleave(function () {
     $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center')
   })
-})
+}) */
 
-/* // 定义一个函数，接受两个参数：选择器和图片路径
+// 定义一个函数，接受两个参数：选择器和图片路径
 function changeBackground(selector, imagePath) {
   // 为选择器绑定鼠标移入和移出事件
   $(selector).mouseover(function () {
@@ -210,4 +210,3 @@ function changeBackground(selector, imagePath) {
 changeBackground('.banner>div>div[class=left]', '../../images/build-bgimg-l.jpg');
 changeBackground('.banner>div>div[class=right]', '../../images/build-bgimg-r.jpg');
 changeBackground('.banner>div>div[class=md]', '../../images/build-bgimg-m.jpg');
- */
