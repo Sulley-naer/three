@@ -588,6 +588,14 @@ header nav .navbar-brand {
   right: 0;
   background: url(../images/title-divide-line.png) no-repeat;
 }
+@media screen and (max-width: 500px) {
+  .adbox > div {
+    width: 60% !important;
+  }
+  .adbox picture {
+    width: 100% !important;
+  }
+}
 .adbox > div {
   margin: 1rem auto 0 auto;
 }
