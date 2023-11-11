@@ -19,6 +19,16 @@
     left: 0%;
   }
 }
+@media screen and (max-width: 1500px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.8);
+  }
+}
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
     transform: scale(0.8);
@@ -26,9 +36,24 @@
   .cop {
     transform: scale(0.8);
   }
+  .AiTechnology-introduce p {
+    transform: scale(0.7);
+  }
+  .AiTechnology-introduce .tz a {
+    transform: scale(0.7);
+  }
 }
 @media screen and (max-width: 950px) {
   .cop {
+    transform: scale(0.6);
+  }
+  .AiTechnology-introduce {
+    justify-content: flex-end;
+  }
+  .AiTechnology-introduce p {
+    transform: scale(0.6);
+  }
+  .AiTechnology-introduce .tz a {
     transform: scale(0.6);
   }
 }
@@ -50,10 +75,19 @@
   .foot-content > .col-2 {
     transform: scale(1);
   }
+  .AiTechnology-introduce p {
+    transform: scale(0.5);
+  }
+  .AiTechnology-introduce .tz a {
+    transform: scale(0.5);
+  }
 }
 @media screen and (max-width: 700px) {
   .products {
     transform: scale(0.7);
+  }
+  .AiTechnology-introduce .tz {
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 550px) {
@@ -87,6 +121,12 @@
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
+  }
+  .AiTechnology-introduce p {
+    transform: scale(0.3);
+  }
+  .AiTechnology-introduce .tz a {
+    transform: scale(0.3);
   }
 }
 @media screen and (max-width: 360px) {
@@ -402,7 +442,8 @@ header nav .navbar-brand {
   justify-content: center;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img {
-  padding: 8% 12%;
+  position: relative;
+  padding: 6.8% 12%;
   margin: 0.05rem;
   display: flex;
   flex-direction: column;
@@ -413,6 +454,74 @@ header nav .navbar-brand {
   padding-top: 0.8rem;
   color: var(--text-gray);
   width: max-content;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce {
+  position: absolute;
+  top: 0;
+  padding-top: 4rem;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/solution-mask.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
+  color: var(--text-gray-hover);
+  margin-bottom: 0;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .tz {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .tz a {
+  padding: 0.2rem 0.5rem;
+  width: max-content;
+  font-size: 0.8rem;
+  color: var(--text-gray-hover);
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 9rem;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span {
+  position: absolute;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(1) {
+  width: 0%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  background: #8debf1;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(2) {
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  background: #94b9fd;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(3) {
+  width: 2px;
+  height: 0%;
+  left: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom, #94b9fd, #8debf1);
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(4) {
+  width: 2px;
+  height: 0%;
+  right: 0;
+  background: linear-gradient(to bottom, #8debf1, #94b9fd);
 }
 .introduce .practice {
   padding-top: 4rem;
@@ -437,6 +546,7 @@ header nav .navbar-brand {
   color: var(--text-gray-hover);
 }
 .introduce .practice .practice-body {
+  display: none;
   padding-top: 3rem;
 }
 .introduce .practice .practice-body h3 {
