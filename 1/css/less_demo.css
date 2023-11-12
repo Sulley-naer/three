@@ -18,6 +18,19 @@
     top: 7%;
     left: 0%;
   }
+}
+@media screen and (max-width: 1500px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.8);
+  }
+  .products {
+    justify-content: center !important;
+  }
   .dropdown-menu {
     position: fixed !important;
     top: 5% !important;
@@ -108,9 +121,9 @@
     transform: scale(0.9);
   }
 }
-@media screen and (max-width: 500px) {
-  .products {
-    transform: scale(0.6);
+@media screen and (max-width: 550px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
   }
 }
 @media screen and (max-width: 480px) {
@@ -393,6 +406,7 @@ header nav .navbar-brand {
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex: 1;
 }
 .SmartDesk > .products .product:hover {
   background: var(--head-bg);
