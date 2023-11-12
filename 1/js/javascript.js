@@ -194,11 +194,11 @@ function changeBackground(selector, imagePath) {
     $(this).parent().css('background', 'url(' + imagePath + ') no-repeat center center');
   }).mouseleave(function () {
     // 鼠标移出时，恢复父元素的背景图片为默认的图片路径
-    $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center');
+    $(this).parent().css('background', 'url(../images/build-bgimg.jpg) no-repeat center center');
   });
 }
 
 // 调用函数，传递不同的选择器和图片路径
-changeBackground('.banner>div>div[class=left]', '../../images/build-bgimg-l.jpg');
-changeBackground('.banner>div>div[class=right]', '../../images/build-bgimg-r.jpg');
-changeBackground('.banner>div>div[class=md]', '../../images/build-bgimg-m.jpg');
+changeBackground('.banner>div>div[class=left]', '../images/build-bgimg-l.jpg');
+changeBackground('.banner>div>div[class=right]', '../images/build-bgimg-r.jpg');
+changeBackground('.banner>div>div[class=md]', '../images/build-bgimg-m.jpg');
