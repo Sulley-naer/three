@@ -196,17 +196,19 @@ $('.banner>div>div[class=md]').mouseover(function () {
 
 // 定义一个函数，接受两个参数：选择器和图片路径
 function changeBackground(selector, imagePath) {
+  // 保存父元素的原始背景图片
+  var originalBgImage = "../images/build-bgimg.jpg";
   // 为选择器绑定鼠标移入和移出事件
-  $(selector).mouseover(function () {
-    // 鼠标移入时，改变父元素的背景图片为指定的图片路径
-    $(this).parent().css('background', 'url(' + imagePath + ') no-repeat center center');
-  }).mouseleave(function () {
-    // 鼠标移出时，恢复父元素的背景图片为默认的图片路径
-    $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center');
-  });
+ $(selector).mouseover(function () {
+   // 改变父元素的背景图片为指定的图片路径
+   $(this).parent().css('background', 'url(' + imagePath + ') no-repeat center center');
+ }).mouseleave(function () {
+   // 鼠标移出时，恢复父元素的背景图片为原始的图片路径
+   $(this).parent().css('background', 'url('+originalBgImage+') no-repeat center center');
+ });
 }
 
 // 调用函数，传递不同的选择器和图片路径
-changeBackground('.banner>div>div[class=left]', '../../images/build-bgimg-l.jpg');
-changeBackground('.banner>div>div[class=right]', '../../images/build-bgimg-r.jpg');
-changeBackground('.banner>div>div[class=md]', '../../images/build-bgimg-m.jpg');
+changeBackground('.banner>div>div[class=left]', '../images/build-bgimg-l.jpg');
+changeBackground('.banner>div>div[class=right]', '../images/build-bgimg-r.jpg');
+changeBackground('.banner>div>div[class=md]', '../images/build-bgimg-m.jpg');
