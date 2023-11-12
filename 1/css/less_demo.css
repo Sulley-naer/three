@@ -37,6 +37,16 @@
     left: 50% !important;
   }
 }
+@media screen and (max-width: 1500px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .AiTechnology-introduce p {
+    transform: scale(0.8);
+  }
+}
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
     transform: scale(0.8);
@@ -390,7 +400,7 @@ header nav .navbar-brand {
   padding: 0 10%;
   padding-top: 2.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .SmartDesk > .products .product {
   display: flex;
