@@ -28,6 +28,9 @@
   .AiTechnology-introduce p {
     transform: scale(0.8);
   }
+  .products {
+    justify-content: center !important;
+  }
 }
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
@@ -384,12 +387,13 @@ header nav .navbar-brand {
   padding: 0 10%;
   padding-top: 2.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .SmartDesk > .products .product {
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex: 1;
 }
 .SmartDesk > .products .product:hover {
   background: var(--head-bg);

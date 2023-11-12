@@ -196,6 +196,8 @@ $('.banner>div>div[class=md]').mouseover(function () {
 
 // 定义一个函数，接受两个参数：选择器和图片路径
 function changeBackground(selector, imagePath) {
+  // 保存父元素的原始背景图片
+  var originalBgImage = "../images/build-bgimg.jpg";
   // 为选择器绑定鼠标移入和移出事件
   $(selector).mouseover(function () {
     // 鼠标移入时，改变父元素的背景图片为指定的图片路径
