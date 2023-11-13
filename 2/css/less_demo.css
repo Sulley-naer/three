@@ -1,3 +1,13 @@
+:root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+}
 .swiper {
   width: 100%;
   height: 67%;
@@ -127,6 +137,20 @@
   align-items: end;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.banner .swiper .swiper-slide title {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.banner .swiper .swiper-slide p {
+  color: #9f9f9f;
+}
+.banner .swiper .swiper-slide p a {
+  color: var(--text-gray);
+}
+.banner .swiper .swiper-slide p .act {
+  color: var(--bili-blue);
 }
 .banner .swiper .swiper-pagination .swiper-pagination-bullet {
   width: calc(100% / 3) !important;
