@@ -54,24 +54,133 @@
     font-size: large;
   }
 }
-.introduce {
-  background: url(../../images/solution-bg.jpg);
+.swiper {
+  width: 100%;
+  height: 67%;
+  position: relative;
+  padding: 0;
+  /* <-- 自定义swiper组件 --> */
+}
+.swiper .swiper-pagination > span {
+  width: 2em !important;
+  height: 4px !important;
+  transform: skewX(-45deg);
+  background: var(--bili-blue);
+  border-radius: 0;
+  background-color: #66d7fb !important;
+}
+.swiper .swiper-scrollbar {
+  background: var(--bili-blue);
+  background-color: #12aae16b;
+}
+.swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: #ffffff;
+  background-color: var(--bili-blue);
+}
+.swiper .swiper-button-prev {
+  color: var(--text-lighter) !important;
+  color: var(--bili-blue) !important;
+}
+.swiper .swiper-button-next {
+  color: var(--text-lighter) !important;
+  color: var(--bili-pink) !important;
+  color: #66d7fb !important;
+  color: var(--bili-blue) !important;
+}
+.swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
   background-size: cover;
+  background-position-y: bottom;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.swiper .swiper-slide .mark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff33;
+}
+.swiper .swiper-slide content {
+  display: block;
   padding: 0 10%;
+  width: 100%;
+  height: 55%;
+  color: var(--text-gray);
+  z-index: 2;
+}
+.swiper .swiper-slide content > h1 {
+  color: var(--text-gray-hover);
+}
+.swiper .swiper-slide content > h1 i {
+  font-style: normal;
+  font-weight: lighter;
+  font-size: smaller;
+  vertical-align: baseline;
+}
+.swiper .swiper-slide content > * {
+  margin-top: 1em;
+  color: var(--text-lighter);
+}
+.swiper .swiper-slide content .learn-more {
+  margin-top: 2.5rem;
+  min-width: 10rem;
+  height: 3em;
+  border-radius: 25px;
+  padding: 0px 33px;
+  background: var(--head-bg);
+  background: #00000025;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.swiper .swiper-slide content .learn-more i {
+  width: 15px;
+  height: 15px;
+  display: flex;
+}
+.swiper .swiper-slide content .learn-more:hover {
+  background: var(--head-bg-hover);
+  background: #00000045;
+}
+.introduce {
   height: max-content;
 }
 .introduce .AiTechnology {
   position: relative;
-  padding-top: 4rem;
+  padding: 0 10%;
+  padding-top: 8rem;
   text-align: center;
   padding-bottom: 4rem;
+}
+.introduce .AiTechnology:nth-child(1) {
+  padding-bottom: 0;
+}
+.introduce .AiTechnology:nth-child(1) .AiTechnology-body-right-img {
+  background: url(../../images/product/iBox-D.png) no-repeat;
+  background-size: contain;
+}
+.introduce .AiTechnology:nth-child(3) {
+  background: #0d1c59;
+}
+.introduce .AiTechnology:nth-child(3) .AiTechnology-title h3 {
+  color: #dedede;
+}
+.introduce .AiTechnology:nth-child(3) .AiTechnology-title p {
+  transform: scale(0.8);
+  color: #d3d3d354;
 }
 .introduce .AiTechnology::after {
   position: absolute;
   content: "";
   width: 30%;
   height: 2px;
-  bottom: 0;
+  top: 4rem;
   left: -13%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
@@ -80,16 +189,78 @@
   content: "";
   width: 30%;
   height: 2px;
-  bottom: 0;
+  top: 4rem;
   right: -13%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
+.introduce .AiTechnology .AiTechnology-bg {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  width: 100%;
+  height: 73%;
+  background: url(../../images/line-bg.svg) no-repeat center center;
+  bottom: 0;
+  left: 0;
+  background-size: contain;
+}
 .introduce .AiTechnology .AiTechnology-title h3 {
-  color: #dedede;
+  color: #141414;
 }
 .introduce .AiTechnology .AiTechnology-title p {
   transform: scale(0.8);
-  color: #d3d3d354;
+  color: rgba(172, 172, 172, 0.573);
+}
+.introduce .AiTechnology .AiTechnology-body {
+  padding: 0 5%;
+  padding-top: 2rem;
+  background: url(../../images/deedfx-box-bg.jpg);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  color: #e6e7f0;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-top {
+  padding-top: 1rem;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-center {
+  padding-top: 1.5rem;
+  margin-bottom: 0;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-foot {
+  margin-top: 2.5rem;
+  min-width: 10rem;
+  height: 3em;
+  border-radius: 25px;
+  padding: 0px 33px;
+  background: var(--head-bg);
+  background: #00000025;
+  outline: none;
+  color: #e6e7f0;
+  border: 3px solid #e6e7f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-foot i {
+  width: 15px;
+  height: 15px;
+  display: flex;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-foot:hover {
+  background: var(--head-bg-hover);
+  background: #00000045;
+  border: 3px solid #c2c2c2;
+  color: #c2c2c2;
+}
+.introduce .AiTechnology .AiTechnology-body-right-img {
+  width: 28%;
+  height: 16rem;
+  background: url(../../images/product/iBox-F.png) no-repeat;
+  background-size: contain;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 0 2rem 0;
 }
 .introduce .AiTechnology .AiTechnology-images {
   display: flex;
