@@ -1,3 +1,4 @@
+
 //隐藏子元素
 $(function () {
   $(".AiTechnology-introduce").hide();
@@ -144,5 +145,6 @@ $(".ad").click(function () {
     //把图片路径的最后一个点前面的内容和最后一个点后面的内容拼接起来
     src = prefix + suffix;
     //把拼接好的图片路径赋值给图片
-    img.eq($(this).index("dt")).attr("src", src);
-  });
+    img.eq($(this).index("dt")).attr("src", src); 
+ });
+

@@ -16,7 +16,10 @@
 
     <link rel="stylesheet" href="css/less_demo.css">
     <link rel="stylesheet" href="css/less_demo.less">
+
     <link rel="stylesheet" href="../css/less_demo.css">
+
+    <link rel="stylesheet" href="../bootstrap/swiper/swiper-bundle.css">
 
     <!-- <link rel="stylesheet" href="../bootstrap/fullPage.js-4.0.20/dist/fullpage.css"> -->
 </head>
@@ -162,7 +165,7 @@
                                         <dd>
                                             <a href="javascript:;">· Agile IS43 立式识别信息屏</a>
                                         </dd>
-                                        <dd>yyy
+                                        <dd>
                                             <a href="javascript:;">· Agile IS13 人脸识别信息屏</a>
                                         </dd>
                                         <dd>
@@ -224,78 +227,39 @@
         </nav>
     </header>
 
-    <div class="introduce">
-        <div class="AiTechnology">
-            <div class="AiTechnology-title">
-                <h3>深入行业，真正让AI技术落地</h3>
-                <p>专注将人工智能技术深度赋能行业发展，在多领域推出领先的创新产品</p>
-            </div>
-            <div class="AiTechnology-images">
-                <div class="AiTechnology-img">
-                    <img src="../images/znjy-icon.png" alt="">
-                    <p>智能教育</p>
-                    <div class="AiTechnology-introduce">
-                        <p>依托丰富强大的AI分析能力，从提供AI分析、边缘<br>
-                            计算、公有云、私有云等技术，到重新定义家校沟<br>
-                            通、校园智能安防、数字化教育等轻量化应用平台</p>
-                        <div class="tz">
-                            <a href="javaScript:;">区级/校级智能安防方案</a>
-                            <a href="javaScript:;">区级/校级智慧校园方案</a>
-                        </div>
-                        <div class="AiTechnology-introduce-border">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="AiTechnology-img">
-                    <img src="../images/zncs-icon.png" alt="">
-                    <p>智能教育</p>
-                    <div class="AiTechnology-introduce">
-                        <p>成熟的安全能力和强大的工程化能力，提供从AI算<br>
-                            法到智能感知终端、边缘计算、云部署的平台方<br>
-                            案，涵盖综治、雪亮、社区、旅游、园区等场景</p>
-                        <div class="tz">
-                            <a href="javaScript:;">智能网格员</a>
-                            <a href="javaScript:;">智能园区</a>
-                            <a href="javaScript:;">智能社区</a>
-                            <a href="javaScript:;">智能环保</a>
-                            <a href="javaScript:;">智能景区</a>
-                        </div>
-                        <div class="AiTechnology-introduce-border">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="AiTechnology-img">
-                    <img src="../images/znOther-icon.png" alt="">
-                    <p>智能教育</p>
-                    <div class="AiTechnology-introduce">
-                        <p>AloT，基于智慧云视ACV创新云平台，物联网技<br>
-                            术，结合i-Box 边缘计算终端，可为多种应用场景<br>
-                            提供高性能、快接入、通用性强的AI解决方案</p>
-                        <div class="tz">
-                            <a href="javaScript:;">电网运监</a>
-                            <a href="javaScript:;">消防通道</a>
-                            <a href="javaScript:;">应急指挥</a>
-                            <a href="javaScript:;">智慧渔政</a>
-                            <a href="javaScript:;">安保技防</a>
-                        </div>
-                        <div class="AiTechnology-introduce-border">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <source src="../picture/algorithm-banner.jpg">
+                <content>
+                    <h1>AgileNet<i>目标检测网络</i></h1>
+                    <p>自主研发AgileNet目标检测网络,&#32;目标与网类网络一体,采集神经网络深度学习,&#32;突破小尺寸、高动态和模糊图片</p>
+                    <p>人脸查询的极限,&#32;大大提升了检测的准确性。</p>
+                    <button class="learn-more"><span>了解更多</span><i><svg t="1699597990089" class="icon"
+                                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1466"
+                                data-spm-anchor-id="a313x.search_index.0.i8.76853a81mwJXmd" width="15" height="15">
+                                <path
+                                    d="M761.856 405.504l-255.68-170.432A128 128 0 0 0 307.2 341.568v340.864a128 128 0 0 0 199.008 106.496l255.648-170.432a128 128 0 0 0 0-212.992z"
+                                    p-id="1467" fill="#cdcdcd"></path>
+                            </svg></i></button>
+                </content>
             </div>
         </div>
+    </div>
+
+    <div class="banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h6>目标检测</h6>
+                    <p><a href="javascript:;">人物检测</a></p>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="container-fluid"></div>
+    </div>
     </div>
 
     <div class="footbox">
@@ -359,6 +323,13 @@
 
 <script src="../bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
 
-<script src="../bootstrap/fullPage.js-4.0.20/dist/fullpage.js"></script>
-
 </html>
+
+<script src="../bootstrap/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    //img变为背景
+    $('.swiper-slide').each(function (index, item) {
+        $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
+    })
+</script>
