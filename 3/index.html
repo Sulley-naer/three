@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/less_demo.less">
     <link rel="stylesheet" href="../css/less_demo.css">
 
+    <link rel="stylesheet" href="../bootstrap/swiper/swiper-bundle.css">
     <!-- <link rel="stylesheet" href="../bootstrap/fullPage.js-4.0.20/dist/fullpage.css"> -->
 </head>
 
@@ -224,8 +225,81 @@
         </nav>
     </header>
 
+    <div class="container-fluid swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <source src="../picture/edge-computing-banner.jpg">
+                <content>
+                    <h1>AgileNet<i>目标检测网络</i></h1>
+                    <p>自主研发AgileNet目标检测网络,&#32;目标与网类网络一体,</p>
+                    <p>采集神经网络深度学习,&#32;突破小尺寸、高动态和模糊图片人脸查询的极限,&#32;大大提升了检测的准确性。</p>
+                    <button class="learn-more"><span>了解更多</span>
+                        <i>
+                            <svg t="1699597990089" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="1466"
+                                data-spm-anchor-id="a313x.search_index.0.i8.76853a81mwJXmd" width="15" height="15">
+                                <path
+                                    d="M761.856 405.504l-255.68-170.432A128 128 0 0 0 307.2 341.568v340.864a128 128 0 0 0 199.008 106.496l255.648-170.432a128 128 0 0 0 0-212.992z"
+                                    p-id="1467" fill="#cdcdcd"></path>
+                            </svg>
+                        </i>
+                    </button>
+                </content>
+            </div>
+        </div>
+    </div>
     <div class="introduce">
         <div class="AiTechnology">
+            <div class="AiTechnology-title">
+                <h3>Agile iBox-D智能行为分析盒</h3>
+                <p>一盒多用，多种场景分析</p>
+            </div>
+            <div class="AiTechnology-body">
+                <div class="AiTechnology-body-left">
+                    <h2 class="AiTechnology-body-top">Agile iBox-D</h2>
+                    <p class="AiTechnology-body-center">支持车辆识别、行为(倒地、打架、抽烟、打电话等)、闯入分析、烟火、船<br>
+                    只等多种目标识别算法，准确率95%，持算法在线升级、更新算法:支持摄像<br>
+                    头云台控制 (部分摄像机) :配套智慧云视平台，也可以提供成熟的HTTP数<br>
+                    据上行接口。</p>
+                    <button class="AiTechnology-body-foot"><span>了解更多</span>
+                        <i>
+                            <svg t="1699597990089" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="1466"
+                                data-spm-anchor-id="a313x.search_index.0.i8.76853a81mwJXmd" width="15" height="15">
+                                <path
+                                    d="M761.856 405.504l-255.68-170.432A128 128 0 0 0 307.2 341.568v340.864a128 128 0 0 0 199.008 106.496l255.648-170.432a128 128 0 0 0 0-212.992z"
+                                    p-id="1467" fill="rgb(230,231,240)"></path>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="AiTechnology-body-right-img"></div>
+            </div>
+        </div>
+        <div class="AiTechnology">
+            <div class="AiTechnology-title">
+                <h3>深入行业，真正让AI技术落地</h3>
+                <p>专注将人工智能技术深度赋能行业发展，在多领域推出领先的创新产品</p>
+            </div>
+            <div class="AiTechnology-body">
+                <div class="AiTechnology-body-left">
+                <h2 class="AiTechnology-body-top">Agile iBox-F</h2>
+                <p class="AiTechnology-body-center">Agile iBox-F高/低密人脸分析盒，高速分析人脸，配合人脸识别摄像头IPC22<br>抓拍使用，适用于多种人脸动态识别场景，人脸布控，无感考勤点名等.</p>
+                <button class="AiTechnology-body-foot"><span>了解更多</span>
+                    <i>
+                        <svg t="1699597990089" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            p-id="1466" data-spm-anchor-id="a313x.search_index.0.i8.76853a81mwJXmd" width="15" height="15">
+                            <path
+                                d="M761.856 405.504l-255.68-170.432A128 128 0 0 0 307.2 341.568v340.864a128 128 0 0 0 199.008 106.496l255.648-170.432a128 128 0 0 0 0-212.992z"
+                                p-id="1467" fill="rgb(230,231,240)"></path>
+                        </svg>
+                    </i>
+                </button></div>
+                <div class="AiTechnology-body-right-img"></div>
+            </div>
+        </div>
+        <div class="AiTechnology">
+            <span class="AiTechnology-bg"></span>
             <div class="AiTechnology-title">
                 <h3>深入行业，真正让AI技术落地</h3>
                 <p>专注将人工智能技术深度赋能行业发展，在多领域推出领先的创新产品</p>
@@ -360,5 +434,10 @@
 <script src="../bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
 
 <script src="../bootstrap/fullPage.js-4.0.20/dist/fullpage.js"></script>
+<script>
+    $('.swiper-slide').each(function (index, item) {
+        $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
+    })
+</script>
 
 </html>
