@@ -187,10 +187,12 @@
   align-items: center;
 }
 .banner .container-fluid .row div[class*="col-"] {
-  width: calc(98% / 4);
+  width: calc(95% / 4);
   height: calc(98% / 3);
   background: var(--blue-gray);
   display: flex;
+  position: relative;
+  padding: 0;
 }
 .banner .container-fluid .row div[class*="col-"] .box {
   display: flex;
@@ -200,7 +202,17 @@
   align-items: center;
   align-self: center;
   color: var(--text-gray-hover);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .banner .container-fluid .row div[class*="col-"] .box i {
   font-size: 3.5rem;
+}
+.banner .container-fluid .row div[class*="col-"] video {
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
 }

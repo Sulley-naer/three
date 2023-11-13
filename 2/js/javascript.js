@@ -6,6 +6,31 @@ $('.banner .swiper .swiper-slide p a').click(function () {
     $(this).toggleClass('act').siblings().removeClass('act')
 })
 
+$('.banner .container-fluid .row div[class*="col-"]').mouseover(function () {
+    $(this).children('video').css({
+        display: 'block',
+        opacity: 1
+    })
+    $(this).mouseleave(function () {
+        $(this).children('video').css({
+            display: 'none',
+            opacity: 0
+        })
+    })
+})
+
+$(document).ready(function() {
+  $('video').each(function() {
+    $(this).on('mouseover', function() {
+      this.play();
+    });
+    $(this).on('mouseleave', function() {
+      this.pause();
+    });
+  });
+});
+
+
 $(".dropdown-menu dl dt").click(function () {
     //我点击后我图片路径原本末尾是icon.png  我要改成icon-h.png
     //获取图片路径
