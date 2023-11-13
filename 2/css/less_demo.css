@@ -108,7 +108,7 @@
   height: 50rem;
   width: 100%;
   padding: 0 10%;
-  background: #fff;
+  background: #fff url(../../);
 }
 .banner::before {
   content: "";
@@ -131,7 +131,7 @@
 }
 .banner picture {
   display: block;
-  height: 15%;
+  height: 14%;
 }
 .banner .swiper {
   width: 100%;
@@ -179,6 +179,7 @@
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 .banner .container-fluid .row {
   height: 100%;
@@ -186,9 +187,27 @@
   justify-content: space-between;
   align-items: center;
 }
+.banner .container-fluid .row div[class*="col-3"] {
+  width: calc(95% / 4) !important;
+  height: calc(98% / 3) !important;
+}
+.banner .container-fluid .row div[class="col-4"] {
+  height: 100%;
+  width: calc(98% / 3);
+}
+.banner .container-fluid .row div[class="col-4"] .box {
+  transform: translate(-50%, -25%) !important;
+  z-index: 0;
+}
+.banner .container-fluid .row div[class="col-41"] {
+  height: 100%;
+  width: calc(98% / 4);
+}
+.banner .container-fluid .row div[class="col-41"] .box {
+  transform: translate(-50%, -25%) !important;
+  z-index: 0;
+}
 .banner .container-fluid .row div[class*="col-"] {
-  width: calc(95% / 4);
-  height: calc(98% / 3);
   background: var(--blue-gray);
   display: flex;
   position: relative;
@@ -196,7 +215,7 @@
 }
 .banner .container-fluid .row div[class*="col-"] .box {
   display: flex;
-  height: 80%;
+  height: 50%;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -206,6 +225,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .banner .container-fluid .row div[class*="col-"] .box i {
   font-size: 3.5rem;
@@ -215,4 +235,6 @@
   height: 100%;
   display: none;
   opacity: 0;
+  z-index: 1;
+  background: #242426;
 }

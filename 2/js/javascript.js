@@ -3,7 +3,10 @@ $('.navbar-toggler').click(function () {
 })
 
 $('.banner .swiper .swiper-slide p a').click(function () { 
-    $(this).toggleClass('act').siblings().removeClass('act')
+  // console.log($(this).index('.banner .swiper .swiper-slide p a'))
+  $(this).toggleClass('act').siblings().removeClass('act')
+  // 让$('.banner .container-fluid .row') 对应被点击的的第几个显示，其他的隐藏
+  $('.banner .container-fluid .row').eq($(this).index('.banner .swiper .swiper-slide p a')).show().siblings().hide()
 })
 
 $('.banner .container-fluid .row div[class*="col-"]').mouseover(function () {
