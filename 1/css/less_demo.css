@@ -512,6 +512,9 @@ li {
   margin-top: 0.5em;
   font-size: small;
 }
+.banner .container-fluid .left .card li:first-child {
+  margin-top: -0.5em;
+}
 .banner .container-fluid .md {
   width: calc(100% / 3);
   height: 100%;
@@ -545,6 +548,9 @@ li {
 .banner .container-fluid .right .card li {
   margin-top: 0.5em;
   font-size: small;
+}
+.banner .container-fluid .right .card li:first-child {
+  margin-top: -0.5em;
 }
 .adbox {
   margin-top: 2rem;
