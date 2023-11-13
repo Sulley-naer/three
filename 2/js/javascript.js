@@ -2,6 +2,10 @@ $('.navbar-toggler').click(function () {
     $('.navbar').toggleClass('act')
 })
 
+$('.banner .swiper .swiper-slide p a').click(function () { 
+    $(this).toggleClass('act').siblings().removeClass('act')
+})
+
 $(".dropdown-menu dl dt").click(function () {
     //我点击后我图片路径原本末尾是icon.png  我要改成icon-h.png
     //获取图片路径

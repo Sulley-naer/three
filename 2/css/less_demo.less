@@ -7,6 +7,7 @@
   --header-bg-down: #000000b5;
   --bili-pink: #ff3272;
   --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
 }
 
 .swiper {
@@ -148,9 +149,12 @@
     background: url(../../images/title-divide-line.png) no-repeat;
     transform: rotate(180deg);
   }
-
+  picture {
+    display: block;
+    height: 15%;
+  }
   .swiper {
-    width: 30%;
+    width: 100%;
     height: 8rem;
 
     .swiper-slide {
@@ -165,11 +169,18 @@
       }
       p {
         color: #9f9f9f;
+        width: max-content;
         a {
           color: var(--text-gray);
+          font-size: x-small;
         }
-        .act{
+        .act {
           color: var(--bili-blue);
+        }
+        i {
+          margin: 0 1em;
+          color: #545454;
+          font-size: xx-small;
         }
       }
     }
@@ -186,88 +197,34 @@
   }
 
   .container-fluid {
-    height: calc(100% - 128px);
-    background: url(../../images/build-bgimg.jpg) no-repeat center center;
+    height: calc(85% - 128px);
     position: relative;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-evenly;
-
-    .left {
-      width: calc(100% / 3);
+    .row {
       height: 100%;
-      // background: #555;
-      position: relative;
-
-      &:hover .card {
-        visibility: visible;
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      .card {
-        visibility: hidden;
-        position: absolute;
-        right: 0;
-        top: 20%;
-        width: max-content;
-        max-width: 80%;
-        transform: translateX(-100%);
-        opacity: 0;
-
-        span {
-          font-size: 1.5rem;
-          font-weight: bold;
-          vertical-align: sub;
-        }
-
-        li {
-          margin-top: 0.5em;
-          font-size: small;
-        }
-      }
-    }
-
-    .md {
-      width: calc(100% / 3);
-      height: 100%;
-      // background: #000;
-      position: relative;
-    }
-
-    .right {
-      width: calc(100% / 3);
-      height: 100%;
-      // background: #555;
-      position: relative;
-
-      &:hover .card {
-        visibility: visible;
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      .card {
-        visibility: hidden;
-        position: absolute;
-        right: 0;
-        top: 20%;
-        width: max-content;
-        max-width: 80%;
-        transform: translateX(100%);
-        opacity: 0;
-
-        span {
-          font-size: 1.5rem;
-          font-weight: bold;
-          vertical-align: sub;
-        }
-
-        li {
-          margin-top: 0.5em;
-          font-size: small;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      div[class*="col-"] {
+        width: calc(98% / 4);
+        height: calc(98% / 3);
+        background: var(--blue-gray);
+        display: flex;
+        .box {
+          display: flex;
+          height: 80%;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          align-self: center;
+          color: var(--text-gray-hover);
+          i {
+            font-size: 3.5rem;
+          }
         }
       }
     }
