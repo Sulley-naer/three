@@ -42,6 +42,9 @@
   .cop {
     transform: scale(0.6);
   }
+  .cop p {
+    line-height: 1.4em;
+  }
 }
 
 @media screen and (max-width: 835px) {
@@ -109,8 +112,13 @@
   --bili-blue: #00aeec;
 }
 
+i{
+  font-style: normal;
+}
+
 a {
   text-decoration: none !important;
+  color: inherit;
 }
 
 header {
