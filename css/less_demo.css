@@ -112,8 +112,13 @@
   --bili-blue: #00aeec;
 }
 
+i{
+  font-style: normal;
+}
+
 a {
   text-decoration: none !important;
+  color: inherit;
 }
 
 header {
