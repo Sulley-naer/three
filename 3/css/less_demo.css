@@ -158,11 +158,29 @@
   text-align: center;
   padding-bottom: 4rem;
 }
+.introduce .AiTechnology::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: -13%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.introduce .AiTechnology::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: -13%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
 .introduce .AiTechnology:nth-child(1) {
   padding-bottom: 0;
 }
 .introduce .AiTechnology:nth-child(1) .AiTechnology-body-right-img {
-  background: url(../../images/product/iBox-D.png) no-repeat;
+  background: no-repeat;
   background-size: contain;
 }
 .introduce .AiTechnology:nth-child(3) {
@@ -174,24 +192,6 @@
 .introduce .AiTechnology:nth-child(3) .AiTechnology-title p {
   transform: scale(0.8);
   color: #d3d3d354;
-}
-.introduce .AiTechnology::after {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 2px;
-  top: 4rem;
-  left: -13%;
-  background: linear-gradient(to right, #2f4da5, #5ba6e4);
-}
-.introduce .AiTechnology::before {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 2px;
-  top: 4rem;
-  right: -13%;
-  background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology .AiTechnology-bg {
   position: absolute;
@@ -220,14 +220,16 @@
   justify-content: space-between;
   color: #e6e7f0;
 }
-.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-top {
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-top {
   padding-top: 1rem;
 }
-.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-center {
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .content {
   padding-top: 1.5rem;
-  margin-bottom: 0;
 }
-.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-foot {
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .content p:not(:first-child) {
+  margin-bottom: 0.5em;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot {
   margin-top: 2.5rem;
   min-width: 10rem;
   height: 3em;
@@ -241,13 +243,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
-.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-foot i {
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot i {
   width: 15px;
   height: 15px;
   display: flex;
 }
-.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-foot:hover {
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot:hover {
   background: var(--head-bg-hover);
   background: #00000045;
   border: 3px solid #c2c2c2;
@@ -256,7 +259,7 @@
 .introduce .AiTechnology .AiTechnology-body-right-img {
   width: 28%;
   height: 16rem;
-  background: url(../../images/product/iBox-F.png) no-repeat;
+  background: no-repeat;
   background-size: contain;
   border-radius: 0.5rem;
   overflow: hidden;

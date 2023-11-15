@@ -257,10 +257,12 @@
             <div class="AiTechnology-body">
                 <div class="AiTechnology-body-left">
                     <h2 class="AiTechnology-body-top">Agile iBox-D</h2>
-                    <p class="AiTechnology-body-center">支持车辆识别、行为(倒地、打架、抽烟、打电话等)、闯入分析、烟火、船<br>
-                        只等多种目标识别算法，准确率95%，持算法在线升级、更新算法:支持摄像<br>
-                        头云台控制 (部分摄像机) :配套智慧云视平台，也可以提供成熟的HTTP数<br>
-                        据上行接口。</p>
+                    <div class="content">
+                        <p>支持车辆识别、行为(倒地、打架、抽烟、打电话等)、闯入分析、烟火、船</p>
+                        <p>只等多种目标识别算法，准确率95%，持算法在线升级、更新算法:支持摄像</p>
+                        <p>头云台控制 (部分摄像机) :配套智慧云视平台，也可以提供成熟的HTTP数</p>
+                        <p>据上行接口。</p>
+                    </div>
                     <button class="AiTechnology-body-foot"><span>了解更多</span>
                         <i>
                             <svg t="1699597990089" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -273,7 +275,9 @@
                         </i>
                     </button>
                 </div>
-                <div class="AiTechnology-body-right-img"></div>
+                <div class="AiTechnology-body-right-img bi">
+                    <source src="../images/product/iBox-D.png" type="">
+                </div>
             </div>
         </div>
         <div class="AiTechnology">
@@ -285,7 +289,8 @@
                 <div class="AiTechnology-body-left">
                     <h2 class="AiTechnology-body-top">Agile iBox-F</h2>
                     <p class="AiTechnology-body-center">Agile
-                        iBox-F高/低密人脸分析盒，高速分析人脸，配合人脸识别摄像头IPC22<br>抓拍使用，适用于多种人脸动态识别场景，人脸布控，无感考勤点名等.</p>
+                        iBox-F高/低密人脸分析盒，高速分析人脸，配合人脸识别摄像头IPC22</p>
+                    <p>抓拍使用，适用于多种人脸动态识别场景，人脸布控，无感考勤点名等.</p>
                     <button class="AiTechnology-body-foot"><span>了解更多</span>
                         <i>
                             <svg t="1699597990089" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -298,7 +303,9 @@
                         </i>
                     </button>
                 </div>
-                <div class="AiTechnology-body-right-img"></div>
+                <div class="AiTechnology-body-right-img bi">
+                    <source  src="../images/product/iBox-F.png" type="">
+                </div>
             </div>
         </div>
         <div class="AiTechnology">
@@ -314,7 +321,7 @@
                     <div class="AiTechnology-introduce">
                         <p>依托丰富强大的AI分析能力，从提供AI分析、边缘<br>
                             计算、公有云、私有云等技术，到重新定义家校沟<br>
-                            通、校园智能安防、数字化教育等轻量化应用平台</p>
+                            通、校园智能安防、数字化教育等轻量化应用平台</br>
                         <div class="tz">
                             <a href="javaScript:;">区级/校级智能安防方案</a>
                             <a href="javaScript:;">区级/校级智慧校园方案</a>
@@ -439,6 +446,9 @@
 <script src="../bootstrap/fullPage.js-4.0.20/dist/fullpage.js"></script>
 <script>
     $('.swiper-slide').each(function (index, item) {
+        $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
+    })
+    $('.bi').each(function (index, item) {
         $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
     })
 </script>
