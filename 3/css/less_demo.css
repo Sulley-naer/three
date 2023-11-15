@@ -180,7 +180,7 @@
   padding-bottom: 0;
 }
 .introduce .AiTechnology:nth-child(1) .AiTechnology-body-right-img {
-  background: no-repeat;
+  background: no-repeat center;
   background-size: contain;
 }
 .introduce .AiTechnology:nth-child(3) {
@@ -259,7 +259,7 @@
 .introduce .AiTechnology .AiTechnology-body-right-img {
   width: 28%;
   height: 16rem;
-  background: no-repeat;
+  background: no-repeat center;
   background-size: contain;
   border-radius: 0.5rem;
   overflow: hidden;
