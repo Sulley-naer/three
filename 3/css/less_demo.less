@@ -189,11 +189,37 @@
         text-align: center;
         padding-bottom: 4rem;
 
-        &:nth-child(1) {padding-bottom: 0;
-        .AiTechnology-body-right-img{
-            background: url(../../images/product/iBox-D.png) no-repeat;
-            background-size: contain;
-        }}
+        &::after {
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 2px;
+            top: 4rem;
+            left: -13%;
+            background: linear-gradient(to right,
+                    rgb(47, 77, 165),
+                    rgb(91, 166, 228));
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 2px;
+            top: 4rem;
+            right: -13%;
+            background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+        }
+
+        &:nth-child(1) {
+            padding-bottom: 0;
+
+            .AiTechnology-body-right-img {
+                background: no-repeat center;
+                background-size: contain;
+            }
+        }
+
         &:nth-child(3) {
             background: rgb(13, 28, 89);
 
@@ -210,27 +236,6 @@
         }
 
 
-        &::after {
-            position: absolute;
-            content: "";
-            width: 30%;
-            height: 2px;
-            top: 4rem;
-            left: -13%;
-            background: linear-gradient(to right,
-                    rgb(47, 77, 165),
-                    rgb(91, 166, 228));
-        }
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: 30%;
-            height: 2px;
-            top: 4rem;
-            right: -13%;
-            background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
-        }
 
         .AiTechnology-bg {
             position: absolute;
@@ -264,56 +269,66 @@
             justify-content: space-between;
             color: rgb(230, 231, 240);
 
-            .AiTechnology-body-top {
-                padding-top: 1rem;
-            }
+            .AiTechnology-body-left {
+                .AiTechnology-body-top {
+                    padding-top: 1rem;
+                }
 
-            .AiTechnology-body-center {
-                padding-top: 1.5rem;
-                margin-bottom: 0;
-            }
+                .content {
+                    padding-top: 1.5rem;
 
-            .AiTechnology-body-foot {
-                margin-top: 2.5rem;
-                min-width: 10rem;
-                height: 3em;
-                border-radius: 25px;
-                padding: 0px 33px;
-                background: var(--head-bg);
-                background: #00000025;
-                outline: none;
-                color: rgb(230, 231, 240);
-                border: 3px solid rgb(230, 231, 240);
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                    p {
+                        &:not(:first-child) {
+                            margin-bottom: .5em;
+                        }
+                    }
+                }
 
-                i {
-                    width: 15px;
-                    height: 15px;
+                .AiTechnology-body-foot {
+                    margin-top: 2.5rem;
+                    min-width: 10rem;
+                    height: 3em;
+                    border-radius: 25px;
+                    padding: 0px 33px;
+                    background: var(--head-bg);
+                    background: #00000025;
+                    outline: none;
+                    color: rgb(230, 231, 240);
+                    border: 3px solid rgb(230, 231, 240);
                     display: flex;
-                }
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2rem;
 
-                &:hover {
-                    background: var(--head-bg-hover);
-                    background: #00000045;
-                    border: 3px solid rgb(194, 194, 194);
-                    color: rgb(194, 194, 194);
+                    i {
+                        width: 15px;
+                        height: 15px;
+                        display: flex;
+                    }
+
+                    &:hover {
+                        background: var(--head-bg-hover);
+                        background: #00000045;
+                        border: 3px solid rgb(194, 194, 194);
+                        color: rgb(194, 194, 194);
+                    }
+
                 }
 
             }
-
         }
 
         .AiTechnology-body-right-img {
             width: 28%;
             height: 16rem;
-            background: url(../../images/product/iBox-F.png) no-repeat;
+            background: no-repeat center;
             background-size: contain;
             border-radius: 0.5rem;
             overflow: hidden;
             margin: 0 0 2rem 0;
         }
+
+
 
         .AiTechnology-images {
             display: flex;
