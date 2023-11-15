@@ -10,14 +10,20 @@ $('.banner .swiper .swiper-slide p a').click(function () {
 })
 
 $('.banner .container-fluid .row div[class*="col-"]').mouseover(function () {
-    $(this).children('video').css({
-        display: 'block',
+    $(this).children('video').stop().css({
+      display: 'block',
+      transition : 'none',
+    }).animate({
         opacity: 1
-    })
+    }, 500)
     $(this).mouseleave(function () {
-        $(this).children('video').css({
+        $(this).children('video').stop().animate({
+          opacity: 0
+        }, 300, function () {
+          $(this).css({
             display: 'none',
-            opacity: 0
+            transition : 'none',
+          })
         })
     })
 })
