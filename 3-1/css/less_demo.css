@@ -208,3 +208,125 @@
   margin-top: 0.5em;
   font-size: small;
 }
+.terminal {
+  padding: 4rem 0;
+  position: relative;
+}
+.terminal::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: -15%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.terminal::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: -15%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.terminal .terminalTop-bg {
+  position: absolute;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  height: 8rem;
+  background: no-repeat center;
+  background-size: contain;
+}
+.terminal .little {
+  padding: 2rem 10% 0;
+}
+.terminal .little .summary {
+  height: 5rem;
+  display: flex;
+  align-content: space-around !important;
+  flex-wrap: wrap !important;
+  flex-direction: column !important;
+}
+.terminal .little .summary .content {
+  width: 65%;
+}
+.terminal .little .summary .content .gradient {
+  background-image: linear-gradient(to right, #405cca, #59bbf1);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.875rem;
+}
+.terminal .iBox-D-introduce,
+.terminal .iBox-F-introduce {
+  padding-top: 4rem;
+  position: relative;
+}
+.terminal .iBox-D-introduce .iBox-introduce-imgs,
+.terminal .iBox-F-introduce .iBox-introduce-imgs {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.terminal .iBox-D-introduce .iBox-introduce-imgs img,
+.terminal .iBox-F-introduce .iBox-introduce-imgs img {
+  width: 30%;
+}
+.terminal .iBox-D-introduce .introduce-left,
+.terminal .iBox-F-introduce .introduce-left {
+  padding-top: 2rem;
+  padding-right: 0;
+  background: no-repeat center;
+  background-size: cover;
+}
+.terminal .iBox-D-introduce .introduce-left .introduce-content,
+.terminal .iBox-F-introduce .introduce-left .introduce-content {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #fff;
+  color: #f0f0f0;
+}
+.terminal .iBox-D-introduce .introduce-left .introduce-content p,
+.terminal .iBox-F-introduce .introduce-left .introduce-content p {
+  font-size: 1.875rem;
+}
+.terminal .iBox-D-introduce .introduce-left .introduce-content small,
+.terminal .iBox-F-introduce .introduce-left .introduce-content small {
+  margin-bottom: 2rem;
+}
+.terminal .iBox-D-introduce .introduce-right,
+.terminal .iBox-F-introduce .introduce-right {
+  position: relative;
+  background: rgba(0, 0, 0, 0.02);
+}
+.terminal .iBox-D-introduce .introduce-right .parameterText,
+.terminal .iBox-F-introduce .introduce-right .parameterText {
+  width: max-content;
+  padding: 2rem 1rem;
+  font-size: 1.875rem;
+  border-top: 1px solid #a8a8a8;
+  border-bottom: 1px solid #a8a8a8;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter,
+.terminal .iBox-F-introduce .introduce-right .parameter {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter li,
+.terminal .iBox-F-introduce .introduce-right .parameter li {
+  margin-bottom: 1rem;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter li:nth-child(1),
+.terminal .iBox-F-introduce .introduce-right .parameter li:nth-child(1) {
+  font-size: 1.875rem;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter li:nth-child(1) p,
+.terminal .iBox-F-introduce .introduce-right .parameter li:nth-child(1) p {
+  margin: 0;
+}

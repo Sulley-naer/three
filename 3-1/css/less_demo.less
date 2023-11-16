@@ -5,7 +5,7 @@
   padding: 0;
 
   /* <-- 自定义swiper组件 --> */
-  .swiper-pagination > span {
+  .swiper-pagination>span {
     width: 2em !important;
     height: 4px !important;
     transform: skewX(-45deg);
@@ -65,7 +65,7 @@
       color: var(--text-gray);
       z-index: 2;
 
-      > h1 {
+      >h1 {
         color: var(--text-gray-hover);
 
         i {
@@ -76,7 +76,7 @@
         }
       }
 
-      > * {
+      >* {
         margin-top: 1em;
         color: var(--text-lighter);
       }
@@ -243,6 +243,142 @@
         li {
           margin-top: 0.5em;
           font-size: small;
+        }
+      }
+    }
+  }
+}
+
+.terminal {
+  padding: 4rem 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    left: -15%;
+    background: linear-gradient(to right,
+        rgb(47, 77, 165),
+        rgb(91, 166, 228));
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    right: -15%;
+    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+
+  .terminalTop-bg {
+    position: absolute;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    height: 8rem;
+    background: no-repeat center;
+    background-size: contain;
+  }
+
+  .little {
+    padding: 2rem 10% 0;
+
+    .summary {
+      height: 5rem;
+      display: flex;
+      align-content: space-around !important;
+      flex-wrap: wrap !important;
+      flex-direction: column !important;
+
+      .content {
+        width: 65%;
+
+        //渐变
+        .gradient {
+          background-image: linear-gradient(to right, rgb(64, 92, 202), rgb(89, 187, 241));
+          -webkit-background-clip: text;
+          color: transparent;
+          font-size: 1.875rem;
+        }
+      }
+    }
+  }
+
+  .iBox-D-introduce,
+  .iBox-F-introduce {
+    padding-top: 4rem;
+    position: relative;
+
+    .iBox-introduce-imgs {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 30%;
+      }
+    }
+
+    .introduce-left {
+      padding-top: 2rem;
+      padding-right: 0;
+      background:no-repeat center;
+      background-size: cover;
+
+      .introduce-content {
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid #fff;
+        color: #f0f0f0;
+
+        p {
+          font-size: 1.875rem;
+        }
+
+        small {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .introduce-right {
+      position: relative;
+      background: rgba(0, 0, 0, .02);
+
+      .parameterText {
+        width: max-content;
+        padding: 2rem 1rem;
+        font-size: 1.875rem;
+        border-top: 1px solid #a8a8a8;
+        border-bottom: 1px solid #a8a8a8;
+      }
+
+      .parameter {
+        text-align: left;
+        margin-bottom: 3rem;
+
+        li {
+          margin-bottom: 1rem;
+
+          &:nth-child(1) {
+            font-size: 1.875rem;
+
+            p {
+              margin: 0;
+            }
+
+            ;
+          }
         }
       }
     }
