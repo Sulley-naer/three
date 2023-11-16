@@ -38,6 +38,9 @@ a {
   .cop {
     transform: scale(0.6);
   }
+  .cop p {
+    line-height: 1.4em;
+  }
 }
 @media screen and (max-width: 835px) {
   .foot-content > .col-2 {
