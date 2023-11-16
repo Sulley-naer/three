@@ -554,8 +554,6 @@
         </div>
         <div class="AiTechnology-body">
 
-
-
             <div class="card">
                 <div class="mark"></div>
 
@@ -577,17 +575,51 @@
                             <div class="card-title"><i class="iconfont">&#xe622;</i>
                                 <h2>人脸属性分析</h2>
                             </div>
-
-                            <p class="card-text">快速检测人脸并返回人类框信息,&#32;准确识别多种属性信息,&#32;包括年龄性别、颜值、表情、情绪、脸型、头部姿态、是否闭眼、是否佩戴眼睛、人类质量信息及类型等。</p>
+                            <p class="card-text">
+                                快速检测人脸并返回人类框信息,&#32;准确识别多种属性信息,&#32;包括年龄性别、颜值、表情、情绪、脸型、头部姿态、是否闭眼、是否佩戴眼睛、人类质量信息及类型等。</p>
                             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <div class="AiTechnology">
+        <div class="AiTechnology-title">
+            <p>准确度及速度</p>
+        </div>
+        <div class="AiTechnology-body">
 
+            <div class="card bi">
+                <source type="" data-bg-img="linear-gradient(45deg,#2572de 0%, #2fbec7 50%,#0350bf 100%)">
+
+                <!-- <div class="mark"></div> -->
+
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2>准确度及速度</h2>
+                            </div>
+                            <p class="card-text">
+                                在AI智能边缘计算终端中,&#32;准确率90%以上的前提下,&#32;检测速度可以达到150毫秒;&#32;在服务器环境下,&#32;速度可以达到30毫秒。将目标区域检测和目标分类检测整合到了单个神经网络模型中,&#32;实现在准确率较高的情况下快速目标检测与识别。
+                            </p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        </div>
+                    </div>
+                    <!-- <div class="vr d-md-inline-block"></div> -->
+                    <!-- <div class="hr d-md-none"></div> -->
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <picture class="bi" data-auto>
+                                <source src="../images/network-R.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footbox">
         <div class="foot-top d-flex">
             <div class="foot-logo">
@@ -658,7 +690,56 @@
     $('.swiper-slide').each(function (index, item) {
         $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
     })
-    $('.bi').each(function (index, item) {
-        $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
-    })
+    $(document).ready(function () {
+        $('.bi').each(function (index, item) {
+            if ($(item).find('source').attr('src') != undefined) {
+                console.log('传入src')
+                if ($(item).attr('data-auto') != undefined) {
+                    autosize()
+                }
+                else {
+                    $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
+
+                }
+            }
+            if ($(item).find('source').attr('data-bg-img') != undefined) {
+                console.log('传入渐变')
+                $(item).css('background-image', $(item).find('source').attr('data-bg-img'))
+            }
+            if ($(item).find('source').attr('data-color') != undefined) {
+                console.log('传入颜色')
+                $(item).css('background-color', $(item).find('source').attr('data-color'))
+            }
+            //src智能宽高
+            function autosize() {
+                var src, h, w;
+                src = $(item).find('source').attr('src');
+                if (src != undefined) {
+                    $(item).css('background-image', 'url(' + src + ')');
+                    // 创建一个Image对象，用来获取图片的原始大小
+                    var img = new Image();
+                    // 把相对路径转换成绝对路径
+                    img.src = new URL(src, window.location.href).href;
+                    // 当图片加载完成后
+                    img.onload = function () {
+                        // 获取图片的原始宽度和高度
+                        h = img.height;
+                        w = img.width;
+                        // 把原始宽度和高度设置给picture元素，并且保持图片的比例
+                        $(item).css({
+                            width: w + 'px',
+                            height: h + 'px',
+                            // 设置display属性为block或inline-block
+                            display: 'block'
+                        });
+                        //打印日志
+                        console.log(' 标签序号：' + index + ' src: ' + src + ' 宽: ' + h + ' 高: ' + h);
+                        console.log(item);
+                    }
+                };
+            }
+        })
+    });
+
+
 </script>

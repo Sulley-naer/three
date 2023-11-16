@@ -321,7 +321,7 @@
   width: 40%;
   height: 2px;
   top: 4rem;
-  right: -13%;
+  right: 0;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .AiTechnology .AiTechnology-bg {
@@ -340,7 +340,8 @@
 }
 .AiTechnology .AiTechnology-title p {
   transform: scale(1);
-  color: var(--text-lighter);
+  color: var(--bs-gray-600);
+  margin-bottom: 2em;
 }
 .AiTechnology .AiTechnology-body {
   position: relative;
@@ -370,6 +371,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] {
   padding: 15px;
@@ -398,6 +400,12 @@
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-text {
   /*               width: max-content;
               max-width: 23rem; */
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body picture {
+  display: block;
+  max-width: 100%;
+  background: center center no-repeat;
+  background-size: contain;
 }
 .AiTechnology .AiTechnology-body .card .mark {
   width: 100%;
@@ -459,7 +467,7 @@
   align-items: center;
 }
 .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
-  color: var(--text-gray-hover);
+  color: var(--bs-gray-600);
   margin-bottom: 0;
 }
 .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p .tz {
