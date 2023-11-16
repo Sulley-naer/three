@@ -8,6 +8,7 @@
   --bili-pink: #ff3272;
   --bili-blue: #00aeec;
   --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
 }
 .swiper {
   width: 100%;
@@ -241,4 +242,274 @@
   opacity: 0;
   z-index: 1;
   background: #242426;
+}
+.AiTechnology {
+  position: relative;
+  padding: 0 10%;
+  padding-top: 8rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  z-index: 1;
+}
+.AiTechnology .head-button {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  color: var(--bili-blue);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  border: 2px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+}
+.AiTechnology .head-button:hover::before {
+  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
+.AiTechnology .head-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--bili-blue), var(--blue-gray));
+  z-index: -1;
+}
+.AiTechnology .head-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  width: 98%;
+  height: 90%;
+  background: #fff;
+  z-index: -1;
+  border-radius: 33px;
+}
+.AiTechnology:nth-child(1) {
+  padding-bottom: 0;
+}
+.AiTechnology:nth-child(1) .AiTechnology-body-right-img {
+  background: url(../../images/product/iBox-D.png) no-repeat;
+  background-size: contain;
+}
+.AiTechnology:nth-child(3) {
+  background: #0d1c59;
+}
+.AiTechnology:nth-child(3) .AiTechnology-title h3 {
+  color: #dedede;
+}
+.AiTechnology:nth-child(3) .AiTechnology-title p {
+  transform: scale(0.8);
+  color: #d3d3d354;
+}
+.AiTechnology::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: -13%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.AiTechnology::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: -13%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.AiTechnology .AiTechnology-bg {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  width: 100%;
+  height: 73%;
+  background: url(../../images/line-bg.svg) no-repeat center center;
+  bottom: 0;
+  left: 0;
+  background-size: contain;
+}
+.AiTechnology .AiTechnology-title h3 {
+  color: #141414;
+}
+.AiTechnology .AiTechnology-title p {
+  transform: scale(0.8);
+  color: rgba(172, 172, 172, 0.573);
+}
+.AiTechnology .AiTechnology-body {
+  position: relative;
+  padding: 0 5%;
+  padding-top: 0rem;
+  background: url(../../images/algorithm-facesb-bg.jpg);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  color: #e6e7f0;
+  width: 70%;
+  margin: auto;
+  height: 300px;
+}
+.AiTechnology .AiTechnology-body .mark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff1a;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .title {
+  display: flex;
+  align-items: center;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .title i {
+  font-size: xxx-large;
+  margin: 0 0.5em 0 0;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .title h2 {
+  color: var(--text-lighter);
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .content p {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: small;
+  color: var(--text-lighter);
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .content p:first-child {
+  margin-top: 1.5rem;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot {
+  margin-top: 2.5rem;
+  min-width: 10rem;
+  height: 3em;
+  border-radius: 25px;
+  padding: 0px 33px;
+  background: var(--head-bg);
+  background: #00000025;
+  outline: none;
+  color: #e6e7f0;
+  border: 3px solid #e6e7f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot i {
+  width: 15px;
+  height: 15px;
+  display: flex;
+}
+.AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot:hover {
+  background: var(--head-bg-hover);
+  background: #00000045;
+  border: 3px solid #c2c2c2;
+  color: #c2c2c2;
+}
+.AiTechnology .AiTechnology-body-right-img {
+  padding-top: 2em;
+  width: 50%;
+  height: 16rem;
+  background: no-repeat;
+  background-size: contain;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 0 2rem 0;
+}
+.AiTechnology .AiTechnology-images {
+  display: flex;
+  justify-content: center;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img {
+  position: relative;
+  padding: 6.8% 12%;
+  margin: 0.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(160deg, rgba(16, 52, 117, 0.8), rgba(33, 67, 193, 0.8));
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img p {
+  padding-top: 0.8rem;
+  color: var(--text-gray);
+  width: max-content;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce {
+  position: absolute;
+  top: 0;
+  padding-top: 4rem;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/solution-mask.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
+  color: var(--text-gray-hover);
+  margin-bottom: 0;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p .tz {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p .tz a {
+  padding: 0.2rem 0.5rem;
+  width: max-content;
+  font-size: 0.8rem;
+  color: var(--text-gray-hover);
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 9rem;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span {
+  position: absolute;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(1) {
+  width: 0%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  background: #8debf1;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(2) {
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  background: #94b9fd;
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(3) {
+  width: 2px;
+  height: 0%;
+  left: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom, #94b9fd, #8debf1);
+}
+.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(4) {
+  width: 2px;
+  height: 0%;
+  right: 0;
+  background: linear-gradient(to bottom, #8debf1, #94b9fd);
 }

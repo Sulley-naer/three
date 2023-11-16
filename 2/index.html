@@ -546,6 +546,48 @@
     </div>
     </div>
 
+    <div class="AiTechnology">
+
+        <div class="head-button">图像识别算法定制服务 > </div>
+        <div class="AiTechnology-title">
+            <p>人脸识别</p>
+        </div>
+        <div class="AiTechnology-body">
+
+
+            <div class="mark"></div>
+
+            <div class="AiTechnology-body-left">
+
+                <div class="title">
+                    <i class="iconfont">&#xe773;</i>
+                    <h2 class="AiTechnology-body-top">人脸分析</h2>
+                </div>
+
+                <div class="content">
+                    <p>利用高精度人脸识别、对比能力、可用于考勤、</p>
+                    <p>闸机,&#32;会员识别等</p>
+                </div>
+            </div>
+            <div class="vr"></div>
+            <div class="AiTechnology-body-left">
+
+                <div class="title">
+                    <i class="iconfont">&#xe622;</i>
+                    <h2 class="AiTechnology-body-top">人脸属性分析</h2>
+                </div>
+
+                <div class="content">
+                    <p>快速检测人脸并返回人类框位置,&#32;准确识别多种属性</p>
+                    <p>信息,&#32;包括年龄、识别、颜值、情绪、脸</p>
+                    <p>形、头部质态、是否闭眼、是否佩戴眼镜、人类质</p>
+                    <p>量信息及类型等。</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="footbox">
         <div class="foot-top d-flex">
             <div class="foot-logo">
@@ -614,6 +656,9 @@
 <script>
     //img变为背景
     $('.swiper-slide').each(function (index, item) {
+        $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
+    })
+    $('.bi').each(function (index, item) {
         $(item).css('background-image', 'url(' + $(item).find('source').attr('src') + ')')
     })
 </script>
