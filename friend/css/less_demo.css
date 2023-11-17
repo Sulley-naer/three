@@ -9,6 +9,16 @@
   --bili-blue: #00aeec;
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
+  --black: #000;
+}
+.swiper .swiper-slide content {
+  display: flex !important;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.swiper .swiper-slide {
+  background-size: contain !important;
 }
 .swiper {
   width: 100%;
@@ -115,7 +125,7 @@
 .AiTechnology .head-button {
   position: absolute;
   left: 50%;
-  top: 2rem;
+  bottom: 0;
   transform: translate(-50%, 0);
   color: var(--bili-blue);
   padding: 0.5em 1em;
@@ -125,6 +135,8 @@
   border-radius: 25px;
   overflow: hidden;
   background: #fff;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 .AiTechnology .head-button:hover::before {
   background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
@@ -143,8 +155,8 @@
   content: "";
   display: block;
   position: absolute;
-  left: 2px;
-  width: 98%;
+  left: 4px;
+  width: 94%;
   height: 90%;
   background: #fff;
   z-index: -1;
@@ -157,34 +169,6 @@
   background: url(../../images/product/iBox-D.png) no-repeat;
   background-size: contain;
 }
-.AiTechnology:nth-child(3) {
-  background: #0d1c59;
-}
-.AiTechnology:nth-child(3) .AiTechnology-title h3 {
-  color: #dedede;
-}
-.AiTechnology:nth-child(3) .AiTechnology-title p {
-  transform: scale(0.8);
-  color: #d3d3d354;
-}
-.AiTechnology::after {
-  position: absolute;
-  content: "";
-  width: 40%;
-  height: 2px;
-  top: 4rem;
-  left: -13%;
-  background: linear-gradient(to right, #2f4da5, #5ba6e4);
-}
-.AiTechnology::before {
-  position: absolute;
-  content: "";
-  width: 40%;
-  height: 2px;
-  top: 4rem;
-  right: 0;
-  background: linear-gradient(to left, #2f4da5, #5ba6e4);
-}
 .AiTechnology .AiTechnology-bg {
   position: absolute;
   display: block;
@@ -196,14 +180,6 @@
   left: 0;
   background-size: contain;
 }
-.AiTechnology .AiTechnology-title h3 {
-  color: #141414;
-}
-.AiTechnology .AiTechnology-title p {
-  transform: scale(1);
-  color: var(--bs-gray-600);
-  margin-bottom: 2em;
-}
 .AiTechnology .AiTechnology-body {
   position: relative;
   text-align: left;
@@ -213,41 +189,58 @@
   margin: auto;
   height: max-content;
   width: max-content;
-  max-width: 100%;
+  max-width: 85%;
+}
+.AiTechnology .AiTechnology-body:not(:first-child) {
+  margin-top: -5%;
+}
+.AiTechnology .AiTechnology-body:not(:first-child) .card .row div[class*="col-"] .card-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.AiTechnology .AiTechnology-body:not(:first-child) .card .row div[class*="col-"] .card-title {
+  justify-content: flex-end;
+}
+.AiTechnology .AiTechnology-body:not(:first-child) .card .row div[class*="col-"] .card-text {
+  text-align: end;
 }
 .AiTechnology .AiTechnology-body .card {
   width: 100%;
   position: relative;
-  background: url(../../images/algorithm-facesb-bg.jpg) no-repeat;
+  background: no-repeat;
   background-size: cover;
   z-index: 2;
   height: max-content;
   min-height: 300px;
   justify-content: center;
   align-items: center;
+  border: 0;
 }
 .AiTechnology .AiTechnology-body .card .row {
   height: max-content;
   max-width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  color: var(--black);
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] {
-  padding: 15px;
+  padding: 0;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body {
+  position: relative;
   width: max-content;
   max-width: 100%;
-  margin: auto;
+  padding-bottom: 6em;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body *:not(:first-child) {
   margin-top: 1rem;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title {
+  padding: 1em 0;
   display: flex;
   align-items: center;
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title i {
   font-size: xx-large;
@@ -259,8 +252,12 @@
   margin-left: 0.5em;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-text {
+  margin: 0;
   /*               width: max-content;
               max-width: 23rem; */
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-text:not(:first-child) {
+  margin-top: 0.5em;
 }
 .AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body picture {
   display: block;
@@ -287,6 +284,70 @@
 .AiTechnology .AiTechnology-body .card .hr {
   width: 100%;
   display: inline-block;
+}
+.AiTechnology:not(:first-child) {
+  margin-top: -7%;
+}
+.AiTechnology:not(:first-child) .card {
+  width: 100%;
+  position: relative;
+  background: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  height: max-content;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+.AiTechnology:not(:first-child) .card .row {
+  height: max-content;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  color: var(--black);
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] {
+  padding: 0;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  padding-bottom: 6em;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body *:not(:first-child) {
+  margin-top: 1rem;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body .card-title {
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body .card-title i {
+  font-size: xx-large;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body .card-title h2 {
+  margin: 0;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body .card-title *:not(:first-child) {
+  margin-left: 0.5em;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body .card-text {
+  margin: 0;
+  /*               width: max-content;
+              max-width: 23rem; */
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body .card-text:not(:first-child) {
+  margin-top: 0.5em;
+}
+.AiTechnology:not(:first-child) .card .row div[class*="col-"] .card-body picture {
+  display: block;
+  max-width: 100%;
+  background: center center no-repeat;
+  background-size: contain;
 }
 .AiTechnology .AiTechnology-body-right-img {
   padding-top: 2em;
@@ -383,4 +444,108 @@
   height: 0%;
   right: 0;
   background: linear-gradient(to bottom, #8debf1, #94b9fd);
+}
+.adbox {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.adbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 30%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: url(../../images/title-divide-line.png) no-repeat;
+}
+.adbox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  transform: translateY(-50%) rotate(180deg);
+  width: 30%;
+  height: 2px;
+  top: 0;
+  right: 0;
+  background: url(../../images/title-divide-line.png) no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .adbox > div {
+    width: 60% !important;
+  }
+  .adbox picture {
+    width: 100% !important;
+  }
+}
+.adbox > div {
+  margin: 1rem auto 0 auto;
+}
+.adbox > div .ad {
+  margin-left: auto;
+  margin-right: auto;
+}
+.adbox .at {
+  display: flex;
+}
+.adbox .w-15 {
+  width: 15%;
+}
+@media screen and (max-width: 1642px) {
+  .adbox .w-15 {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 910px) {
+  .adbox .w-15 {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 965px) {
+  .adbox .w-15 {
+    width: 50%;
+  }
+}
+.adbox .active {
+  color: skyblue;
+  transition: all 0.3s;
+}
+.adbox picture {
+  /* // background: #00000009; */
+  width: 75%;
+  height: 150px;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  display: none !important;
+}
+.adbox picture div {
+  border-radius: 25px;
+  overflow: hidden;
+}
+.adbox .act {
+  display: flex !important;
+}
+.adbox .act > div > img {
+  animation-name: dm;
+  animation-duration: 0.5s;
+}
+.foot_swiper {
+  max-height: 465px;
+}
+.foot_swiper content {
+  align-content: space-around;
+  flex-wrap: wrap;
+  align-items: center !important;
+}
+.foot_swiper content h1 {
+  font-size: xx-large;
+  font-weight: 100;
+}
+.foot_swiper content p {
+  color: var(--text-gray) !important;
 }

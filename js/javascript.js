@@ -12,11 +12,13 @@ $(document).ready(function () {
       console.log("传入src");
       if ($(item).attr("data-auto") != undefined) {
         autosize();
+        console.log("智能宽高");
       } else {
         $(item).css(
           "background-image",
           "url(" + $(item).find("source").attr("src") + ")"
         );
+        console.log("添加src");
       }
     }
     if ($(item).find("source").attr("data-bg-img") != undefined) {
