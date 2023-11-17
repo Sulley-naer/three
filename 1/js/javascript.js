@@ -173,27 +173,6 @@ $(document).ready(function () {
   })
 })
 
-/* $('.banner>div>div[class=left]').mouseover(function () { 
-  $(this).parent().css('background', 'url(../../images/build-bgimg-l.jpg) no-repeat center center')
-  $(this).mouseleave(function () {
-    $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center')
-  })
-})
-
-$('.banner>div>div[class=right]').mouseover(function () { 
-  $(this).parent().css('background', 'url(../../images/build-bgimg-r.jpg) no-repeat center center')
-  $(this).mouseleave(function () {
-    $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center')
-  })
-})
-
-$('.banner>div>div[class=md]').mouseover(function () { 
-  $(this).parent().css('background', 'url(../../images/build-bgimg-m.jpg) no-repeat center center')
-  $(this).mouseleave(function () {
-    $(this).parent().css('background', 'url(../../images/build-bgimg.jpg) no-repeat center center')
-  })
-}) */
-
 // 定义一个函数，接受两个参数：选择器和图片路径
 function changeBackground(selector, imagePath) {
   // 保存父元素的原始背景图片
