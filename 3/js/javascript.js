@@ -148,3 +148,4 @@ $(".ad").click(function () {
     img.eq($(this).index("dt")).attr("src", src); 
  });
 
+ 
