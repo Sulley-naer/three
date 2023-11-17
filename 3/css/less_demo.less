@@ -213,11 +213,6 @@
 
         &:nth-child(1) {
             padding-bottom: 0;
-
-            .AiTechnology-body-right-img {
-                background: no-repeat center;
-                background-size: contain;
-            }
         }
 
         &:nth-child(3) {
@@ -263,11 +258,38 @@
         .AiTechnology-body {
             padding: 0 5%;
             padding-top: 2rem;
-            background: url(../../images/deedfx-box-bg.jpg);
+            background: no-repeat center;
             text-align: left;
-            display: flex;
-            justify-content: space-between;
             color: rgb(230, 231, 240);
+
+            .learn-more {
+                margin-top: 2.5rem;
+                min-width: 10rem;
+                height: 3em;
+                border-radius: 25px;
+                padding: 0px 33px;
+                outline: none;
+                background: none;
+                border: 2px solid rgb(230, 231, 240);
+                color: rgb(230, 231, 240);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                i {
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                }
+
+                &:hover {
+                    background: var(--head-bg-hover);
+                    background: rgba(255, 255, 255, .08) !important;
+                }
+                &:focus{
+                    background:rgba(0,0,0,.4) !important;
+                }
+            }
 
             .AiTechnology-body-left {
                 .AiTechnology-body-top {
@@ -481,4 +503,12 @@
             }
         }
     }
+}
+
+.card-title {
+    margin-bottom: 2rem;
+}
+
+.card-text {
+    line-height: 3rem;
 }
