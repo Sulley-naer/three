@@ -148,12 +148,15 @@ $(document).ready(function () {
     img.eq($(this).index("dt")).attr("src", src);
   });
 
-  $("#ToiBox-D").on("click", function () {
-    localStorage.removeItem("iBox-F");
-    window.open("../3-1/index.html");
-  });
-  $("#ToiBox-F").on("click", function () {
-    sessionStorage.setItem("iBox-F", "1");
-    window.open("../3-1/index.html");
-  });
+$("#ToiBox-D").on("click", function () {
+  if (sessionStorage.getItem("iBox-F") !== null) {
+    sessionStorage.removeItem("iBox-F");
+  }
+  window.open("../3-1/index.html");
+});
+
+$("#ToiBox-F").on("click", function () {
+  sessionStorage.setItem("iBox-F", "1");
+  window.open("../3-1/index.html");
+});
 });
