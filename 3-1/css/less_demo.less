@@ -10,6 +10,13 @@
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
 }
+
+@media screen and (max-width: 1700px) {
+  .terminal {
+    overflow-x: hidden;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 67%;
@@ -17,7 +24,7 @@
   padding: 0;
 
   /* <-- 自定义swiper组件 --> */
-  .swiper-pagination>span {
+  .swiper-pagination > span {
     width: 2em !important;
     height: 4px !important;
     transform: skewX(-45deg);
@@ -77,7 +84,7 @@
       color: var(--text-gray);
       z-index: 2;
 
-      >h1 {
+      > h1 {
         color: var(--text-gray-hover);
 
         i {
@@ -88,7 +95,7 @@
         }
       }
 
-      >* {
+      > * {
         margin-top: 1em;
         color: var(--text-lighter);
       }
@@ -272,9 +279,7 @@
     height: 2px;
     top: 4rem;
     left: -15%;
-    background: linear-gradient(to right,
-        rgb(47, 77, 165),
-        rgb(91, 166, 228));
+    background: linear-gradient(to right, rgb(47, 77, 165), rgb(91, 166, 228));
   }
 
   &::before {
@@ -312,7 +317,11 @@
 
         //渐变
         .gradient {
-          background-image: linear-gradient(to right, rgb(64, 92, 202), rgb(89, 187, 241));
+          background-image: linear-gradient(
+            to right,
+            rgb(64, 92, 202),
+            rgb(89, 187, 241)
+          );
           -webkit-background-clip: text;
           color: transparent;
           font-size: 1.875rem;
@@ -342,7 +351,7 @@
     .introduce-left {
       padding-top: 2rem;
       padding-right: 0;
-      background:no-repeat center;
+      background: no-repeat center;
       background-size: cover;
 
       .introduce-content {
@@ -365,7 +374,7 @@
 
     .introduce-right {
       position: relative;
-      background: rgba(0, 0, 0, .02);
+      background: rgba(0, 0, 0, 0.02);
 
       .parameterText {
         width: max-content;
@@ -388,8 +397,6 @@
             p {
               margin: 0;
             }
-
-            ;
           }
         }
       }
@@ -406,6 +413,7 @@
   z-index: 1;
 
   .head-button {
+    width: max-content;
     position: absolute;
     left: 50%;
     top: 2rem;
@@ -421,9 +429,11 @@
 
     &:hover {
       &::before {
-        background-image: linear-gradient(to right,
-            var(--blue-gray),
-            var(--bili-blue));
+        background-image: linear-gradient(
+          to right,
+          var(--blue-gray),
+          var(--bili-blue)
+        );
       }
     }
 
@@ -434,9 +444,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(to right,
-          var(--bili-blue),
-          var(--blue-gray));
+      background-image: linear-gradient(
+        to right,
+        var(--bili-blue),
+        var(--blue-gray)
+      );
       // border-radius: 12px;
       z-index: -1;
     }
@@ -445,7 +457,7 @@
       content: "";
       display: block;
       position: absolute;
-      left: 1px;
+      left: 1.5px;
       width: 98%;
       height: 90%;
       background: #fff;
@@ -462,7 +474,6 @@
       background-size: contain;
     }
   }
-
 
   &::after {
     position: absolute;
@@ -507,7 +518,7 @@
       color: var(--bs-gray-600);
       margin-bottom: 1rem;
     }
-    small{
+    small {
       color: var(--text-gray);
     }
   }
@@ -570,7 +581,6 @@
               *:not(:first-child) {
                 margin-left: 0.5em;
               }
-              
             }
 
             picture {

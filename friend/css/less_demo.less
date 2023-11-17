@@ -12,6 +12,26 @@
   --black: #000;
 }
 
+@media screen and (max-width: 800px) {
+  .AiTechnology .AiTechnology-body:not(:first-child) {
+    margin-top: 5% !important;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .AiTechnology:not(:first-child) .card .row div[class*="col-"] {
+    padding-right: 2rem !important;
+  }
+}
+@media screen and (max-width: 770px) {
+  .card-body {
+    .card-title {
+      justify-content: center !important;
+    }
+    .card-text {
+      text-align: center !important;
+    }
+  }
+}
 .swiper .swiper-slide content {
   display: flex !important;
   align-items: flex-start;
@@ -143,6 +163,7 @@
   z-index: 1;
 
   .head-button {
+    width: max-content;
     position: absolute;
     left: 50%;
     bottom: 0;
