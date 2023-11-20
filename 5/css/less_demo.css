@@ -1,3 +1,17 @@
+@media screen and (max-width: 1250px) {
+  .objective {
+    width: 50% !important;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .objective .objective-content p {
+    width: 100% !important;
+  }
+  .objective .objective-content small {
+    display: none;
+  }
+}
 :root {
   --head-bg: rgba(3, 21, 75, 0.137);
   --head-bg-hover: rgba(3, 21, 75, 0.3);
@@ -113,12 +127,17 @@
   background: #00000045;
 }
 .objectives {
-  padding: 4rem 10% ;
+  padding: 4rem 10%;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 .objectives .objective {
   transition: all 0.5;
   width: 24%;
+  width: max-content;
+  max-width: 100%;
+  align-items: center;
+  flex-wrap: nowrap ;
   border-radius: 5px;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.17);
 }
@@ -131,6 +150,7 @@
   background: no-repeat center;
 }
 .objectives .objective .objective-content p {
+  width: max-content;
   margin-bottom: 0 !important;
 }
 .objectives .objective .objective-content small {
@@ -306,4 +326,27 @@
 }
 .ContactUs .ContactUsForm .form-group .form-group-row small a {
   color: #86b7fe;
+}
+.serve {
+  padding: 4rem 10% 0;
+  position: relative;
+  text-align: center;
+}
+.serve::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 0;
+  left: 0%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.serve::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 0;
+  right: 0%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }

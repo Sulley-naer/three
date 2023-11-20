@@ -257,7 +257,14 @@
   background-size: contain;
 }
 .terminal .little {
-  padding: 2rem 10% 0;
+  padding: 2rem  0;
+  margin: auto;
+}
+.terminal .little .title-nav {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
 }
 .terminal .little .summary {
   height: 5rem;
