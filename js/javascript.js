@@ -1,9 +1,20 @@
+$(".navbar-toggler").click(function () {
+  $(".navbar").toggleClass("act");
+});
+
 $(window).scroll(function () {
   if ($(document).scrollTop() >= 100) {
     $("header").css("background", "var(--header-bg-down)");
   } else {
     $("header").css("background", "var(--header-bg)");
   }
+});
+
+$(".swiper-slide").each(function (index, item) {
+  $(item).css(
+    "background-image",
+    "url(" + $(item).find("source").attr("src") + ")"
+  );
 });
 
 $(document).ready(function () {

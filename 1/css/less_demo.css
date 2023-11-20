@@ -146,6 +146,44 @@
     font-size: large;
   }
 }
+.button-lin {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  color: var(--bili-blue);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  border: 2px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+}
+.button-lin::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--bili-blue), var(--blue-gray));
+  z-index: -1;
+}
+.button-lin::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  width: 98%;
+  height: 90%;
+  background: #fff;
+  z-index: -1;
+  border-radius: 33px;
+}
+.button-lin:hover::before {
+  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
 li {
   list-style: none;
 }
