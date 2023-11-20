@@ -227,6 +227,9 @@ header nav .navbar-brand {
   padding-right: 2rem;
   color: white;
 }
+.AiTechnology {
+  overflow-x: hidden;
+}
 .footbox {
   width: 100%;
   padding: 0 10%;
