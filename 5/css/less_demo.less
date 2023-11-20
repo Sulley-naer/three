@@ -1,3 +1,20 @@
+@media screen and (max-width:1250px) {
+  .objective{
+    width: 50% !important;
+    margin-bottom: 2rem;
+  }}
+@media screen and (max-width:700px) {
+  .objective{
+    .objective-content{
+      p{
+        width: 100% !important;
+      }
+      small{
+        display: none;
+      }
+    }
+  }
+}
 :root {
   --head-bg: rgba(3, 21, 75, 0.137);
   --head-bg-hover: rgba(3, 21, 75, 0.3);
@@ -134,12 +151,17 @@
 }
 
 .objectives {
-  padding: 4rem 10% ;
+  padding: 4rem 10%;
   justify-content: space-between;
+  flex-wrap: nowrap;
 
   .objective {
     transition: all .5;
     width: 24%;
+    width: max-content;
+    max-width: 100%;
+    align-items: center;
+    flex-wrap:nowrap ;
     border-radius: 5px;
     box-shadow: 0 0 8px 1px rgb(0 0 0 / 17%);
 
@@ -155,6 +177,7 @@
 
     .objective-content {
       p {
+        width: max-content;
         margin-bottom: 0 !important;
       }
 
@@ -209,7 +232,8 @@
     padding: 1.5rem 0;
     text-align: center;
     color: #d2d2d2;
-    &::after{
+
+    &::after {
       position: absolute;
       content: "";
       top: 0;
@@ -232,10 +256,11 @@
         justify-content: space-around;
         margin-bottom: 1rem;
 
-        label{
-          width:max-content;
+        label {
+          width: max-content;
           max-width: 100%;
         }
+
         //自定义select
         .cooperate {
           display: block;
@@ -289,13 +314,14 @@
           appearance: none;
           border-radius: 0.375rem;
           text-indent: .7rem;
+
           &:focus {
-              color: var(--bs-body-color);
-              background-color: var(--bs-form-control-bg);
-              border-color: #86b7fe;
-              outline: 0;
-              box-shadow: 0 0 .3rem 0rem rgba(13, 110, 253, 0.25);
-            }
+            color: var(--bs-body-color);
+            background-color: var(--bs-form-control-bg);
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 .3rem 0rem rgba(13, 110, 253, 0.25);
+          }
         }
 
         input[type="submit"] {
@@ -353,17 +379,52 @@
             border-radius: 33px;
           }
         }
-        hr{
+
+        hr {
           width: 70%;
           color: #949494;
         }
-        small{
+
+        small {
           color: #949494;
-          a{
-              color: #86b7fe;
+
+          a {
+            color: #86b7fe;
           }
         }
       }
     }
+  }
+}
+
+.serve {
+  padding: 4rem 10% 0;
+  position: relative;
+  text-align: center;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 0;
+    left: 0%;
+    background: linear-gradient(to right,
+        rgb(47, 77, 165),
+        rgb(91, 166, 228));
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 0;
+    right: 0%;
+    background: linear-gradient(to left,
+        rgb(47, 77, 165),
+        rgb(91, 166, 228));
+  }
+  .serve-title{
+
   }
 }
