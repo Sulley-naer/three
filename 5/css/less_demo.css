@@ -113,7 +113,7 @@
   background: #00000045;
 }
 .objectives {
-  padding: 4rem 10% 0;
+  padding: 4rem 10% ;
   justify-content: space-between;
 }
 .objectives .objective {
@@ -152,7 +152,7 @@
   width: 40%;
   height: 2px;
   top: 0;
-  left: -15%;
+  left: 0%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
 .ContactUs::before {
@@ -161,7 +161,7 @@
   width: 40%;
   height: 2px;
   top: 0;
-  right: -15%;
+  right: 0%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .ContactUs .ContactUs-title {
