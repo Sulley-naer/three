@@ -111,6 +111,7 @@
   text-align: center;
   padding-bottom: 4rem;
   z-index: 1;
+  overflow-x: hidden;
 }
 .AiTechnology .head-button {
   position: absolute;
