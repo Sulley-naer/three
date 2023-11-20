@@ -282,6 +282,7 @@
 }
 .terminal .iBox-D-introduce .iBox-introduce-imgs,
 .terminal .iBox-F-introduce .iBox-introduce-imgs {
+  display: none;
   position: absolute;
   height: 100%;
   display: flex;

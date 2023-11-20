@@ -1,19 +1,16 @@
 $(document).ready(function () {
-  $(".navbar-toggler").click(function () {
-    $(".navbar").toggleClass("act");
-  });
-   function IBOXD() {
-     $(".iBox-D-introduce,.iBox-D-apply").show();
-     $(".iBox-F-introduce,.iBox-F-apply").hide();
-     $("#iBox-D").find(".nav-link").removeClass("disabled");
-     $("#iBox-F").find(".nav-link").addClass("disabled");
-   }
-   function IBOXF() {
-     $(".iBox-D-introduce,.iBox-D-apply").hide();
-     $(".iBox-F-introduce,.iBox-F-apply").show();
-     $("#iBox-F").find(".nav-link").removeClass("disabled");
-     $("#iBox-D").find(".nav-link").addClass("disabled");
-   }
+  function IBOXD() {
+    $(".iBox-D-introduce,.iBox-D-apply").show();
+    $(".iBox-F-introduce,.iBox-F-apply").hide();
+    $("#iBox-D").find(".nav-link").removeClass("disabled");
+    $("#iBox-F").find(".nav-link").addClass("disabled");
+  }
+  function IBOXF() {
+    $(".iBox-D-introduce,.iBox-D-apply").hide();
+    $(".iBox-F-introduce,.iBox-F-apply").show();
+    $("#iBox-F").find(".nav-link").removeClass("disabled");
+    $("#iBox-D").find(".nav-link").addClass("disabled");
+  }
   $(function () {
     if (sessionStorage.getItem("iBox-F")) {
       IBOXF();
