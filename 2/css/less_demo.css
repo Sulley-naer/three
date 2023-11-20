@@ -265,9 +265,6 @@
   overflow: hidden;
   background: #fff;
 }
-.AiTechnology .head-button:hover::before {
-  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
-}
 .AiTechnology .head-button::before {
   content: "";
   display: block;
@@ -288,6 +285,9 @@
   background: #fff;
   z-index: -1;
   border-radius: 33px;
+}
+.AiTechnology .head-button:hover::before {
+  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
 }
 .AiTechnology:nth-child(1) {
   padding-bottom: 0;
