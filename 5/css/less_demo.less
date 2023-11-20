@@ -203,11 +203,21 @@
   }
 
   .ContactUs-title {
+    position: relative;
     background: linear-gradient(to right, #2F488B, #2E4287, #2F488B);
     background-size: cover;
     padding: 1.5rem 0;
     text-align: center;
     color: #d2d2d2;
+    &::after{
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../../images/line-bg.svg) center no-repeat;
+      background-size: cover;
+    }
   }
 
   .ContactUsForm {
@@ -294,11 +304,12 @@
           border: none;
           outline: none;
           background: inherit;
+          color: #3984c9;
         }
 
         .submit {
           margin-top: 2rem;
-          transform: translate(-50%, 0);
+          transform: translate(0%, 0);
           color: var(--bili-blue);
           padding: 0.5em 1em;
           display: flex;
@@ -340,6 +351,16 @@
             background: #fff;
             z-index: -1;
             border-radius: 33px;
+          }
+        }
+        hr{
+          width: 70%;
+          color: #949494;
+        }
+        small{
+          color: #949494;
+          a{
+              color: #86b7fe;
           }
         }
       }

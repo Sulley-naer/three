@@ -165,11 +165,21 @@
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .ContactUs .ContactUs-title {
+  position: relative;
   background: linear-gradient(to right, #2F488B, #2E4287, #2F488B);
   background-size: cover;
   padding: 1.5rem 0;
   text-align: center;
   color: #d2d2d2;
+}
+.ContactUs .ContactUs-title::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/line-bg.svg) center no-repeat;
+  background-size: cover;
 }
 .ContactUs .ContactUsForm {
   padding-top: 8rem;
@@ -249,10 +259,11 @@
   border: none;
   outline: none;
   background: inherit;
+  color: #3984c9;
 }
 .ContactUs .ContactUsForm .form-group .form-group-row .submit {
   margin-top: 2rem;
-  transform: translate(-50%, 0);
+  transform: translate(0%, 0);
   color: var(--bili-blue);
   padding: 0.5em 1em;
   display: flex;
@@ -285,4 +296,14 @@
   background: #fff;
   z-index: -1;
   border-radius: 33px;
+}
+.ContactUs .ContactUsForm .form-group .form-group-row hr {
+  width: 70%;
+  color: #949494;
+}
+.ContactUs .ContactUsForm .form-group .form-group-row small {
+  color: #949494;
+}
+.ContactUs .ContactUsForm .form-group .form-group-row small a {
+  color: #86b7fe;
 }
