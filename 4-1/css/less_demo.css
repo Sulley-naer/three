@@ -322,3 +322,6 @@ main .content-box .row div[class*="col-"] p:not(first-child) {
   color: var(--text-lighter);
   text-align: left;
 }
+main .content-box .row div[class*="col-"] picture {
+  margin: auto;
+}
