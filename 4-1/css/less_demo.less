@@ -271,7 +271,8 @@
 .terminal {
   padding: 4rem 0;
   position: relative;
-
+  text-align: center;
+  margin: 0;
   &::after {
     position: absolute;
     content: "";
@@ -312,9 +313,36 @@
       i {
         margin: 0.5em;
       }
-      .act{
+      .act {
         color: var(--bili-blue);
       }
     }
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    left: 0;
+    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    right: 0;
+    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+  .content-box{
+    
   }
 }

@@ -228,6 +228,8 @@
 .terminal {
   padding: 4rem 0;
   position: relative;
+  text-align: center;
+  margin: 0;
 }
 .terminal::after {
   position: absolute;
@@ -271,4 +273,27 @@
 }
 .terminal .little .content .act {
   color: var(--bili-blue);
+}
+main {
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+main::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: 0;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+main::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: 0;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
