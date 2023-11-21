@@ -1,4 +1,4 @@
-$("header").load("../模板/header.HTML");
+$("header").load("../模板/header.html");
 $(".footbox").load("../模板/footer.html");
 
 $(document).ready(function () {
@@ -48,7 +48,7 @@ $(document).ready(function () {
     );
   });
 
-  $(".bi").each(function (index, item) {
+  $(".bi:not(:has(img))").each(function (index, item) {
     if ($(item).attr("data-size") != undefined) {
       $(item).css({
         backgroundRepeat: "no-repeat",
