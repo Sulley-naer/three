@@ -269,3 +269,6 @@
 .terminal .little .content i {
   margin: 0.5em;
 }
+.terminal .little .content .act {
+  color: var(--bili-blue);
+}
