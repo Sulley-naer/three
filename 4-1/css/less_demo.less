@@ -324,25 +324,47 @@ main {
   position: relative;
   width: 100%;
   height: max-content;
-  &::before {
-    position: absolute;
-    content: "";
-    width: 40%;
-    height: 2px;
-    top: 4rem;
-    left: 0;
-    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
-  }
-  &::after {
-    position: absolute;
-    content: "";
-    width: 40%;
-    height: 2px;
-    top: 4rem;
-    right: 0;
-    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
-  }
-  .content-box{
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  .content-box {
+    padding: 1.5%;
+    height: max-content;
+    background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
+    min-width: 40%;
+    width: max-content;
+    max-width: 60%;
+    min-height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .row {
+      width: max-content;
+      max-width: 100%;
+      min-height: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      div[class*="col-"] {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        h3 {
+          color: var(--text-gray-hover);
+        }
+        p {
+          margin-top: 1em;
+          &:not(first-child) {
+            color: var(--text-lighter);
+            text-align: left;
+          }
+        }
+      }
+    }
   }
 }
