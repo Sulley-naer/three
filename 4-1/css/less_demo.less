@@ -17,6 +17,56 @@
   }
 }
 
+@media screen and (min-width: 1670px) {
+  main .content-box .hst .center-box:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .content-box .hst .center-box > div > picture:not(:only-child) {
+    max-width: 35% !important;
+    background-position: bottom;
+  }
+  main .content-box .hst .center-box > div > picture:only-child {
+    max-width: 75% !important;
+    background-position: bottom;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .content-box .hst .center-box > div {
+    margin: auto;
+  }
+  main .content-box .hst .center-box > div > picture:not(:only-child) {
+    max-width: 30% !important;
+    background-position: top;
+    > span {
+      top: 50% + 1.5rem;
+    }
+  }
+  main .content-box .hst .center-box > div > picture:only-child {
+    margin-top: -20.2%;
+    max-width: 57.5% !important;
+    background-position: top;
+    > span {
+      top: 50% + 1.5rem;
+    }
+  }
+  main .content-box .hst .center-box > div > picture:not(:first-child) {
+    margin-left: 0 !important;
+  }
+  main .content-box .hst .center-box {
+    &:not(:first-child) {
+      margin-top: -20%;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  main .content-box .hst {
+    transform: scale(0.9);
+  }
+}
+
 .swiper {
   width: 100%;
   height: 67%;
@@ -378,13 +428,13 @@ main {
       .center-box {
         margin-top: 1.5rem;
         &:not(:first-child) {
-          margin-left: 1.5rem;
+          // margin-left: 1.5rem;
         }
         > div {
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-          justify-content: space-between;
+          justify-content: center;
           width: max-content;
           &:not(:first-child) {
             margin-top: 1.5em + 1.5em;
@@ -392,11 +442,8 @@ main {
           }
           > picture {
             position: relative;
-            width: max-content;
-            //帮我写一个寻找三的倍数
-            max-width: 100% !important;
             &:not(:only-child) {
-              max-width: 50% !important;
+              max-width: 50%;
             }
 
             .tips {
