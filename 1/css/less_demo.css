@@ -3,7 +3,20 @@
     display: none;
   }
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1200px) {
+  .AiTechnology-introduce {
+    padding-top: 2rem !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
+  }
+  .AiTechnology-introduce {
+    padding-top: 0rem !important;
+  }
+}
+@media screen and (max-width: 1000px) and screen and (max-width: 990px) {
   #friend {
     display: flex;
   }
@@ -19,56 +32,33 @@
     left: 0%;
   }
 }
-@media screen and (max-width: 1500px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.9);
-  }
-}
-@media screen and (max-width: 1300px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.8);
-  }
-  .products {
-    justify-content: center !important;
-  }
-}
-@media screen and (max-width: 1110px) {
-  .foot-content > .col-2 {
-    transform: scale(0.8);
-  }
-  .cop {
-    transform: scale(0.8);
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.7);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.7);
-  }
-}
-@media screen and (max-width: 950px) {
-  .cop {
-    transform: scale(0.6);
-  }
-  .AiTechnology-introduce {
-    justify-content: flex-end;
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.6);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.6);
-  }
-  .cop p {
-    line-height: 1.4em;
-  }
-}
 @media screen and (max-width: 835px) {
   .foot-content > .col-2 {
     transform: scale(0.6);
   }
   .products {
     transform: scale(0.9);
+  }
+  .AiTechnology-img {
+    width: 50% !important;
+  }
+  .AiTechnology-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AiTechnology-images .tz {
+    margin-top: 0 !important;
+  }
+  .AiTechnology-images .tz a {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .products {
+    transform: scale(0.7);
+  }
+  .AiTechnology-img {
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 775px) {
@@ -81,19 +71,10 @@
   .foot-content > .col-2 {
     transform: scale(1);
   }
-  .AiTechnology-introduce p {
-    transform: scale(0.5);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.5);
-  }
 }
-@media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
-  .AiTechnology-introduce .tz {
-    margin-top: 0;
+@media screen and (max-width: 620px) {
+  .foot-content > .col-2 {
+    transform: scale(0.9);
   }
 }
 @media screen and (max-width: 550px) {
@@ -104,46 +85,24 @@
     display: none;
   }
 }
-@media screen and (max-width: 620px) {
-  .foot-content > .col-2 {
-    transform: scale(0.9);
-  }
-}
 @media screen and (max-width: 500px) {
   .products {
     transform: scale(0.6);
   }
 }
 @media screen and (max-width: 480px) {
-  .foot-content > .col-2 {
-    transform: scale(0.6);
+  .AiTechnology-img {
+    height: 14rem;
   }
-  .products {
-    transform: scale(0.5);
-  }
-}
-@media screen and (max-width: 480px) {
   .navbar-nav .dropdown-menu {
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
   }
-  .AiTechnology-introduce p {
-    transform: scale(0.3);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.3);
-  }
 }
 @media screen and (max-width: 360px) {
   .products {
     transform: scale(0.4);
-  }
-}
-@media screen and (max-width: 600px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.4);
-    font-size: large;
   }
 }
 .button-lin {
@@ -291,6 +250,7 @@ li {
   padding-top: 2.5rem;
   display: flex;
   justify-content: space-between;
+  justify-content: center;
 }
 .SmartDesk > .products .product {
   display: flex;
@@ -355,6 +315,8 @@ li {
   justify-content: center;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img {
+  width: 33%;
+  max-width: 100%;
   position: relative;
   padding: 6.8% 12%;
   margin: 0.05rem;
@@ -380,6 +342,8 @@ li {
   align-items: center;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
+  width: max-content;
+  max-width: 100%;
   color: var(--text-gray-hover);
   margin-bottom: 0;
 }
