@@ -322,7 +322,7 @@
 .terminal .little .content .act {
   color: var(--bili-blue);
 }
-main {
+.terminal main {
   position: relative;
   width: 100%;
   height: max-content;
@@ -333,7 +333,7 @@ main {
   flex-direction: column;
   align-content: space-around;
 }
-main .content-box {
+.terminal main .content-box {
   padding: 1.5%;
   height: max-content;
   background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
@@ -346,64 +346,64 @@ main .content-box {
   justify-content: center;
   flex-wrap: wrap;
 }
-main .content-box .row {
+.terminal main .content-box .row {
   width: max-content;
   max-width: 100%;
   min-height: 50%;
   display: flex;
   flex-wrap: wrap;
 }
-main .content-box .row div[class*="col-"] {
+.terminal main .content-box .row div[class*="col-"] {
   display: flex;
   align-items: start;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
-main .content-box .row div[class*="col-"] h3 {
+.terminal main .content-box .row div[class*="col-"] h3 {
   color: var(--text-gray-hover);
 }
-main .content-box .row div[class*="col-"] p {
+.terminal main .content-box .row div[class*="col-"] p {
   margin-top: 1em;
 }
-main .content-box .row div[class*="col-"] p:not(first-child) {
+.terminal main .content-box .row div[class*="col-"] p:not(first-child) {
   color: var(--text-lighter);
   text-align: left;
 }
-main .content-box .row div[class*="col-"] picture {
+.terminal main .content-box .row div[class*="col-"] picture {
   margin: auto;
 }
-main .content-box .hst {
+.terminal main .content-box .hst {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   max-width: 100%;
 }
-main .content-box .hst .center-box {
+.terminal main .content-box .hst .center-box {
   margin-top: 1.5rem;
 }
-main .content-box .hst .center-box > div {
+.terminal main .content-box .hst .center-box > div {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   width: max-content;
 }
-main .content-box .hst .center-box > div:not(:first-child) {
+.terminal main .content-box .hst .center-box > div:not(:first-child) {
   margin-top: 3em;
   margin-bottom: 1.5rem;
 }
-main .content-box .hst .center-box > div > picture {
+.terminal main .content-box .hst .center-box > div > picture {
   position: relative;
 }
-main .content-box .hst .center-box > div > picture:not(:only-child) {
+.terminal main .content-box .hst .center-box > div > picture:not(:only-child) {
   max-width: 50%;
 }
-main .content-box .hst .center-box > div > picture:hover .tips {
+.terminal main .content-box .hst .center-box > div > picture:hover .tips {
   color: var(--bili-blue);
 }
-main .content-box .hst .center-box > div > picture .tips {
+.terminal main .content-box .hst .center-box > div > picture .tips {
   width: 100%;
   height: 1.5rem;
   position: absolute;
@@ -414,7 +414,7 @@ main .content-box .hst .center-box > div > picture .tips {
   background: var(--text-gray-hover);
   color: var(--text-gray);
 }
-main .content-box .hst .center-box > div > picture:not(:first-child) {
+.terminal main .content-box .hst .center-box > div > picture:not(:first-child) {
   margin-left: 1.65em;
 }
 .summary {
