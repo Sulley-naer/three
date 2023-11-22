@@ -3,6 +3,18 @@
     width: 50% !important;
     margin-bottom: 2rem;
   }
+  .myPhone {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .serve-body-contents {
+    flex-direction: column;
+    align-items: center;
+  }
+  .serve-body-content {
+    width: 50% !important;
+  }
 }
 @media screen and (max-width: 700px) {
   .objective .objective-content p {
@@ -10,6 +22,12 @@
   }
   .objective .objective-content small {
     display: none;
+  }
+  .form-group-row label {
+    margin-right: 1rem;
+  }
+  .serve-body-content {
+    width: 100% !important;
   }
 }
 :root {
@@ -137,7 +155,7 @@
   width: max-content;
   max-width: 100%;
   align-items: center;
-  flex-wrap: nowrap ;
+  flex-wrap: nowrap;
   border-radius: 5px;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.17);
 }
@@ -203,6 +221,7 @@
 }
 .ContactUs .ContactUsForm {
   padding-top: 8rem;
+  padding-bottom: 4rem;
 }
 .ContactUs .ContactUsForm .form-group {
   text-align: center;
@@ -331,6 +350,16 @@
   padding: 4rem 10% 0;
   position: relative;
   text-align: center;
+  background: linear-gradient(to bottom, #fff 45%, #0D1C5A 45%, #0D1C5A 100%);
+}
+.serve .serve-bottom-bg {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  left: 0;
+  bottom: 0;
+  background: url(../../images/line-bg.svg) no-repeat center;
+  background-size: cover;
 }
 .serve::after {
   position: absolute;
@@ -349,4 +378,34 @@
   top: 0;
   right: 0%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.serve .serve-title {
+  margin-bottom: 2rem;
+}
+.serve .serve-body {
+  height: 100%;
+}
+.serve .serve-body .serve-body-contents {
+  height: 100%;
+  justify-content: space-between;
+}
+.serve .serve-body .serve-body-contents .serve-body-content {
+  width: 30%;
+  flex: 0 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+.serve .serve-body .serve-body-contents .serve-body-content picture {
+  display: block;
+  width: 100% !important;
+  background: no-repeat center;
+  background-size: cover;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.serve .serve-body .serve-body-contents .serve-body-content p {
+  background: #fff;
+  line-height: 2.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
