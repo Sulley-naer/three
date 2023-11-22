@@ -1,57 +1,41 @@
-@media screen and (max-width: 1500px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.9);
-  }
-}
 @media screen and (max-width: 1300px) {
   .AiTechnology-introduce p {
     transform: scale(0.8);
   }
 }
-@media screen and (max-width: 1110px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.7);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.7);
-  }
-}
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1200px) {
   .AiTechnology-introduce {
-    justify-content: flex-end;
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.6);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.6);
+    padding-top: 2rem !important;
   }
 }
-@media screen and (max-width: 775px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.5);
+@media screen and (max-width: 1000px) {
+  .AiTechnology-introduce {
+    padding-top: 0rem !important;
   }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.5);
+}
+@media screen and (max-width: 835px) {
+  .AiTechnology-img {
+    width: 50% !important;
+  }
+  .AiTechnology-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AiTechnology-images .tz {
+    margin-top: 0 !important;
+  }
+  .AiTechnology-images .tz a {
+    margin-top: 0.5rem;
   }
 }
 @media screen and (max-width: 700px) {
-  .AiTechnology-introduce .tz {
-    margin-top: 0;
+  .AiTechnology-img {
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 480px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.3);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.3);
-  }
-}
-@media screen and (max-width: 600px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.4);
-    font-size: large;
+  .AiTechnology-img {
+    height: 14rem;
   }
 }
 .swiper {
@@ -291,6 +275,8 @@
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img {
   position: relative;
+  width: 33%;
+  max-width: 100%;
   padding: 6.8% 12%;
   margin: 0.05rem;
   display: flex;
@@ -315,6 +301,8 @@
   align-items: center;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
+  width: max-content;
+  max-width: 100%;
   color: var(--text-gray-hover);
   margin-bottom: 0;
 }
