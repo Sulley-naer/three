@@ -34,7 +34,7 @@
     <div class="container-fluid swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <source src="../picture/proiBox-banner.jpg" />
+          <source src="../picture/AiEnforce-banner.jpg" />
           <content>
             <h1>智慧执法</h1>
             <p>
@@ -50,72 +50,12 @@
       <div class="little">
         <div class="title">边缘计算终端</div>
         <div class="content">
-          <span class="act">行政执法解决方案</span>
+          <span class="" page="1">行政执法解决方案</span>
           <i class="vr"></i>
-          <span>智慧渔政解决方案</span>
+          <span class="act" page="2">智慧渔政解决方案</span>
         </div>
       </div>
-      <main>
-        <div class="content-box">
-          <div class="row">
-            <div class="col-md-6">
-              <h3>智慧环保解决方案</h3>
-              <p>
-                通过水环境、大气、噪声、土壤、自然环境生态等污染情况的实时监控,&#32;理用AI图形识别技术,&#32;自动分析、识别可疑污染源,&#32;实时推送短信预警,&#32;利用推送短信预警,&#32;推进问题的及时整改与落实,&#32;实现了从人防到技防的转变,&#32;提升环保治理的时效性。
-              </p>
-            </div>
-            <div class="col-md-6">
-              <picture class="bi" data-auto data-size>
-                <source src="../images/AiCity-zhhb.png" />
-              </picture>
-            </div>
-          </div>
-          <div class="hst">
-            <div class="center-box">
-              <div class="">
-                <picture class="bi" data-size data-auto>
-                  <source src="../images/hb-wushui.jpg" />
-                  <span class="tips">河岸排污</span>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </picture>
-                <picture class="bi" data-size data-auto>
-                  <source src="../images/hb-laji.jpg" />
-                  <span class="tips">河岸垃圾</span>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </picture>
-              </div>
-              <div class="">
-                <picture class="bi" data-size data-auto>
-                  <source src="../images/hb-wushuic.jpg" />
-                  <span class="tips">污水处理厂</span>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </picture>
-              </div>
-            </div>
-            <div class="center-box">
-              <div class="col-md-12">
-                <picture class="bi" data-size data-auto>
-                  <source src="../images/hb-ywsb.jpg" />
-                  <span class="tips">烟雾识别</span>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </picture>
-                <picture class="bi" data-size data-auto>
-                  <source src="../images/hb-wgjz.jpg" />
-                  <span class="tips">违规建筑</span>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </picture>
-              </div>
-              <div class="col-md-12">
-                <picture class="bi" data-size data-auto>
-                  <source src="../images/hb-trsc.jpg" />
-                  <span class="tips">土壤沙层</span>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </picture>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+      <main></main>
     </div>
     <div class="summary">
       <div class="little">
@@ -125,9 +65,41 @@
         </div>
       </div>
       <main>
-        <picture class="bi" data-auto data-size>
+        <div class="bi">
           <source src="../images/AiCity-trait-bg.jpg" />
-        </picture>
+          <div class="content row">
+            <div class="col-md-4">
+              <div class="head">
+                <i>&#xe773;</i>
+                <span>技术</span>
+              </div>
+              <div class="msgbox">
+                <p>AI边缘分析技术</p>
+                <p>私有/共有云全栈平台</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="head">
+                <i>&#xe619;</i>
+                <span>商业</span>
+              </div>
+              <div class="msgbox">
+                <p>渠道共建模式</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="head">
+                <i>&#xe614;</i>
+                <span>特点</span>
+              </div>
+              <div class="msgbox">
+                <p>设备利旧</p>
+                <p>轻终端、轻工程</p>
+                <p>三方业务平台对接</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 
@@ -144,3 +116,24 @@
 </html>
 
 <script src="../bootstrap/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  function qh() {
+    let pageText = $(".terminal .little .content span.act").attr("page");
+    if (pageText == "1") {
+      $(".terminal main").load("page-1.html", function () {
+        // alert("加载完成");
+        pc();
+      });
+    } else {
+      $(".terminal main").load("page-2.html", function () {
+        // alert("加载完成");
+        pc();
+      });
+    }
+  }
+  qh();
+  $(".terminal .little .content span").click(function () {
+    qh();
+  });
+</script>
