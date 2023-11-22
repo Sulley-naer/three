@@ -471,3 +471,15 @@
 .summary .little .content i {
   margin: 0.5em;
 }
+.summary main {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+}
