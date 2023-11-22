@@ -3,6 +3,19 @@
     display: none;
   }
 }
+@media screen and (max-width: 1200px) {
+  .AiTechnology-introduce {
+    padding-top: 2rem !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
+  }
+  .AiTechnology-introduce {
+    padding-top: 0rem !important;
+  }
+}
 @media screen and (max-width: 990px) {
   #friend {
     display: flex;
@@ -19,6 +32,7 @@
     left: 0%;
   }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 1500px) {
   .AiTechnology-introduce p {
     transform: scale(0.9);
@@ -75,12 +89,29 @@
     transform: scale(0.6);
   }
 }
+=======
+>>>>>>> sui
 @media screen and (max-width: 835px) {
-  .foot-content > .col-2 {
-    transform: scale(0.6);
+  .AiTechnology-img {
+    width: 50% !important;
   }
+  .AiTechnology-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AiTechnology-images .tz {
+    margin-top: 0 !important;
+  }
+  .AiTechnology-images .tz a {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
   .products {
-    transform: scale(0.9);
+    transform: scale(0.7);
+  }
+  .AiTechnology-img {
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 775px) {
@@ -93,19 +124,10 @@
   .foot-content > .col-2 {
     transform: scale(1);
   }
-  .AiTechnology-introduce p {
-    transform: scale(0.5);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.5);
-  }
 }
-@media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
-  .AiTechnology-introduce .tz {
-    margin-top: 0;
+@media screen and (max-width: 620px) {
+  .foot-content > .col-2 {
+    transform: scale(0.9);
   }
 }
 @media screen and (max-width: 550px) {
@@ -116,6 +138,7 @@
     display: none;
   }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 620px) {
   .foot-content > .col-2 {
     transform: scale(0.9);
@@ -124,27 +147,21 @@
 @media screen and (max-width: 550px) {
   .foot-content > .col-2 {
     transform: scale(0.8);
-  }
-}
-@media screen and (max-width: 480px) {
-  .foot-content > .col-2 {
-    transform: scale(0.6);
-  }
+=======
+@media screen and (max-width: 500px) {
   .products {
-    transform: scale(0.5);
+    transform: scale(0.6);
+>>>>>>> sui
   }
 }
 @media screen and (max-width: 480px) {
+  .AiTechnology-img {
+    height: 14rem;
+  }
   .navbar-nav .dropdown-menu {
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.3);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.3);
   }
 }
 @media screen and (max-width: 360px) {
@@ -152,152 +169,46 @@
     transform: scale(0.4);
   }
 }
-@media screen and (max-width: 600px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.4);
-    font-size: large;
-  }
+.button-lin {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  color: var(--bili-blue);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  border: 2px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
 }
-:root {
-  --head-bg: rgba(3, 21, 75, 0.137);
-  --head-bg-hover: rgba(3, 21, 75, 0.3);
-  --text-gray: #9f9f9f;
-  --text-gray-hover: #ffffff;
-  --text-lighter: #d2d2d2;
-  --header-bg-down: #000000b5;
-  --bili-pink: #ff3272;
-  --bili-blue: #00aeec;
+.button-lin::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--bili-blue), var(--blue-gray));
+  z-index: -1;
+}
+.button-lin::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  width: 98%;
+  height: 90%;
+  background: #fff;
+  z-index: -1;
+  border-radius: 33px;
+}
+.button-lin:hover::before {
+  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
 }
 li {
   list-style: none;
-}
-header {
-  width: 100%;
-  padding: 0 10%;
-  background: var(--head-bg);
-  margin: auto;
-  height: 3.75rem;
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #4a4a4a;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header .logo {
-  float: left;
-}
-header .navbar {
-  align-content: space-around;
-}
-header .act {
-  align-content: baseline;
-}
-header nav {
-  background: transparent !important;
-  padding: 0;
-  height: 100%;
-}
-header nav .collapse {
-  padding: 0 14px;
-}
-header nav .collapse > ul > li {
-  padding: 29px 0;
-  display: flex;
-  align-items: center;
-}
-header nav .collapse > ul,
-header nav .collapse > li {
-  align-items: center;
-  background: transparent;
-}
-header nav .collapse > ul .ai,
-header nav .collapse > li .ai {
-  background: #2080d5;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-}
-header nav .collapse > ul .ai a,
-header nav .collapse > li .ai a {
-  color: #fff;
-}
-header nav .collapse > ul .ai:hover,
-header nav .collapse > li .ai:hover {
-  background: #2080d5;
-}
-header nav .collapse > ul .dropdown-menu,
-header nav .collapse > li .dropdown-menu {
-  background: #00000055;
-  border-radius: 0;
-  padding: 1rem !important;
-  width: auto !important;
-  max-height: 600px;
-  overflow: scroll;
-}
-header nav .collapse > ul .dropdown-menu > li,
-header nav .collapse > li .dropdown-menu > li {
-  width: max-content;
-  margin: 0;
-}
-header nav .collapse > ul .dropdown-menu dl,
-header nav .collapse > li .dropdown-menu dl {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 16em;
-}
-header nav .collapse > ul .dropdown-menu dl dt,
-header nav .collapse > li .dropdown-menu dl dt {
-  color: var(--text-gray) !important;
-  font-weight: normal;
-  font-size: 16px;
-  width: 100%;
-  width: fit-content;
-  padding: 1rem;
-}
-header nav .collapse > ul .dropdown-menu dl dd,
-header nav .collapse > li .dropdown-menu dl dd {
-  width: 100%;
-  text-indent: 40px;
-  padding: 1rem;
-}
-header nav .collapse > ul .dropdown-menu dl dd a,
-header nav .collapse > li .dropdown-menu dl dd a {
-  color: var(--text-gray) !important;
-  font-size: small;
-}
-header nav .collapse > ul .dropdown-menu dl dt:hover,
-header nav .collapse > li .dropdown-menu dl dt:hover,
-header nav .collapse > ul .dropdown-menu dl dd:hover,
-header nav .collapse > li .dropdown-menu dl dd:hover {
-  background: #0000001f;
-}
-header nav .collapse > ul > li {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  height: 3.5rem;
-}
-header nav .collapse > ul > li:hover,
-header nav .collapse > ul > li:focus {
-  background: #00000020;
-}
-header nav .collapse > ul > li > a {
-  height: 3.5rem;
-  line-height: 2.5rem;
-  color: var(--text-gray);
-}
-header nav .collapse > ul > li > a:hover,
-header nav .collapse > ul > li > a:focus {
-  color: #fff;
-}
-header nav .navbar-brand {
-  background: #00000020;
-  padding: 14px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: white;
 }
 .swiper {
   width: 100%;
@@ -400,6 +311,10 @@ header nav .navbar-brand {
   padding: 0 10%;
   padding-top: 2.5rem;
   display: flex;
+<<<<<<< HEAD
+=======
+  justify-content: space-between;
+>>>>>>> sui
   justify-content: center;
 }
 .SmartDesk > .products .product {
@@ -465,6 +380,8 @@ header nav .navbar-brand {
   justify-content: center;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img {
+  width: 33%;
+  max-width: 100%;
   position: relative;
   padding: 6.8% 12%;
   margin: 0.05rem;
@@ -490,6 +407,8 @@ header nav .navbar-brand {
   align-items: center;
 }
 .introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
+  width: max-content;
+  max-width: 100%;
   color: var(--text-gray-hover);
   margin-bottom: 0;
 }
@@ -663,6 +582,9 @@ header nav .navbar-brand {
   margin-top: 0.5em;
   font-size: small;
 }
+.banner .container-fluid .left .card li:first-child {
+  margin-top: -0.5em;
+}
 .banner .container-fluid .md {
   width: calc(100% / 3);
   height: 100%;
@@ -696,6 +618,9 @@ header nav .navbar-brand {
 .banner .container-fluid .right .card li {
   margin-top: 0.5em;
   font-size: small;
+}
+.banner .container-fluid .right .card li:first-child {
+  margin-top: -0.5em;
 }
 .adbox {
   margin-top: 2rem;

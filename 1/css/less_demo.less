@@ -4,26 +4,15 @@
   }
 }
 
-@media screen and (max-width: 990px) {
-  #friend {
-    display: flex;
-  }
 
-  .navbar-nav {
-    display: block;
-  }
 
-  .dropdown-menu {
-    z-index: 999;
-  }
-
-  .navbar-nav .dropdown-menu {
-    position: fixed !important;
-    top: 7%;
-    left: 0%;
+@media screen and (max-width: 1200px) {
+  .AiTechnology-introduce {
+    padding-top: 2rem !important;
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1500px) {
   .AiTechnology-introduce p {
     transform: scale(0.9);
@@ -60,50 +49,69 @@
 
 @media screen and (max-width: 1110px) {
   .foot-content > .col-2 {
+=======
+@media screen and (max-width: 1000px) {
+  .foot-content>.col-2 {
+>>>>>>> sui
     transform: scale(0.8);
-  }
-
-  .cop {
-    transform: scale(0.8);
-  }
-
-  .AiTechnology-introduce p {
-    transform: scale(0.7);
-  }
-
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.7);
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .cop {
-    transform: scale(0.6);
   }
 
   .AiTechnology-introduce {
-    justify-content: flex-end;
-  }
-
-  .AiTechnology-introduce p {
-    transform: scale(0.6);
-  }
-
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.6);
+    padding-top: 0rem !important;
   }
 }
-
+    @media screen and (max-width: 990px) {
+      #friend {
+        display: flex;
+      }
+  
+      .navbar-nav {
+        display: block;
+      }
+  
+      .dropdown-menu {
+        z-index: 999;
+      }
+  
+      .navbar-nav .dropdown-menu {
+        position: fixed !important;
+        top: 7%;
+        left: 0%;
+      }
+    }
 @media screen and (max-width: 835px) {
+<<<<<<< HEAD
   .foot-content > .col-2 {
     transform: scale(0.6);
+=======
+  .AiTechnology-img {
+    width: 50% !important;
+>>>>>>> sui
   }
 
-  .products {
-    transform: scale(0.9);
+  .AiTechnology-images {
+    flex-direction: column;
+    align-items: center;
+
+    .tz {
+      margin-top: 0 !important;
+
+      a {
+        margin-top: .5rem;
+      }
+    }
   }
 }
 
+@media screen and (max-width: 700px) {
+  .products {
+    transform: scale(0.7);
+  }
+
+  .AiTechnology-img {
+    width: 100% !important;
+  }
+}
 @media screen and (max-width: 775px) {
   .foot-logo {
     display: none;
@@ -117,22 +125,13 @@
     }
   }
 
-  .AiTechnology-introduce p {
-    transform: scale(0.5);
-  }
 
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.5);
-  }
 }
 
-@media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
 
-  .AiTechnology-introduce .tz {
-    margin-top: 0;
+@media screen and (max-width: 620px) {
+  .foot-content>.col-2 {
+    transform: scale(0.9);
   }
 }
 
@@ -146,6 +145,7 @@
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 620px) {
   .foot-content > .col-2 {
     transform: scale(0.9);
@@ -155,34 +155,27 @@
 @media screen and (max-width: 550px) {
   .foot-content > .col-2 {
     transform: scale(0.8);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .foot-content>.col-2 {
-    transform: scale(0.6);
-  }
-
+=======
+@media screen and (max-width: 500px) {
   .products {
-    transform: scale(0.5);
+    transform: scale(0.6);
+>>>>>>> sui
   }
+
 }
 
 @media screen and (max-width: 480px) {
+.AiTechnology-img{
+  height: 14rem;
+}
+
   .navbar-nav .dropdown-menu {
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
   }
-
-  .AiTechnology-introduce p {
-    transform: scale(0.3);
-  }
-
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.3);
-  }
 }
+
 
 @media screen and (max-width: 360px) {
   .products {
@@ -190,166 +183,58 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.4);
-    font-size: large;
-  }
-}
 
-:root {
-  --head-bg: rgba(3, 21, 75, 0.137);
-  --head-bg-hover: rgba(3, 21, 75, 0.3);
-  --text-gray: rgb(159, 159, 159);
-  --text-gray-hover: rgb(255, 255, 255);
-  --text-lighter: rgb(210, 210, 210);
-  --header-bg-down: #000000b5;
-  --bili-pink: rgb(255, 50, 114);
-  --bili-blue: rgb(0, 174, 236);
+.button-lin {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  color: var(--bili-blue);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  border: 2px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,
+        var(--bili-blue),
+        var(--blue-gray));
+    // border-radius: 12px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2px;
+    width: 98%;
+    height: 90%;
+    background: #fff;
+    z-index: -1;
+    border-radius: 33px;
+  }
+
+  &:hover {
+    &::before {
+      background-image: linear-gradient(to right,
+          var(--blue-gray),
+          var(--bili-blue));
+    }
+  }
 }
 
 li {
   list-style: none;
-}
-
-header {
-  width: 100%;
-  padding: 0 10%;
-  background: var(--head-bg);
-  margin: auto;
-  height: 3.75rem;
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #4a4a4a;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .logo {
-    float: left;
-  }
-
-  .navbar {
-    align-content: space-around;
-  }
-
-  .act {
-    align-content: baseline;
-  }
-
-  nav {
-    background: transparent !important;
-    padding: 0;
-    height: 100%;
-
-    .collapse {
-      padding: 0 14px;
-
-      >ul>li {
-        padding: 29px 0;
-        display: flex;
-        align-items: center;
-      }
-
-      >ul,
-      >li {
-        align-items: center;
-        background: transparent;
-
-        .ai {
-          background: rgb(32, 128, 213);
-          padding: 30px;
-          display: flex;
-          align-items: center;
-
-          a {
-            color: #fff;
-          }
-
-          &:hover {
-            background: rgb(32, 128, 213);
-          }
-        }
-
-        .dropdown-menu {
-          background: #00000055;
-          border-radius: 0;
-          padding: 1rem !important;
-          width: auto !important;
-          max-height: 600px;
-          overflow: scroll;
-
-          >li {
-            width: max-content;
-            margin: 0;
-          }
-
-          dl {
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 16em;
-
-            dt {
-              color: var(--text-gray) !important;
-              font-weight: normal;
-              font-size: 16px;
-              width: 100%;
-              width: fit-content;
-              padding: 1rem;
-            }
-
-            dd {
-              width: 100%;
-              text-indent: 40px;
-              padding: 1rem;
-
-              a {
-                color: var(--text-gray) !important;
-                font-size: small;
-              }
-            }
-
-            & dt:hover,
-            dd:hover {
-              background: #0000001f;
-            }
-          }
-        }
-      }
-
-      >ul>li {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        height: 3.5rem;
-
-        &:hover,
-        &:focus {
-          background: #00000020;
-        }
-
-        >a {
-          height: 3.5rem;
-          line-height: 2.5rem;
-          color: var(--text-gray);
-
-          &:hover,
-          &:focus {
-            color: #fff;
-          }
-        }
-      }
-    }
-
-    .navbar-brand {
-      background: #00000020;
-      padding: 14px;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      color: white;
-    }
-  }
 }
 
 .swiper {
@@ -472,7 +357,13 @@ header {
     padding: 0 10%;
     padding-top: 2.5rem;
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
+=======
+    justify-content: space-between;
+    justify-content: center;
+
+>>>>>>> sui
     .product {
       display: flex;
       align-items: center;
@@ -552,6 +443,8 @@ header {
       justify-content: center;
 
       .AiTechnology-img {
+        width: 33%;
+        max-width: 100%;
         position: relative;
         padding: 6.8% 12%;
         margin: 0.05rem;
@@ -563,6 +456,7 @@ header {
             rgba(33, 67, 193, 0.8));
 
         p {
+
           padding-top: 0.8rem;
           color: var(--text-gray);
           width: max-content;
@@ -580,6 +474,8 @@ header {
           align-items: center;
 
           p {
+            width: max-content;
+            max-width: 100%;
             color: var(--text-gray-hover);
             margin-bottom: 0;
           }
@@ -790,6 +686,10 @@ header {
         li {
           margin-top: 0.5em;
           font-size: small;
+
+          &:first-child {
+            margin-top: -0.5em;
+          }
         }
       }
     }
@@ -832,6 +732,10 @@ header {
         li {
           margin-top: 0.5em;
           font-size: small;
+
+          &:first-child {
+            margin-top: -0.5em;
+          }
         }
       }
     }

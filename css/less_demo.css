@@ -1,0 +1,323 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+@media screen and (max-width: 1415px) {
+  #friend {
+    display: none;
+  }
+}
+@media screen and (max-width: 1415px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 1110px) {
+  .foot-content > .col-2 {
+    transform: scale(0.6);
+  }
+  .cop {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 990px) {
+  #friend {
+    display: flex;
+  }
+  .navbar-nav {
+    display: block;
+  }
+  .dropdown-menu {
+    z-index: 999;
+  }
+  .navbar-nav .dropdown-menu {
+    position: fixed !important;
+    top: 7%;
+    left: 0%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .cop {
+    transform: scale(0.6);
+  }
+  .cop p {
+    line-height: 1.4em;
+  }
+  .foot-logo {
+    display: none;
+  }
+  .foot-content {
+    width: 100% !important;
+  }
+  .foot-content > .col-2 {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 835px) {
+  .foot-content > .col-2 {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 620px) {
+  .foot-content > .col-2 {
+    transform: scale(0.6);
+  }
+}
+@media screen and (max-width: 550px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-nav .dropdown-menu {
+    position: fixed !important;
+    top: 6.5% !important;
+    left: 2% !important;
+  }
+  .foot-content > .col-2 {
+    transform: scale(0.4);
+  }
+}
+@keyframes dm {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+:root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
+  --line: hsla(0, 0%, 75%, 0.45);
+}
+header {
+  width: 100%;
+  padding: 0 10%;
+  background: var(--head-bg);
+  margin: auto;
+  height: 3.75rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  float: left;
+  position: relative;
+}
+header .navbar {
+  align-content: space-around;
+}
+header .act {
+  align-content: baseline;
+}
+header nav {
+  background: transparent !important;
+  padding: 0;
+  height: 100%;
+  /*     .navbar-brand {
+      background: #00000020;
+      padding: 14px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      color: white;
+    } */
+}
+header nav .collapse {
+  padding: 0 14px;
+}
+header nav .collapse > ul > li {
+  padding: 29px 0;
+  display: flex;
+  align-items: center;
+}
+header nav .collapse > ul,
+header nav .collapse > li {
+  align-items: center;
+  background: transparent;
+}
+header nav .collapse > ul .ai,
+header nav .collapse > li .ai {
+  background: #2080d5;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+header nav .collapse > ul .ai a,
+header nav .collapse > li .ai a {
+  color: #fff;
+}
+header nav .collapse > ul .ai:hover,
+header nav .collapse > li .ai:hover {
+  background: #2080d5;
+}
+header nav .collapse > ul .dropdown-menu,
+header nav .collapse > li .dropdown-menu {
+  background: #00000055;
+  border-radius: 0;
+  padding: 1rem !important;
+  width: auto !important;
+  max-height: 600px;
+  overflow: scroll;
+}
+header nav .collapse > ul .dropdown-menu > li,
+header nav .collapse > li .dropdown-menu > li {
+  width: max-content;
+  margin: 0;
+}
+header nav .collapse > ul .dropdown-menu dl,
+header nav .collapse > li .dropdown-menu dl {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 16em;
+}
+header nav .collapse > ul .dropdown-menu dl dt,
+header nav .collapse > li .dropdown-menu dl dt {
+  color: var(--text-gray) !important;
+  font-weight: normal;
+  font-size: 16px;
+  width: 100%;
+  width: fit-content;
+  padding: 1rem;
+  position: relative;
+}
+header nav .collapse > ul .dropdown-menu dl dd,
+header nav .collapse > li .dropdown-menu dl dd {
+  width: 100%;
+  text-indent: 40px;
+  padding: 1rem;
+  position: relative;
+}
+header nav .collapse > ul .dropdown-menu dl dd a,
+header nav .collapse > li .dropdown-menu dl dd a {
+  color: var(--text-gray) !important;
+  font-size: small;
+}
+header nav .collapse > ul .dropdown-menu dl dt:hover,
+header nav .collapse > li .dropdown-menu dl dt:hover,
+header nav .collapse > ul .dropdown-menu dl dd:hover,
+header nav .collapse > li .dropdown-menu dl dd:hover {
+  background: #0000001f;
+}
+header nav .collapse > ul > li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3.5rem;
+}
+header nav .collapse > ul > li:hover,
+header nav .collapse > ul > li:focus {
+  background: #00000020;
+}
+header nav .collapse > ul > li > a {
+  text-align: center;
+  min-width: 4em;
+  height: 3.5rem;
+  line-height: 2.5rem;
+  color: var(--text-gray);
+}
+header nav .collapse > ul > li > a:hover,
+header nav .collapse > ul > li > a:focus {
+  color: #fff;
+}
+header nav .collapse > ul .act {
+  background: #00000020 !important;
+}
+header nav .collapse > ul .act > a {
+  color: #fff !important;
+}
+.AiTechnology {
+  overflow-x: hidden;
+}
+.footbox {
+  width: 100%;
+  padding: 0 10%;
+  background: url(../picture/footer-bg.jpg);
+  background-size: cover;
+}
+.footbox > .foot-top {
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid #ffffff29;
+}
+.footbox > .foot-top .foot-logo {
+  width: 40%;
+  height: 100%;
+  padding-top: 2.5rem;
+}
+.footbox > .foot-top .foot-content {
+  width: 60%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.footbox > .foot-top .foot-content > dl {
+  white-space: nowrap;
+}
+.footbox > .foot-top .foot-content > dl > dt {
+  margin-bottom: 2em;
+  color: #dedede;
+}
+.footbox > .foot-top .foot-content > dl > dd {
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+.footbox > .foot-top .foot-content > dl > dd > a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+.footbox > .foot-top .foot-content > dl > dd > a:focus {
+  color: #fff;
+}
+.footbox > .about-me {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  justify-content: space-between;
+}
+.footbox > .about-me > .cop {
+  font-size: smaller;
+  line-height: 0.7rem;
+  padding-top: 1.25rem;
+}
+.footbox > .about-me > .cop > p {
+  color: var(--text-gray);
+}
+.footbox > .about-me > .cop > p > a {
+  color: var(--text-gray);
+}
+.footbox > .about-me > .cop > p > a:focus {
+  color: #fff;
+}
+.footbox > .about-me > .cop .mt-4 {
+  margin-top: 2rem !important;
+}
+.footbox > .about-me .ewm {
+  padding-top: 1.25rem;
+  text-align: end;
+  display: block;
+  width: 100px;
+  position: relative;
+}
+.footbox > .about-me .ewm p {
+  white-space: nowrap;
+  margin-left: 1em;
+  color: var(--text-gray);
+  font-size: smaller;
+}
