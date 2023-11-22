@@ -16,7 +16,7 @@
     padding-top: 0rem !important;
   }
 }
-@media screen and (max-width: 1000px) and screen and (max-width: 990px) {
+@media screen and (max-width: 990px) {
   #friend {
     display: flex;
   }
@@ -33,12 +33,6 @@
   }
 }
 @media screen and (max-width: 835px) {
-  .foot-content > .col-2 {
-    transform: scale(0.6);
-  }
-  .products {
-    transform: scale(0.9);
-  }
   .AiTechnology-img {
     width: 50% !important;
   }
