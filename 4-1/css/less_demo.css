@@ -228,6 +228,8 @@
 .terminal {
   padding: 4rem 0;
   position: relative;
+  text-align: center;
+  margin: 0;
 }
 .terminal::after {
   position: absolute;
@@ -268,4 +270,104 @@
 }
 .terminal .little .content i {
   margin: 0.5em;
+}
+.terminal .little .content .act {
+  color: var(--bili-blue);
+}
+main {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+}
+main .content-box {
+  padding: 1.5%;
+  height: max-content;
+  background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
+  min-width: 40%;
+  width: max-content;
+  max-width: 70%;
+  min-height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .content-box .row {
+  width: max-content;
+  max-width: 100%;
+  min-height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .content-box .row div[class*="col-"] {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+main .content-box .row div[class*="col-"] h3 {
+  color: var(--text-gray-hover);
+}
+main .content-box .row div[class*="col-"] p {
+  margin-top: 1em;
+}
+main .content-box .row div[class*="col-"] p:not(first-child) {
+  color: var(--text-lighter);
+  text-align: left;
+}
+main .content-box .row div[class*="col-"] picture {
+  margin: auto;
+}
+main .content-box .hst {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+}
+main .content-box .hst .center-box {
+  margin-top: 1.5rem;
+}
+main .content-box .hst .center-box:not(:first-child) {
+  margin-left: 1.5rem;
+}
+main .content-box .hst .center-box > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: max-content;
+}
+main .content-box .hst .center-box > div:not(:first-child) {
+  margin-top: 3em;
+  margin-bottom: 1.5rem;
+}
+main .content-box .hst .center-box > div > picture {
+  position: relative;
+  width: max-content;
+  max-width: 100% !important;
+}
+main .content-box .hst .center-box > div > picture:not(:only-child) {
+  max-width: 50% !important;
+}
+main .content-box .hst .center-box > div > picture .tips {
+  width: 100%;
+  height: 1.5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -1.5rem;
+  background: var(--text-gray-hover);
+  color: var(--text-gray);
+}
+main .content-box .hst .center-box > div > picture:not(:first-child) {
+  margin-left: 1.65em;
 }
