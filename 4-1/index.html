@@ -118,22 +118,5 @@
 <script src="../bootstrap/swiper/swiper-bundle.min.js"></script>
 
 <script>
-  function qh() {
-    let pageText = $(".terminal .little .content span.act").attr("page");
-    if (pageText == "1") {
-      $(".terminal main").load("page-1.html", function () {
-        // alert("加载完成");
-        pc();
-      });
-    } else {
-      $(".terminal main").load("page-2.html", function () {
-        // alert("加载完成");
-        pc();
-      });
-    }
-  }
-  qh();
-  $(".terminal .little .content span").click(function () {
-    qh();
-  });
+
 </script>

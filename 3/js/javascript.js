@@ -113,11 +113,11 @@ $(document).ready(function () {
     if (sessionStorage.getItem("iBox-F") !== null) {
       sessionStorage.removeItem("iBox-F");
     }
-    window.open("../3-1/index.html");
+    location.href = "../3-1/index.html";
   });
 
   $("#ToiBox-F").on("click", function () {
     sessionStorage.setItem("iBox-F", "1");
-    window.open("../3-1/index.html");
+    location.href = "../3-1/index.html";
   });
 });

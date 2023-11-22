@@ -117,4 +117,30 @@ $(document).ready(function () {
     );
   });
   pc();
+
+  //header高亮
+  var path = window.location.pathname;
+  if (path === "/1/index.html") {
+    $(".nav-item").eq(0).addClass("act");
+  } else if (path === "/2/index.html") {
+    $(".nav-item").eq(1).addClass("act");
+  } else if (path === "/3/index.html") {
+    $(".nav-item").eq(1).addClass("act");
+  } else if (path === "/4-1/index.html") {
+    $(".nav-item").eq(2).addClass("act");
+  } else if (path === "/friend/index.html") {
+    $(".nav-item").eq(4).addClass("act");
+  } else if (path === "/5/index.html") {
+    $(".nav-item").eq(5).addClass("act");
+  }
+
+  //跳转密钥
+    $('.nav-item').eq(2).find('dd').eq(0).click(function(){
+    sessionStorage.setItem('click', '0')
+    location.href='../4-1/index.html'
+  })
+  $('.nav-item').eq(2).find('dd').eq(1).click(function(){
+    sessionStorage.setItem('click', '1')
+    location.href='../4-1/index.html'
+  })
 });

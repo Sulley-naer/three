@@ -130,6 +130,13 @@ header nav {
   background: transparent !important;
   padding: 0;
   height: 100%;
+  /*     .navbar-brand {
+      background: #00000020;
+      padding: 14px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      color: white;
+    } */
 }
 header nav .collapse {
   padding: 0 14px;
@@ -218,6 +225,8 @@ header nav .collapse > ul > li:focus {
   background: #00000020;
 }
 header nav .collapse > ul > li > a {
+  text-align: center;
+  min-width: 4em;
   height: 3.5rem;
   line-height: 2.5rem;
   color: var(--text-gray);
@@ -226,12 +235,11 @@ header nav .collapse > ul > li > a:hover,
 header nav .collapse > ul > li > a:focus {
   color: #fff;
 }
-header nav .navbar-brand {
-  background: #00000020;
-  padding: 14px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: white;
+header nav .collapse > ul .act {
+  background: #00000020 !important;
+}
+header nav .collapse > ul .act > a {
+  color: #fff !important;
 }
 .AiTechnology {
   overflow-x: hidden;
