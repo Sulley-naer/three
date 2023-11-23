@@ -51,6 +51,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: center;
 }
 .swiper .swiper-slide .mark {
   width: 100%;
@@ -104,284 +105,97 @@
   background: var(--head-bg-hover);
   background: #00000045;
 }
-.AiTechnology {
+.foot_swiper {
+  max-height: 465px;
+}
+.foot_swiper content {
   position: relative;
-  padding: 0 10%;
-  padding-top: 8rem;
-  text-align: center;
-  padding-bottom: 4rem;
-  z-index: 1;
-  overflow-x: hidden;
-}
-.AiTechnology .head-button {
-  position: absolute;
-  left: 50%;
-  top: 2rem;
-  transform: translate(-50%, 0);
-  color: var(--bili-blue);
-  padding: 0.5em 1em;
-  display: flex;
-  align-items: center;
-  border: 2px;
-  border-radius: 25px;
-  overflow: hidden;
-  background: #fff;
-}
-.AiTechnology .head-button:hover::before {
-  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
-}
-.AiTechnology .head-button::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right, var(--bili-blue), var(--blue-gray));
-  z-index: -1;
-}
-.AiTechnology .head-button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 2px;
-  width: 98%;
-  height: 90%;
-  background: #fff;
-  z-index: -1;
-  border-radius: 33px;
-}
-.AiTechnology:nth-child(1) {
-  padding-bottom: 0;
-}
-.AiTechnology:nth-child(1) .AiTechnology-body-right-img {
-  background: url(../../images/product/iBox-D.png) no-repeat;
-  background-size: contain;
-}
-.AiTechnology:nth-child(3) {
-  background: #0d1c59;
-}
-.AiTechnology:nth-child(3) .AiTechnology-title h3 {
-  color: #dedede;
-}
-.AiTechnology:nth-child(3) .AiTechnology-title p {
-  transform: scale(0.8);
-  color: #d3d3d354;
-}
-.AiTechnology::after {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 2px;
-  top: 4rem;
-  left: 0;
-  background: linear-gradient(to right, #2f4da5, #5ba6e4);
-}
-.AiTechnology::before {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 2px;
-  top: 4rem;
-  right: 0;
-  background: linear-gradient(to left, #2f4da5, #5ba6e4);
-}
-.AiTechnology .AiTechnology-bg {
-  position: absolute;
-  display: block;
-  z-index: 0;
-  width: 100%;
-  height: 73%;
-  background: url(../../images/line-bg.svg) no-repeat center center;
-  bottom: 0;
-  left: 0;
-  background-size: contain;
-}
-.AiTechnology .AiTechnology-title h3 {
-  color: #141414;
-}
-.AiTechnology .AiTechnology-title p {
-  transform: scale(1);
-  color: var(--bs-gray-600);
-  margin-bottom: 2em;
-}
-.AiTechnology .AiTechnology-body {
-  position: relative;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  color: #e6e7f0;
-  margin: auto;
-  height: max-content;
-  width: max-content;
-  max-width: 100%;
-}
-.AiTechnology .AiTechnology-body .card {
-  width: 100%;
-  position: relative;
-  background: url(../../images/algorithm-facesb-bg.jpg) no-repeat;
-  background-size: cover;
-  z-index: 2;
-  height: max-content;
-  min-height: 300px;
-  justify-content: center;
-  align-items: center;
-}
-.AiTechnology .AiTechnology-body .card .row {
-  height: max-content;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] {
-  padding: 15px;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body {
-  width: max-content;
-  max-width: 100%;
-  margin: auto;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body *:not(:first-child) {
-  margin-top: 1rem;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title {
-  display: flex;
-  align-items: center;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title i {
-  font-size: xx-large;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title h2 {
-  margin: 0;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title *:not(:first-child) {
-  margin-left: 0.5em;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-text {
-  /*               width: max-content;
-              max-width: 23rem; */
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body picture {
-  display: block;
-  max-width: 100%;
-  background: center center no-repeat;
-  background-size: contain;
-}
-.AiTechnology .AiTechnology-body .card .mark {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #ffffff1a;
-}
-.AiTechnology .AiTechnology-body .card .vr {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, 0);
-  height: 100%;
-  display: none;
-}
-.AiTechnology .AiTechnology-body .card .hr {
-  width: 100%;
-  display: inline-block;
-}
-.AiTechnology .AiTechnology-body-right-img {
-  padding-top: 2em;
-  width: 50%;
-  height: 16rem;
-  background: no-repeat;
-  background-size: contain;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  margin: 0 0 2rem 0;
-}
-.AiTechnology .AiTechnology-images {
-  display: flex;
-  justify-content: center;
-}
-.AiTechnology .AiTechnology-images .AiTechnology-img {
-  position: relative;
-  padding: 6.8% 12%;
-  margin: 0.05rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(160deg, rgba(16, 52, 117, 0.8), rgba(33, 67, 193, 0.8));
-}
-.AiTechnology .AiTechnology-images .AiTechnology-img p {
-  padding-top: 0.8rem;
-  color: var(--text-gray);
-  width: max-content;
-}
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce {
-  position: absolute;
-  top: 0;
-  padding-top: 4rem;
-  width: 100%;
-  height: 100%;
-  background: url(../../images/solution-mask.jpg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
-  color: var(--bs-gray-600);
-  margin-bottom: 0;
-}
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p .tz {
-  display: flex;
-  justify-content: space-around;
+  align-content: space-around;
   flex-wrap: wrap;
-  margin-top: 1rem;
-}
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p .tz a {
-  padding: 0.2rem 0.5rem;
-  width: max-content;
-  font-size: 0.8rem;
-  color: var(--text-gray-hover);
+  align-items: center !important;
   text-align: center;
-  border: 1px solid #fff;
-  border-radius: 9rem;
+  width: max-content !important;
+  max-width: 80%;
 }
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border {
+.foot_swiper content::after {
   position: absolute;
-  top: 0;
+  top: 2rem;
+  left: 0;
+  content: "";
   width: 100%;
   height: 100%;
+  background: url(../../picture/AiSatety-banner-text.png) no-repeat center;
 }
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span {
+.foot_swiper content h1 {
+  font-size: xx-large;
+  font-weight: 100;
+}
+.foot_swiper content text {
+  padding-top: 2rem;
+  display: block;
+  width: max-content;
+  margin: auto;
+}
+.foot_swiper content text p {
+  color: var(--text-gray-hover);
+  font-size: 1.25rem;
+  width: max-content;
+  text-align: left !important;
+}
+.foot_swiper content text p i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--text-gray-hover);
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+.Security {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.Security .Security-bg {
+  position: relative;
+  background: no-repeat center center / cover;
+}
+.Security ul {
+  margin: 0;
+  padding: 0;
+  width: max-content;
   position: absolute;
 }
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(1) {
-  width: 0%;
-  height: 2px;
-  left: 0;
-  top: 0;
-  background: #8debf1;
+.Security ul li {
+  color: var(--blue-gray);
+  font-size: smaller;
 }
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(2) {
-  width: 0%;
-  height: 2px;
-  right: 0;
-  bottom: 0;
-  transform: rotate(180deg);
-  background: #94b9fd;
+.Security ul li i {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--blue-gray);
+  vertical-align: middle;
+  margin-right: 0.8rem;
 }
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(3) {
-  width: 2px;
-  height: 0%;
-  left: 0;
-  bottom: 0;
-  transform: rotate(180deg);
-  background: linear-gradient(to bottom, #94b9fd, #8debf1);
+.Security ul:nth-child(1),
+.Security ul:nth-child(2) {
+  left: 15.78%;
 }
-.AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(4) {
-  width: 2px;
-  height: 0%;
-  right: 0;
-  background: linear-gradient(to bottom, #8debf1, #94b9fd);
+.Security ul:nth-child(1) {
+  top: 20%;
+}
+.Security ul:nth-child(2) {
+  top: 75%;
+}
+.Security ul:nth-child(3),
+.Security ul:nth-child(4) {
+  right: 17.7%;
+}
+.Security ul:nth-child(3) {
+  top: 6%;
+}
+.Security ul:nth-child(4) {
+  top: 55%;
 }
