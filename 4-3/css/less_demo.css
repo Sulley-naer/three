@@ -31,129 +31,72 @@
     border-bottom: 2px solid var(--line-o);
   }
 }
-.banner {
-  position: relative;
-  height: 50rem;
+.container {
   width: 100%;
-  padding: 0 10%;
-  background: #fff;
-}
-.banner::before {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 2px;
-  top: 10%;
-  left: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
-}
-.banner::after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 2px;
-  top: 10%;
-  right: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
-  transform: rotate(180deg);
-}
-.banner .swiper {
-  width: 30%;
-  height: 8rem;
-}
-.banner .swiper .swiper-slide {
-  display: flex;
-  align-items: end;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.banner .swiper .swiper-pagination .swiper-pagination-bullet {
-  width: calc(100% / 3) !important;
-  transform: none;
-  background: var(--bili-blue) !important;
-  margin: 0;
-  border-radius: 6px;
-}
-.banner .container-fluid {
-  height: calc(100% - 128px);
-  background: url(../../images/build-bgimg.jpg) no-repeat center center;
-  position: relative;
+  min-height: 20rem;
+  height: max-content;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
 }
-.banner .container-fluid .left {
-  width: calc(100% / 3);
-  height: 100%;
-  position: relative;
-}
-.banner .container-fluid .left:hover .card {
-  visibility: visible;
-  transform: translateX(0);
-  opacity: 1;
-}
-.banner .container-fluid .left .card {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 20%;
+.container .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: max-content;
-  max-width: 80%;
-  transform: translateX(-100%);
-  opacity: 0;
+  max-width: 100%;
 }
-.banner .container-fluid .left .card span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  vertical-align: sub;
+.container .title i {
+  font-style: normal;
+  font-size: xxx-large;
 }
-.banner .container-fluid .left .card li {
-  margin-top: 0.5em;
-  font-size: small;
-}
-.banner .container-fluid .md {
-  width: calc(100% / 3);
-  height: 100%;
+.container .main {
   position: relative;
-}
-.banner .container-fluid .right {
-  width: calc(100% / 3);
-  height: 100%;
-  position: relative;
-}
-.banner .container-fluid .right:hover .card {
-  visibility: visible;
-  transform: translateX(0);
-  opacity: 1;
-}
-.banner .container-fluid .right .card {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 20%;
   width: max-content;
-  max-width: 80%;
-  transform: translateX(100%);
-  opacity: 0;
+  max-width: 100%;
 }
-.banner .container-fluid .right .card span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  vertical-align: sub;
+.container .main img {
+  width: 100%;
 }
-.banner .container-fluid .right .card li {
-  margin-top: 0.5em;
-  font-size: small;
+.container .main span {
+  position: absolute;
+  display: block;
+  width: max-content;
+  max-width: 15em;
 }
-.terminal {
-  padding: 4rem 0;
-  position: relative;
-  text-align: center;
+.container .main span .card {
+  border: 0;
+  background: transparent;
+}
+.container .main span .card .card-body {
+  color: #3394ef;
+}
+.container .main span .card .card-body ul {
+  padding-left: 1em;
   margin: 0;
 }
-.terminal::after {
+.container .main span .card .card-body ul li {
+  list-style: disc;
+}
+.container .main span .card .card-body .card-title {
+  font-size: 1.5rem;
+}
+.container .main span .card .card-body .card-text {
+  font-size: 1rem;
+}
+main[class*="body"] {
+  width: 100%;
+  height: max-content;
+  padding: 4rem 0;
+  position: relative;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main[class*="body"]::after {
   position: absolute;
   content: "";
   width: 40%;
@@ -162,7 +105,7 @@
   left: -15%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
-.terminal::before {
+main[class*="body"]::before {
   position: absolute;
   content: "";
   width: 40%;
@@ -171,31 +114,139 @@
   right: -15%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
-.terminal .little {
+main[class*="body"] .head {
   text-align: center;
   padding: 2rem 0;
   width: max-content;
   max-width: 100%;
   margin: auto;
 }
-.terminal .little .title {
+main[class*="body"] .head .title {
   font-size: large;
   width: 100%;
 }
-.terminal .little .content {
+main[class*="body"] .head .content {
   width: max-content;
   max-width: 100%;
   display: flex;
   align-items: center;
 }
-.terminal .little .content span {
+main[class*="body"] .head .content span {
   font-size: small;
 }
-.terminal .little .content i {
+main[class*="body"] .head .content i {
+  font-style: normal;
   margin: 0.5em;
 }
-.terminal .little .content .act {
+main[class*="body"] .head .content .act {
   color: var(--bili-blue);
+}
+main[class*="body"] main {
+  height: max-content;
+  width: 60%;
+  background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main[class*="body"] main > div {
+  width: 100%;
+}
+main[class*="body"] main .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main[class*="body"] main .head .row {
+  padding: 0 2em;
+  width: max-content;
+  max-width: 100%;
+  min-height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main[class*="body"] main .head .row div[class*="col-"] {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+main[class*="body"] main .head .row div[class*="col-"] .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+}
+main[class*="body"] main .head .row div[class*="col-"] .title h3 {
+  color: var(--text-gray-hover);
+  margin: 0;
+}
+main[class*="body"] main .head .row div[class*="col-"] .title i {
+  margin: 0 0.5em;
+  font-size: xx-large;
+  font-family: "iconfont";
+  font-style: normal;
+  color: var(--text-gray-hover);
+}
+main[class*="body"] main .head .row div[class*="col-"] p {
+  margin-top: 1em;
+}
+main[class*="body"] main .head .row div[class*="col-"] p:not(first-child) {
+  color: var(--text-lighter);
+  text-align: left;
+}
+main[class*="body"] main .head .row div[class*="col-"] picture {
+  margin: auto;
+}
+main[class*="body"] main .head .row div[class*="col-"] .pic-p2 {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: -6px 6px 6px 0px #02020221;
+}
+main[class*="body"] main .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main[class*="body"] main .content > div {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2em;
+  height: max-content;
+  min-height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main[class*="body"] main .content .page > div {
+  position: relative;
+  width: calc(90% / 5);
+  margin-bottom: 2em;
+}
+main[class*="body"] main .content .page > div:hover > span {
+  color: var(--bili-blue);
+}
+main[class*="body"] main .content .page > div > span {
+  display: block;
+  width: 100%;
+  padding: 0.3em 0;
+  color: var(--text-gray);
+  text-align: center;
+  background: var(--text-gray-hover);
+}
+main[class*="body"] main .content .page > div > img {
+  display: block;
+  width: 100%;
+}
+main[class*="body"] main .content .page-2 > div {
+  width: calc(90% / 4);
+}
+main[class*="body"] main .content .page-2 .lg {
+  width: calc(90% / 2 + 34px);
 }
 .summary {
   width: 100%;
