@@ -9,6 +9,7 @@
   --bili-blue: #00aeec;
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
+  --line: hsla(0, 0%, 75%, 0.45);
 }
 .swiper {
   width: 100%;
@@ -111,7 +112,6 @@
   text-align: center;
   padding-bottom: 4rem;
   z-index: 1;
-  overflow-x: hidden;
 }
 .AiTechnology .head-button {
   position: absolute;

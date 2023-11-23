@@ -12,9 +12,9 @@ a {
   }
 }
 @media screen and (max-width: 1415px) {
-  .foot-content>.col-2 {
-      transform: scale(0.8);
-    }
+  .foot-content > .col-2 {
+    transform: scale(0.8);
+  }
 }
 
 @media screen and (max-width: 1110px) {
@@ -54,17 +54,17 @@ a {
   .cop p {
     line-height: 1.4em;
   }
-        .foot-logo {
-          display: none;
-        }
-    
-        .foot-content {
-          width: 100% !important;
-    
-          >.col-2 {
-            transform: scale(1);
-          }
-        }
+  .foot-logo {
+    display: none;
+  }
+
+  .foot-content {
+    width: 100% !important;
+
+    > .col-2 {
+      transform: scale(1);
+    }
+  }
 }
 
 @media screen and (max-width: 835px) {
@@ -74,7 +74,6 @@ a {
 }
 
 @media screen and (max-width: 775px) {
-
 }
 
 @media screen and (max-width: 620px) {
@@ -95,14 +94,12 @@ a {
     top: 6.5% !important;
     left: 2% !important;
   }
-    .foot-content>.col-2 {
-      transform: scale(0.4);
-    }
+  .foot-content > .col-2 {
+    transform: scale(0.4);
+  }
 }
 @media screen and (max-width: 450px) {
-    
-  }
-
+}
 
 @keyframes dm {
   from {
@@ -119,12 +116,15 @@ a {
 :root {
   --head-bg: rgba(3, 21, 75, 0.137);
   --head-bg-hover: rgba(3, 21, 75, 0.3);
-  --text-gray: rgb(159, 159, 159);
-  --text-gray-hover: rgb(255, 255, 255);
-  --text-lighter: rgb(210, 210, 210);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
   --header-bg-down: #000000b5;
-  --bili-pink: rgb(255, 50, 114);
-  --bili-blue: rgb(0, 174, 236);
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
+  --line: hsl(0deg 0% 75% / 45%);
 }
 
 header {
@@ -247,6 +247,8 @@ header {
         }
 
         > a {
+          text-align: center;
+          min-width: 4em;
           height: 3.5rem;
           line-height: 2.5rem;
           color: var(--text-gray);
@@ -257,15 +259,21 @@ header {
           }
         }
       }
+      > ul .act {
+        background: #00000020 !important;
+        > a {
+          color: #fff !important;
+        }
+      }
     }
 
-    .navbar-brand {
+    /*     .navbar-brand {
       background: #00000020;
       padding: 14px;
       padding-left: 2rem;
       padding-right: 2rem;
       color: white;
-    }
+    } */
   }
 }
 

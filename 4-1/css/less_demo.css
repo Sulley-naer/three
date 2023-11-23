@@ -9,6 +9,8 @@
   --bili-blue: #00aeec;
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
+  --line: hsla(0, 0%, 75%, 0.45);
+  --line-o: hsla(0, 0%, 75%, 0.2);
 }
 @media screen and (max-width: 1700px) {
   .terminal,
@@ -29,6 +31,19 @@
   main .content-box .hst .center-box > div > picture:only-child {
     max-width: 75% !important;
     background-position: bottom;
+  }
+}
+@media screen and (max-width: 770px) {
+  .summary main {
+    margin-top: 3rem;
+  }
+  .summary main > div .content div[class*="col-"] {
+    padding: 0 2.5em !important;
+    align-items: center;
+    border-right: 0;
+  }
+  .summary main > div .content div[class*="col-"]:not(:last-child) {
+    border-bottom: 2px solid var(--line-o);
   }
 }
 @media screen and (max-width: 600px) {
@@ -373,6 +388,12 @@
 .terminal main .content-box .row div[class*="col-"] picture {
   margin: auto;
 }
+.terminal main .content-box .row div[class*="col-"] .pic-p2 {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: -6px 6px 6px 0px #02020221;
+}
 .terminal main .content-box .hst {
   display: flex;
   justify-content: center;
@@ -474,6 +495,7 @@
 .summary main {
   position: relative;
   width: 100%;
+  max-height: 420px;
   padding: 0 5%;
   height: max-content;
   display: flex;
@@ -482,4 +504,61 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-around;
+}
+.summary main > div {
+  width: 100%;
+  background-size: cover !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+}
+.summary main > div .content {
+  width: 100%;
+  height: max-content;
+  display: flex;
+}
+.summary main > div .content div[class*="col-"] {
+  padding: 6rem 2.5em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.summary main > div .content div[class*="col-"]:not(:last-child) {
+  border-right: 2px solid var(--line-o);
+}
+.summary main > div .content div[class*="col-"] > *:not(:first-child) {
+  margin-top: 0.5em;
+}
+.summary main > div .content div[class*="col-"] .head {
+  width: max-content;
+  max-width: 100%;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--text-gray-hover);
+}
+.summary main > div .content div[class*="col-"] .head i {
+  font-size: xxx-large;
+  font-family: "iconfont";
+  font-style: normal;
+}
+.summary main > div .content div[class*="col-"] .head span {
+  margin-left: 1em;
+}
+.summary main > div .content div[class*="col-"] .msgbox {
+  height: max-content;
+  max-height: 7rem;
+  min-height: 7rem;
+  overflow-y: auto;
+}
+.summary main > div .content div[class*="col-"] .msgbox p {
+  width: max-content;
+  max-width: 100%;
+  line-height: 1.5em;
+  color: var(--text-gray-hover);
 }

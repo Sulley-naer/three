@@ -9,6 +9,8 @@
   --bili-blue: #00aeec;
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
+  --line: hsl(0deg 0% 75% / 45%);
+  --line-o: hsl(0deg 0% 75% / 20%);
 }
 
 @media screen and (max-width: 1700px) {
@@ -31,6 +33,20 @@
   main .content-box .hst .center-box > div > picture:only-child {
     max-width: 75% !important;
     background-position: bottom;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .summary main {
+    margin-top: 3rem;
+  }
+  .summary main > div .content div[class*="col-"] {
+    padding: 0 2.5em !important;
+    align-items: center;
+    border-right: 0;
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--line-o);
+    }
   }
 }
 
@@ -417,6 +433,12 @@
           picture {
             margin: auto;
           }
+          .pic-p2 {
+            padding: 10px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: -6px 6px 6px 0px #02020221;
+          }
         }
       }
       .hst {
@@ -531,6 +553,7 @@
   main {
     position: relative;
     width: 100%;
+    max-height: 420px;
     padding: 0 5%;
     height: max-content;
     display: flex;
@@ -539,7 +562,66 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: space-around;
-    > picture {
+    > div {
+      width: 100%;
+      background-size: cover !important;
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      // min-height: 420px;
+      height: max-content;
+      .content {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        div[class*="col-"] {
+          padding: 6rem 2.5em;
+          height: 100%;
+          // width: max-content;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          &:not(:last-child) {
+            border-right: 2px solid var(--line-o);
+          }
+          > * {
+            &:not(:first-child) {
+              margin-top: 0.5em;
+            }
+          }
+          .head {
+            width: max-content;
+            max-width: 100%;
+            font-size: x-large;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            color: var(--text-gray-hover);
+            i {
+              font-size: xxx-large;
+              font-family: "iconfont";
+              font-style: normal;
+            }
+            span {
+              margin-left: 1em;
+            }
+          }
+          .msgbox {
+            height: max-content;
+            max-height: 7rem;
+            min-height: 7rem;
+            overflow-y: auto;
+            p {
+              width: max-content;
+              max-width: 100%;
+              line-height: 1.5em;
+              color: var(--text-gray-hover);
+            }
+          }
+        }
+      }
     }
   }
 }
