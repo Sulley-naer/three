@@ -135,11 +135,11 @@ $(document).ready(function () {
   }
 
   //跳转密钥
-    $('.nav-item').eq(2).find('dd').eq(0).click(function(){
+    $('.nav-item').eq(2).find('dd').eq(10).click(function(){
     sessionStorage.setItem('click', '0')
     location.href='../4-1/index.html'
   })
-  $('.nav-item').eq(2).find('dd').eq(1).click(function(){
+  $('.nav-item').eq(2).find('dd').eq(11).click(function(){
     sessionStorage.setItem('click', '1')
     location.href='../4-1/index.html'
   })
