@@ -1,0 +1,375 @@
+:root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
+  --line: hsla(0, 0%, 75%, 0.45);
+  --line-o: hsla(0, 0%, 75%, 0.2);
+}
+@media screen and (max-width: 1700px) {
+  .terminal,
+  .summary {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 770px) {
+  .summary main {
+    margin-top: 3rem;
+  }
+  .summary main > div .content div[class*="col-"] {
+    padding: 0 2.5em !important;
+    align-items: center;
+    border-right: 0;
+  }
+  .summary main > div .content div[class*="col-"]:not(:last-child) {
+    border-bottom: 2px solid var(--line-o);
+  }
+}
+.container {
+  width: 100%;
+  min-height: 20rem;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+}
+.container .title i {
+  font-style: normal;
+  font-size: xxx-large;
+}
+.container .main {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+}
+.container .main img {
+  width: 100%;
+}
+.container .main span {
+  position: absolute;
+  display: block;
+  width: max-content;
+  max-width: 15em;
+}
+.container .main span .card {
+  border: 0;
+  background: transparent;
+}
+.container .main span .card .card-body {
+  color: #3394ef;
+}
+.container .main span .card .card-body ul {
+  padding-left: 1em;
+  margin: 0;
+}
+.container .main span .card .card-body ul li {
+  list-style: disc;
+}
+.container .main span .card .card-body .card-title {
+  font-size: 1.5rem;
+}
+.container .main span .card .card-body .card-text {
+  font-size: 1rem;
+}
+main[class*="body"] {
+  width: 100%;
+  height: max-content;
+  padding: 4rem 0;
+  position: relative;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main[class*="body"]::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: -15%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+main[class*="body"]::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: -15%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+main[class*="body"] .head {
+  text-align: center;
+  padding: 2rem 0;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+}
+main[class*="body"] .head .title {
+  font-size: large;
+  width: 100%;
+}
+main[class*="body"] .head .content {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+main[class*="body"] .head .content span {
+  font-size: small;
+}
+main[class*="body"] .head .content i {
+  font-style: normal;
+  margin: 0.5em;
+}
+main[class*="body"] .head .content .act {
+  color: var(--bili-blue);
+}
+main[class*="body"] main {
+  height: max-content;
+  width: 60%;
+  background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main[class*="body"] main > div {
+  width: 100%;
+}
+main[class*="body"] main .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main[class*="body"] main .head .row {
+  padding: 0 2em;
+  width: max-content;
+  max-width: 100%;
+  min-height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main[class*="body"] main .head .row div[class*="col-"] {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+main[class*="body"] main .head .row div[class*="col-"] .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+}
+main[class*="body"] main .head .row div[class*="col-"] .title h3 {
+  color: var(--text-gray-hover);
+  margin: 0;
+}
+main[class*="body"] main .head .row div[class*="col-"] .title i {
+  margin: 0 0.5em;
+  font-size: xx-large;
+  font-family: "iconfont";
+  font-style: normal;
+  color: var(--text-gray-hover);
+}
+main[class*="body"] main .head .row div[class*="col-"] p {
+  margin-top: 1em;
+}
+main[class*="body"] main .head .row div[class*="col-"] p:not(first-child) {
+  color: var(--text-lighter);
+  text-align: left;
+}
+main[class*="body"] main .head .row div[class*="col-"] picture {
+  margin: auto;
+}
+main[class*="body"] main .head .row div[class*="col-"] .pic-p2 {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: -6px 6px 6px 0px #02020221;
+}
+main[class*="body"] main .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main[class*="body"] main .content > div {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2em;
+  height: max-content;
+  min-height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main[class*="body"] main .content .page > div {
+  position: relative;
+  width: calc(90% / 5);
+  margin-bottom: 2em;
+}
+main[class*="body"] main .content .page > div:hover > span {
+  color: var(--bili-blue);
+}
+main[class*="body"] main .content .page > div > span {
+  display: block;
+  width: 100%;
+  padding: 0.3em 0;
+  color: var(--text-gray);
+  text-align: center;
+  background: var(--text-gray-hover);
+}
+main[class*="body"] main .content .page > div > img {
+  display: block;
+  width: 100%;
+}
+main[class*="body"] main .content .page-2 > div {
+  width: calc(90% / 4);
+}
+main[class*="body"] main .content .page-2 .lg {
+  width: calc(90% / 2 + 34px);
+}
+.summary {
+  width: 100%;
+  height: max-content;
+  padding: 4rem 0;
+  position: relative;
+}
+.summary::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: -15%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.summary::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: -15%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.summary .little {
+  text-align: center;
+  padding: 2rem 0;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+}
+.summary .little > *:not(:first-child) {
+  margin-top: 0.5em;
+}
+.summary .little .title {
+  font-size: large;
+  width: 100%;
+}
+.summary .little .content {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+.summary .little .content span {
+  font-size: small;
+  color: var(--text-gray);
+}
+.summary .little .content span:focus {
+  color: var(--bili-blue);
+}
+.summary .little .content i {
+  margin: 0.5em;
+}
+.summary main {
+  position: relative;
+  width: 100%;
+  max-height: 420px;
+  padding: 0 5%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+}
+.summary main > div {
+  width: 80%;
+  background-size: cover !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+}
+.summary main > div .content {
+  width: 100%;
+  height: max-content;
+  display: flex;
+}
+.summary main > div .content div[class*="col-"] {
+  transition: all 0.5s ease;
+  padding: 6rem 2.5em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.summary main > div .content div[class*="col-"]:not(:last-child) {
+  border-right: 2px solid var(--line-o);
+}
+.summary main > div .content div[class*="col-"] > *:not(:first-child) {
+  margin-top: 0.5em;
+}
+.summary main > div .content div[class*="col-"] .head {
+  width: max-content;
+  max-width: 100%;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--text-gray-hover);
+}
+.summary main > div .content div[class*="col-"] .head i {
+  font-size: xxx-large;
+  font-family: "iconfont";
+  font-style: normal;
+}
+.summary main > div .content div[class*="col-"] .head span {
+  margin-left: 1em;
+}
+.summary main > div .content div[class*="col-"] .msgbox {
+  height: max-content;
+  max-height: 7rem;
+  min-height: 7rem;
+  overflow-y: auto;
+}
+.summary main > div .content div[class*="col-"] .msgbox p {
+  width: max-content;
+  max-width: 100%;
+  line-height: 1.5em;
+  color: var(--text-gray-hover);
+}

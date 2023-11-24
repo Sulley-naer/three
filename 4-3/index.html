@@ -34,29 +34,90 @@
     <div class="container-fluid swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <source src="../picture/AiEnforce-banner.jpg" />
+          <source src="../picture/AiCity-banner.jpg" />
           <content>
-            <h1>智慧执法</h1>
+            <h1>智能城市</h1>
+            <h1>人工智能赋能未来城市</h1>
             <p>
-              通过智慧感知终端、大数据、云计算等先进技术将软件、硬件紧密连接起来,
+              依托领先的AI技术、成熟的安全能力和强大的工程化能力,&#32;提供从AI算法到AI高清摄像机、从边缘到私有云的全方位软硬一体解决方案,
             </p>
-            <p>统一平台,&#32;实现执法精细化、智慧化、规范化。</p>
+            <p>
+              覆盖宗治、雪亮、城管、社区、景区等诸多应用场景,&#32;与各种网络条件、使用环境及管理系统无缝整合。
+            </p>
           </content>
         </div>
       </div>
     </div>
 
-    <div class="terminal">
-      <div class="little">
-        <div class="title">边缘计算终端</div>
+    <div class="container">
+      <div class="title">
+        <h2>核心</h2>
+        <i>·</i>
+        <h2>构建智能化城市新业态</h2>
+      </div>
+      <div class="main">
+        <img src="../images/AiCity-core-img.jpg" alt="" />
+        <span style="top: 22%; left: -0.5%">
+          <div class="card">
+            <div class="card-body">
+              一机多用,&#32;具备入侵检测功能,&#32;入侵事件紧急推送,&#32;安防联动处理
+            </div>
+          </div>
+        </span>
+        <span style="bottom: 8%; left: 25.5%">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>街道常态化</li>
+                <li>社区智能布控</li>
+                <li>智能网络员</li>
+              </ul>
+            </div>
+          </div>
+        </span>
+        <span style="top: 23%; right: 5.5%">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>园区人群分析</li>
+                <li>园区通信管理</li>
+                <li>安全可视化管理</li>
+              </ul>
+            </div>
+          </div>
+        </span>
+        <span style="bottom: 5%; right: 4.5%">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>景区环境数据采集</li>
+                <li>人流数据分析</li>
+                <li>安全主动预防预警</li>
+              </ul>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <main class="body">
+      <div class="head">
+        <h2 class="title">智能城市解决方案</h2>
         <div class="content">
-          <span class="" page="1">行政执法解决方案</span>
-          <i class="vr"></i>
-          <span class="act" page="2">智慧渔政解决方案</span>
+          <span class="act" page="1">宗治雪亮智能方案</span>
+          <i>|</i>
+          <span page="2">智慧社区方案</span>
+          <i>|</i>
+          <span page="3">智慧景区方案</span>
+          <i>|</i>
+          <span page="4">智慧园区方案</span>
+          <i>|</i>
+          <span page="5">智慧环保方案</span>
         </div>
       </div>
       <main></main>
-    </div>
+    </main>
+
     <div class="summary">
       <div class="little">
         <div class="title">解决方案特征亮点</div>
@@ -118,15 +179,5 @@
 <script src="../bootstrap/swiper/swiper-bundle.min.js"></script>
 
 <script>
-  $('.summary main > div .content div[class*="col-"]').mouseenter(function () {
-    $(this).attr("class", "col-md-6").css("align-items", "center");
-    $(this).siblings().attr("class", "col-md-3");
-  });
 
-  $(".summary main > div .content").mouseleave(function () {
-    $(this)
-      .find('div[class*="col-"]')
-      .attr("class", "col-md-4")
-      .css("align-items", "flex-start");
-  });
 </script>
