@@ -101,6 +101,7 @@ a {
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
   --line: hsla(0, 0%, 75%, 0.45);
+  --line-o: hsla(0, 0%, 75%, 0.2);
 }
 header {
   width: 100%;
