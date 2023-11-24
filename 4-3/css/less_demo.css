@@ -18,6 +18,14 @@
     overflow-x: hidden;
   }
 }
+@media screen and (max-width: 1000px) {
+  .container .main span .card {
+    font-size: 14px;
+  }
+  .container .main span .card li {
+    width: max-content;
+  }
+}
 @media screen and (max-width: 770px) {
   .summary main {
     margin-top: 3rem;
@@ -29,6 +37,15 @@
   }
   .summary main > div .content div[class*="col-"]:not(:last-child) {
     border-bottom: 2px solid var(--line-o);
+  }
+  .container .main span .card {
+    font-size: 10px;
+  }
+  .container .main span .card li {
+    width: auto;
+  }
+  main[class*="body"] .head .content span {
+    font-size: 10px !important;
   }
 }
 .container {
@@ -63,7 +80,7 @@
   position: absolute;
   display: block;
   width: max-content;
-  max-width: 15em;
+  max-width: 22%;
 }
 .container .main span .card {
   border: 0;
@@ -143,7 +160,7 @@ main[class*="body"] .head .content .act {
 }
 main[class*="body"] main {
   height: max-content;
-  width: 60%;
+  width: 75%;
   background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
   display: flex;
   align-items: center;
@@ -246,7 +263,7 @@ main[class*="body"] main .content .page-2 > div {
   width: calc(90% / 4);
 }
 main[class*="body"] main .content .page-2 .lg {
-  width: calc(90% / 2 + 34px);
+  width: calc(90% / 2);
 }
 .summary {
   width: 100%;
