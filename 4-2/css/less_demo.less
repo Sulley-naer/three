@@ -181,6 +181,7 @@
   position: relative;
 display: flex;
 justify-content: center;
+margin-top: 4rem;
 .Security-bg {
     position: relative;
     background: no-repeat center center/cover;
@@ -233,4 +234,32 @@ justify-content: center;
       top: 55%;
     }
   }
+}
+.programme{
+  padding: 4rem 10% 0;
+    position: relative;
+  
+    &::after {
+      position: absolute;
+      content: "";
+      width: 40%;
+      height: 2px;
+      top: 0;
+      left: 0%;
+      background: linear-gradient(to right,
+          rgb(47, 77, 165),
+          rgb(91, 166, 228));
+    }
+  
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40%;
+      height: 2px;
+      top: 0;
+      right: 0%;
+      background: linear-gradient(to left,
+          rgb(47, 77, 165),
+          rgb(91, 166, 228));
+    }
 }
