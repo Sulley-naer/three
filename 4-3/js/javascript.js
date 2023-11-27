@@ -67,8 +67,7 @@ if (sessionStorage.getItem("high") == 0) {
   $("html").animate(
     {
       scrollTop: $("main[class*='body']").offset().top,
-    },
-    1000
+    }
   );
   sessionStorage.setItem("high", "1");
 }

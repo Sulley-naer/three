@@ -121,48 +121,15 @@ $(document).ready(function () {
   $(".practice-title>p>a").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
-
+  //partner
   $(".ad").click(function () {
-    $(this).toggleClass("active").siblings().removeClass("active");
-    $(".at")
-      .eq($(this).index(".ad"))
-      .addClass("act")
-      .siblings()
-      .removeClass("act");
+    $(this).addClass("active").siblings().removeClass("active");
+    SwiperAd.slideTo($(this).index(".ad"));
   });
 });
 
-/* // 定义一个函数，接受两个参数：选择器和图片路径
-function changeBackground(selector, imagePath) {
-  // 保存父元素的原始背景图片
-  var originalBgImage = "../images/build-bgimg.jpg";
-  // 为选择器绑定鼠标移入和移出事件
-  $(selector)
-    .mouseover(function () {
-      // 鼠标移入时，改变父元素的背景图片为指定的图片路径
-      $(this)
-        .parent()
-        .css("background", "url(" + imagePath + ") no-repeat center center");
-    })
-    .mouseleave(function () {
-      // 鼠标移出时，恢复父元素的背景图片为默认的图片路径
-      $(this)
-        .parent()
-        .css(
-          "background",
-          "url(../images/build-bgimg.jpg) no-repeat center center"
-        );
-    });
-}
-
-// 调用函数，传递不同的选择器和图片路径
-changeBackground(".banner>div>div[class=left]", "../images/build-bgimg-l.jpg");
-changeBackground(".banner>div>div[class=right]", "../images/build-bgimg-r.jpg");
-changeBackground(".banner>div>div[class=md]", "../images/build-bgimg-m.jpg"); */
-
 $(".banner>div>div").mouseenter(function (event) {
   let hdt = $(".banner .swiper-ban .swiper-pagination>span");
-  console.log($(this).index());
   mySwiper.slideTo($(this).index());
 
   // 阻止事件冒泡
@@ -170,34 +137,19 @@ $(".banner>div>div").mouseenter(function (event) {
 });
 
 
-function simulateMouseover(index) {
-  switch (index) {
-    case 0:
-      $(".banner>div>div[class=left]").mouseover();
-      break;
-    case 1:
-      $(".banner>div>div[class=md]").mouseover();
-      break;
-    case 2:
-      $(".banner>div>div[class=right]").mouseover();
-      break;
-    // 添加更多的 case 语句，以适应你的 Swiper slide 数量
-  }
-}
 
 // 定义一个函数，接受两个参数：选择器和图片路径
 function changeBackground(selector, imagePath) {
   // 保存父元素的原始背景图片
   var originalBgImage = "../images/build-bgimg.jpg";
   // 为选择器绑定鼠标移入和移出事件
-  $(selector)
-    .mouseover(function () {
-      // 鼠标移入时，改变父元素的背景图片为指定的图片路径
-      $(this)
-        .parent()
-        .css("background", "url(" + imagePath + ") no-repeat center center");
-    })
-    /* .mouseleave(function () {
+  $(selector).mouseover(function () {
+    // 鼠标移入时，改变父元素的背景图片为指定的图片路径
+    $(this)
+      .parent()
+      .css("background", "url(" + imagePath + ") no-repeat center center");
+  });
+  /* .mouseleave(function () {
       // 鼠标移出时，恢复父元素的背景图片为默认的图片路径
       $(this)
         .parent()
