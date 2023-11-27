@@ -4,8 +4,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 1200px) {
   .AiTechnology-introduce {
     padding-top: 2rem !important;
@@ -13,7 +11,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .foot-content>.col-2 {
+  .foot-content > .col-2 {
     transform: scale(0.8);
   }
 
@@ -21,25 +19,25 @@
     padding-top: 0rem !important;
   }
 }
-    @media screen and (max-width: 990px) {
-      #friend {
-        display: flex;
-      }
-  
-      .navbar-nav {
-        display: block;
-      }
-  
-      .dropdown-menu {
-        z-index: 999;
-      }
-  
-      .navbar-nav .dropdown-menu {
-        position: fixed !important;
-        top: 7%;
-        left: 0%;
-      }
-    }
+@media screen and (max-width: 990px) {
+  #friend {
+    display: flex;
+  }
+
+  .navbar-nav {
+    display: block;
+  }
+
+  .dropdown-menu {
+    z-index: 999;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: fixed !important;
+    top: 7%;
+    left: 0%;
+  }
+}
 @media screen and (max-width: 835px) {
   .AiTechnology-img {
     width: 50% !important;
@@ -53,7 +51,7 @@
       margin-top: 0 !important;
 
       a {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
       }
     }
   }
@@ -76,17 +74,14 @@
   .foot-content {
     width: 100% !important;
 
-    >.col-2 {
+    > .col-2 {
       transform: scale(1);
     }
   }
-
-
 }
 
-
 @media screen and (max-width: 620px) {
-  .foot-content>.col-2 {
+  .foot-content > .col-2 {
     transform: scale(0.9);
   }
 }
@@ -105,13 +100,12 @@
   .products {
     transform: scale(0.6);
   }
-
 }
 
 @media screen and (max-width: 480px) {
-.AiTechnology-img{
-  height: 14rem;
-}
+  .AiTechnology-img {
+    height: 14rem;
+  }
 
   .navbar-nav .dropdown-menu {
     position: fixed !important;
@@ -120,13 +114,11 @@
   }
 }
 
-
 @media screen and (max-width: 360px) {
   .products {
     transform: scale(0.4);
   }
 }
-
 
 .button-lin {
   position: absolute;
@@ -149,9 +141,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right,
-        var(--bili-blue),
-        var(--blue-gray));
+    background-image: linear-gradient(
+      to right,
+      var(--bili-blue),
+      var(--blue-gray)
+    );
     // border-radius: 12px;
     z-index: -1;
   }
@@ -170,9 +164,11 @@
 
   &:hover {
     &::before {
-      background-image: linear-gradient(to right,
-          var(--blue-gray),
-          var(--bili-blue));
+      background-image: linear-gradient(
+        to right,
+        var(--blue-gray),
+        var(--bili-blue)
+      );
     }
   }
 }
@@ -187,7 +183,7 @@ li {
   padding: 0 10%;
   padding-top: 2.5rem;
 
-  >.products {
+  > .products {
     padding: 0 10%;
     padding-top: 2.5rem;
     display: flex;
@@ -242,9 +238,11 @@ li {
       height: 2px;
       bottom: 0;
       left: -13%;
-      background: linear-gradient(to right,
-          rgb(47, 77, 165),
-          rgb(91, 166, 228));
+      background: linear-gradient(
+        to right,
+        rgb(47, 77, 165),
+        rgb(91, 166, 228)
+      );
     }
 
     &::before {
@@ -281,12 +279,13 @@ li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: linear-gradient(160deg,
-            rgba(16, 52, 117, 0.8),
-            rgba(33, 67, 193, 0.8));
+        background: linear-gradient(
+          160deg,
+          rgba(16, 52, 117, 0.8),
+          rgba(33, 67, 193, 0.8)
+        );
 
         p {
-
           padding-top: 0.8rem;
           color: var(--text-gray);
           width: max-content;
@@ -359,18 +358,22 @@ li {
                 left: 0;
                 bottom: 0;
                 transform: rotate(180deg);
-                background: linear-gradient(to bottom,
-                    rgb(148, 185, 253),
-                    rgb(141, 235, 241));
+                background: linear-gradient(
+                  to bottom,
+                  rgb(148, 185, 253),
+                  rgb(141, 235, 241)
+                );
               }
 
               &:nth-child(4) {
                 width: 2px;
                 height: 0%;
                 right: 0;
-                background: linear-gradient(to bottom,
-                    rgb(141, 235, 241),
-                    rgb(148, 185, 253));
+                background: linear-gradient(
+                  to bottom,
+                  rgb(141, 235, 241),
+                  rgb(148, 185, 253)
+                );
               }
             }
           }
@@ -602,9 +605,17 @@ li {
     right: 0;
     background: url(../images/title-divide-line.png) no-repeat;
   }
-
+  > div {
+    width: 15%;
+    margin: 1rem auto 0 auto;
+    position: relative;
+    .ad {
+      margin: auto 0;
+      position: relative;
+    }
+  }
   @media screen and (max-width: 500px) {
-    >div {
+    > div {
       width: 60% !important;
     }
 
@@ -613,37 +624,20 @@ li {
     }
   }
 
-  >div {
-    margin: 1rem auto 0 auto;
-
-    .ad {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  .at {
-    display: flex;
-  }
-
-  .w-15 {
-    width: 15%;
-  }
-
   @media screen and (max-width: 1642px) {
-    .w-15 {
+    > div {
       width: 25%;
     }
   }
 
   @media screen and (max-width: 910px) {
-    .w-15 {
-      width: 30%;
+    > div {
+      width: 35%;
     }
   }
 
   @media screen and (max-width: 965px) {
-    .w-15 {
+    > div {
       width: 50%;
     }
   }
@@ -652,7 +646,10 @@ li {
     color: skyblue;
     transition: all 0.3s;
   }
-
+  .swiper {
+    width: 100%;
+    height: max-content;
+  }
   & picture {
     /* // background: #00000009; */
     width: 75%;
@@ -660,25 +657,30 @@ li {
     display: block;
     margin: auto;
     margin-top: 1rem;
-    display: none !important;
-
+    display: flex;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
     & div {
       border-radius: 25px;
       overflow: hidden;
-    }
-  }
-
-  .act {
-    display: flex !important;
-
-    >div>img {
-      animation-name: dm;
-      animation-duration: 0.5s;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
 
-@keyframes dm {
+.act {
+  display: flex !important;
+
+  > div > img {
+    animation-name: dm;
+    animation-duration: 0.5s;
+  }
+}
+
+/* @keyframes dm {
   from {
     // transform: scale(0);
     opacity: 0;
@@ -688,7 +690,7 @@ li {
     // transform: scale(1);
     opacity: 1;
   }
-}
+} */
 
 //foot
 .footbox {
@@ -697,7 +699,7 @@ li {
   background: url(../../picture/footer-bg.jpg);
   background-size: cover;
 
-  >.foot-top {
+  > .foot-top {
     width: 100%;
     height: 60%;
     border-bottom: 1px solid #ffffff29;
@@ -715,19 +717,19 @@ li {
       justify-content: space-between;
       margin-top: 1rem;
 
-      >dl {
+      > dl {
         white-space: nowrap;
 
-        >dt {
+        > dt {
           margin-bottom: 2em;
           color: #dedede;
         }
 
-        >dd {
+        > dd {
           margin-bottom: 1em;
           font-size: 14px;
 
-          >a {
+          > a {
             text-decoration: none;
             color: var(--text-gray);
 
@@ -740,21 +742,21 @@ li {
     }
   }
 
-  >.about-me {
+  > .about-me {
     display: flex;
     width: 100%;
     height: 40%;
     justify-content: space-between;
 
-    >.cop {
+    > .cop {
       font-size: smaller;
       line-height: 0.7rem;
       padding-top: 1.25rem;
 
-      >p {
+      > p {
         color: var(--text-gray);
 
-        >a {
+        > a {
           color: var(--text-gray);
 
           &:focus {

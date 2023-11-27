@@ -121,30 +121,35 @@ $(document).ready(function () {
   $(".practice-title>p>a").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
-
+  //partner
   $(".ad").click(function () {
-    $(this).toggleClass("active").siblings().removeClass("active");
-    $(".at")
-      .eq($(this).index(".ad"))
-      .addClass("act")
-      .siblings()
-      .removeClass("act");
+    $(this).addClass("active").siblings().removeClass("active");
+    SwiperAd.slideTo($(this).index(".ad"));
   });
 });
+
+$(".banner>div>div").mouseenter(function (event) {
+  let hdt = $(".banner .swiper-ban .swiper-pagination>span");
+  mySwiper.slideTo($(this).index());
+
+  // 阻止事件冒泡
+  event.stopPropagation();
+});
+
+
 
 // 定义一个函数，接受两个参数：选择器和图片路径
 function changeBackground(selector, imagePath) {
   // 保存父元素的原始背景图片
   var originalBgImage = "../images/build-bgimg.jpg";
   // 为选择器绑定鼠标移入和移出事件
-  $(selector)
-    .mouseover(function () {
-      // 鼠标移入时，改变父元素的背景图片为指定的图片路径
-      $(this)
-        .parent()
-        .css("background", "url(" + imagePath + ") no-repeat center center");
-    })
-    .mouseleave(function () {
+  $(selector).mouseover(function () {
+    // 鼠标移入时，改变父元素的背景图片为指定的图片路径
+    $(this)
+      .parent()
+      .css("background", "url(" + imagePath + ") no-repeat center center");
+  });
+  /* .mouseleave(function () {
       // 鼠标移出时，恢复父元素的背景图片为默认的图片路径
       $(this)
         .parent()
@@ -152,7 +157,7 @@ function changeBackground(selector, imagePath) {
           "background",
           "url(../images/build-bgimg.jpg) no-repeat center center"
         );
-    });
+    }); */
 }
 
 // 调用函数，传递不同的选择器和图片路径

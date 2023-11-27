@@ -486,6 +486,15 @@ li {
   right: 0;
   background: url(../images/title-divide-line.png) no-repeat;
 }
+.adbox > div {
+  width: 15%;
+  margin: 1rem auto 0 auto;
+  position: relative;
+}
+.adbox > div .ad {
+  margin: auto 0;
+  position: relative;
+}
 @media screen and (max-width: 500px) {
   .adbox > div {
     width: 60% !important;
@@ -494,37 +503,28 @@ li {
     width: 100% !important;
   }
 }
-.adbox > div {
-  margin: 1rem auto 0 auto;
-}
-.adbox > div .ad {
-  margin-left: auto;
-  margin-right: auto;
-}
-.adbox .at {
-  display: flex;
-}
-.adbox .w-15 {
-  width: 15%;
-}
 @media screen and (max-width: 1642px) {
-  .adbox .w-15 {
+  .adbox > div {
     width: 25%;
   }
 }
 @media screen and (max-width: 910px) {
-  .adbox .w-15 {
-    width: 30%;
+  .adbox > div {
+    width: 35%;
   }
 }
 @media screen and (max-width: 965px) {
-  .adbox .w-15 {
+  .adbox > div {
     width: 50%;
   }
 }
 .adbox .active {
   color: skyblue;
   transition: all 0.3s;
+}
+.adbox .swiper {
+  width: 100%;
+  height: max-content;
 }
 .adbox picture {
   /* // background: #00000009; */
@@ -533,27 +533,36 @@ li {
   display: block;
   margin: auto;
   margin-top: 1rem;
-  display: none !important;
+  display: flex;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 .adbox picture div {
   border-radius: 25px;
   overflow: hidden;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
-.adbox .act {
+.act {
   display: flex !important;
 }
-.adbox .act > div > img {
+.act > div > img {
   animation-name: dm;
   animation-duration: 0.5s;
 }
-@keyframes dm {
+/* @keyframes dm {
   from {
+    // transform: scale(0);
     opacity: 0;
   }
+
   to {
+    // transform: scale(1);
     opacity: 1;
   }
-}
+} */
 .footbox {
   width: 100%;
   padding: 0 10%;
