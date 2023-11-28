@@ -134,41 +134,5 @@ $(document).ready(function () {
     $(".nav-item").eq(4).addClass("act");
   } else if (path === "/5/index.html") {
     $(".nav-item").eq(5).addClass("act");
-  } 
-
-  //跳转密钥
-  $('.nav-item').eq(2).find('dd').eq(11).click(function(){
-    sessionStorage.setItem('click', '0')
-    location.href='../4-1/index.html'
-  })
-  $('.nav-item').eq(2).find('dd').eq(12).click(function(){
-    sessionStorage.setItem('click', '1')
-    location.href='../4-1/index.html'
-  })
-
-    $('.nav-item').eq(2).find('dd').eq(2).click(function(){
-    sessionStorage.setItem('click', '0')
-    sessionStorage.setItem("high", "0");
-    location.href='../4-3/index.html'
-  })
-    $('.nav-item').eq(2).find('dd').eq(3).click(function(){
-    sessionStorage.setItem('click', '1')
-    sessionStorage.setItem("high", "0");
-    location.href='../4-3/index.html'
-  })
-    $('.nav-item').eq(2).find('dd').eq(4).click(function(){
-      sessionStorage.setItem("click", "2");
-      sessionStorage.setItem("high", "0");
-    location.href='../4-3/index.html'
-  })
-    $('.nav-item').eq(2).find('dd').eq(5).click(function(){
-      sessionStorage.setItem("click", "3");
-    sessionStorage.setItem("high", "0");
-    location.href='../4-3/index.html'
-  })
-    $('.nav-item').eq(2).find('dd').eq(6).click(function(){
-      sessionStorage.setItem("click", "4");
-    sessionStorage.setItem("high", "0");
-    location.href='../4-3/index.html'
-  })
+  }
 });
