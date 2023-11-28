@@ -141,7 +141,6 @@ li {
   display: flex;
   width: max-content;
   overflow: auto;
-  min-width: 910px;
 }
 .products .product {
   width: max-content;
