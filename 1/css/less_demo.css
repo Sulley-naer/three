@@ -525,6 +525,9 @@ li {
   width: 15%;
   margin: 1rem auto 0 auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .adbox > div .ad {
   margin: auto 0;
@@ -558,7 +561,7 @@ li {
   transition: all 0.3s;
 }
 .adbox .swiper {
-  width: 100%;
+  width: 100% !important;
   height: max-content;
 }
 .adbox picture {
@@ -587,17 +590,6 @@ li {
   animation-name: dm;
   animation-duration: 0.5s;
 }
-/* @keyframes dm {
-  from {
-    // transform: scale(0);
-    opacity: 0;
-  }
-
-  to {
-    // transform: scale(1);
-    opacity: 1;
-  }
-} */
 .footbox {
   width: 100%;
   padding: 0 10%;
