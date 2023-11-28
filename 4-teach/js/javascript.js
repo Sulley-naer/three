@@ -1,22 +1,19 @@
 $(document).ready(function () {
-let pageText = $('main[class*="body"] .head .content .act').attr("page");
-function qh() {
-  pageText = $('main[class*="body"] .head .content .act').attr("page");
-
-  if (pageText == "1") {
-    $('main[class*="body"] main').load("page-1.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "2") {
-    $('main[class*="body"] main').load("page-2.html", function () {
-      // alert(pageText);
-      pc();
-    });
+function qh(pageText) {
+  if (pageText !== undefined) {
+    $('main[class*="body"] main').load(
+      "page-" + pageText + ".html",
+      function () {
+        pc();
+      }
+    );
   }
 }
-qh();
-
+qh(1);
+$('main[class*="body"] .head .content span').click(function () {
+  let pageText = $(this).attr("page");
+  qh(pageText);
+});
 
   $('main[class*="body"] .head .content span').click(function () {
     $(this).toggleClass("act").siblings().removeClass("act");

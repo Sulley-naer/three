@@ -4,26 +4,21 @@ $(document).ready(function () {
     qh();
   });
 
-  function qh(pageText) {
-    if ((pageText ==null)) {
-      $('.programme main[class*="body"] main').load("page-1.html", function () {
-        pc();
-      });
-    } else {
-      $('.programme main[class*="body"] main').load(
-        "page-" + pageText + ".html",
-        function () {
-          pc();
-        }
-      );
+function qh(pageText) {
+      if (pageText !== undefined) {
+        $('main[class*="body"] main').load(
+          "page-" + pageText + ".html",
+          function () {
+            pc();
+          }
+        );
+      }
     }
-  }
-  qh();
-  $('.programme main[class*="body"] .head .content span').click(function () {
-    let pageText = $(this).attr("page");
-    qh(pageText);
-  });
-});
+    qh(1);
+    $('main[class*="body"] .head .content span').click(function () {
+      let pageText = $(this).attr("page");
+      qh(pageText);
+    });
 
 $("body").ready(function () {
   let key = parseInt(sessionStorage.getItem("click"));
@@ -48,4 +43,5 @@ $(".summary main > div .content").mouseleave(function () {
     .find('div[class*="col-"]')
     .attr("class", "col-md-4")
     .css("align-items", "flex-start");
+});
 });

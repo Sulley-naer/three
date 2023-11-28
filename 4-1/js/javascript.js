@@ -4,16 +4,20 @@ $(document).ready(function () {
   });
 });
 
-function qh() {
-  let pageText = $(".terminal .little .content span.act").attr("page");
-    $(".terminal main").load("page-"+pageText+".html", function () {
-      // alert("加载完成");
-      pc();
-    });
+function qh(pageText) {
+  if (pageText !== undefined) {
+    $('main[class*="body"] main').load(
+      "page-" + pageText + ".html",
+      function () {
+        pc();
+      }
+    );
+  }
 }
-qh();
-$(".terminal .little .content span").click(function () {
-  qh();
+qh(1);
+$('main[class*="body"] .head .content span').click(function () {
+  let pageText = $(this).attr("page");
+  qh(pageText);
 });
 
 $("body").ready(function () {

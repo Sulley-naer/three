@@ -13,12 +13,8 @@ $(".summary main > div .content").mouseleave(function () {
 
 $(document).ready(function () {
     function qh(pageText) {
-      if ((pageText ==null)) {
-        $(' main[class*="body"] main').load("page-1.html", function () {
-          pc();
-        });
-      } else {
-        $(' main[class*="body"] main').load(
+      if (pageText !== undefined) {
+        $('main[class*="body"] main').load(
           "page-" + pageText + ".html",
           function () {
             pc();
@@ -26,8 +22,8 @@ $(document).ready(function () {
         );
       }
     }
-    qh();
-    $(' main[class*="body"] .head .content span').click(function () {
+    qh(1);
+    $('main[class*="body"] .head .content span').click(function () {
       let pageText = $(this).attr("page");
       qh(pageText);
     });
