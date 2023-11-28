@@ -6,16 +6,13 @@ $(document).ready(function () {
 
 function qh(pageText) {
   if (pageText !== undefined) {
-    $('main[class*="body"] main').load(
-      "page-" + pageText + ".html",
-      function () {
-        pc();
-      }
-    );
+    $(".terminal main").load("page-" + pageText + ".html", function () {
+      pc();
+    });
   }
 }
 qh(1);
-$('main[class*="body"] .head .content span').click(function () {
+$(".terminal .little .content span").click(function () {
   let pageText = $(this).attr("page");
   qh(pageText);
 });
