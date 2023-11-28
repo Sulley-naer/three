@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 1000px) {
   .foot-content > .col-2 {
-    transform: scale(0.8);
+    // transform: scale(0.8);
   }
 
   .AiTechnology-introduce {
@@ -20,6 +20,9 @@
   }
 }
 @media screen and (max-width: 990px) {
+  .product:first-child {
+    margin-left: 5%;
+  }
   #friend {
     display: flex;
   }
@@ -36,6 +39,11 @@
     position: fixed !important;
     top: 7%;
     left: 0%;
+  }
+}
+@media screen and (max-width: 880px) {
+  .products > div {
+    // transform: scale(0.8);
   }
 }
 @media screen and (max-width: 835px) {
@@ -58,10 +66,6 @@
 }
 
 @media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
-
   .AiTechnology-img {
     width: 100% !important;
   }
@@ -87,18 +91,8 @@
 }
 
 @media screen and (max-width: 550px) {
-  .products {
-    transform: scale(0.6);
-  }
-
   .navbar-brand {
     display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .products {
-    transform: scale(0.6);
   }
 }
 
@@ -114,9 +108,30 @@
   }
 }
 
-@media screen and (max-width: 360px) {
-  .products {
-    transform: scale(0.4);
+@media screen and (max-width: 830px) {
+  .product:first-child {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .product:first-child {
+    margin-left: 15%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .product:first-child {
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .product:first-child {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .product:first-child {
+    margin-left: 28%;
   }
 }
 
@@ -182,38 +197,65 @@ li {
   width: 100%;
   padding: 0 10%;
   padding-top: 2.5rem;
+  overflow: auto;
+}
 
-  > .products {
-    padding: 0 10%;
-    padding-top: 2.5rem;
+.products {
+  margin: auto;
+  width: max-content;
+  max-width: 100%;
+  padding: 4em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+
+  > div {
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
+    width: max-content;
+    overflow: auto;
+    min-width: 910px;
+  }
+  .product {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
 
-    .product {
+    > a {
       display: flex;
-      align-items: center;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
       flex-direction: column;
-      flex: 1;
+      padding: 1rem 0;
+    }
+    &:hover {
+      background: var(--head-bg);
+    }
 
-      &:hover {
-        background: var(--head-bg);
+    .product-img {
+      width: max-content;
+      max-width: 100%;
+      margin-bottom: 0.5rem;
+      margin: auto;
+      > img {
+        width: 80px;
       }
+    }
 
-      .product-img {
-        transform: scale(0.6);
-        margin-bottom: 0.5rem;
-      }
+    .product-name {
+      width: 100%;
+      text-align: center;
+      margin-bottom: -0.5rem;
+      color: #101010;
+    }
 
-      .product-name {
-        margin-bottom: -0.5rem;
-        color: #101010;
-      }
-
-      .products-introduce {
-        font-size: small;
-        color: var(--text-gray);
-      }
+    .products-introduce {
+      width: 100%;
+      font-size: small;
+      color: var(--text-gray);
     }
   }
 }
@@ -435,7 +477,7 @@ li {
   width: 100%;
   padding: 0 10%;
   background: #fff;
-
+  overflow: hidden;
   &::before {
     content: "";
     position: absolute;
@@ -609,6 +651,9 @@ li {
     width: 15%;
     margin: 1rem auto 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .ad {
       margin: auto 0;
       position: relative;
@@ -647,7 +692,7 @@ li {
     transition: all 0.3s;
   }
   .swiper {
-    width: 100%;
+    width: 100% !important;
     height: max-content;
   }
   & picture {
@@ -679,18 +724,6 @@ li {
     animation-duration: 0.5s;
   }
 }
-
-/* @keyframes dm {
-  from {
-    // transform: scale(0);
-    opacity: 0;
-  }
-
-  to {
-    // transform: scale(1);
-    opacity: 1;
-  }
-} */
 
 //foot
 .footbox {

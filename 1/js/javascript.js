@@ -5,14 +5,14 @@ $(document).ready(function () {
   $(".product").hover(
     function () {
       $(this)
-        .children($(".product-img"))
-        .children("img")
+        .find($(".product-img"))
+        .find("img")
         .css("transform", "rotate(360deg)");
     },
     function () {
       $(this)
-        .children($(".product-img"))
-        .children("img")
+        .find($(".product-img"))
+        .find("img")
         .css("transform", "rotate(0deg)");
     }
   );

@@ -9,14 +9,14 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .foot-content > .col-2 {
-    transform: scale(0.8);
-  }
   .AiTechnology-introduce {
     padding-top: 0rem !important;
   }
 }
 @media screen and (max-width: 990px) {
+  .product:first-child {
+    margin-left: 5%;
+  }
   #friend {
     display: flex;
   }
@@ -48,9 +48,6 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
   .AiTechnology-img {
     width: 100% !important;
   }
@@ -72,16 +69,8 @@
   }
 }
 @media screen and (max-width: 550px) {
-  .products {
-    transform: scale(0.6);
-  }
   .navbar-brand {
     display: none;
-  }
-}
-@media screen and (max-width: 500px) {
-  .products {
-    transform: scale(0.6);
   }
 }
 @media screen and (max-width: 480px) {
@@ -94,9 +83,29 @@
     left: 2% !important;
   }
 }
-@media screen and (max-width: 360px) {
-  .products {
-    transform: scale(0.4);
+@media screen and (max-width: 830px) {
+  .product:first-child {
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 730px) {
+  .product:first-child {
+    margin-left: 15%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .product:first-child {
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .product:first-child {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .product:first-child {
+    margin-left: 28%;
   }
 }
 .button-lin {
@@ -144,32 +153,57 @@ li {
   width: 100%;
   padding: 0 10%;
   padding-top: 2.5rem;
+  overflow: auto;
 }
-.SmartDesk > .products {
-  padding: 0 10%;
-  padding-top: 2.5rem;
+.products {
+  margin: auto;
+  width: max-content;
+  max-width: 100%;
+  padding: 4em 0;
   display: flex;
-  justify-content: space-between;
   justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
-.SmartDesk > .products .product {
+.products > div {
+  display: flex;
+  width: max-content;
+  overflow: auto;
+  min-width: 910px;
+}
+.products .product {
+  width: max-content;
   display: flex;
   align-items: center;
   flex-direction: column;
   flex: 1;
 }
-.SmartDesk > .products .product:hover {
+.products .product > a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.products .product:hover {
   background: var(--head-bg);
 }
-.SmartDesk > .products .product .product-img {
-  transform: scale(0.6);
+.products .product .product-img {
+  width: max-content;
+  max-width: 100%;
   margin-bottom: 0.5rem;
+  margin: auto;
 }
-.SmartDesk > .products .product .product-name {
+.products .product .product-img > img {
+  width: 80px;
+}
+.products .product .product-name {
+  width: 100%;
+  text-align: center;
   margin-bottom: -0.5rem;
   color: #101010;
 }
-.SmartDesk > .products .product .products-introduce {
+.products .product .products-introduce {
+  width: 100%;
   font-size: small;
   color: var(--text-gray);
 }
@@ -342,6 +376,7 @@ li {
   width: 100%;
   padding: 0 10%;
   background: #fff;
+  overflow: hidden;
 }
 .banner::before {
   content: "";
@@ -490,6 +525,9 @@ li {
   width: 15%;
   margin: 1rem auto 0 auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .adbox > div .ad {
   margin: auto 0;
@@ -523,7 +561,7 @@ li {
   transition: all 0.3s;
 }
 .adbox .swiper {
-  width: 100%;
+  width: 100% !important;
   height: max-content;
 }
 .adbox picture {
@@ -552,17 +590,6 @@ li {
   animation-name: dm;
   animation-duration: 0.5s;
 }
-/* @keyframes dm {
-  from {
-    // transform: scale(0);
-    opacity: 0;
-  }
-
-  to {
-    // transform: scale(1);
-    opacity: 1;
-  }
-} */
 .footbox {
   width: 100%;
   padding: 0 10%;
