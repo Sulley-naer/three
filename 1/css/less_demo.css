@@ -48,9 +48,6 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
   .AiTechnology-img {
     width: 100% !important;
   }
@@ -72,16 +69,8 @@
   }
 }
 @media screen and (max-width: 550px) {
-  .products {
-    transform: scale(0.6);
-  }
   .navbar-brand {
     display: none;
-  }
-}
-@media screen and (max-width: 500px) {
-  .products {
-    transform: scale(0.6);
   }
 }
 @media screen and (max-width: 480px) {
@@ -92,11 +81,6 @@
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
-  }
-}
-@media screen and (max-width: 360px) {
-  .products {
-    transform: scale(0.4);
   }
 }
 .button-lin {
@@ -144,32 +128,34 @@ li {
   width: 100%;
   padding: 0 10%;
   padding-top: 2.5rem;
+  overflow: scroll;
 }
-.SmartDesk > .products {
-  padding: 0 10%;
-  padding-top: 2.5rem;
+.products {
+  padding: 1em 5%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   justify-content: center;
+  overflow: auto;
 }
-.SmartDesk > .products .product {
+.products .product {
   display: flex;
   align-items: center;
   flex-direction: column;
   flex: 1;
 }
-.SmartDesk > .products .product:hover {
+.products .product:hover {
   background: var(--head-bg);
 }
-.SmartDesk > .products .product .product-img {
+.products .product .product-img {
   transform: scale(0.6);
   margin-bottom: 0.5rem;
 }
-.SmartDesk > .products .product .product-name {
+.products .product .product-name {
   margin-bottom: -0.5rem;
   color: #101010;
 }
-.SmartDesk > .products .product .products-introduce {
+.products .product .products-introduce {
   font-size: small;
   color: var(--text-gray);
 }
@@ -342,6 +328,7 @@ li {
   width: 100%;
   padding: 0 10%;
   background: #fff;
+  overflow: hidden;
 }
 .banner::before {
   content: "";

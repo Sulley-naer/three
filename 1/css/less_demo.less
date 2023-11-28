@@ -58,10 +58,6 @@
 }
 
 @media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
-
   .AiTechnology-img {
     width: 100% !important;
   }
@@ -87,18 +83,8 @@
 }
 
 @media screen and (max-width: 550px) {
-  .products {
-    transform: scale(0.6);
-  }
-
   .navbar-brand {
     display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .products {
-    transform: scale(0.6);
   }
 }
 
@@ -111,12 +97,6 @@
     position: fixed !important;
     top: 6.5% !important;
     left: 2% !important;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .products {
-    transform: scale(0.4);
   }
 }
 
@@ -182,38 +162,42 @@ li {
   width: 100%;
   padding: 0 10%;
   padding-top: 2.5rem;
+  overflow: scroll;
+}
 
-  > .products {
-    padding: 0 10%;
-    padding-top: 2.5rem;
+.products {
+  padding: 1em 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  overflow: auto;
+  .product {
+    // max-width: calc(100% / 3);
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
 
-    .product {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      flex: 1;
+    &:hover {
+      background: var(--head-bg);
+    }
 
-      &:hover {
-        background: var(--head-bg);
-      }
+    .product-img {
+      transform: scale(0.6);
+      margin-bottom: 0.5rem;
+    }
 
-      .product-img {
-        transform: scale(0.6);
-        margin-bottom: 0.5rem;
-      }
+    .product-name {
+      margin-bottom: -0.5rem;
+      color: #101010;
+    }
 
-      .product-name {
-        margin-bottom: -0.5rem;
-        color: #101010;
-      }
-
-      .products-introduce {
-        font-size: small;
-        color: var(--text-gray);
-      }
+    .products-introduce {
+      font-size: small;
+      color: var(--text-gray);
     }
   }
 }
@@ -435,7 +419,7 @@ li {
   width: 100%;
   padding: 0 10%;
   background: #fff;
-
+  overflow: hidden;
   &::before {
     content: "";
     position: absolute;
