@@ -10,40 +10,27 @@ $(".summary main > div .content").mouseleave(function () {
     .css("align-items", "flex-start");
 });
 
-let pageText = $('main[class*="body"] .head .content .act').attr("page");
-function qh() {
-  pageText = $('main[class*="body"] .head .content .act').attr("page");
-
-  if (pageText == "1") {
-    $('main[class*="body"] main').load("page-1.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "2") {
-    $('main[class*="body"] main').load("page-2.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "3") {
-    $('main[class*="body"] main').load("page-3.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "4") {
-    $('main[class*="body"] main').load("page-4.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "5") {
-    $('main[class*="body"] main').load("page-5.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  }
-}
-qh();
 
 $(document).ready(function () {
+    function qh(pageText) {
+      if ((pageText ==null)) {
+        $(' main[class*="body"] main').load("page-1.html", function () {
+          pc();
+        });
+      } else {
+        $(' main[class*="body"] main').load(
+          "page-" + pageText + ".html",
+          function () {
+            pc();
+          }
+        );
+      }
+    }
+    qh();
+    $(' main[class*="body"] .head .content span').click(function () {
+      let pageText = $(this).attr("page");
+      qh(pageText);
+    });
   $('main[class*="body"] .head .content span').click(function () {
     $(this).toggleClass("act").siblings().removeClass("act");
     qh();

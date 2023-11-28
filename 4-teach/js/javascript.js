@@ -13,21 +13,6 @@ function qh() {
       // alert(pageText);
       pc();
     });
-  } else if (pageText == "3") {
-    $('main[class*="body"] main').load("page-3.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "4") {
-    $('main[class*="body"] main').load("page-4.html", function () {
-      // alert(pageText);
-      pc();
-    });
-  } else if (pageText == "5") {
-    $('main[class*="body"] main').load("page-5.html", function () {
-      // alert(pageText);
-      pc();
-    });
   }
 }
 qh();
