@@ -1,6 +1,5 @@
 $(document).ready(function () {
-function qh(pageText) {
-  if (pageText !== undefined) {
+  function qh(pageText) {
     $('main[class*="body"] main').load(
       "page-" + pageText + ".html",
       function () {
@@ -8,51 +7,48 @@ function qh(pageText) {
       }
     );
   }
-}
-qh(1);
-$('main[class*="body"] .head .content span').click(function () {
-  let pageText = $(this).attr("page");
-  qh(pageText);
-});
+  qh(1);
+  $('main[class*="body"] .head .content span').click(function () {
+    qh($(this).attr("page"));
+  });
 
   $('main[class*="body"] .head .content span').click(function () {
     $(this).toggleClass("act").siblings().removeClass("act");
     qh();
   });
 
+  $("body").ready(function () {
+    let key = parseInt(sessionStorage.getItem("click"));
 
-$("body").ready(function () {
-  let key = parseInt(sessionStorage.getItem("click"));
+    if (key !== undefined) {
+      // alert(key);
+      $('main[class*="body"] .head .content span')
+        .eq(key - 1)
+        .addClass("act")
+        .siblings()
+        .removeClass("act");
+      qh(key);
+    }
+  });
+  //变大
+  $('.summary main > div .content div[class*="col-"]').mouseenter(function () {
+    $(this).attr("class", "col-6").css("align-items", "center");
+    $(this).siblings().attr("class", "col-3");
+    if ($(window).width() < 800) {
+      $('.summary main > div .content div[class*="col-"] .msgbox').hide();
+    }
+    $(this).find(".msgbox").show();
+  });
 
-  if (key !== undefined) {
-    // alert(key);
-    $('main[class*="body"] .head .content span')
-      .eq(key)
-      .addClass("act")
-      .siblings()
-      .removeClass("act");
-  }
-});
-//变大
-$('.summary main > div .content div[class*="col-"]').mouseenter(function () {
-  
-  $(this).attr("class", "col-6").css("align-items", "center");
-  $(this).siblings().attr("class", "col-3");
-      if ($(window).width() < 800) {
-        $('.summary main > div .content div[class*="col-"] .msgbox').hide();
-      }
-  $(this).find(".msgbox").show();
-});
-
-$(".summary main > div .content").mouseleave(function () {
-  $(this)
-    .find('div[class*="col-"]')
-    .attr("class", "col-4")
-    .css("align-items", "flex-start");
-     if ($(window).width() < 800) {
-       $('.summary main > div .content div[class*="col-"] .msgbox').hide();
-     }
-});
+  $(".summary main > div .content").mouseleave(function () {
+    $(this)
+      .find('div[class*="col-"]')
+      .attr("class", "col-4")
+      .css("align-items", "flex-start");
+    if ($(window).width() < 800) {
+      $('.summary main > div .content div[class*="col-"] .msgbox').hide();
+    }
+  });
 
   //隐藏子元素
   $(function () {
