@@ -1,13 +1,12 @@
 $(document).ready(function () {
-
-    function qh(pageText) {
-      $('main[class*="body"] main').load(
-        "page-" + pageText + ".html",
-        function () {
-          pc();
-        }
-      );
-    }
+  function qh(pageText) {
+    $('main[class*="body"] main').load(
+      "page-" + pageText + ".html",
+      function () {
+        pc();
+      }
+    );
+  }
   qh(1);
   $('main[class*="body"] .head .content span').click(function () {
     qh($(this).attr("page"));
@@ -24,11 +23,11 @@ $(document).ready(function () {
     if (key !== undefined) {
       // alert(key);
       $('main[class*="body"] .head .content span')
-        .eq(key-1)
+        .eq(key - 1)
         .addClass("act")
         .siblings()
         .removeClass("act");
-        qh(key)
+      qh(key);
     }
   });
   //变大
