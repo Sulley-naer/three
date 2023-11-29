@@ -190,7 +190,7 @@ header nav .collapse > li .dropdown-menu dl {
 }
 header nav .collapse > ul .dropdown-menu dl dt,
 header nav .collapse > li .dropdown-menu dl dt {
-  color: var(--text-gray) !important;
+  color: var(--text-gray);
   font-weight: normal;
   font-size: 16px;
   width: 100%;
@@ -200,6 +200,7 @@ header nav .collapse > li .dropdown-menu dl dt {
 }
 header nav .collapse > ul .dropdown-menu dl dd,
 header nav .collapse > li .dropdown-menu dl dd {
+  color: var(--text-gray);
   width: 100%;
   text-indent: 40px;
   padding: 1rem;
@@ -207,7 +208,6 @@ header nav .collapse > li .dropdown-menu dl dd {
 }
 header nav .collapse > ul .dropdown-menu dl dd a,
 header nav .collapse > li .dropdown-menu dl dd a {
-  color: var(--text-gray) !important;
   font-size: small;
 }
 header nav .collapse > ul .dropdown-menu dl dt:hover,

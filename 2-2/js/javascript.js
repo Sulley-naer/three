@@ -1,55 +1,4 @@
 $(document).ready(function () {
-  function qh(pageText) {
-    $('main[class*="body"] main').load(
-      "page-" + pageText + ".html",
-      function () {
-        pc();
-      }
-    );
-  }
-  qh(1);
-  $('main[class*="body"] .head .content span').click(function () {
-    qh($(this).attr("page"));
-  });
-
-  $('main[class*="body"] .head .content span').click(function () {
-    $(this).toggleClass("act").siblings().removeClass("act");
-    qh();
-  });
-
-  $("body").ready(function () {
-    let key = parseInt(sessionStorage.getItem("click"));
-
-    if (key !== undefined) {
-      // alert(key);
-      $('main[class*="body"] .head .content span')
-        .eq(key - 1)
-        .addClass("act")
-        .siblings()
-        .removeClass("act");
-      qh(key);
-    }
-  });
-  //变大
-  $('.summary main > div .content div[class*="col-"]').mouseenter(function () {
-    $(this).attr("class", "col-6").css("align-items", "center");
-    $(this).siblings().attr("class", "col-3");
-    if ($(window).width() < 800) {
-      $('.summary main > div .content div[class*="col-"] .msgbox').hide();
-    }
-    $(this).find(".msgbox").show();
-  });
-
-  $(".summary main > div .content").mouseleave(function () {
-    $(this)
-      .find('div[class*="col-"]')
-      .attr("class", "col-4")
-      .css("align-items", "flex-start");
-    if ($(window).width() < 800) {
-      $('.summary main > div .content div[class*="col-"] .msgbox').hide();
-    }
-  });
-
   //隐藏子元素
   $(function () {
     $(".AiTechnology-introduce").hide();
@@ -119,7 +68,6 @@ $(document).ready(function () {
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
       );
       $(".AiTechnology-img").click(function () {
-        $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
         $(".AiTechnology-introduce").stop().fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
         $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
@@ -132,16 +80,7 @@ $(document).ready(function () {
       $(this).find("span").eq(0).stop().animate({ width: "0%" }, 1000);
       $(this).find("span").eq(1).stop().animate({ width: "0%" }, 1000);
       $(this).find("span").eq(2).stop().animate({ height: "0%" }, 1000);
-      $(this)
-        .find("span")
-        .eq(3)
-        .stop()
-        .animate({ height: "0%" }, 1000, function () {
-          $(this).parents("div[class='AiTechnology-introduce']").hide();
-        });
-      $(this)
-        .find("div[class='AiTechnology-introduce']")
-        .animate({ opacity: 0 }, 1000);
+      $(this).find("span").eq(3).stop().animate({ height: "0%" }, 1000);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(
         "background",
@@ -160,4 +99,25 @@ $(document).ready(function () {
       $(this).children("img").attr("src", src);
     }
   );
+
+  $(".ad").click(function () {
+    $(this).toggleClass("active").siblings().removeClass("active");
+    $(".at")
+      .eq($(this).index(".ad"))
+      .addClass("act")
+      .siblings()
+      .removeClass("act");
+  });
+
+  $("#ToiBox-D").on("click", function () {
+    if (sessionStorage.getItem("iBox-F") !== null) {
+      sessionStorage.removeItem("iBox-F");
+    }
+    location.href = "../2-2-1/index.html";
+  });
+
+  $("#ToiBox-F").on("click", function () {
+    sessionStorage.setItem("iBox-F", "1");
+    location.href = "../2-2-1/index.html";
+  });
 });
