@@ -18,19 +18,14 @@ $(".terminal .little .content span").click(function () {
 });
 
 $("body").ready(function () {
-  if (sessionStorage.getItem("click") == "0") {
-    // alert(sessionStorage.getItem('click'))
+  let key = parseInt(sessionStorage.getItem("click"));
+
+  if (key !== undefined) {
     $(".terminal .little .content span")
-      .eq(0)
+      .eq(key - 1)
       .addClass("act")
       .siblings()
       .removeClass("act");
-  } else if (sessionStorage.getItem("click") == "1") {
-    // alert(sessionStorage.getItem('click'))
-    $(".terminal .little .content span")
-      .eq(1)
-      .addClass("act")
-      .siblings()
-      .removeClass("act");
+    qh(key);
   }
 });

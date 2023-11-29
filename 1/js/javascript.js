@@ -86,7 +86,7 @@ $(document).ready(function () {
       );
       $(".AiTechnology-img").click(function () {
         $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
-        $(".AiTechnology-introduce").stop().fadeOut(200);
+        $(".AiTechnology-introduce").fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
         $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
         $(this).find("span").eq(1).stop().animate({ width: "100%" }, 1000);

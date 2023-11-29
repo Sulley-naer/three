@@ -26,10 +26,11 @@ $("body").ready(function () {
   if (key !== undefined) {
     // alert(key);
     $('main[class*="body"] .head .content span')
-      .eq(key)
+      .eq(key-1)
       .addClass("act")
       .siblings()
       .removeClass("act");
+      qh(key);
   }
 });
 //变大

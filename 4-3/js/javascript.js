@@ -10,23 +10,22 @@ $(".summary main > div .content").mouseleave(function () {
     .css("align-items", "flex-start");
 });
 
-
 $(document).ready(function () {
-    function qh(pageText) {
-      if (pageText !== undefined) {
-        $('main[class*="body"] main').load(
-          "page-" + pageText + ".html",
-          function () {
-            pc();
-          }
-        );
-      }
+  function qh(pageText) {
+    if (pageText !== undefined) {
+      $('main[class*="body"] main').load(
+        "page-" + pageText + ".html",
+        function () {
+          pc();
+        }
+      );
     }
-    qh(1);
-    $('main[class*="body"] .head .content span').click(function () {
-      let pageText = $(this).attr("page");
-      qh(pageText);
-    });
+  }
+  qh(1);
+  $('main[class*="body"] .head .content span').click(function () {
+    let pageText = $(this).attr("page");
+    qh(pageText);
+  });
   $('main[class*="body"] .head .content span').click(function () {
     $(this).toggleClass("act").siblings().removeClass("act");
     qh();
@@ -37,21 +36,19 @@ $("body").ready(function () {
   let key = parseInt(sessionStorage.getItem("click"));
 
   if (key !== undefined) {
-    // alert(key);
     $('main[class*="body"] .head .content span')
-      .eq(key)
+      .eq(key-1)
       .addClass("act")
       .siblings()
       .removeClass("act");
+    qh(key);
   }
 });
 
 if (sessionStorage.getItem("high") == 0) {
-  $("html").animate(
-    {
-      scrollTop: $("main[class*='body']").offset().top,
-    }
-  );
+  $("html").animate({
+    scrollTop: $("main[class*='body']").offset().top,
+  });
   sessionStorage.setItem("high", "1");
 }
 
