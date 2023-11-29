@@ -84,7 +84,7 @@ $(document).ready(function () {
         "background",
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
       );
-      $(".AiTechnology-img").click(function () {
+      $(".AiTechnology-img").mouseenter(function () {
         $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
         $(".AiTechnology-introduce").stop().fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
