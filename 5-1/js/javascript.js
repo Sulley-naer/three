@@ -7,3 +7,9 @@ $(".AiTechnology .navbar .nav .nav-item").on("click", function () {
     .children("a")
     .removeClass("active");
 });
+
+  $(document).ready(function () {
+    let box = $(".AiTechnology .main .pictureBox>picture");
+    let widthPercentage = 100 / box.length;
+    box.css("width", widthPercentage + "%");
+  });
