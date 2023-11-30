@@ -152,9 +152,16 @@
   height: max-content;
   margin-top: 5rem;
   color: var(--text-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .AiTechnology .main .head .title {
   color: var(--text-gray-hover);
+}
+.AiTechnology .main .head > p {
+  max-width: 70%;
 }
 .AiTechnology .main .pictureBox {
   margin-top: 1rem;
@@ -172,6 +179,9 @@
   position: relative;
   background-size: cover;
   max-height: 300px;
+}
+.AiTechnology .main .pictureBox > picture.no {
+  max-height: none;
 }
 .AiTechnology .main .pictureBox > picture:not(:first-child) {
   margin-left: 0.5rem;
@@ -369,6 +379,7 @@
 }
 .programme main .row div[class*="col-"] .msg .content p {
   width: max-content;
+  max-width: 30em;
   margin-top: 1em;
   font-size: 10px;
   color: var(--text-lighter);
