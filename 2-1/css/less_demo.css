@@ -215,16 +215,16 @@
 .AiTechnology::after {
   position: absolute;
   content: "";
-  width: 40%;
+  width: 30%;
   height: 2px;
   top: 4rem;
-  left: -13%;
+  left: 0%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
 .AiTechnology::before {
   position: absolute;
   content: "";
-  width: 40%;
+  width: 30%;
   height: 2px;
   top: 4rem;
   right: 0;
