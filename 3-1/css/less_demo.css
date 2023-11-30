@@ -9,150 +9,319 @@
   --bili-blue: #00aeec;
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
+  --line: hsla(0, 0%, 75%, 0.45);
 }
-@media screen and (max-width: 1700px) {
-  .terminal {
-    overflow-x: hidden;
-  }
-}
-@media screen and (max-width: 760px) {
-  .terminal {
-    overflow-x: hidden;
-  }
-  .iBox-introduce-imgs {
-    top: 14rem;
-    left: 4rem;
-    width: 33% !important;
-    height: 10% !important;
-    flex-direction: row !important;
-    align-items: center !important;
-  }
-  .iBox-introduce-imgs img {
-    width: max-content !important;
-    max-width: 100% !important;
+@media screen and (max-width: 1300px) {
+  .programme main[class*="body"] main .content .page > div {
+    width: calc(90%/2) !important;
   }
 }
-.banner {
+@media screen and (max-width: 1200px) {
+  .AiTechnology-introduce {
+    padding-top: 2rem !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .AiTechnology-introduce {
+    padding-top: 0 !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .programme main[class*="body"] main .content .page {
+    justify-content: center;
+  }
+  .programme main[class*="body"] main .content .page > div {
+    width: calc(90%/1) !important;
+  }
+  .summary main > div .content div[class*="col-"] .msgbox {
+    display: none;
+  }
+  .AiTechnology-img {
+    width: 50% !important;
+  }
+  .AiTechnology-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AiTechnology-images .tz {
+    margin-top: 0 !important;
+  }
+  .AiTechnology-images .tz a {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .AiTechnology-img {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .AiTechnology-img {
+    height: 14rem;
+  }
+}
+.Security {
   position: relative;
-  height: 50rem;
-  width: 100%;
-  padding: 0 10%;
-  background: #fff;
-}
-.banner::before {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 2px;
-  top: 10%;
-  left: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
-}
-.banner::after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 2px;
-  top: 10%;
-  right: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
-  transform: rotate(180deg);
-}
-.banner .swiper {
-  width: 30%;
-  height: 8rem;
-}
-.banner .swiper .swiper-slide {
   display: flex;
-  align-items: end;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
 }
-.banner .swiper .swiper-pagination .swiper-pagination-bullet {
-  width: calc(100% / 3) !important;
-  transform: none;
-  background: var(--bili-blue) !important;
-  margin: 0;
-  border-radius: 6px;
-}
-.banner .container-fluid {
-  height: calc(100% - 128px);
-  background: url(../../images/build-bgimg.jpg) no-repeat center center;
+.Security .Security-bg {
   position: relative;
+  background: no-repeat center center / cover;
+}
+.Security ul {
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  position: absolute;
+}
+.Security ul li {
+  color: var(--blue-gray);
+  font-size: smaller;
+}
+.Security ul li i {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--blue-gray);
+  vertical-align: middle;
+  margin-right: 0.8rem;
+}
+.Security ul:nth-child(1),
+.Security ul:nth-child(2) {
+  left: 21%;
+}
+.Security ul:nth-child(1) {
+  top: 24%;
+}
+.Security ul:nth-child(2) {
+  top: 70%;
+}
+.Security ul:nth-child(3),
+.Security ul:nth-child(4) {
+  right: 22%;
+}
+.Security ul:nth-child(3) {
+  top: 22%;
+}
+.Security ul:nth-child(4) {
+  top: 70%;
+}
+.programme {
+  padding: 4rem 10% 0;
+  position: relative;
+}
+.programme::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 0;
+  left: 0%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.programme::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 0;
+  right: 0%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.programme main[class*="body"] {
+  width: 100%;
+  height: max-content;
+  padding: 4rem 0;
+  position: relative;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.programme main[class*="body"] .head {
+  text-align: center;
+  padding: 2rem 0;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+}
+.programme main[class*="body"] .head .title {
+  font-size: large;
+  width: 100%;
+}
+.programme main[class*="body"] .head .content {
+  width: max-content;
+  max-width: 100%;
   display: flex;
   align-items: center;
+}
+.programme main[class*="body"] .head .content span {
+  font-size: small;
+}
+.programme main[class*="body"] .head .content i {
+  font-style: normal;
+  margin: 0.5em;
+}
+.programme main[class*="body"] .head .content .act {
+  color: var(--bili-blue);
+}
+.programme main[class*="body"] main {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(225deg, #1a4882 30%, #2580b3 100%);
+}
+.programme main[class*="body"] main > div {
+  width: 100%;
+}
+.programme main[class*="body"] main .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.programme main[class*="body"] main .head .row {
+  padding: 0 2em;
+  width: max-content;
+  max-width: 100%;
+  min-height: 50%;
+  display: flex;
   flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: space-evenly;
 }
-.banner .container-fluid .left {
-  width: calc(100% / 3);
-  height: 100%;
-  position: relative;
+.programme main[class*="body"] main .head .row div[class*="col-"] {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
-.banner .container-fluid .left:hover .card {
-  visibility: visible;
-  transform: translateX(0);
-  opacity: 1;
-}
-.banner .container-fluid .left .card {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 20%;
+.programme main[class*="body"] main .head .row div[class*="col-"] .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: max-content;
-  max-width: 80%;
-  transform: translateX(-100%);
-  opacity: 0;
+  max-width: 100%;
 }
-.banner .container-fluid .left .card span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  vertical-align: sub;
+.programme main[class*="body"] main .head .row div[class*="col-"] .title h3 {
+  color: var(--text-gray-hover);
+  margin: 0;
 }
-.banner .container-fluid .left .card li {
-  margin-top: 0.5em;
-  font-size: small;
+.programme main[class*="body"] main .head .row div[class*="col-"] .title i {
+  margin: 0 0.5em;
+  font-size: xx-large;
+  font-family: "iconfont";
+  font-style: normal;
+  color: var(--text-gray-hover);
 }
-.banner .container-fluid .md {
-  width: calc(100% / 3);
-  height: 100%;
+.programme main[class*="body"] main .head .row div[class*="col-"] p {
+  margin-top: 1em;
+  color: var(--text-gray-hover) !important;
+}
+.programme main[class*="body"] main .head .row div[class*="col-"] p:not(first-child) {
+  color: var(--text-lighter);
+  text-align: left;
+}
+.programme main[class*="body"] main .head .row div[class*="col-"] picture {
+  margin: auto;
+}
+.programme main[class*="body"] main .head .row div[class*="col-"] .pic-p2 {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: -6px 6px 6px 0px #02020221;
+}
+.programme main[class*="body"] main .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.programme main[class*="body"] main .content > div {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2em;
+  height: max-content;
+  min-height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.programme main[class*="body"] main .content .page > div {
   position: relative;
+  width: calc(90% / 3);
+  margin-bottom: 2em;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.banner .container-fluid .right {
-  width: calc(100% / 3);
+.programme main[class*="body"] main .content .page > div:hover > span {
+  color: var(--bili-blue);
+}
+.programme main[class*="body"] main .content .page > div > p {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 2rem;
+  color: var(--text-gray-hover);
+  text-align: left;
+  line-height: 2rem;
+  height: 2rem;
+  background: #00000057;
+}
+.programme main[class*="body"] main .content .page > div > content {
+  display: block;
+  width: 100%;
   height: 100%;
-  position: relative;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  background: #0000002f;
 }
-.banner .container-fluid .right:hover .card {
-  visibility: visible;
-  transform: translateX(0);
-  opacity: 1;
+.programme main[class*="body"] main .content .page > div > content ul {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  /* float: left; */
 }
-.banner .container-fluid .right .card {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 20%;
-  width: max-content;
-  max-width: 80%;
-  transform: translateX(100%);
-  opacity: 0;
+.programme main[class*="body"] main .content .page > div > content ul .more {
+  text-indent: 0.9875rem;
 }
-.banner .container-fluid .right .card span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  vertical-align: sub;
+.programme main[class*="body"] main .content .page > div > content ul li {
+  float: left;
+  line-height: 2rem;
+  /*  margin-left: 2rem; */
+  color: var(--text-gray-hover);
+  /* font-size: smaller; */
 }
-.banner .container-fluid .right .card li {
-  margin-top: 0.5em;
-  font-size: small;
+.programme main[class*="body"] main .content .page > div > content ul li i {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--text-gray-hover);
+  vertical-align: middle;
+  margin-right: 0.8rem;
 }
-.terminal {
+.programme main[class*="body"] main .content .page > div > content .son-100 li {
+  width: 100%;
+}
+.programme main[class*="body"] main .content .page > div > content .son-50 li {
+  width: 50%;
+}
+.programme main[class*="body"] main .content .page > div > content .son-30 li {
+  width: 30%;
+}
+.summary {
+  width: 100%;
+  height: max-content;
   padding: 4rem 0;
   position: relative;
 }
-.terminal::after {
+.summary::after {
   position: absolute;
   content: "";
   width: 40%;
@@ -161,7 +330,7 @@
   left: -15%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
-.terminal::before {
+.summary::before {
   position: absolute;
   content: "";
   width: 40%;
@@ -170,128 +339,114 @@
   right: -15%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
-.terminal .terminalTop-bg {
-  position: absolute;
-  display: block;
+.summary .little {
+  text-align: center;
+  padding: 2rem 0;
   width: max-content;
   max-width: 100%;
-  height: 8rem;
-  background: no-repeat center;
-  background-size: contain;
-}
-.terminal .little {
-  padding: 2rem  0;
   margin: auto;
 }
-.terminal .little .title-nav {
-  margin: auto;
+.summary .little > *:not(:first-child) {
+  margin-top: 0.5em;
+}
+.summary .little .title {
+  font-size: large;
+  width: 100%;
+}
+.summary .little .content {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+.summary .little .content span {
+  font-size: small;
+  color: var(--text-gray);
+}
+.summary .little .content span:focus {
+  color: var(--bili-blue);
+}
+.summary .little .content i {
+  margin: 0.5em;
+}
+.summary main {
+  position: relative;
+  width: 100%;
+  max-height: 420px;
+  padding: 0 5%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+}
+.summary main > div {
+  width: 100%;
+  background-size: cover !important;
+  display: flex !important;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: max-content;
+  height: max-content;
 }
-.terminal .little .summary {
-  height: 5rem;
+.summary main > div .content {
+  width: 100%;
+  height: max-content;
   display: flex;
-  align-content: space-around !important;
-  flex-wrap: wrap !important;
-  flex-direction: column !important;
 }
-.terminal .little .summary .content {
-  width: 65%;
-}
-.terminal .little .summary .content .gradient {
-  background-image: linear-gradient(to right, #405cca, #59bbf1);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 1.875rem;
-}
-.terminal .iBox-D-introduce,
-.terminal .iBox-F-introduce {
-  padding-top: 4rem;
+.summary main > div .content div[class*="col-"] {
+  transition: all 0.5s ease;
+  padding: 6rem 2.5em;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
   position: relative;
 }
-.terminal .iBox-D-introduce .iBox-introduce-imgs,
-.terminal .iBox-F-introduce .iBox-introduce-imgs {
-  display: none;
-  position: absolute;
-  height: 100%;
+.summary main > div .content div[class*="col-"]:not(:last-child) {
+  border-right: 2px solid var(--line-o);
+}
+.summary main > div .content div[class*="col-"] > *:not(:first-child) {
+  margin-top: 0.5em;
+}
+.summary main > div .content div[class*="col-"] .head {
+  width: max-content;
+  max-width: 100%;
+  font-size: x-large;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  justify-content: start;
+  color: var(--text-gray-hover);
 }
-.terminal .iBox-D-introduce .iBox-introduce-imgs img,
-.terminal .iBox-F-introduce .iBox-introduce-imgs img {
-  transform: scale(0.6);
+.summary main > div .content div[class*="col-"] .head i {
+  font-size: xxx-large;
+  font-family: "iconfont";
+  font-style: normal;
 }
-.terminal .iBox-D-introduce .introduce-left,
-.terminal .iBox-F-introduce .introduce-left {
-  padding-top: 2rem;
-  padding-right: 0;
-  background: no-repeat center;
-  background-size: cover;
+.summary main > div .content div[class*="col-"] .head span {
+  margin-left: 1em;
 }
-.terminal .iBox-D-introduce .introduce-left .introduce-content,
-.terminal .iBox-F-introduce .introduce-left .introduce-content {
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-bottom: 1px solid #fff;
-  color: #f0f0f0;
+.summary main > div .content div[class*="col-"] .msgbox {
+  height: max-content;
+  max-height: 7rem;
+  min-height: 7rem;
+  overflow-y: auto;
 }
-.terminal .iBox-D-introduce .introduce-left .introduce-content p,
-.terminal .iBox-F-introduce .introduce-left .introduce-content p {
-  font-size: 1.875rem;
+.summary main > div .content div[class*="col-"] .msgbox p {
+  width: max-content;
+  max-width: 100%;
+  line-height: 1.5em;
+  color: var(--text-gray-hover);
 }
-.terminal .iBox-D-introduce .introduce-left .introduce-content small,
-.terminal .iBox-F-introduce .introduce-left .introduce-content small {
+.head-button {
+  position: relative;
+  margin: auto;
   margin-bottom: 2rem;
-}
-.terminal .iBox-D-introduce .introduce-right,
-.terminal .iBox-F-introduce .introduce-right {
-  position: relative;
-  background: rgba(0, 0, 0, 0.02);
-}
-.terminal .iBox-D-introduce .introduce-right .parameterText,
-.terminal .iBox-F-introduce .introduce-right .parameterText {
   width: max-content;
-  padding: 2rem 1rem;
-  font-size: 1.875rem;
-  border-top: 1px solid #a8a8a8;
-  border-bottom: 1px solid #a8a8a8;
-}
-.terminal .iBox-D-introduce .introduce-right .parameter,
-.terminal .iBox-F-introduce .introduce-right .parameter {
-  text-align: left;
-  margin-bottom: 3rem;
-}
-.terminal .iBox-D-introduce .introduce-right .parameter li,
-.terminal .iBox-F-introduce .introduce-right .parameter li {
-  margin-bottom: 1rem;
-}
-.terminal .iBox-D-introduce .introduce-right .parameter li:nth-child(1),
-.terminal .iBox-F-introduce .introduce-right .parameter li:nth-child(1) {
-  font-size: 1.875rem;
-}
-.terminal .iBox-D-introduce .introduce-right .parameter li:nth-child(1) p,
-.terminal .iBox-F-introduce .introduce-right .parameter li:nth-child(1) p {
-  margin: 0;
-}
-.AiTechnology {
-  position: relative;
-  padding: 0 10%;
-  padding-top: 8rem;
-  text-align: center;
-  padding-bottom: 4rem;
-  z-index: 1;
-}
-.AiTechnology .head-button {
-  width: max-content;
-  position: absolute;
-  left: 50%;
-  top: 2rem;
-  transform: translate(-50%, 0);
+  transform: translate(0%, 0);
   color: var(--bili-blue);
   padding: 0.5em 1em;
   display: flex;
@@ -301,10 +456,7 @@
   overflow: hidden;
   background: #fff;
 }
-.AiTechnology .head-button:hover::before {
-  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
-}
-.AiTechnology .head-button::before {
+.head-button::before {
   content: "";
   display: block;
   position: absolute;
@@ -314,136 +466,222 @@
   background-image: linear-gradient(to right, var(--bili-blue), var(--blue-gray));
   z-index: -1;
 }
-.AiTechnology .head-button::after {
+.head-button::after {
   content: "";
   display: block;
   position: absolute;
-  left: 1.5px;
-  width: 98%;
+  left: 2px;
+  width: 97%;
   height: 90%;
   background: #fff;
   z-index: -1;
   border-radius: 33px;
 }
-.AiTechnology:nth-child(1) {
-  padding-bottom: 0;
+.head-button:hover::before {
+  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
 }
-.AiTechnology:nth-child(1) .AiTechnology-body-right-img {
-  background: url(../../images/product/iBox-D.png) no-repeat;
+.introduce {
+  height: max-content;
+  background: #0e1a5a;
+}
+.introduce .AiTechnology-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem;
+}
+.introduce .AiTechnology-title h3 {
+  color: #dedede;
+}
+.introduce .AiTechnology-title p {
+  transform: scale(0.8);
+  color: rgba(172, 172, 172, 0.573);
+}
+.introduce .AiTechnology {
+  position: relative;
+  padding: 0 10%;
+  text-align: center;
+  padding-bottom: 5rem;
+  background: url(../../images/line-bg.svg) no-repeat center center;
   background-size: contain;
 }
-.AiTechnology::after {
-  position: absolute;
-  content: "";
-  width: 40%;
-  height: 2px;
-  top: 4rem;
-  left: 0;
-  background: linear-gradient(to right, #2f4da5, #5ba6e4);
-}
-.AiTechnology::before {
-  position: absolute;
-  content: "";
-  width: 40%;
-  height: 2px;
-  top: 4rem;
-  right: 0;
-  background: linear-gradient(to left, #2f4da5, #5ba6e4);
-}
-.AiTechnology .AiTechnology-bg {
+.introduce .AiTechnology .AiTechnology-bg {
   position: absolute;
   display: block;
   z-index: 0;
   width: 100%;
   height: 73%;
-  background: url(../../images/line-bg.svg) no-repeat center center;
   bottom: 0;
   left: 0;
-  background-size: contain;
 }
-.AiTechnology .AiTechnology-title {
-  margin-bottom: 2em;
-}
-.AiTechnology .AiTechnology-title h3 {
-  color: #141414;
-}
-.AiTechnology .AiTechnology-title p {
-  transform: scale(1);
-  color: var(--bs-gray-600);
-  margin-bottom: 1rem;
-}
-.AiTechnology .AiTechnology-title small {
-  color: var(--text-gray);
-}
-.AiTechnology .AiTechnology-body {
-  position: relative;
+.introduce .AiTechnology .AiTechnology-body {
+  padding: 0 5%;
+  padding-top: 2rem;
+  background: no-repeat center;
   text-align: left;
-  display: flex;
-  justify-content: space-between;
   color: #e6e7f0;
-  margin: auto;
-  height: max-content;
-  width: max-content;
-  max-width: 100%;
 }
-.AiTechnology .AiTechnology-body .card {
-  width: 100%;
-  position: relative;
-  background: url(../../images/algorithm-facesb-bg.jpg) no-repeat;
-  background-size: cover;
-  z-index: 2;
-  height: max-content;
-  min-height: 300px;
-  justify-content: center;
-  align-items: center;
-}
-.AiTechnology .AiTechnology-body .card .row {
-  height: max-content;
-  max-width: 100%;
+.introduce .AiTechnology .AiTechnology-body .learn-more {
+  margin-top: 2.5rem;
+  min-width: 10rem;
+  height: 3em;
+  border-radius: 25px;
+  padding: 0px 33px;
+  outline: none;
+  background: none;
+  border: 2px solid #e6e7f0;
+  color: #e6e7f0;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
 }
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] {
-  padding: 15px;
+.introduce .AiTechnology .AiTechnology-body .learn-more i {
+  width: 15px;
+  height: 15px;
+  display: flex;
 }
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body {
+.introduce .AiTechnology .AiTechnology-body .learn-more:hover {
+  background: var(--head-bg-hover);
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+.introduce .AiTechnology .AiTechnology-body .learn-more:focus {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-top {
+  padding-top: 1rem;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .content {
+  padding-top: 1.5rem;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .content p:not(:first-child) {
+  margin-bottom: 0.5em;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot {
+  margin-top: 2.5rem;
+  min-width: 10rem;
+  height: 3em;
+  border-radius: 25px;
+  padding: 0px 33px;
+  background: var(--head-bg);
+  background: #00000025;
+  outline: none;
+  color: #e6e7f0;
+  border: 3px solid #e6e7f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot i {
+  width: 15px;
+  height: 15px;
+  display: flex;
+}
+.introduce .AiTechnology .AiTechnology-body .AiTechnology-body-left .AiTechnology-body-foot:hover {
+  background: var(--head-bg-hover);
+  background: #00000045;
+  border: 3px solid #c2c2c2;
+  color: #c2c2c2;
+}
+.introduce .AiTechnology .AiTechnology-body-right-img {
+  width: 28%;
+  height: 16rem;
+  background: no-repeat center;
+  background-size: contain;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 0 2rem 0;
+}
+.introduce .AiTechnology .AiTechnology-images {
+  display: flex;
+  justify-content: center;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img {
+  position: relative;
+  width: 33%;
+  max-width: 100%;
+  padding: 6.8% 12%;
+  margin: 0.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(160deg, rgba(16, 52, 117, 0.8), rgba(33, 67, 193, 0.8));
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img p {
+  padding-top: 0.8rem;
+  color: var(--text-gray);
+  width: max-content;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce {
+  position: absolute;
+  top: 0;
+  padding-top: 4rem;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/solution-mask.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce p {
   width: max-content;
   max-width: 100%;
-  margin: auto;
+  color: var(--text-gray-hover);
+  margin-bottom: 0;
 }
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body *:not(:first-child) {
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .tz {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title {
-  display: flex;
-  align-items: center;
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .tz a {
+  padding: 0.2rem 0.5rem;
+  width: max-content;
+  font-size: 0.8rem;
+  color: var(--text-gray-hover);
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 9rem;
 }
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title i {
-  font-size: xx-large;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title h2 {
-  margin: 0;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title *:not(:first-child) {
-  margin-left: 0.5em;
-}
-.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body picture {
-  display: block;
-  max-width: 100%;
-  background: center center no-repeat;
-  background-size: contain;
-}
-.AiTechnology .AiTechnology-body .card .vr {
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border {
   position: absolute;
-  left: 50%;
   top: 0;
-  transform: translate(-50%, 0);
-  height: 100%;
-  display: none;
-}
-.AiTechnology .AiTechnology-body .card .hr {
   width: 100%;
-  display: inline-block;
+  height: 100%;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span {
+  position: absolute;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(1) {
+  width: 0%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  background: #8debf1;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(2) {
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  background: #94b9fd;
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(3) {
+  width: 2px;
+  height: 0%;
+  left: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom, #94b9fd, #8debf1);
+}
+.introduce .AiTechnology .AiTechnology-images .AiTechnology-img .AiTechnology-introduce .AiTechnology-introduce-border span:nth-child(4) {
+  width: 2px;
+  height: 0%;
+  right: 0;
+  background: linear-gradient(to bottom, #8debf1, #94b9fd);
 }

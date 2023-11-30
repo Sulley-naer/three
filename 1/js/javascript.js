@@ -18,7 +18,7 @@ $(document).ready(function () {
   );
 
   $(function () {
-    $(".AiTechnology-introduce").hide();
+    $(".AiTechnology-introduce").stop().hide();
   });
   //隐藏span
   function AiTechnologyIntroduceBorderNone() {
@@ -86,7 +86,7 @@ $(document).ready(function () {
       );
       $(".AiTechnology-img").mouseenter(function () {
         $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
-        $(".AiTechnology-introduce").fadeOut(200);
+        $(".AiTechnology-introduce").stop().fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
         $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
         $(this).find("span").eq(1).stop().animate({ width: "100%" }, 1000);
@@ -107,6 +107,7 @@ $(document).ready(function () {
         });
       $(this)
         .find("div[class='AiTechnology-introduce']")
+        .stop()
         .animate({ opacity: 0 }, 1000);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(
@@ -127,9 +128,6 @@ $(document).ready(function () {
     }
   );
 
-  $(".practice-title>p>a").click(function () {
-    $(this).addClass("active").siblings().removeClass("active");
-  });
   //partner
   $(".ad").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
@@ -171,3 +169,18 @@ function changeBackground(selector, imagePath) {
 changeBackground(".banner>div>div[class=left]", "../images/build-bgimg-l.jpg");
 changeBackground(".banner>div>div[class=right]", "../images/build-bgimg-r.jpg");
 changeBackground(".banner>div>div[class=md]", "../images/build-bgimg-m.jpg");
+
+//加载page
+function qh(pageText) {
+  if (pageText !== undefined) {
+    $(".practice-body").load("page-" + pageText + ".html", function () {
+      pc();
+    });
+  }
+}
+qh(1);
+$(".practice-title>small>a").click(function () {
+  $(this).addClass("active").siblings().removeClass("active");
+  let pageText = $(this).attr("page");
+  qh(pageText);
+});

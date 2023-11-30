@@ -67,6 +67,12 @@
   .foot-content > .col-2 {
     transform: scale(0.9);
   }
+  .practice-body {
+    height: max-content !important;
+  }
+  .practice-body p {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 550px) {
   .navbar-brand {
@@ -210,10 +216,10 @@ li {
 .introduce {
   background: url(../../images/solution-bg.jpg);
   background-size: cover;
-  padding: 0 10%;
   height: max-content;
 }
 .introduce .AiTechnology {
+  padding: 0 10%;
   position: relative;
   padding-top: 4rem;
   text-align: center;
@@ -225,7 +231,7 @@ li {
   width: 30%;
   height: 2px;
   bottom: 0;
-  left: -13%;
+  left: 0%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology::before {
@@ -234,7 +240,7 @@ li {
   width: 30%;
   height: 2px;
   bottom: 0;
-  right: -13%;
+  right: 0%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology .AiTechnology-title h3 {
@@ -335,6 +341,7 @@ li {
   background: linear-gradient(to bottom, #8debf1, #94b9fd);
 }
 .introduce .practice {
+  padding: 0 10%;
   padding-top: 4rem;
 }
 .introduce .practice .practice-title {
@@ -343,22 +350,20 @@ li {
 .introduce .practice .practice-title h3 {
   color: #dedede;
 }
-.introduce .practice .practice-title p {
-  transform: scale(0.8);
-}
-.introduce .practice .practice-title p span {
+.introduce .practice .practice-title small span {
   color: var(--text-gray);
   padding: 0 0.7rem;
 }
-.introduce .practice .practice-title p a {
+.introduce .practice .practice-title small a {
   color: var(--text-gray);
 }
-.introduce .practice .practice-title p .active {
+.introduce .practice .practice-title small .active {
   color: var(--text-gray-hover);
 }
 .introduce .practice .practice-body {
-  display: none;
-  padding-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  height: 13.375rem;
 }
 .introduce .practice .practice-body h3 {
   color: #fff;

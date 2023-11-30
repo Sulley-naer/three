@@ -1,0 +1,449 @@
+:root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
+}
+@media screen and (max-width: 1700px) {
+  .terminal {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 760px) {
+  .terminal {
+    overflow-x: hidden;
+  }
+  .iBox-introduce-imgs {
+    top: 14rem;
+    left: 4rem;
+    width: 33% !important;
+    height: 10% !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  .iBox-introduce-imgs img {
+    width: max-content !important;
+    max-width: 100% !important;
+  }
+}
+.banner {
+  position: relative;
+  height: 50rem;
+  width: 100%;
+  padding: 0 10%;
+  background: #fff;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  top: 10%;
+  left: 0;
+  background: url(../../images/title-divide-line.png) no-repeat;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  top: 10%;
+  right: 0;
+  background: url(../../images/title-divide-line.png) no-repeat;
+  transform: rotate(180deg);
+}
+.banner .swiper {
+  width: 30%;
+  height: 8rem;
+}
+.banner .swiper .swiper-slide {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.banner .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: calc(100% / 3) !important;
+  transform: none;
+  background: var(--bili-blue) !important;
+  margin: 0;
+  border-radius: 6px;
+}
+.banner .container-fluid {
+  height: calc(100% - 128px);
+  background: url(../../images/build-bgimg.jpg) no-repeat center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+}
+.banner .container-fluid .left {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
+}
+.banner .container-fluid .left:hover .card {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+}
+.banner .container-fluid .left .card {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: max-content;
+  max-width: 80%;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.banner .container-fluid .left .card span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: sub;
+}
+.banner .container-fluid .left .card li {
+  margin-top: 0.5em;
+  font-size: small;
+}
+.banner .container-fluid .md {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
+}
+.banner .container-fluid .right {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
+}
+.banner .container-fluid .right:hover .card {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+}
+.banner .container-fluid .right .card {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: max-content;
+  max-width: 80%;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.banner .container-fluid .right .card span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: sub;
+}
+.banner .container-fluid .right .card li {
+  margin-top: 0.5em;
+  font-size: small;
+}
+.terminal {
+  padding: 4rem 0;
+  position: relative;
+}
+.terminal::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: -15%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.terminal::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: -15%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.terminal .terminalTop-bg {
+  position: absolute;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  height: 8rem;
+  background: no-repeat center;
+  background-size: contain;
+}
+.terminal .little {
+  padding: 2rem  0;
+  margin: auto;
+}
+.terminal .little .title-nav {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+.terminal .little .summary {
+  height: 5rem;
+  display: flex;
+  align-content: space-around !important;
+  flex-wrap: wrap !important;
+  flex-direction: column !important;
+}
+.terminal .little .summary .content {
+  width: 65%;
+}
+.terminal .little .summary .content .gradient {
+  background-image: linear-gradient(to right, #405cca, #59bbf1);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.875rem;
+}
+.terminal .iBox-D-introduce,
+.terminal .iBox-F-introduce {
+  padding-top: 4rem;
+  position: relative;
+}
+.terminal .iBox-D-introduce .iBox-introduce-imgs,
+.terminal .iBox-F-introduce .iBox-introduce-imgs {
+  display: none;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.terminal .iBox-D-introduce .iBox-introduce-imgs img,
+.terminal .iBox-F-introduce .iBox-introduce-imgs img {
+  transform: scale(0.6);
+}
+.terminal .iBox-D-introduce .introduce-left,
+.terminal .iBox-F-introduce .introduce-left {
+  padding-top: 2rem;
+  padding-right: 0;
+  background: no-repeat center;
+  background-size: cover;
+}
+.terminal .iBox-D-introduce .introduce-left .introduce-content,
+.terminal .iBox-F-introduce .introduce-left .introduce-content {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #fff;
+  color: #f0f0f0;
+}
+.terminal .iBox-D-introduce .introduce-left .introduce-content p,
+.terminal .iBox-F-introduce .introduce-left .introduce-content p {
+  font-size: 1.875rem;
+}
+.terminal .iBox-D-introduce .introduce-left .introduce-content small,
+.terminal .iBox-F-introduce .introduce-left .introduce-content small {
+  margin-bottom: 2rem;
+}
+.terminal .iBox-D-introduce .introduce-right,
+.terminal .iBox-F-introduce .introduce-right {
+  position: relative;
+  background: rgba(0, 0, 0, 0.02);
+}
+.terminal .iBox-D-introduce .introduce-right .parameterText,
+.terminal .iBox-F-introduce .introduce-right .parameterText {
+  width: max-content;
+  padding: 2rem 1rem;
+  font-size: 1.875rem;
+  border-top: 1px solid #a8a8a8;
+  border-bottom: 1px solid #a8a8a8;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter,
+.terminal .iBox-F-introduce .introduce-right .parameter {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter li,
+.terminal .iBox-F-introduce .introduce-right .parameter li {
+  margin-bottom: 1rem;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter li:nth-child(1),
+.terminal .iBox-F-introduce .introduce-right .parameter li:nth-child(1) {
+  font-size: 1.875rem;
+}
+.terminal .iBox-D-introduce .introduce-right .parameter li:nth-child(1) p,
+.terminal .iBox-F-introduce .introduce-right .parameter li:nth-child(1) p {
+  margin: 0;
+}
+.AiTechnology {
+  position: relative;
+  padding: 0 10%;
+  padding-top: 8rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  z-index: 1;
+}
+.AiTechnology .head-button {
+  width: max-content;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  color: var(--bili-blue);
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  border: 2px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+}
+.AiTechnology .head-button:hover::before {
+  background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
+.AiTechnology .head-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--bili-blue), var(--blue-gray));
+  z-index: -1;
+}
+.AiTechnology .head-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1.5px;
+  width: 98%;
+  height: 90%;
+  background: #fff;
+  z-index: -1;
+  border-radius: 33px;
+}
+.AiTechnology:nth-child(1) {
+  padding-bottom: 0;
+}
+.AiTechnology:nth-child(1) .AiTechnology-body-right-img {
+  background: url(../../images/product/iBox-D.png) no-repeat;
+  background-size: contain;
+}
+.AiTechnology::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  left: 0;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.AiTechnology::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 4rem;
+  right: 0;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.AiTechnology .AiTechnology-bg {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  width: 100%;
+  height: 73%;
+  background: url(../../images/line-bg.svg) no-repeat center center;
+  bottom: 0;
+  left: 0;
+  background-size: contain;
+}
+.AiTechnology .AiTechnology-title {
+  margin-bottom: 2em;
+}
+.AiTechnology .AiTechnology-title h3 {
+  color: #141414;
+}
+.AiTechnology .AiTechnology-title p {
+  transform: scale(1);
+  color: var(--bs-gray-600);
+  margin-bottom: 1rem;
+}
+.AiTechnology .AiTechnology-title small {
+  color: var(--text-gray);
+}
+.AiTechnology .AiTechnology-body {
+  position: relative;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  color: #e6e7f0;
+  margin: auto;
+  height: max-content;
+  width: max-content;
+  max-width: 100%;
+}
+.AiTechnology .AiTechnology-body .card {
+  width: 100%;
+  position: relative;
+  background: url(../../images/algorithm-facesb-bg.jpg) no-repeat;
+  background-size: cover;
+  z-index: 2;
+  height: max-content;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.AiTechnology .AiTechnology-body .card .row {
+  height: max-content;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] {
+  padding: 15px;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body {
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body *:not(:first-child) {
+  margin-top: 1rem;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title {
+  display: flex;
+  align-items: center;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title i {
+  font-size: xx-large;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title h2 {
+  margin: 0;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body .card-title *:not(:first-child) {
+  margin-left: 0.5em;
+}
+.AiTechnology .AiTechnology-body .card .row div[class*="col-"] .card-body picture {
+  display: block;
+  max-width: 100%;
+  background: center center no-repeat;
+  background-size: contain;
+}
+.AiTechnology .AiTechnology-body .card .vr {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  height: 100%;
+  display: none;
+}
+.AiTechnology .AiTechnology-body .card .hr {
+  width: 100%;
+  display: inline-block;
+}

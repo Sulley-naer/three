@@ -1,0 +1,525 @@
+:root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
+}
+
+@media screen and (max-width: 1700px) {
+  .terminal {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 760px) {
+  .terminal {
+    overflow-x: hidden;
+  }
+  .iBox-introduce-imgs{
+        top: 14rem;
+        left: 4rem;
+          width: 33% !important;
+          height: 10% !important;
+
+          flex-direction: row !important;
+          align-items: center !important;
+          img{
+              width: max-content !important;
+                max-width: 100% !important;
+          }
+  }
+}
+
+.banner {
+  position: relative;
+  height: 50rem;
+  width: 100%;
+  padding: 0 10%;
+  background: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    top: 10%;
+    left: 0;
+    background: url(../../images/title-divide-line.png) no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    top: 10%;
+    right: 0;
+    background: url(../../images/title-divide-line.png) no-repeat;
+    transform: rotate(180deg);
+  }
+
+  .swiper {
+    width: 30%;
+    height: 8rem;
+
+    .swiper-slide {
+      display: flex;
+      align-items: end;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: calc(100% / 3) !important;
+        transform: none;
+        background: var(--bili-blue) !important;
+        margin: 0;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .container-fluid {
+    height: calc(100% - 128px);
+    background: url(../../images/build-bgimg.jpg) no-repeat center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+
+    .left {
+      width: calc(100% / 3);
+      height: 100%;
+      // background: #555;
+      position: relative;
+
+      &:hover .card {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .card {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        width: max-content;
+        max-width: 80%;
+        transform: translateX(-100%);
+        opacity: 0;
+
+        span {
+          font-size: 1.5rem;
+          font-weight: bold;
+          vertical-align: sub;
+        }
+
+        li {
+          margin-top: 0.5em;
+          font-size: small;
+        }
+      }
+    }
+
+    .md {
+      width: calc(100% / 3);
+      height: 100%;
+      // background: #000;
+      position: relative;
+    }
+
+    .right {
+      width: calc(100% / 3);
+      height: 100%;
+      // background: #555;
+      position: relative;
+
+      &:hover .card {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .card {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        width: max-content;
+        max-width: 80%;
+        transform: translateX(100%);
+        opacity: 0;
+
+        span {
+          font-size: 1.5rem;
+          font-weight: bold;
+          vertical-align: sub;
+        }
+
+        li {
+          margin-top: 0.5em;
+          font-size: small;
+        }
+      }
+    }
+  }
+}
+
+.terminal {
+  padding: 4rem 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    left: -15%;
+    background: linear-gradient(to right, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    right: -15%;
+    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+
+  .terminalTop-bg {
+    position: absolute;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    height: 8rem;
+    background: no-repeat center;
+    background-size: contain;
+  }
+
+  .little {
+    padding: 2rem  0;
+    margin: auto;
+    .title-nav{
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+    }
+
+    .summary {
+      height: 5rem;
+      display: flex;
+      align-content: space-around !important;
+      flex-wrap: wrap !important;
+      flex-direction: column !important;
+
+      .content {
+        width: 65%;
+
+        //渐变
+        .gradient {
+          background-image: linear-gradient(
+            to right,
+            rgb(64, 92, 202),
+            rgb(89, 187, 241)
+          );
+          -webkit-background-clip: text;
+          color: transparent;
+          font-size: 1.875rem;
+        }
+      }
+    }
+  }
+
+  .iBox-D-introduce,
+  .iBox-F-introduce {
+    padding-top: 4rem;
+    position: relative;
+
+    .iBox-introduce-imgs {
+      display: none;
+      position: absolute;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        transform: scale(0.6);
+      }
+    }
+
+    .introduce-left {
+      padding-top: 2rem;
+      padding-right: 0;
+      background: no-repeat center;
+      background-size: cover;
+
+      .introduce-content {
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid #fff;
+        color: #f0f0f0;
+
+        p {
+          font-size: 1.875rem;
+        }
+
+        small {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .introduce-right {
+      position: relative;
+      background: rgba(0, 0, 0, 0.02);
+
+      .parameterText {
+        width: max-content;
+        padding: 2rem 1rem;
+        font-size: 1.875rem;
+        border-top: 1px solid #a8a8a8;
+        border-bottom: 1px solid #a8a8a8;
+      }
+
+      .parameter {
+        text-align: left;
+        margin-bottom: 3rem;
+
+        li {
+          margin-bottom: 1rem;
+
+          &:nth-child(1) {
+            font-size: 1.875rem;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.AiTechnology {
+  position: relative;
+  padding: 0 10%;
+  padding-top: 8rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  z-index: 1;
+
+  .head-button {
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    transform: translate(-50%, 0);
+    color: var(--bili-blue);
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    border: 2px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #fff;
+
+    &:hover {
+      &::before {
+        background-image: linear-gradient(
+          to right,
+          var(--blue-gray),
+          var(--bili-blue)
+        );
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        var(--bili-blue),
+        var(--blue-gray)
+      );
+      // border-radius: 12px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 1.5px;
+      width: 98%;
+      height: 90%;
+      background: #fff;
+      z-index: -1;
+      border-radius: 33px;
+    }
+  }
+
+  &:nth-child(1) {
+    padding-bottom: 0;
+
+    .AiTechnology-body-right-img {
+      background: url(../../images/product/iBox-D.png) no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    left: 0;
+    background: linear-gradient(to right, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    top: 4rem;
+    right: 0;
+    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+
+  .AiTechnology-bg {
+    position: absolute;
+    display: block;
+    z-index: 0;
+    width: 100%;
+    height: 73%;
+    background: url(../../images/line-bg.svg) no-repeat center center;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+  }
+
+  .AiTechnology-title {
+    margin-bottom: 2em;
+    h3 {
+      color: #141414;
+    }
+
+    p {
+      transform: scale(1);
+      color: var(--bs-gray-600);
+      margin-bottom: 1rem;
+    }
+    small {
+      color: var(--text-gray);
+    }
+  }
+
+  .AiTechnology-body {
+    position: relative;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    color: #e6e7f0;
+    margin: auto;
+    height: max-content;
+    width: max-content;
+    max-width: 100%;
+
+    .card {
+      width: 100%;
+      position: relative;
+      background: url(../../images/algorithm-facesb-bg.jpg) no-repeat;
+      background-size: cover;
+      z-index: 2;
+      height: max-content;
+      min-height: 300px;
+      justify-content: center;
+      align-items: center;
+
+      .row {
+        height: max-content;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+        div[class*="col-"] {
+          padding: 15px;
+
+          .card-body {
+            width: max-content;
+            max-width: 100%;
+            margin: auto;
+
+            *:not(:first-child) {
+              margin-top: 1rem;
+            }
+
+            .card-title {
+              display: flex;
+              align-items: center;
+
+              // justify-content: center;
+              i {
+                font-size: xx-large;
+              }
+
+              h2 {
+                margin: 0;
+              }
+
+              *:not(:first-child) {
+                margin-left: 0.5em;
+              }
+            }
+
+            picture {
+              display: block;
+              max-width: 100%;
+              background: center center no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+      }
+
+      .vr {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+        height: 100%;
+        display: none;
+      }
+
+      .hr {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+}

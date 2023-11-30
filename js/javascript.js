@@ -71,7 +71,41 @@ function pc() {
 }
 
 $(document).ready(function () {
-  $(".dropdown-menu dl dt").click(function () {
+  $(".dropdown-menu li").on("mouseenter", function () {
+    $(this).find('dt').css("color", "#fff");
+    var src = $(this).find("img").attr("src");
+    var index = src.lastIndexOf(".");
+    var suffix = src.substring(index);
+    var prefix = src.substring(0, index);
+    if (prefix.indexOf("-h") != -1) {
+      //如果包含-h，就把-h替换成空
+      prefix = prefix.replace("-h", "");
+    } else {
+      prefix = prefix + "-h";
+    }
+    src = prefix + suffix;
+    $(this).find("img").attr("src", src);
+    $(this).find("dd").hover(function(){
+      $(this).css("color", "#ffffffcc");
+    },function(){
+      $(this).css("color", "#9f9f9f");
+    })
+  });
+  $(".dropdown-menu li").on("mouseleave", function () {
+    $(this).find("dt").css("color", "#9f9f9f ");
+    var src = $(this).find("img").attr("src");
+    var index = src.lastIndexOf(".");
+    var suffix = src.substring(index);
+    var prefix = src.substring(0, index);
+    if (prefix.indexOf("-h") != -1) {
+      prefix = prefix.replace("-h", "");
+    } else {
+      prefix = prefix + "-h";
+    }
+    src = prefix + suffix;
+    $(this).find("img").attr("src", src);
+  });
+  /*   $(".dropdown-menu dl dt").click(function () {
     //我点击后我图片路径原本末尾是icon.png  我要改成icon-h.png
     //获取图片路径
     var img = $(".dropdown-menu dl dt img");
@@ -96,7 +130,7 @@ $(document).ready(function () {
     src = prefix + suffix;
     //把拼接好的图片路径赋值给图片
     img.eq($(this).index("dt")).attr("src", src);
-  });
+  }); */
 
   $(".navbar-toggler").click(function () {
     $(".navbar").toggleClass("act");
@@ -104,9 +138,9 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     if ($(document).scrollTop() >= 100) {
-      $("header").css("background", "var(--header-bg-down)");
+      $("header,.dropdown-menu").css("background", "var(--header-bg-down)");
     } else {
-      $("header").css("background", "var(--head-bg)");
+      $("header,.dropdown-menu").css("background", "var(--head-bg)");
     }
   });
 
@@ -122,17 +156,23 @@ $(document).ready(function () {
   var path = window.location.pathname;
   if (path === "/1/index.html") {
     $(".nav-item").eq(0).addClass("act");
-  } else if (path === "/2/index.html") {
+  } else if (path === "/2-1/index.html") {
     $(".nav-item").eq(1).addClass("act");
-  } else if (path === "/3/index.html") {
+  } else if (path === "/2-2/index.html") {
     $(".nav-item").eq(1).addClass("act");
-  } else if (path === "/4-1/index.html") {
+  } else if (path === "/3-1/index.html") {
     $(".nav-item").eq(2).addClass("act");
-  } else if (path === "/4-3/index.html") {
+  } else if (path === "/3-2/index.html") {
     $(".nav-item").eq(2).addClass("act");
-  } else if (path === "/friend/index.html") {
-    $(".nav-item").eq(4).addClass("act");
   } else if (path === "/5/index.html") {
+  } else if (path === "/3-3/index.html") {
+    $(".nav-item").eq(2).addClass("act");
+  } else if (path === "/5/index.html") {
+  } else if (path === "/3-4/index.html") {
+    $(".nav-item").eq(2).addClass("act");
+  } else if (path === "/5/index.html") {
+    $(".nav-item").eq(4).addClass("act");
+  } else if (path === "/6/index.html") {
     $(".nav-item").eq(5).addClass("act");
   }
 });
