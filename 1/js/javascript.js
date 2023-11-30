@@ -84,8 +84,8 @@ $(document).ready(function () {
         "background",
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
       );
-      $(".AiTechnology-img").click(function () {
-        $(this).find('div[class="AiTechnology-introduce"').stop().css("opacity", "1");
+      $(".AiTechnology-img").mouseenter(function () {
+        $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
         $(".AiTechnology-introduce").stop().fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
         $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
@@ -106,7 +106,8 @@ $(document).ready(function () {
           $(this).parents("div[class='AiTechnology-introduce']").hide();
         });
       $(this)
-        .find("div[class='AiTechnology-introduce']").stop()
+        .find("div[class='AiTechnology-introduce']")
+        .stop()
         .animate({ opacity: 0 }, 1000);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(
@@ -180,6 +181,6 @@ function qh(pageText) {
 qh(1);
 $(".practice-title>small>a").click(function () {
   $(this).addClass("active").siblings().removeClass("active");
-   let pageText = $(this).attr("page");
-   qh(pageText);
+  let pageText = $(this).attr("page");
+  qh(pageText);
 });
