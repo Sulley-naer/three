@@ -9,14 +9,14 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .foot-content > .col-2 {
-    transform: scale(0.8);
-  }
   .AiTechnology-introduce {
     padding-top: 0rem !important;
   }
 }
 @media screen and (max-width: 990px) {
+  .product:first-child {
+    margin-left: 5%;
+  }
   #friend {
     display: flex;
   }
@@ -32,65 +32,6 @@
     left: 0%;
   }
 }
-<<<<<<< HEAD
-@media screen and (max-width: 1500px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.9);
-  }
-}
-@media screen and (max-width: 1300px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.8);
-  }
-  .products {
-    justify-content: center !important;
-  }
-  .dropdown-menu {
-    position: fixed !important;
-    top: 5% !important;
-    left: 50% !important;
-  }
-}
-@media screen and (max-width: 1500px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.9);
-  }
-}
-@media screen and (max-width: 1300px) {
-  .AiTechnology-introduce p {
-    transform: scale(0.8);
-  }
-}
-@media screen and (max-width: 1110px) {
-  .foot-content > .col-2 {
-    transform: scale(0.8);
-  }
-  .cop {
-    transform: scale(0.8);
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.7);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.7);
-  }
-}
-@media screen and (max-width: 950px) {
-  .cop {
-    transform: scale(0.6);
-  }
-  .AiTechnology-introduce {
-    justify-content: flex-end;
-  }
-  .AiTechnology-introduce p {
-    transform: scale(0.6);
-  }
-  .AiTechnology-introduce .tz a {
-    transform: scale(0.6);
-  }
-}
-=======
->>>>>>> sui
 @media screen and (max-width: 835px) {
   .AiTechnology-img {
     width: 50% !important;
@@ -107,9 +48,6 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .products {
-    transform: scale(0.7);
-  }
   .AiTechnology-img {
     width: 100% !important;
   }
@@ -129,15 +67,19 @@
   .foot-content > .col-2 {
     transform: scale(0.9);
   }
+  .practice-body {
+    height: max-content !important;
+  }
+  .practice-body p {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 550px) {
-  .products {
-    transform: scale(0.6);
-  }
   .navbar-brand {
     display: none;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 @media screen and (max-width: 620px) {
   .foot-content > .col-2 {
@@ -154,6 +96,8 @@
 >>>>>>> sui
   }
 }
+=======
+>>>>>>> sui
 @media screen and (max-width: 480px) {
   .AiTechnology-img {
     height: 14rem;
@@ -164,9 +108,29 @@
     left: 2% !important;
   }
 }
-@media screen and (max-width: 360px) {
-  .products {
-    transform: scale(0.4);
+@media screen and (max-width: 830px) {
+  .product:first-child {
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 730px) {
+  .product:first-child {
+    margin-left: 15%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .product:first-child {
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .product:first-child {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .product:first-child {
+    margin-left: 28%;
   }
 }
 .button-lin {
@@ -210,141 +174,76 @@
 li {
   list-style: none;
 }
-.swiper {
-  width: 100%;
-  height: 67%;
-  position: relative;
-  padding: 0;
-  /* <-- 自定义swiper组件 --> */
-}
-.swiper .swiper-pagination > span {
-  width: 2em !important;
-  height: 4px !important;
-  transform: skewX(-45deg);
-  background: var(--bili-blue);
-  border-radius: 0;
-  background-color: #66d7fb !important;
-}
-.swiper .swiper-scrollbar {
-  background: var(--bili-blue);
-  background-color: #12aae16b;
-}
-.swiper .swiper-scrollbar .swiper-scrollbar-drag {
-  background-color: #ffffff;
-  background-color: var(--bili-blue);
-}
-.swiper .swiper-button-prev {
-  color: var(--text-lighter) !important;
-  color: var(--bili-blue) !important;
-}
-.swiper .swiper-button-next {
-  color: var(--text-lighter) !important;
-  color: var(--bili-pink) !important;
-  color: #66d7fb !important;
-  color: var(--bili-blue) !important;
-}
-.swiper .swiper-slide {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position-y: bottom;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.swiper .swiper-slide .mark {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #ffffff33;
-}
-.swiper .swiper-slide content {
-  display: block;
-  padding: 0 10%;
-  width: 100%;
-  height: 55%;
-  color: var(--text-gray);
-  z-index: 2;
-}
-.swiper .swiper-slide content > h1 {
-  color: var(--text-gray-hover);
-}
-.swiper .swiper-slide content > h1 i {
-  font-style: normal;
-  font-weight: lighter;
-  font-size: smaller;
-  vertical-align: baseline;
-}
-.swiper .swiper-slide content > * {
-  margin-top: 1em;
-  color: var(--text-lighter);
-}
-.swiper .swiper-slide content .learn-more {
-  margin-top: 2.5rem;
-  min-width: 10rem;
-  height: 3em;
-  border-radius: 25px;
-  padding: 0px 33px;
-  background: var(--head-bg);
-  background: #00000025;
-  outline: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.swiper .swiper-slide content .learn-more i {
-  width: 15px;
-  height: 15px;
-  display: flex;
-}
-.swiper .swiper-slide content .learn-more:hover {
-  background: var(--head-bg-hover);
-  background: #00000045;
-}
 .SmartDesk {
   padding-top: 2.5rem;
+  overflow: auto;
 }
-.SmartDesk > .products {
-  padding: 0 10%;
-  padding-top: 2.5rem;
+.products {
+  margin: auto;
+  width: max-content;
+  max-width: 100%;
+  padding: 4em 0;
   display: flex;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   justify-content: space-between;
 >>>>>>> sui
+=======
+>>>>>>> sui
   justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
-.SmartDesk > .products .product {
+.products > div {
+  display: flex;
+  width: max-content;
+  overflow: auto;
+  min-width: 910px;
+}
+.products .product {
+  width: max-content;
   display: flex;
   align-items: center;
   flex-direction: column;
   flex: 1;
 }
-.SmartDesk > .products .product:hover {
+.products .product > a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.products .product:hover {
   background: var(--head-bg);
 }
-.SmartDesk > .products .product .product-img {
-  transform: scale(0.6);
+.products .product .product-img {
+  width: max-content;
+  max-width: 100%;
   margin-bottom: 0.5rem;
+  margin: auto;
 }
-.SmartDesk > .products .product .product-name {
+.products .product .product-img > img {
+  width: 80px;
+}
+.products .product .product-name {
+  width: 100%;
+  text-align: center;
   margin-bottom: -0.5rem;
   color: #101010;
 }
-.SmartDesk > .products .product .products-introduce {
+.products .product .products-introduce {
+  width: 100%;
   font-size: small;
   color: var(--text-gray);
 }
 .introduce {
-  background: url(../../images/solution-bg.jpg);
+  background: url(../public/images/solution-bg.jpg);
   background-size: cover;
-  padding: 0 10%;
   height: max-content;
 }
 .introduce .AiTechnology {
+  padding: 0 10%;
   position: relative;
   padding-top: 4rem;
   text-align: center;
@@ -356,7 +255,7 @@ li {
   width: 30%;
   height: 2px;
   bottom: 0;
-  left: -13%;
+  left: 0%;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology::before {
@@ -365,7 +264,7 @@ li {
   width: 30%;
   height: 2px;
   bottom: 0;
-  right: -13%;
+  right: 0%;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .introduce .AiTechnology .AiTechnology-title h3 {
@@ -401,7 +300,7 @@ li {
   padding-top: 4rem;
   width: 100%;
   height: 100%;
-  background: url(../../images/solution-mask.jpg);
+  background: url(../public/images/solution-mask.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -466,6 +365,7 @@ li {
   background: linear-gradient(to bottom, #8debf1, #94b9fd);
 }
 .introduce .practice {
+  padding: 0 10%;
   padding-top: 4rem;
 }
 .introduce .practice .practice-title {
@@ -474,22 +374,20 @@ li {
 .introduce .practice .practice-title h3 {
   color: #dedede;
 }
-.introduce .practice .practice-title p {
-  transform: scale(0.8);
-}
-.introduce .practice .practice-title p span {
+.introduce .practice .practice-title small span {
   color: var(--text-gray);
   padding: 0 0.7rem;
 }
-.introduce .practice .practice-title p a {
+.introduce .practice .practice-title small a {
   color: var(--text-gray);
 }
-.introduce .practice .practice-title p .active {
+.introduce .practice .practice-title small .active {
   color: var(--text-gray-hover);
 }
 .introduce .practice .practice-body {
-  display: none;
-  padding-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  height: 13.375rem;
 }
 .introduce .practice .practice-body h3 {
   color: #fff;
@@ -507,6 +405,7 @@ li {
   width: 100%;
   padding: 0 10%;
   background: #fff;
+  overflow: hidden;
 }
 .banner::before {
   content: "";
@@ -515,7 +414,7 @@ li {
   height: 2px;
   top: 10%;
   left: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
+  background: url(../public/images/title-divide-line.png) no-repeat;
 }
 .banner::after {
   content: "";
@@ -524,7 +423,7 @@ li {
   height: 2px;
   top: 10%;
   right: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
+  background: url(../public/images/title-divide-line.png) no-repeat;
   transform: rotate(180deg);
 }
 .banner .swiper {
@@ -545,7 +444,7 @@ li {
 }
 .banner .container-fluid {
   height: calc(100% - 128px);
-  background: url(../../images/build-bgimg.jpg) no-repeat center center;
+  background: url(../public/images/build-bgimg.jpg) no-repeat center center;
   position: relative;
   display: flex;
   align-items: center;
@@ -651,6 +550,18 @@ li {
   right: 0;
   background: url(../images/title-divide-line.png) no-repeat;
 }
+.adbox > div {
+  width: 15%;
+  margin: 1rem auto 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adbox > div .ad {
+  margin: auto 0;
+  position: relative;
+}
 @media screen and (max-width: 500px) {
   .adbox > div {
     width: 60% !important;
@@ -659,37 +570,28 @@ li {
     width: 100% !important;
   }
 }
-.adbox > div {
-  margin: 1rem auto 0 auto;
-}
-.adbox > div .ad {
-  margin-left: auto;
-  margin-right: auto;
-}
-.adbox .at {
-  display: flex;
-}
-.adbox .w-15 {
-  width: 15%;
-}
 @media screen and (max-width: 1642px) {
-  .adbox .w-15 {
+  .adbox > div {
     width: 25%;
   }
 }
 @media screen and (max-width: 910px) {
-  .adbox .w-15 {
-    width: 30%;
+  .adbox > div {
+    width: 35%;
   }
 }
 @media screen and (max-width: 965px) {
-  .adbox .w-15 {
+  .adbox > div {
     width: 50%;
   }
 }
 .adbox .active {
   color: skyblue;
   transition: all 0.3s;
+}
+.adbox .swiper {
+  width: 100% !important;
+  height: max-content;
 }
 .adbox picture {
   /* // background: #00000009; */
@@ -698,31 +600,29 @@ li {
   display: block;
   margin: auto;
   margin-top: 1rem;
-  display: none !important;
+  display: flex;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 .adbox picture div {
   border-radius: 25px;
   overflow: hidden;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
-.adbox .act {
+.act {
   display: flex !important;
 }
-.adbox .act > div > img {
+.act > div > img {
   animation-name: dm;
   animation-duration: 0.5s;
-}
-@keyframes dm {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .footbox {
   width: 100%;
   padding: 0 10%;
-  background: url(../../picture/footer-bg.jpg);
+  background: url(../public/picture/footer-bg.jpg);
   background-size: cover;
 }
 .footbox > .foot-top {
