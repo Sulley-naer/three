@@ -214,7 +214,7 @@ li {
   color: var(--text-gray);
 }
 .introduce {
-  background: url(../../images/solution-bg.jpg);
+  background: url(../public/images/solution-bg.jpg);
   background-size: cover;
   height: max-content;
 }
@@ -276,7 +276,7 @@ li {
   padding-top: 4rem;
   width: 100%;
   height: 100%;
-  background: url(../../images/solution-mask.jpg);
+  background: url(../public/images/solution-mask.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -390,7 +390,7 @@ li {
   height: 2px;
   top: 10%;
   left: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
+  background: url(../public/images/title-divide-line.png) no-repeat;
 }
 .banner::after {
   content: "";
@@ -399,7 +399,7 @@ li {
   height: 2px;
   top: 10%;
   right: 0;
-  background: url(../../images/title-divide-line.png) no-repeat;
+  background: url(../public/images/title-divide-line.png) no-repeat;
   transform: rotate(180deg);
 }
 .banner .swiper {
@@ -420,7 +420,7 @@ li {
 }
 .banner .container-fluid {
   height: calc(100% - 128px);
-  background: url(../../images/build-bgimg.jpg) no-repeat center center;
+  background: url(../public/images/build-bgimg.jpg) no-repeat center center;
   position: relative;
   display: flex;
   align-items: center;
@@ -598,7 +598,7 @@ li {
 .footbox {
   width: 100%;
   padding: 0 10%;
-  background: url(../../picture/footer-bg.jpg);
+  background: url(../public/picture/footer-bg.jpg);
   background-size: cover;
 }
 .footbox > .foot-top {

@@ -1,24 +1,7 @@
 $(document).ready(function () {
-  //jq等待页面加载完时再触发js
-  //全写这里面
-  //移入移出product下级product-img旋转360deg
-  $(".product").hover(
-    function () {
-      $(this)
-        .find($(".product-img"))
-        .find("img")
-        .css("transform", "rotate(360deg)");
-    },
-    function () {
-      $(this)
-        .find($(".product-img"))
-        .find("img")
-        .css("transform", "rotate(0deg)");
-    }
-  );
-
+  //隐藏子元素
   $(function () {
-    $(".AiTechnology-introduce").stop().hide();
+    $(".AiTechnology-introduce").hide();
   });
   //隐藏span
   function AiTechnologyIntroduceBorderNone() {
@@ -84,8 +67,7 @@ $(document).ready(function () {
         "background",
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
       );
-      $(".AiTechnology-img").mouseenter(function () {
-        $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
+      $(".AiTechnology-img").click(function () {
         $(".AiTechnology-introduce").stop().fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
         $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
@@ -98,17 +80,7 @@ $(document).ready(function () {
       $(this).find("span").eq(0).stop().animate({ width: "0%" }, 1000);
       $(this).find("span").eq(1).stop().animate({ width: "0%" }, 1000);
       $(this).find("span").eq(2).stop().animate({ height: "0%" }, 1000);
-      $(this)
-        .find("span")
-        .eq(3)
-        .stop()
-        .animate({ height: "0%" }, 1000, function () {
-          $(this).parents("div[class='AiTechnology-introduce']").hide();
-        });
-      $(this)
-        .find("div[class='AiTechnology-introduce']")
-        .stop()
-        .animate({ opacity: 0 }, 1000);
+      $(this).find("span").eq(3).stop().animate({ height: "0%" }, 1000);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(
         "background",
@@ -128,59 +100,24 @@ $(document).ready(function () {
     }
   );
 
-  //partner
   $(".ad").click(function () {
-    $(this).addClass("active").siblings().removeClass("active");
-    SwiperAd.slideTo($(this).index(".ad"));
+    $(this).toggleClass("active").siblings().removeClass("active");
+    $(".at")
+      .eq($(this).index(".ad"))
+      .addClass("act")
+      .siblings()
+      .removeClass("act");
   });
-});
 
-$(".banner>div>div").mouseenter(function (event) {
-  let hdt = $(".banner .swiper-ban .swiper-pagination>span");
-  mySwiper.slideTo($(this).index());
-
-  // 阻止事件冒泡
-  event.stopPropagation();
-});
-
-// 定义一个函数，接受两个参数：选择器和图片路径
-function changeBackground(selector, imagePath) {
-  // 保存父元素的原始背景图片
-  var originalBgImage = "../public/images/build-bgimg.jpg";
-  // 为选择器绑定鼠标移入和移出事件
-  $(selector).mouseover(function () {
-    // 鼠标移入时，改变父元素的背景图片为指定的图片路径
-    $(this)
-      .parent()
-      .css("background", "url(" + imagePath + ") no-repeat center center");
+  $("#ToiBox-D").on("click", function () {
+    if (sessionStorage.getItem("iBox-F") !== null) {
+      sessionStorage.removeItem("iBox-F");
+    }
+    location.href = "2-3.html";
   });
-  /* .mouseleave(function () {
-      // 鼠标移出时，恢复父元素的背景图片为默认的图片路径
-      $(this)
-        .parent()
-        .css(
-          "background",
-          "url(../public/images/build-bgimg.jpg) no-repeat center center"
-        );
-    }); */
-}
 
-// 调用函数，传递不同的选择器和图片路径
-changeBackground(".banner>div>div[class=left]", "../public/images/build-bgimg-l.jpg");
-changeBackground(".banner>div>div[class=right]", "../public/images/build-bgimg-r.jpg");
-changeBackground(".banner>div>div[class=md]", "../public/images/build-bgimg-m.jpg");
-
-//加载page
-function qh(pageText) {
-  if (pageText !== undefined) {
-    $(".practice-body").load("page-" + pageText + ".html", function () {
-      pc();
-    });
-  }
-}
-qh(1);
-$(".practice-title>small>a").click(function () {
-  $(this).addClass("active").siblings().removeClass("active");
-  let pageText = $(this).attr("page");
-  qh(pageText);
+  $("#ToiBox-F").on("click", function () {
+    sessionStorage.setItem("iBox-F", "1");
+    location.href = "2-3.html";
+  });
 });
