@@ -290,3 +290,29 @@
 .AiTechnology .AiTechnology-body .content .page > div > content .son-30 li {
   width: 30%;
 }
+.brief {
+  position: relative;
+  padding: 0 10%;
+  padding-top: 4rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  z-index: 1;
+}
+.brief::after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  top: 0;
+  left: 0%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.brief::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}

@@ -1,17 +1,26 @@
 function qh(pageText) {
   if (pageText !== undefined) {
+    //顶部
     $(".objectives").load(
-      "objective_page/7-"+pageText+".html",
+      "7-" + pageText +"-"+pageText+ ".html",
+      function () {
+        pc();
+      }
+      );
+      $(".AiTechnology").load(
+        //body
+      "7-"+pageText+".html",
       function () {
         pc();
       }
     );
-    $(".AiTechnology").load(
-      "AiTechnology_page/7-" + pageText + ".html",
-      function () {
-        pc();
-      }
-    );
+      $(".brief").load(
+        //foot
+        "7-footBrief-" + pageText + ".html",
+        function () {
+          pc();
+        }
+      );
   }
 }
 qh(1);

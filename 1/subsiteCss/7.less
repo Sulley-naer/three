@@ -181,9 +181,10 @@
             }
 
             content {
-              p{
+              p {
                 font-size: small;
               }
+
               i {
                 display: inline-block;
                 width: 3px;
@@ -362,5 +363,36 @@
         }
       }
     }
+  }
+}
+
+.brief {
+    position: relative;
+      padding: 0 10%;
+      padding-top: 4rem;
+      text-align: center;
+      padding-bottom: 4rem;
+      z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    top: 0;
+    left: 0%;
+    background: linear-gradient(to right, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, rgb(47, 77, 165), rgb(91, 166, 228));
+  }
+  .brief-title {
+    
   }
 }
