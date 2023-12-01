@@ -161,3 +161,16 @@ $(document).ready(function () {
     }
   );
 });
+
+if (sessionStorage.getItem("high") == 0) {
+  $(document).ready(function () {
+    var targetElement = $(".programme main[class*='body']");
+    if (targetElement.length > 0) {
+      var targetOffset = targetElement.offset().top;
+      // 添加一些额外的偏移量，如果需要的话
+      var scrollToPosition = targetOffset + 400;
+      // 执行滚动
+      $("html, body").animate({ scrollTop: scrollToPosition }, 500);
+    }
+  });
+}

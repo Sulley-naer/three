@@ -30,7 +30,7 @@ function qh(pageText) {
   }
 }
 
-qh(1);
+/* qh(1);
 
 $("body").ready(function () {
   let key = parseInt(sessionStorage.getItem("click"));
@@ -50,3 +50,10 @@ $("body").ready(function () {
     qh(1);
   }
 });
+
+if (sessionStorage.getItem("high") == 0) {
+  $("html").animate({
+    scrollTop: $(".AiTechnology").offset().top,
+  });
+  sessionStorage.setItem("high", "1");
+} */

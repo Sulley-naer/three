@@ -18,6 +18,9 @@
   .pictureBox > picture:not(:first-child) {
     margin: 1em 0 !important;
   }
+  .programme main .row div[class*="col-"] .msg .content p {
+    max-width: 25em !important;
+  }
 }
 @media screen and (max-width: 710px) {
   .AiTechnology {
@@ -28,6 +31,16 @@
   }
   .AiTechnology .main .pictureBox > picture {
     width: 80% !important;
+  }
+}
+@media screen and (max-width: 765px) {
+  .programme main .row div[class*="col-"] .msg {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .programme main .row div[class*="col-"] .msg .content p {
+    max-width: 22em !important;
   }
 }
 .AiTechnology {
@@ -177,8 +190,10 @@
   height: 100%;
   display: block;
   position: relative;
+  background: center center;
   background-size: cover;
   max-height: 300px;
+  max-width: 100% !important;
 }
 .AiTechnology .main .pictureBox > picture.no {
   max-height: none;

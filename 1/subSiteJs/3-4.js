@@ -29,3 +29,10 @@ $("body").ready(function () {
     qh(key);
   }
 });
+
+if (sessionStorage.getItem("high") == 0) {
+  $("html").animate({
+    scrollTop: $(".terminal").offset().top,
+  });
+  sessionStorage.setItem("high", "1");
+}
