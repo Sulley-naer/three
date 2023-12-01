@@ -1,0 +1,403 @@
+:root {
+  --head-bg: rgba(3, 21, 75, 0.137);
+  --head-bg-hover: rgba(3, 21, 75, 0.3);
+  --text-gray: #9f9f9f;
+  --text-gray-hover: #ffffff;
+  --text-lighter: #d2d2d2;
+  --header-bg-down: #000000b5;
+  --bili-pink: #ff3272;
+  --bili-blue: #00aeec;
+  --blue-gray: #317fc6;
+  --transparent-hover: #00000020;
+  --line: hsla(0, 0%, 75%, 0.45);
+}
+@media screen and (max-width: 1300px) {
+  .pictureBox {
+    flex-direction: column !important;
+  }
+  .pictureBox > picture:not(:first-child) {
+    margin: 1em 0 !important;
+  }
+}
+@media screen and (max-width: 710px) {
+  .AiTechnology {
+    padding: 8rem 0 !important;
+  }
+  .AiTechnology .main {
+    width: 100% !important;
+  }
+  .AiTechnology .main .pictureBox > picture {
+    width: 80% !important;
+  }
+}
+.AiTechnology {
+  position: relative;
+  padding: 8rem 10%;
+  text-align: center;
+  padding-bottom: 4rem;
+  z-index: 1;
+}
+.AiTechnology::after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  top: 4rem;
+  left: 0;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.AiTechnology::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  top: 4rem;
+  right: 0;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.AiTechnology .AiTechnology-bg {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  width: 100%;
+  height: 73%;
+  background: url(../../public/images/line-bg.svg) no-repeat center center;
+  bottom: 0;
+  left: 0;
+  background-size: contain;
+}
+.AiTechnology .AiTechnology-title {
+  display: flex;
+  max-width: 100%;
+  min-height: 4rem;
+  justify-content: space-between;
+}
+.AiTechnology .AiTechnology-title .card {
+  width: 20%;
+  background: none;
+  border: none;
+}
+.AiTechnology .AiTechnology-title .card > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AiTechnology .AiTechnology-title .card > div i {
+  font-size: 3rem;
+  color: var(--text-gray);
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, #405cca, #59bbf1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.AiTechnology .AiTechnology-title .card > div .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.AiTechnology .AiTechnology-title .card > div .card-body .card-title {
+  text-align: left;
+  background-image: linear-gradient(to right, #405cca, #59bbf1);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+}
+.AiTechnology .AiTechnology-title .card > div .card-body .card-text {
+  color: var(--text-gray);
+  font-size: small;
+}
+.AiTechnology .navbar {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.AiTechnology .navbar .nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AiTechnology .navbar .nav .line {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: smaller;
+}
+.AiTechnology .navbar .nav .nav-item {
+  margin: 0 1rem;
+  padding: 0;
+}
+.AiTechnology .navbar .nav .nav-item a {
+  padding: 0;
+  color: var(--text-gray);
+  font-size: small;
+}
+.AiTechnology .navbar .nav .nav-item a.active {
+  color: var(--bili-blue);
+}
+.AiTechnology .main {
+  min-height: 45em;
+  width: 75%;
+  height: max-content;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(5deg, #145273 5%, #0a294f 80%);
+}
+.AiTechnology .main .head {
+  width: 100%;
+  height: max-content;
+  margin-top: 5rem;
+  color: var(--text-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.AiTechnology .main .head .title {
+  color: var(--text-gray-hover);
+}
+.AiTechnology .main .head > p {
+  max-width: 70%;
+}
+.AiTechnology .main .pictureBox {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  min-height: 10rem;
+  height: max-content;
+  padding: 0 2%;
+  align-items: center;
+  justify-content: center;
+}
+.AiTechnology .main .pictureBox > picture {
+  height: 100%;
+  display: block;
+  position: relative;
+  background-size: cover;
+  max-height: 300px;
+}
+.AiTechnology .main .pictureBox > picture.no {
+  max-height: none;
+}
+.AiTechnology .main .pictureBox > picture:not(:first-child) {
+  margin-left: 0.5rem;
+}
+.AiTechnology .main .pictureBox > picture > img {
+  width: 100%;
+}
+.AiTechnology .main .pictureBox > picture p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--text-gray-hover);
+  background-color: var(--header-bg-down);
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 3px;
+  font-size: smaller;
+  font-weight: 100;
+  text-align: left;
+  align-items: center;
+  padding-left: 0.5em;
+}
+.AiTechnology .main .pictureBox > picture .w {
+  color: #000;
+  background-color: var(--text-gray-hover);
+}
+.AiTechnology .main .content {
+  margin-top: 2rem;
+  width: 100%;
+  height: max-content;
+  min-height: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../../public/images/line-bg.svg) no-repeat center bottom;
+  background-size: contain;
+}
+.AiTechnology .main .content .title-box {
+  padding: 0 2%;
+  width: 100%;
+  min-height: 5em;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.AiTechnology .main .content .title-box > * {
+  color: var(--text-lighter);
+  margin-top: 0.3em;
+}
+.AiTechnology .main .content .title-box > *:first-child {
+  color: var(--text-gray-hover);
+  font-weight: lighter;
+  margin-top: 0;
+}
+.AiTechnology .main .content .msg-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 80%;
+  margin-top: 1em;
+  padding-bottom: 3rem;
+}
+.AiTechnology .main .content .msg-box .row > div {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.AiTechnology .main .content .msg-box .row > div dl {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+}
+.AiTechnology .main .content .msg-box .row > div dl dd {
+  margin-top: 1em;
+  color: var(--text-gray-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: smaller;
+}
+.programme {
+  padding: 2rem 10% 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7rem;
+}
+.programme::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 0;
+  left: 0%;
+  background: linear-gradient(to right, #2f4da5, #5ba6e4);
+}
+.programme::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  top: 0;
+  right: 0%;
+  background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.programme .head {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.programme .head .title {
+  color: black;
+  opacity: 0.7;
+}
+.programme .head p {
+  color: var(--text-gray);
+  font-size: small;
+}
+.programme main {
+  height: max-content;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(225deg, #25a5b3 30%, #1a4882 100%) no-repeat;
+  background-image: url(../../public/images/pro-apply-bg.jpg);
+  background-size: cover;
+  padding: 4rem 0;
+}
+.programme main > div {
+  width: 100%;
+}
+.programme main .row {
+  padding: 0 2em;
+  width: max-content;
+  max-width: 100%;
+  min-height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.programme main .row div[class*="col-"] {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+.programme main .row div[class*="col-"]:first-child {
+  margin-bottom: 1em;
+}
+.programme main .row div[class*="col-"] .msg {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.programme main .row div[class*="col-"] .msg .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+  flex-direction: column;
+}
+.programme main .row div[class*="col-"] .msg .title h3 {
+  color: #e3e3e3;
+  margin: 0;
+}
+.programme main .row div[class*="col-"] .msg .title h3:hover {
+  color: var(--text-gray-hover);
+}
+.programme main .row div[class*="col-"] .msg .title i {
+  margin: 0 0.5em;
+  font-size: xx-large;
+  font-family: "iconfont";
+  font-style: normal;
+  color: var(--text-gray-hover);
+}
+.programme main .row div[class*="col-"] .msg .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.programme main .row div[class*="col-"] .msg .content p {
+  width: max-content;
+  max-width: 30em;
+  margin-top: 1em;
+  font-size: 10px;
+  color: var(--text-lighter);
+}
+.programme main .row div[class*="col-"] .msg .content p:first-child {
+  margin-top: 1.2rem;
+}
+.programme main .row div[class*="col-"] .msg .content p:hover {
+  color: var(--text-gray-hover);
+}
+.programme main .row div[class*="col-"] picture {
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+}
+.programme main .row div[class*="col-"] picture > img {
+  max-width: 100%;
+}
