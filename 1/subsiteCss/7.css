@@ -316,3 +316,9 @@
   right: 0;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
+.brief .brief-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
