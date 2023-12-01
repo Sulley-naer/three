@@ -22,15 +22,15 @@ $(document).ready(function () {
 function qh(pageText) {
   if (pageText !== undefined) {
     $(".AiTechnology .main").load("5-" + pageText + ".html", function () {
-      pc(),pb();
+      pc(), pb();
     });
     $(".programme").load("5-" + pageText + "-1.html", function () {
-      pc(),pb();
+      pc(), pb();
     });
   }
 }
 
-/* qh(1);
+qh(1);
 
 $("body").ready(function () {
   let key = parseInt(sessionStorage.getItem("click"));
@@ -46,7 +46,7 @@ $("body").ready(function () {
       .children("a")
       .removeClass("active");
     qh(key + 1);
-  } else { 
+  } else {
     qh(1);
   }
 });
@@ -56,4 +56,4 @@ if (sessionStorage.getItem("high") == 0) {
     scrollTop: $(".AiTechnology").offset().top,
   });
   sessionStorage.setItem("high", "1");
-} */
+}

@@ -10,6 +10,7 @@
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
   --line: hsla(0, 0%, 75%, 0.45);
+  --text-black-hover: #626262;
 }
 @media screen and (max-width: 1300px) {
   .pictureBox {
@@ -41,6 +42,11 @@
 @media screen and (max-width: 500px) {
   .programme main .row div[class*="col-"] .msg .content p {
     max-width: 22em !important;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .programme main .row div[class*="col-"] .msg {
+    margin-left: -50% !important;
   }
 }
 .AiTechnology {
@@ -175,6 +181,11 @@
 }
 .AiTechnology .main .head > p {
   max-width: 70%;
+  font-size: smaller;
+  color: var(--text-gray);
+}
+.AiTechnology .main .head > p:hover {
+  color: var(--text-gray-hover);
 }
 .AiTechnology .main .pictureBox {
   margin-top: 1rem;
@@ -190,7 +201,7 @@
   height: 100%;
   display: block;
   position: relative;
-  background: center center;
+  background: center center no-repeat;
   background-size: cover;
   max-height: 300px;
   max-width: 100% !important;
@@ -213,7 +224,7 @@
   position: absolute;
   bottom: 0;
   margin: 0;
-  padding: 3px;
+  padding: 10px;
   font-size: smaller;
   font-weight: 100;
   text-align: left;
@@ -223,6 +234,7 @@
 .AiTechnology .main .pictureBox > picture .w {
   color: #000;
   background-color: var(--text-gray-hover);
+  padding: 3px;
 }
 .AiTechnology .main .content {
   margin-top: 2rem;
@@ -255,6 +267,15 @@
   font-weight: lighter;
   margin-top: 0;
 }
+.AiTechnology .main .content .title-box > * span {
+  color: var(--text-lighter);
+}
+.AiTechnology .main .content .title-box > * span:hover {
+  color: var(--text-gray-hover);
+}
+.AiTechnology .main .content .title-box p:hover {
+  color: var(--text-gray-hover);
+}
 .AiTechnology .main .content .msg-box {
   display: flex;
   justify-content: center;
@@ -278,11 +299,15 @@
 }
 .AiTechnology .main .content .msg-box .row > div dl dd {
   margin-top: 1em;
-  color: var(--text-gray-hover);
+  color: var(--text-lighter);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: smaller;
+  padding: 0.5em;
+}
+.AiTechnology .main .content .msg-box .row > div dl dd:hover {
+  color: var(--text-gray-hover);
 }
 .programme {
   padding: 2rem 10% 0;
@@ -326,6 +351,9 @@
 .programme .head p {
   color: var(--text-gray);
   font-size: small;
+}
+.programme .head p:hover {
+  color: var(--text-black-hover);
 }
 .programme main {
   height: max-content;
