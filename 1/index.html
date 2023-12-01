@@ -392,11 +392,11 @@
         <div class="practice-title">
           <h3>实践验证，智能世界无限可能</h3>
           <small>
-            <a href="javaScript:;" class="active" page="1">智能社区</a><span>|</span
-            ><a href="javaScript:;" page="2">智能教育</a><span>|</span
-            ><a href="javaScript:;" page="3">智慧安防</a><span>|</span
-            ><a href="javaScript:;" page="4">智慧环保</a><span>|</span
-            ><a href="javaScript:;" page="5">智慧渔政</a>
+            <a href="javaScript:;" class="active" page="1">智能社区</a
+            ><span>|</span><a href="javaScript:;" page="2">智能教育</a
+            ><span>|</span><a href="javaScript:;" page="3">智慧安防</a
+            ><span>|</span><a href="javaScript:;" page="4">智慧环保</a
+            ><span>|</span><a href="javaScript:;" page="5">智慧渔政</a>
           </small>
         </div>
         <div class="practice-body"></div>
@@ -579,7 +579,6 @@
   <script src="js/javascript.js"></script>
 
   <script src="public/bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
-
 </html>
 
 <script src="public/bootstrap/swiper/swiper-bundle.min.js"></script>
@@ -795,6 +794,7 @@
     .eq(0)
     .click(function () {
       sessionStorage.setItem("click", "1");
+      sessionStorage.setItem("high", "0");
       location.href = "subsite/3-1.html";
     });
   $(".nav-item")
@@ -803,6 +803,7 @@
     .eq(1)
     .click(function () {
       sessionStorage.setItem("click", "2");
+      sessionStorage.setItem("high", "0");
       location.href = "subsite/3-1.html";
     });
   $(".nav-item")
@@ -850,8 +851,8 @@
       sessionStorage.setItem("high", "0");
       location.href = "subsite/3-2.html";
     });
-    //防护
-    $(".nav-item")
+  //防护
+  $(".nav-item")
     .eq(2)
     .find("dd")
     .eq(7)
@@ -860,7 +861,7 @@
       sessionStorage.setItem("high", "0");
       location.href = "subsite/3-3.html";
     });
-    $(".nav-item")
+  $(".nav-item")
     .eq(2)
     .find("dd")
     .eq(8)
@@ -869,7 +870,7 @@
       sessionStorage.setItem("high", "0");
       location.href = "subsite/3-3.html";
     });
-    $(".nav-item")
+  $(".nav-item")
     .eq(2)
     .find("dd")
     .eq(9)
@@ -878,7 +879,7 @@
       sessionStorage.setItem("high", "0");
       location.href = "subsite/3-3.html";
     });
-    $(".nav-item")
+  $(".nav-item")
     .eq(2)
     .find("dd")
     .eq(10)
@@ -894,6 +895,7 @@
     .eq(11)
     .click(function () {
       sessionStorage.setItem("click", "1");
+      sessionStorage.setItem("high", "0");
       location.href = "subsite/3-4.html";
     });
   $(".nav-item")
@@ -902,6 +904,7 @@
     .eq(12)
     .click(function () {
       sessionStorage.setItem("click", "2");
+      sessionStorage.setItem("high", "0");
       location.href = "subsite/3-4.html";
     });
   $(".nav-item")
@@ -910,7 +913,8 @@
     .eq(0)
     .click(function () {
       sessionStorage.setItem("click", "0");
-      location.href = "subsite/5-1.html";
+      sessionStorage.setItem("high", "0");
+      location.href = "subsite/5.html";
     });
   $(".nav-item")
     .eq(3)
@@ -918,7 +922,8 @@
     .eq(1)
     .click(function () {
       sessionStorage.setItem("click", "1");
-      location.href = "subsite/5-1.html";
+      sessionStorage.setItem("high", "0");
+      location.href = "subsite/5.html";
     });
   $(".nav-item")
     .eq(3)
@@ -926,7 +931,8 @@
     .eq(2)
     .click(function () {
       sessionStorage.setItem("click", "2");
-      location.href = "subsite/5-1.html";
+      sessionStorage.setItem("high", "0");
+      location.href = "subsite/5.html";
     });
   $(".nav-item")
     .eq(3)
@@ -934,7 +940,8 @@
     .eq(3)
     .click(function () {
       sessionStorage.setItem("click", "3");
-      location.href = "subsite/5-1.html";
+      sessionStorage.setItem("high", "0");
+      location.href = "subsite/5.html";
     });
   $(".nav-item")
     .eq(3)
@@ -942,7 +949,8 @@
     .eq(4)
     .click(function () {
       sessionStorage.setItem("click", "4");
-      location.href = "subsite/4-1.html";
+      sessionStorage.setItem("high", "0");
+      location.href = "subsite/5.html";
     });
   $(".nav-item")
     .eq(3)
@@ -950,6 +958,7 @@
     .eq(5)
     .click(function () {
       sessionStorage.setItem("click", "5");
-      location.href = "subsite/4-1.html";
+      sessionStorage.setItem("high", "0");
+      location.href = "subsite/5.html";
     });
 </script>

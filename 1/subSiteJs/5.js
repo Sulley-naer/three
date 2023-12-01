@@ -50,3 +50,10 @@ $("body").ready(function () {
     qh(1);
   }
 });
+
+if (sessionStorage.getItem("high") == 0) {
+  $("html").animate({
+    scrollTop: $(".AiTechnology").offset().top,
+  });
+  sessionStorage.setItem("high", "1");
+}

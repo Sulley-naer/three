@@ -20,19 +20,17 @@ $(document).ready(function () {
     qh(pageText);
   });
 
+  let key = parseInt(sessionStorage.getItem("click"));
 
-    let key = parseInt(sessionStorage.getItem("click"));
-
-    if (key !== undefined) {
-      // alert(key);
-      $('main[class*="body"] .head .content span')
-        .eq(key - 1)
-        .addClass("act")
-        .siblings()
-        .removeClass("act");
-      qh(key);
-    }
-
+  if (key !== undefined) {
+    // alert(key);
+    $('main[class*="body"] .head .content span')
+      .eq(key - 1)
+      .addClass("act")
+      .siblings()
+      .removeClass("act");
+    qh(key);
+  }
 
   //变大
   $('.summary main > div .content div[class*="col-"]').mouseenter(function () {
@@ -48,9 +46,15 @@ $(document).ready(function () {
   });
 
   if (sessionStorage.getItem("high") == 0) {
-    $("html").animate({
-      scrollTop: $(".summary").offset().top
+    $(document).ready(function () {
+      var targetElement = $(".programme main[class*='body']");
+      if (targetElement.length > 0) {
+        var targetOffset = targetElement.offset().top;
+        // 添加一些额外的偏移量，如果需要的话
+        var scrollToPosition = targetOffset + 475;
+        // 执行滚动
+        $("html, body").animate({ scrollTop: scrollToPosition }, 500);
+      }
     });
-    sessionStorage.setItem("high", "1");
   }
 });
