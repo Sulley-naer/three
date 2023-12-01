@@ -1,3 +1,4 @@
+$(document).ready(function () {
 function qh(pageText) {
   if (pageText !== undefined) {
     //顶部
@@ -24,3 +25,6 @@ function qh(pageText) {
   }
 }
 qh(2);
+
+$(".brief .box").odd().css("");
+});
