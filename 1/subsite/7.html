@@ -52,9 +52,7 @@
     </div>
       </div>
       <div class="AiTechnology row"></div>
-      <div class="brief row">
-        <div class="brief-title">111</div>
-      </div>
+      <div class="brief row"></div>
     </div>
 
     <div class="footbox"></div>
@@ -70,3 +68,47 @@
 </html>
 
 <script src="../public/bootstrap/swiper/swiper-bundle.min.js"></script>
+<script>
+function swiper(){
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    var mySwiper = new Swiper('.swiper', {
+    direction: 'horizontal', // 垂直切换选项 vertical/horizontal 竖/横
+    loop: true, // 循环模式选项
+
+    // loopAdditionalSlides: 6, // 在循环模式下，前后需要复制的slide个数
+    // loopedSlides: 6, // 在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数(等于原来slide个数) 有bug
+
+    //freeMode: true  自由模式
+    freeMode: true, // 开启free mode
+    freeModeMomentum: true, // 开启惯性动量
+    freeModeMomentumBounce: true, // 开启自由滑动反弹
+    freeModeSticky: true, // 关闭自由滑动贴合
+
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // 分页器是否可点击
+    },
+
+    // 如果需要前进后退按钮 
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    //自动切换
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: true,
+      //显示时间下一次自动切换的时间
+      disableOnInteraction: true, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+    },
+  });
+}
+</script>
