@@ -4,12 +4,39 @@
     margin-bottom: 2rem;
   }
 }
+@media screen and (max-width: 1000px) {
+  .AiTechnology .AiTechnology-body .content .page {
+    flex-direction: column;
+    align-content: center;
+  }
+  .AiTechnology .AiTechnology-body .content .page > div {
+    width: 70% !important;
+  }
+  .AiTechnology .AiTechnology-body .content .page > div content {
+    height: 10rem !important;
+  }
+  .brief .swiper .swiper-slide .sweiper_title,
+  .brief .swiper .swiper-slide .sweiper_content {
+    font-size: small;
+  }
+}
 @media screen and (max-width: 700px) {
   .objective .objective-content p {
     width: 100% !important;
   }
   .objective .objective-content small {
     display: none;
+  }
+  .AiTechnology .AiTechnology-body .content .page > div {
+    width: 100% !important;
+  }
+  .AiTechnology .AiTechnology-body .content .page > div content {
+    height: 12rem !important;
+    padding-left: 0.5rem !important;
+  }
+  .brief .swiper .swiper-slide .sweiper_title,
+  .brief .swiper .swiper-slide .sweiper_content {
+    font-size: smaller;
   }
 }
 :root {
@@ -266,6 +293,7 @@
   text-indent: 0.9875rem;
 }
 .AiTechnology .AiTechnology-body .content .page > div > content ul li {
+  list-style: none;
   float: left;
   line-height: 2rem;
   /*  margin-left: 2rem; */
@@ -315,4 +343,53 @@
   top: 0;
   right: 0;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
+}
+.brief .brief-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+.brief .brief-title small {
+  color: var(--text-gray);
+}
+.brief .swiper {
+  margin-top: 4rem;
+  width: 100%;
+  height: 31rem;
+}
+.brief .swiper .swiper-slide {
+  width: 100% !important;
+  text-align: center;
+  font-size: 18px;
+  background: no-repeat center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.brief .swiper .swiper-slide .sweiper_title {
+  width: 70%;
+  text-align: left;
+  margin-bottom: 4rem;
+  color: #ccc;
+}
+.brief .swiper .swiper-slide .sweiper_content {
+  width: 70%;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin-bottom: 3rem;
+  text-align: left;
+  color: #ccc;
+}
+.brief .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.brief .swiper .swiper-pagination-bullet {
+  background: #fff;
+  background-color: #fff !important;
 }
