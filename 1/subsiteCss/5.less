@@ -10,6 +10,7 @@
   --blue-gray: #317fc6;
   --transparent-hover: #00000020;
   --line: hsl(0deg 0% 75% / 45%);
+  --text-black-hover: #626262;
 }
 @media screen and (max-width: 1300px) {
   .pictureBox {
@@ -41,6 +42,11 @@
 @media screen and (max-width: 500px) {
   .programme main .row div[class*="col-"] .msg .content p {
     max-width: 22em !important;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .programme main .row div[class*="col-"] .msg {
+    margin-left: -50% !important;
   }
 }
 .AiTechnology {
@@ -175,6 +181,11 @@
       }
       > p {
         max-width: 70%;
+        font-size: smaller;
+        color: var(--text-gray);
+        &:hover {
+          color: var(--text-gray-hover);
+        }
       }
     }
     .pictureBox {
@@ -190,7 +201,7 @@
         height: 100%;
         display: block;
         position: relative;
-        background: center center;
+        background: center center no-repeat;
         background-size: cover;
         max-height: 300px;
         max-width: 100% !important;
@@ -212,7 +223,7 @@
           position: absolute;
           bottom: 0;
           margin: 0;
-          padding: 3px;
+          padding: 10px;
           font-size: smaller;
           font-weight: 100;
           text-align: left;
@@ -222,6 +233,7 @@
         .w {
           color: #000;
           background-color: var(--text-gray-hover);
+          padding: 3px;
         }
       }
     }
@@ -253,6 +265,17 @@
             font-weight: lighter;
             margin-top: 0;
           }
+          span {
+            color: var(--text-lighter);
+            &:hover {
+              color: var(--text-gray-hover);
+            }
+          }
+        }
+        p {
+          &:hover {
+            color: var(--text-gray-hover);
+          }
         }
       }
       .msg-box {
@@ -276,11 +299,15 @@
               flex-direction: column;
               dd {
                 margin-top: 1em;
-                color: var(--text-gray-hover);
+                color: var(--text-lighter);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-size: smaller;
+                padding: 0.5em;
+                &:hover {
+                  color: var(--text-gray-hover);
+                }
               }
             }
           }
@@ -329,6 +356,9 @@
     p {
       color: var(--text-gray);
       font-size: small;
+      &:hover {
+        color: var(--text-black-hover);
+      }
     }
   }
   main {
