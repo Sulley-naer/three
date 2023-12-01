@@ -30,12 +30,12 @@
 
     <div class="container-fluid swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide ">
           <source src="../public/picture/acv-banner.jpg" />
           <content>
             <h1>智慧云视AVC平台</i></h1>
             <p>
-              人工智能中台,&#32;为智能城市、智能校园、智能安保行业提供一站式解决方案,&#32;安防布控中心,&#32;智能安防终端接
+               人工智能中台,&#32;为智能城市、智能校园、智能安保行业提供一站式解决方案,&#32;安防布控中心,&#32;智能安防终端接
             </p>
             <p>入、GIS地图、视频实况以及事件录像回放,&#32;以图搜图等。</p>
           </content>
@@ -84,7 +84,7 @@ function swiper(){
     // loopedSlides: 6, // 在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数(等于原来slide个数) 有bug
 
     //freeMode: true  自由模式
-    freeMode: true, // 开启free mode
+    freeMode: false, // 开启free mode
     freeModeMomentum: true, // 开启惯性动量
     freeModeMomentumBounce: true, // 开启自由滑动反弹
     freeModeSticky: true, // 关闭自由滑动贴合
@@ -103,7 +103,7 @@ function swiper(){
 
     //自动切换
     autoplay: {
-      delay: 3000,
+      delay: 6000,
       stopOnLastSlide: false,
       disableOnInteraction: true,
       //显示时间下一次自动切换的时间
