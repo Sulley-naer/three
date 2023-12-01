@@ -30,7 +30,7 @@ function qh(pageText) {
   }
 }
 
-qh(1);
+/* qh(1);
 
 $("body").ready(function () {
   let key = parseInt(sessionStorage.getItem("click"));
@@ -56,4 +56,4 @@ if (sessionStorage.getItem("high") == 0) {
     scrollTop: $(".AiTechnology").offset().top,
   });
   sessionStorage.setItem("high", "1");
-}
+} */
