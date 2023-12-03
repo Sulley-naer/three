@@ -26,5 +26,6 @@ function qh(pageText) {
 }
 qh(2);
 
-$(".brief .box").odd().css("");
+
+
 });
