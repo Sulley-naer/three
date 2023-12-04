@@ -1,0 +1,25 @@
+.brief .ability div[class="col-4"] {
+  padding: 1rem;
+}
+.brief .ability div[class="col-4"] .box {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.brief .ability div[class="col-4"] .box i {
+  font-size: 5rem;
+  background-image: linear-gradient(to bottom, #405cca, #59bbf1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.brief .ability div[class="col-4"] .box p {
+  margin-top: 1rem;
+}
+.brief .ability div[class="col-4"] .evenbg {
+  background: #F6F6FE;
+}
+.brief .ability div[class="col-4"] .oddbg {
+  background: #F1F1F1;
+}

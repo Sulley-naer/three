@@ -24,8 +24,13 @@ function qh(pageText) {
       );
   }
 }
-qh(2);
+qh(1);
 
 
+//单偶颜色
+  $(function () {
+    $(".ability .box:even").addClass("evenbg");
+    $(".ability .box:odd").addClass("oddbg");
+  });
 
 });
