@@ -156,12 +156,17 @@ header nav .collapse > ul .ai,
 header nav .collapse > li .ai {
   background: #2080d5;
   padding: 30px;
+}
+header nav .collapse > ul .ai > a,
+header nav .collapse > li .ai > a {
   display: flex;
   align-items: center;
-}
-header nav .collapse > ul .ai a,
-header nav .collapse > li .ai a {
+  padding: 0 !important;
   color: #fff;
+}
+header nav .collapse > ul .ai > a::after,
+header nav .collapse > li .ai > a::after {
+  display: none !important;
 }
 header nav .collapse > ul .ai:hover,
 header nav .collapse > li .ai:hover {

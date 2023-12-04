@@ -177,11 +177,15 @@ header {
         .ai {
           background: rgb(32, 128, 213);
           padding: 30px;
-          display: flex;
-          align-items: center;
 
-          a {
+          > a {
+            display: flex;
+            align-items: center;
+            padding: 0 !important;
             color: #fff;
+            &::after {
+              display: none !important;
+            }
           }
 
           &:hover {
@@ -209,7 +213,7 @@ header {
             max-width: 16em;
 
             dt {
-              color: var(--text-gray) ;
+              color: var(--text-gray);
               font-weight: normal;
               font-size: 16px;
               width: 100%;
