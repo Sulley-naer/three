@@ -1,7 +1,7 @@
 $(document).ready(function () {
   function IBOXD() {
-    $(".iBox-D-introduce,.iBox-D-apply").show();
-    $(".iBox-F-introduce,.iBox-F-apply").hide();
+    $(".iBox-D-introduce, .iBox-D-apply").show();
+    $(".iBox-F-introduce, .iBox-F-apply").hide();
     $("#iBox-D").find(".nav-link").removeClass("disabled");
     $("#iBox-F").find(".nav-link").addClass("disabled");
   }

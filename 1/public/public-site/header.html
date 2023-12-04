@@ -490,4 +490,44 @@
       sessionStorage.setItem("high", "0");
       location.href = "5.html";
     });
+  $(".nav-item")
+    .eq(3)
+    .find("dd")
+    .eq(6)
+    .click(function () {
+      sessionStorage.setItem("iBox-F", "1");
+      location.href = "2-3.html";
+       
+    });
+  $(".nav-item")
+    .eq(3)
+    .find("dd")
+    .eq(7)
+    .click(function () {
+      if (sessionStorage.getItem("iBox-F") !== null) {
+        sessionStorage.removeItem("iBox-F");
+      }
+      location.href = "2-3.html";
+    });
+  $(".nav-item")
+    .eq(3)
+    .find("dd")
+    .eq(8)
+    .click(function () {
+      location.href = "7-1.html";
+    });
+  $(".nav-item")
+    .eq(3)
+    .find("dd")
+    .eq(9)
+    .click(function () {
+      location.href = "7-2.html";
+    });
+  $(".nav-item")
+    .eq(3)
+    .find("dd")
+    .eq(10)
+    .click(function () {
+      location.href = "2-1.html";
+    });
 </script>
