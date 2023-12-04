@@ -8,7 +8,6 @@ $(document).ready(function () {
     $(".ability .box:odd").addClass("oddbg");
   });
 
-
   $(".head-button").on('click',function(){
 location.href = "6.html";
   })
