@@ -115,85 +115,100 @@
 
 </html>
 <script>
-  // 添加密码强度验证的 JavaScript 代码
-  function checkPasswordStrength(password) {
-    var strength = calculatePasswordStrength(password);
-    var passwordStrengthElement = $("#password-strength");
-    var strengthText = getStrengthText(strength);
-
-    passwordStrengthElement.text("密码强度：" + strengthText);
-
-    // 设置进度条样式
-    var progressBar = $("#password-strength-bar");
-
-    // 更新进度条的宽度
-    var width = strength * 33.33; // 三个阶段，每个阶段宽度为 33.33%
-    progressBar.animate({ 'width': width + "%" }, {
-      duration: 500,
-      easing: 'linear',
-    });
-
-    $("#password-strength-progress").hide().show(0);
-
-    // 移除所有类，然后根据强度添加相应的类
-    progressBar.removeClass().addClass("progress-bar progress-bar-striped progress-bar-animated");
-
-    if (strength === 0) {
-      progressBar.addClass("bg-danger");
-    } else if (strength === 1) {
-      progressBar.removeClass("bg-danger");
-    } else if (strength === 2) {
-      progressBar.addClass("bg-success");
-    } else {
-      progressBar.addClass("bg-info");
-    }
-  }
-
-  function calculatePasswordStrength(password) {
-    // 这里是一个简单的密码强度计算示例，根据你的需求可能需要更复杂的逻辑
-    var lowercaseRegex = /[a-z]/;
-    var uppercaseRegex = /[A-Z]/;
-    var digitRegex = /\d/;
-    var specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
-
-    var lowercase = lowercaseRegex.test(password);
-    var uppercase = uppercaseRegex.test(password);
-    var digit = digitRegex.test(password);
-    var specialChar = specialCharRegex.test(password);
-
-    var strength = 0;
-
-    if (lowercase) strength++;
-    if (uppercase) strength++;
-    if (digit) strength++;
-    if (specialChar) strength++;
-
-    return strength;
-  }
-
-  function getStrengthText(strength) {
-    if (strength === 0) {
-      return "弱";
-    } else if (strength === 1 || strength === 2) {
-      return "中";
-    } else {
-      return "强";
-    }
-  }
-
-  // 添加密码强度验证的事件监听
   $(document).ready(function () {
-    $("#password-input").on("input", function () {
-      checkPasswordStrength($(this).val());
 
-      // 检查所有验证条件是否都满足
-      checkRegistrationConditions();
-    });
+    // 添加密码强度验证的 JavaScript 代码
+    function checkPasswordStrength(password) {
+      var strength = calculatePasswordStrength(password);
+      var passwordStrengthElement = $("#password-strength");
+      var strengthText = getStrengthText(strength);
 
-    // 添加密码框输入限制，禁止输入空格
-    $("input[name='password'], #password-confirm").on("input", function () {
-      $(this).val(function (_, val) {
-        return val.replace(/\s/g, ""); // 替换空格
+      // 检查密码长度是否满足要求
+      var passwordLengthValid = password.length >= 8;
+
+      // 如果密码长度满足要求，添加 Bootstrap 的有效样式；否则，添加无效样式
+      if (passwordLengthValid) {
+        passwordStrengthElement.addClass("text-success");
+      } else {
+        passwordStrengthElement.removeClass("text-success");
+      }
+
+      passwordStrengthElement.text("密码强度：" + strengthText);
+
+      // 设置进度条样式
+      var progressBar = $("#password-strength-bar");
+
+      // 更新进度条的宽度
+      var width = strength * 33.33; // 三个阶段，每个阶段宽度为 33.33%
+      progressBar.animate({ 'width': width + "%" }, {
+        duration: 500,
+        easing: 'linear',
+      });
+
+      $("#password-strength-progress").hide().show(0);
+
+      // 移除所有类，然后根据强度添加相应的类
+      progressBar.removeClass().addClass("progress-bar progress-bar-striped progress-bar-animated");
+
+      if (strength === 0) {
+        progressBar.addClass("bg-danger");
+      } else if (strength === 1) {
+        progressBar.removeClass("bg-danger");
+      } else if (strength === 2) {
+        progressBar.addClass("bg-success");
+      } else {
+        progressBar.addClass("bg-info");
+      }
+    }
+
+    function calculatePasswordStrength(password) {
+      // 这里是一个简单的密码强度计算示例，根据你的需求可能需要更复杂的逻辑
+      var lowercaseRegex = /[a-z]/;
+      var uppercaseRegex = /[A-Z]/;
+      var digitRegex = /\d/;
+      var specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+
+      var lowercase = lowercaseRegex.test(password);
+      var uppercase = uppercaseRegex.test(password);
+      var digit = digitRegex.test(password);
+      var specialChar = specialCharRegex.test(password);
+
+      var strength = 0;
+
+      if (lowercase) strength++;
+      if (uppercase) strength++;
+      if (digit) strength++;
+      if (specialChar) strength++;
+
+      return strength;
+    }
+
+    function getStrengthText(strength) {
+      if (strength === 0) {
+        return "弱";
+      } else if (strength === 1 || strength === 2) {
+        return "中";
+      } else {
+        return "强";
+      }
+    }
+
+    // 添加密码强度验证的事件监听
+    $(document).ready(function () {
+      $("#password-input").on("input", function () {
+        checkPasswordStrength($(this).val());
+
+        // 检查所有验证条件是否都满足
+        checkRegistrationConditions();
+      });
+
+      // 添加密码框输入限制，禁止输入空格
+      $("input[name='password'], #password-confirm").on("input", function () {
+        $(this).val(function (_, val) {
+          return val.replace(/\s/g, ""); // 替换空格
+          // 检查所有验证条件是否都满足
+          checkRegistrationConditions();
+        });
       });
     });
 
@@ -202,19 +217,28 @@
       var password = $("#password-input").val();
       var confirmPassword = $(this).val();
 
-      if (password === confirmPassword) {
+      if (password === confirmPassword && password.length >= 8) {
         // 密码一致，添加 Bootstrap 的有效样式
         $(this).removeClass("is-invalid");
         $(this).addClass("is-valid");
+
+        // 也将密码输入框标记为无效
+        $("#password-input").removeClass("is-invalid");
+        $("#password-input").addClass("is-valid");
       } else {
         // 密码不一致，添加 Bootstrap 的无效样式
         $(this).removeClass("is-valid");
         $(this).addClass("is-invalid");
+
+        // 也将密码输入框标记为无效
+        $("#password-input").removeClass("is-valid");
+        $("#password-input").addClass("is-invalid");
       }
 
       // 检查所有验证条件是否都满足
       checkRegistrationConditions();
     });
+
 
     // 添加用户名长度验证
     $("input[name='username']").on("input", function () {
@@ -340,6 +364,77 @@
 <script>
   // 获取按钮元素
   var toastBtn = document.getElementById("toast-btn");
+  // 获取容器元素
+  var toastContainer = document.getElementById("toast-container");
+  // 获取模板元素
+  var toastTemplate = document.getElementById("toast-template");
+  // 定义一个计数器，用于记录弹窗的数量
+  var toastCount = 0;
+  // 定义一个函数，用于格式化时间
+  function formatTime(time) {
+    // 获取当前时间和给定时间的差值（毫秒）
+    var diff = Date.now() - time;
+    // 如果差值小于1分钟，返回“刚刚”
+    if (diff < 60 * 1000) {
+      return "刚刚";
+    }
+    // 如果差值小于1小时，返回“x分钟前”
+    if (diff < 60 * 60 * 1000) {
+      return Math.floor(diff / (60 * 1000)) + "分钟前";
+    }
+    // 如果差值小于1天，返回“x小时前”
+    if (diff < 24 * 60 * 60 * 1000) {
+      return Math.floor(diff / (60 * 60 * 1000)) + "小时前";
+    }
+    // 否则，返回“x天前”
+    return Math.floor(diff / (24 * 60 * 60 * 1000)) + "天前";
+  }
+  // 给按钮添加点击事件监听器
+  toastBtn.addEventListener("click", function () {
+    // 每次点击按钮，计数器加一
+    toastCount++;
+    // 克隆模板元素，生成一个新的弹窗元素
+    var newToast = toastTemplate.content.cloneNode(true);
+    // 给新的弹窗元素添加一个id属性，用于区分不同的弹窗
+    newToast.querySelector(".toast").id = "toast-" + toastCount;
+    // 给新的弹窗元素添加一个data-time属性，用于记录创建时间
+    newToast.querySelector(".toast").dataset.time = Date.now();
+    // 把新的弹窗元素添加到容器元素中
+    toastContainer.appendChild(newToast);
+    // 获取新的弹窗元素
+    var toastEl = document.getElementById("toast-" + toastCount);
+    // 初始化新的弹窗元素，并设置autohide选项为false
+    var toast = new bootstrap.Toast(toastEl, { autohide: false });
+    // 显示新的弹窗元素
+    toast.show();
+  });
+  // 定义一个函数，用于更新所有弹窗的时间
+  function updateTime() {
+    // 获取所有的弹窗元素
+    var toasts = document.querySelectorAll(".toast");
+    // 遍历每个弹窗元素
+    for (var i = 0; i < toasts.length; i++) {
+      // 获取当前弹窗元素
+      var toast = toasts[i];
+      // 获取当前弹窗的创建时间
+      var time = toast.dataset.time;
+      // 获取当前弹窗的时间元素
+      var timeEl = toast.querySelector("#time");
+      // 更新时间元素的内容，用格式化后的时间替换原来的内容
+      timeEl.textContent = formatTime(time);
+    }
+  }
+  // 设置一个定时器，每隔1秒调用一次更新时间的函数
+  setInterval(updateTime, 1000);
+
+  $(".div").focus(function (e) {
+    event.preventDefault();
+  });
+</script>
+
+<script>
+  // 获取按钮元素
+  var toastBtn = document.getElementById("register-btn");
   // 获取容器元素
   var toastContainer = document.getElementById("toast-container");
   // 获取模板元素
