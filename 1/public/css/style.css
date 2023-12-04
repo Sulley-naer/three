@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 }
 
 * {
-    font-family: MiSans;
+    font-family: MiSans,iconfont;
     transition: all .3s;
     user-select: none;
 }
