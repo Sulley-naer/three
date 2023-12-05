@@ -28,6 +28,12 @@
     <link rel="stylesheet" href="public/css/public.css" />
 
     <link rel="stylesheet" href="public/bootstrap/swiper/swiper-bundle.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <!-- <link rel="stylesheet" href="../bootstrap/fullPage.js-4.0.20/dist/fullpage.css"> -->
   </head>
 
@@ -233,7 +239,30 @@
       <!-- 如果需要滚动条 -->
       <div class="swiper-scrollbar"></div>
       <!-- 显示自动切换时间 -->
-      <div class="autoplay-progress"></div>
+      <div class="autoplay-progress" style="bottom: 4%; right: 1%">
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="none"
+            stroke="#fff"
+            stroke-width="10"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="none"
+            stroke="#f00"
+            stroke-width="10"
+            stroke-dasharray="282.6"
+            stroke-dashoffset="282.6"
+            style="--progress: 0"
+          />
+        </svg>
+        <span>3s</span>
+      </div>
     </div>
 
     <div class="SmartDesk">
@@ -399,7 +428,48 @@
             ><span>|</span><a href="javaScript:;" page="5">智慧渔政</a>
           </small>
         </div>
-        <div class="practice-body"></div>
+        <div class="practice-body">
+          <div class="swiper swiper-text">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3>
+                  智慧社区,&#32;AI成为常态化社区治理工具,&#32;打造网格员、综治、城管、社区智慧应用
+                </h3>
+                <p>
+                  2019年8月,&#32;AI智能携手渠道伙伴,&#32;在苛刻的比选中脱颖而出,&#32;协助荣昌区政府政法委在社区常态化治理中落地AI网格化改造
+                  快速识别街道人、车、物异常,&#32;并推送到网格员手机端,&#32;对各类事件进行核查、处置,&#32;并对事件进行关联、整合、分析、归档。
+                  24小时实时分析,&#32;让社区、街道工作不打烊..
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h3>AI智能携手各大运营商,&#32;打造智慧教育AI云创新平台</h3>
+                <p>
+                  2019年,&#32;AI智能与多家运营商达成战略合作,&#32;参与智慧校园顶层设计与建设,&#32;优质云网资源,&#32;
+                  将在校园智能教育、智能安防方面提供AI云服务,&#32;利用物联网、边缘计算终端,&#32;快速、低成本部署校园智能应用。
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h3>智慧园区方案</h3>
+                <p>
+                  新技术助力园区从管理型向服务型、增值运营转变,&#32;打造以人工智能技术深度融合产业集聚新高地。
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h3>智慧环保方案</h3>
+                <p>
+                  通过对水环境、大气、噪声、土壤、自然生态等污染情况的实时监控,&#32;运用AI图像识别技术,&#32;自动分析、识别可疑污染源,&#32;实时推送短信预警,&#32;推进问题的及时整改与落实,&#32;实现了从人防到技防的转变,&#32;提升环保治理的时效性。
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h3>智慧渔政方案</h3>
+                <p>
+                  针对当前渔业水域面积广,&#32;渔政执法难度大,&#32;执法人员力量薄弱等问题,&#32;
+                  “智慧渔政”以渔船、船员为主体,&#32;以互联网、云计算、大数据、人工智能技术为支撑,&#32;采用先进的高清监控、边缘计算图像分析技术,&#32;对水源周边进行全方位、全天候的高清视频监控覆盖和分析。当出现钓鱼、渔船捕鱼行为时主动预警,&#32;联动推送至网格人员处置。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -609,13 +679,15 @@
       prevEl: ".swiper-button-prev",
     },
 
+    spaceBetween: 30,
+    centeredSlides: true,
     //自动切换
     autoplay: {
       delay: 3000,
       stopOnLastSlide: false,
       disableOnInteraction: true,
       //显示时间下一次自动切换的时间
-      disableOnInteraction: true, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+      disableOnInteraction: false, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
     },
 
     //滚动条效果
@@ -636,19 +708,23 @@
       enabled: true, // 开启键盘控制
       onlyInViewport: true, // 设置键盘控制只在swiper容器被聚焦时有效
     },
-    //切换3D效果
-    effect: "coverflow", // 开启Coverflow Effect Parameters效果
-    coverflowEffect: {
-      rotate: 30, // 设置slide做3d旋转时Y轴的旋转角度
-      stretch: 10, // 设置每个slide之间的拉伸值
-      depth: 60, // 设置slide的位置深度
-      modifier: 2, // 设置depth和rotate和stretch的倍率
-      slideShadows: true, // 设置是否开启slide阴影
-    },
     //淡入淡出 效果
     effect: "fade", // 开启Fade Effect效果
     fadeEffect: {
       crossFade: true, // 开启交叉淡出
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        var progressCircle = document.querySelector(
+          ".autoplay-progress circle"
+        );
+        // 获取显示时间的文本元素
+        var progressContent = document.querySelector(".autoplay-progress span");
+        // 设置圆形元素的进度属性
+        progressCircle.style.setProperty("--progress", 1 - progress);
+        // 设置文本元素的内容
+        progressContent.textContent = Math.ceil(time / 1000) + "s";
+      },
     },
   });
   //img变为背景
@@ -961,4 +1037,46 @@
       sessionStorage.setItem("high", "0");
       location.href = "subsite/5.html";
     });
+</script>
+
+<script>
+  var Swipertext = new Swiper(".swiper-text", {
+    direction: "horizontal", // 垂直切换选项 vertical/horizontal 竖/横
+    loop: true, // 循环模式选项
+
+    //自动切换
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: true, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+    },
+
+    keyboard: {
+      enabled: true, // 开启键盘控制
+      onlyInViewport: true, // 设置键盘控制只在swiper容器被聚焦时有效
+    },
+
+    //切换3D效果
+    effect: "coverflow", // 开启Coverflow Effect Parameters效果
+    coverflowEffect: {
+      rotate: 40, // 设置slide做3d旋转时Y轴的旋转角度
+      stretch: 5, // 设置每个slide之间的拉伸值
+      depth: 20, // 设置slide的位置深度
+      modifier: 2, // 设置depth和rotate和stretch的倍率
+      slideShadows: false, // 设置是否开启slide阴影
+    },
+    on: {
+      slideChange: function () {
+        var page = this.realIndex;
+        $(".practice-title>small>a")
+          .eq(page)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      },
+    },
+  });
+  $(".practice-title>small>a").click(function () {
+    Swipertext.slideTo($(this).index(".practice-title>small>a"));
+  });
 </script>

@@ -166,21 +166,16 @@ function changeBackground(selector, imagePath) {
 }
 
 // 调用函数，传递不同的选择器和图片路径
-changeBackground(".banner>div>div[class=left]", "../public/images/build-bgimg-l.jpg");
-changeBackground(".banner>div>div[class=right]", "../public/images/build-bgimg-r.jpg");
-changeBackground(".banner>div>div[class=md]", "../public/images/build-bgimg-m.jpg");
+changeBackground(
+  ".banner>div>div[class=left]",
+  "../public/images/build-bgimg-l.jpg"
+);
+changeBackground(
+  ".banner>div>div[class=right]",
+  "../public/images/build-bgimg-r.jpg"
+);
+changeBackground(
+  ".banner>div>div[class=md]",
+  "../public/images/build-bgimg-m.jpg"
+);
 
-//加载page
-function qh(pageText) {
-  if (pageText !== undefined) {
-    $(".practice-body").load("page-" + pageText + ".html", function () {
-      pc();
-    });
-  }
-}
-qh(1);
-$(".practice-title>small>a").click(function () {
-  $(this).addClass("active").siblings().removeClass("active");
-  let pageText = $(this).attr("page");
-  qh(pageText);
-});
