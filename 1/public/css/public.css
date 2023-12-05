@@ -215,8 +215,6 @@ header nav .collapse > ul .dropdown-menu dl dd a,
 header nav .collapse > li .dropdown-menu dl dd a {
   font-size: small;
 }
-header nav .collapse > ul .dropdown-menu dl dt:hover,
-header nav .collapse > li .dropdown-menu dl dt:hover,
 header nav .collapse > ul .dropdown-menu dl dd:hover,
 header nav .collapse > li .dropdown-menu dl dd:hover {
   background: #0000001f;
