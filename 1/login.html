@@ -407,6 +407,8 @@
     var toast = new bootstrap.Toast(toastEl, { autohide: false });
     // 显示新的弹窗元素
     toast.show();
+    //渐入
+    $(".toast").fadeIn(1000);
   });
   // 定义一个函数，用于更新所有弹窗的时间
   function updateTime() {
@@ -478,6 +480,9 @@
     var toast = new bootstrap.Toast(toastEl, { autohide: false });
     // 显示新的弹窗元素
     toast.show();
+    //渐入
+    $(".toast").fadeIn(1000); 
+    $('.toast-container').stop().animate({ bottom: 0, opacity: 1 }, 500)
   });
   // 定义一个函数，用于更新所有弹窗的时间
   function updateTime() {
