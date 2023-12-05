@@ -59,6 +59,9 @@
   .AiTechnology-img {
     height: 14rem;
   }
+  .summary main > div .content div[class*="col-"] .head span {
+    display: none;
+  }
 }
 .Security {
   position: relative;
