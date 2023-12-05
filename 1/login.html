@@ -74,7 +74,7 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated" style="height: 100%; width: 0;"
                   id="password-strength-bar"></div>
               </div>
-              <button type="submit" class="btn btn-primary disabled" id="register-btn">
+              <button type="submit" class="btn btn-primary" id="register-btn">
                 注册
               </button>
             </form>
@@ -114,166 +114,17 @@
 </body>
 
 </html>
+
+//写一个input框静止输入空格
 <script>
-  $(document).ready(function () {
-
-    // 添加密码强度验证的 JavaScript 代码
-    function checkPasswordStrength(password) {
-      var strength = calculatePasswordStrength(password);
-      var passwordStrengthElement = $("#password-strength");
-      var strengthText = getStrengthText(strength);
-
-      // 检查密码长度是否满足要求
-      var passwordLengthValid = password.length >= 8;
-
-      // 如果密码长度满足要求，添加 Bootstrap 的有效样式；否则，添加无效样式
-      if (passwordLengthValid) {
-        passwordStrengthElement.addClass("text-success");
-      } else {
-        passwordStrengthElement.removeClass("text-success");
-      }
-
-      passwordStrengthElement.text("密码强度：" + strengthText);
-
-      // 设置进度条样式
-      var progressBar = $("#password-strength-bar");
-
-      // 更新进度条的宽度
-      var width = strength * 33.33; // 三个阶段，每个阶段宽度为 33.33%
-      progressBar.animate({ 'width': width + "%" }, {
-        duration: 500,
-        easing: 'linear',
-      });
-
-      $("#password-strength-progress").hide().show(0);
-
-      // 移除所有类，然后根据强度添加相应的类
-      progressBar.removeClass().addClass("progress-bar progress-bar-striped progress-bar-animated");
-
-      if (strength === 0) {
-        progressBar.addClass("bg-danger");
-      } else if (strength === 1) {
-        progressBar.removeClass("bg-danger");
-      } else if (strength === 2) {
-        progressBar.addClass("bg-success");
-      } else {
-        progressBar.addClass("bg-info");
-      }
-    }
-
-    function calculatePasswordStrength(password) {
-      // 这里是一个简单的密码强度计算示例，根据你的需求可能需要更复杂的逻辑
-      var lowercaseRegex = /[a-z]/;
-      var uppercaseRegex = /[A-Z]/;
-      var digitRegex = /\d/;
-      var specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
-
-      var lowercase = lowercaseRegex.test(password);
-      var uppercase = uppercaseRegex.test(password);
-      var digit = digitRegex.test(password);
-      var specialChar = specialCharRegex.test(password);
-
-      var strength = 0;
-
-      if (lowercase) strength++;
-      if (uppercase) strength++;
-      if (digit) strength++;
-      if (specialChar) strength++;
-
-      return strength;
-    }
-
-    function getStrengthText(strength) {
-      if (strength === 0) {
-        return "弱";
-      } else if (strength === 1 || strength === 2) {
-        return "中";
-      } else {
-        return "强";
-      }
-    }
-
-    // 添加密码强度验证的事件监听
-    $(document).ready(function () {
-      $("#password-input").on("input", function () {
-        checkPasswordStrength($(this).val());
-
-        // 检查所有验证条件是否都满足
-        checkRegistrationConditions();
-      });
-
-      // 添加密码框输入限制，禁止输入空格
-      $("input[name='password'], #password-confirm").on("input", function () {
-        $(this).val(function (_, val) {
-          return val.replace(/\s/g, ""); // 替换空格
-          // 检查所有验证条件是否都满足
-          checkRegistrationConditions();
-        });
-      });
+  $(function () {
+    $("input").on("keyup", function () {
+      $(this).val($(this).val().replace(/\s/g, ""));
     });
-
-    // 添加确认密码与密码一致性验证
-    $("#password-confirm").on("input", function () {
-      var password = $("#password-input").val();
-      var confirmPassword = $(this).val();
-
-      if (password === confirmPassword && password.length >= 8) {
-        // 密码一致，添加 Bootstrap 的有效样式
-        $(this).removeClass("is-invalid");
-        $(this).addClass("is-valid");
-
-        // 也将密码输入框标记为无效
-        $("#password-input").removeClass("is-invalid");
-        $("#password-input").addClass("is-valid");
-      } else {
-        // 密码不一致，添加 Bootstrap 的无效样式
-        $(this).removeClass("is-valid");
-        $(this).addClass("is-invalid");
-
-        // 也将密码输入框标记为无效
-        $("#password-input").removeClass("is-valid");
-        $("#password-input").addClass("is-invalid");
-      }
-
-      // 检查所有验证条件是否都满足
-      checkRegistrationConditions();
-    });
-
-
-    // 添加用户名长度验证
-    $("input[name='username']").on("input", function () {
-      var username = $(this).val();
-
-      if (username.length >= 6) {
-        // 用户名长度大于等于6，可以添加相应样式或其他逻辑
-        $(this).removeClass("is-invalid");
-        $(this).addClass("is-valid");
-      } else {
-        // 用户名长度小于6，添加 Bootstrap 的红色边框类
-        $(this).removeClass("is-valid");
-        $(this).addClass("is-invalid");
-      }
-
-      // 检查所有验证条件是否都满足
-      checkRegistrationConditions();
-    });
-
-    // 检查所有验证条件是否都满足的函数
-    function checkRegistrationConditions() {
-      var usernameValid = $("#creak").hasClass("is-valid");
-      var passwordValid = $("#password-confirm").hasClass("is-valid");
-
-      // 如果用户名和密码验证条件都满足，启用按钮；否则，禁用按钮
-      if (usernameValid && passwordValid) {
-        $("#register-btn").prop("disabled", false);
-        $("#register-btn").removeClass("disabled");
-      } else {
-        $("#register-btn").prop("disabled", true);
-        $("#register-btn").addClass("disabled");
-      }
-    }
   });
 </script>
+
+
 <script>
   $("#register").click(function () {
     $("form[action='login.php']").hide();
@@ -295,32 +146,6 @@
       .querySelector("form[action='login.php']")
       .addEventListener("submit", function (event) {
         event.preventDefault(); // 阻止默认的表单提交行为
-
-        // 获取表单数据
-        var formData = new FormData(this);
-
-        // 发送异步请求
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "login.php", true);
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState == 4 && xhr.status == 200) {
-            // 解析JSON响应
-            var response = JSON.parse(xhr.responseText);
-
-            // 显示弹窗
-            $(".toast-body")
-              .eq($(".toast-body").length - 1)
-              .text(response.message);
-
-            // 根据登录状态执行其他操作
-            if (response.status === "success") {
-              // 登录成功，可以进行跳转或其他操作
-            } else {
-              // 登录失败，可以进行其他操作
-            }
-          }
-        };
-        xhr.send(formData);
       });
   });
 </script>
@@ -331,32 +156,6 @@
       .querySelector("form[action='register.php']")
       .addEventListener("submit", function (event) {
         event.preventDefault(); // 阻止默认的表单提交行为
-
-        // 获取表单数据
-        var formData = new FormData(this);
-
-        // 发送异步请求
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "register.php", true);
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState == 4 && xhr.status == 200) {
-            // 解析JSON响应
-            var response = JSON.parse(xhr.responseText);
-
-            // 显示弹窗
-            $(".toast-body")
-              .eq($(".toast-body").length - 1)
-              .text(response.message);
-
-            // 根据注册状态执行其他操作
-            if (response.status === "success") {
-              // 注册成功，可以进行跳转或其他操作
-            } else {
-              // 注册失败，可以进行其他操作
-            }
-          }
-        };
-        xhr.send(formData);
       });
   });
 </script>
@@ -409,6 +208,7 @@
     toast.show();
     //渐入
     $(".toast").fadeIn(1000);
+    $('.toast-container').stop().animate({ opacity: 1 }, 500)
   });
   // 定义一个函数，用于更新所有弹窗的时间
   function updateTime() {
@@ -481,8 +281,8 @@
     // 显示新的弹窗元素
     toast.show();
     //渐入
-    $(".toast").fadeIn(1000); 
-    $('.toast-container').stop().animate({ bottom: 0, opacity: 1 }, 500)
+    $(".toast").fadeIn(1000);
+    $('.toast-container').stop().animate({ opacity: 1 }, 500)
   });
   // 定义一个函数，用于更新所有弹窗的时间
   function updateTime() {
