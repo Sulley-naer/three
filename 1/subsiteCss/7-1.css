@@ -21,11 +21,13 @@
   }
 }
 @media screen and (max-width: 700px) {
+  .objective .objective-content {
+    /*  small {
+        display: none;
+      } */
+  }
   .objective .objective-content p {
     width: 100% !important;
-  }
-  .objective .objective-content small {
-    display: none;
   }
   .AiTechnology .AiTechnology-body .content .page > div {
     width: 100% !important;
@@ -37,6 +39,14 @@
   .brief .swiper .swiper-slide .sweiper_title,
   .brief .swiper .swiper-slide .sweiper_content {
     font-size: smaller;
+  }
+}
+@media screen and (max-width: 600px) {
+  .objective-content p {
+    font-size: 1rem !important;
+  }
+  .objective-content small {
+    font-size: 0.8rem !important;
   }
 }
 :root {

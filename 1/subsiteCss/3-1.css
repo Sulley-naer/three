@@ -50,6 +50,15 @@
     margin-top: 0.5rem;
   }
 }
+@media screen and (max-width: 770px) {
+  .container .main span .card {
+    font-size: 10px;
+  }
+  .container .main span .card li {
+    width: auto;
+    font-size: 0.4rem;
+  }
+}
 @media screen and (max-width: 700px) {
   .AiTechnology-img {
     width: 100% !important;
@@ -63,54 +72,59 @@
     display: none;
   }
 }
-.Security {
-  position: relative;
+.container {
+  width: 100%;
+  min-height: 20rem;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .title {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
-}
-.Security .Security-bg {
-  position: relative;
-  background: no-repeat center center / cover;
-}
-.Security ul {
-  margin: 0;
-  padding: 0;
+  align-items: center;
   width: max-content;
+  max-width: 100%;
+}
+.container .title i {
+  font-style: normal;
+  font-size: xxx-large;
+}
+.container .main {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+}
+.container .main img {
+  width: 100%;
+}
+.container .main span {
   position: absolute;
+  display: block;
+  width: max-content;
+  max-width: 22%;
 }
-.Security ul li {
-  color: var(--blue-gray);
-  font-size: smaller;
+.container .main span .card {
+  border: 0;
+  background: transparent;
 }
-.Security ul li i {
-  display: inline-block;
-  width: 3px;
-  height: 3px;
-  border-radius: 5px;
-  background: var(--blue-gray);
-  vertical-align: middle;
-  margin-right: 0.8rem;
+.container .main span .card .card-body {
+  color: #3394ef;
 }
-.Security ul:nth-child(1),
-.Security ul:nth-child(2) {
-  left: 21%;
+.container .main span .card .card-body ul {
+  padding-left: 1em;
+  margin: 0;
 }
-.Security ul:nth-child(1) {
-  top: 24%;
+.container .main span .card .card-body ul li {
+  list-style: disc;
 }
-.Security ul:nth-child(2) {
-  top: 70%;
+.container .main span .card .card-body .card-title {
+  font-size: 1.5rem;
 }
-.Security ul:nth-child(3),
-.Security ul:nth-child(4) {
-  right: 22%;
-}
-.Security ul:nth-child(3) {
-  top: 22%;
-}
-.Security ul:nth-child(4) {
-  top: 70%;
+.container .main span .card .card-body .card-text {
+  font-size: 1rem;
 }
 .programme {
   padding: 4rem 10% 0;

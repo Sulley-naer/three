@@ -19,6 +19,15 @@
   .terminal {
     overflow-x: hidden;
   }
+  .summary .content p {
+    font-size: 1.2rem !important;
+  }
+  .iBox-F-introduce .introduce-left .introduce-content p {
+    font-size: 1.5rem !important;
+  }
+  .text-muted {
+    font-size: 0.7rem !important;
+  }
   .iBox-introduce-imgs {
     top: 14rem;
     left: 4rem;
@@ -46,7 +55,7 @@
   height: 2px;
   top: 10%;
   left: 0;
-  background: url(../../public/images/title-divide-line.png) no-repeat;
+  background: url(../public/images/title-divide-line.png) no-repeat;
 }
 .banner::after {
   content: "";
@@ -155,19 +164,19 @@
 .terminal::after {
   position: absolute;
   content: "";
-  width: 40%;
+  width: 30%;
   height: 2px;
   top: 4rem;
-  left: -15%;
+  left: 0;
   background: linear-gradient(to right, #2f4da5, #5ba6e4);
 }
 .terminal::before {
   position: absolute;
   content: "";
-  width: 40%;
+  width: 30%;
   height: 2px;
   top: 4rem;
-  right: -15%;
+  right: 0;
   background: linear-gradient(to left, #2f4da5, #5ba6e4);
 }
 .terminal .terminalTop-bg {
@@ -180,7 +189,7 @@
   background-size: contain;
 }
 .terminal .little {
-  padding: 2rem  0;
+  padding: 2rem 0;
   margin: auto;
 }
 .terminal .little .title-nav {
@@ -335,7 +344,7 @@
 .AiTechnology::after {
   position: absolute;
   content: "";
-  width: 40%;
+  width: 30%;
   height: 2px;
   top: 4rem;
   left: 0;
@@ -344,7 +353,7 @@
 .AiTechnology::before {
   position: absolute;
   content: "";
-  width: 40%;
+  width: 30%;
   height: 2px;
   top: 4rem;
   right: 0;
