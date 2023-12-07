@@ -35,6 +35,7 @@
 @media screen and (max-width: 835px) {
   .AiTechnology-img {
     width: 50% !important;
+    justify-content: center;
   }
   .AiTechnology-images {
     flex-direction: column;
@@ -365,11 +366,23 @@ li {
   padding-bottom: 3rem;
   height: 13.375rem;
 }
-.introduce .practice .practice-body h3 {
+.introduce .practice .practice-body > .swiper {
+  height: max-content;
+}
+.introduce .practice .practice-body > .swiper > div {
+  height: max-content;
+}
+.introduce .practice .practice-body > .swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  align-items: stretch;
+}
+.introduce .practice .practice-body > .swiper .swiper-slide h3 {
   color: #fff;
 }
-.introduce .practice .practice-body p {
-  padding: 1rem 0;
+.introduce .practice .practice-body > .swiper .swiper-slide p {
+  padding: 0;
   color: #fff;
   width: 55%;
   font-size: smaller;
@@ -671,4 +684,40 @@ li {
   margin-left: 1em;
   color: var(--text-gray);
   font-size: smaller;
+}
+.autoplay-progress {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em !important;
+  transition: none !important;
+}
+.autoplay-progress > * {
+  transition: none !important;
+}
+.autoplay-progress > span {
+  color: #fff;
+  font-size: small;
+  z-index: 5;
+}
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  fill: none;
+  transform: translateX(-50%) rotate(90deg);
+}
+.autoplay-progress svg > circle {
+  /* 修改stroke-dashoffset属性的值 */
+  stroke-dashoffset: calc(360 * (1 - var(--progress)));
+  /* 修改stroke-dasharray属性的值 */
+  stroke-dasharray: 360;
+  stroke: var(--bili-blue);
 }

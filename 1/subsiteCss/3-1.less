@@ -59,6 +59,16 @@
     }
   }
 }
+@media screen and (max-width: 770px){
+  .container .main span .card {
+      font-size: 10px;
+  
+      li {
+        width: auto;
+        font-size: .4rem;
+      }
+    }
+}
 
 @media screen and (max-width:700px) {
   .AiTechnology-img {
@@ -68,64 +78,74 @@
 @media screen and (max-width: 480px) {
   .AiTechnology-img {
     height: 14rem;
-  }}
+  }
+.summary main>div .content div[class*="col-"] .head span{
+  display: none;
+}
+}
 
-.Security {
-  position: relative;
+.container {
+  width: 100%;
+  min-height: 20rem;
+  height: max-content;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 4rem;
+  flex-direction: column;
 
-  .Security-bg {
-    position: relative;
-    background: no-repeat center center/cover;
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    max-width: 100%;
+
+    i {
+      font-style: normal;
+      font-size: xxx-large;
+    }
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
+  .main {
+    position: relative;
     width: max-content;
-    position: absolute;
+    max-width: 100%;
 
-    li {
-      color: var(--blue-gray);
-      font-size: smaller;
+    img {
+      width: 100%;
+    }
 
-      i {
-        display: inline-block;
-        width: 3px;
-        height: 3px;
-        border-radius: 5px;
-        background: var(--blue-gray);
-        vertical-align: middle;
-        margin-right: .8rem;
+    span {
+      position: absolute;
+      display: block;
+      width: max-content;
+      max-width: 22%;
+
+      .card {
+        border: 0;
+        background: transparent;
+
+        .card-body {
+          color: #3394ef;
+
+          ul {
+            padding-left: 1em;
+            margin: 0;
+
+            li {
+              list-style: disc;
+            }
+          }
+
+          .card-title {
+            font-size: 1.5rem;
+          }
+
+          .card-text {
+            font-size: 1rem;
+          }
+        }
       }
-    }
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      left: 21%;
-    }
-
-    &:nth-child(1) {
-      top: 24%;
-    }
-
-    &:nth-child(2) {
-      top: 70%;
-    }
-
-    &:nth-child(3),
-    &:nth-child(4) {
-      right: 22%;
-    }
-
-    &:nth-child(3) {
-      top: 22%;
-    }
-
-    &:nth-child(4) {
-      top: 70%;
     }
   }
 }

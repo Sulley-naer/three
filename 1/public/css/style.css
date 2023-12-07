@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 }
 
 * {
-    font-family: MiSans;
+    font-family: MiSans,iconfont;
     transition: all .3s;
     user-select: none;
 }
@@ -31,4 +31,8 @@ body::-webkit-scrollbar {
     width: 100%;
     background-color: hsl(0deg 0% 75% / 45%);
     margin: auto;
+}
+
+li{
+    list-style: none;
 }

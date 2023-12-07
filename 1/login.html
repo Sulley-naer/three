@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录页</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="public/font/MiSans-Normal.ttf" />
+  <link rel="stylesheet" href="public/font/font.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4357925_3ryelsauflw.css" />
+  <link rel="stylesheet" href="public/bootstrap/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css" />
+
+  <link rel="stylesheet" href="css/login.less" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="public/images/web-logo.png" alt="" width="250px" />
+      <a href="index.html" class="stretched-link"></a>
+    </div>
+
+    <div class="content">智慧云视 v3.0</div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-8">
+          <img src="images/login_acv.png" class="img-fluid rounded-start" alt="..." />
+        </div>
+        <div class="col-md-4">
+          <div class="card-body">
+            <h5 class="card-title">欢迎登陆</h5>
+            <p class="card-text">重庆AI智能科技智慧云视ACV平台</p>
+            <form action="login.php" method="post" class="card-text">
+              <div class="input-group">
+                <span class="input-group-text iconfont icon-user" id="inputGroup-sizing-default"></span>
+                <input type="text" class="form-control" placeholder="用户名/账号" name="username" minlength="6" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-text iconfont icon-suoding" id="inputGroup-sizing-default"></span>
+                <input type="password" class="form-control" placeholder="密码" name="password" pattern="^\S+$" />
+              </div>
+              <button type="submit" class="btn btn-primary" id="toast-btn">
+                登陆
+              </button>
+            </form>
+            <button type="button" class="btn btn-primary" id="register">
+              注册
+            </button>
+
+            <form action="register.php" method="post" class="card-text" style="display: none">
+              <div class="input-group">
+                <span class="input-group-text iconfont icon-user" id="inputGroup-sizing-default"></span>
+                <input type="text" class="form-control" placeholder="用户名/账号" name="username" minlength="6" id="creak" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-text iconfont icon-suoding" id="inputGroup-sizing-default"></span>
+                <input type="password" class="form-control" placeholder="密码" id="password-input" name="password" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-text iconfont icon-suoding" id="inputGroup-sizing-default"></span>
+                <input type="password" class="form-control" placeholder="确认密码" name="password-confirm"
+                  id="password-confirm" />
+              </div>
+
+              <div id="password-strength" class="form-text m-0"></div>
+
+              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100" id="password-strength-progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="height: 100%; width: 0;"
+                  id="password-strength-bar"></div>
+              </div>
+              <button type="submit" class="btn btn-primary" id="register-btn">
+                注册
+              </button>
+            </form>
+
+            <button type="button" class="btn btn-primary" id="login" style="display: none">
+              登陆
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 创建一个容器，用于存放弹窗 -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- 创建一个模板，用于生成弹窗 -->
+  <template id="toast-template">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="images/icon_login_user.png" class="rounded me-2" alt="..." />
+        <strong class="me-auto">User-name</strong>
+        <small id="time">刚刚</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"
+          data-bs-autohide="false"></button>
+      </div>
+      <div class="toast-body">这是一个新的弹窗</div>
+    </div>
+  </template>
+
+  <footer>
+    <span>copyright © 重庆AI智能科技有限公司 2000-2024</span>
+  </footer>
+  <script src="public/bootstrap/jquery-3.7.1.min.js"></script>
+  <script src="public/bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>
+
+//写一个input框静止输入空格
+<script>
+  $(function () {
+    $("input").on("keyup", function () {
+      $(this).val($(this).val().replace(/\s/g, ""));
+    });
+  });
+</script>
+
+
+<script>
+  $("#register").click(function () {
+    $("form[action='login.php']").hide();
+    $("#login").show();
+    $("#register").hide();
+    $("form[action='register.php']").show();
+  });
+  $("#login").click(function () {
+    $("form[action='login.php']").show();
+    $("#login").hide();
+    $("#register").show();
+    $("form[action='register.php']").hide();
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .querySelector("form[action='login.php']")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // 阻止默认的表单提交行为
+      });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .querySelector("form[action='register.php']")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // 阻止默认的表单提交行为
+      });
+  });
+</script>
+
+<script>
+  // 获取按钮元素
+  var toastBtn = document.getElementById("toast-btn");
+  // 获取容器元素
+  var toastContainer = document.getElementById("toast-container");
+  // 获取模板元素
+  var toastTemplate = document.getElementById("toast-template");
+  // 定义一个计数器，用于记录弹窗的数量
+  var toastCount = 0;
+  // 定义一个函数，用于格式化时间
+  function formatTime(time) {
+    // 获取当前时间和给定时间的差值（毫秒）
+    var diff = Date.now() - time;
+    // 如果差值小于1分钟，返回“刚刚”
+    if (diff < 60 * 1000) {
+      return "刚刚";
+    }
+    // 如果差值小于1小时，返回“x分钟前”
+    if (diff < 60 * 60 * 1000) {
+      return Math.floor(diff / (60 * 1000)) + "分钟前";
+    }
+    // 如果差值小于1天，返回“x小时前”
+    if (diff < 24 * 60 * 60 * 1000) {
+      return Math.floor(diff / (60 * 60 * 1000)) + "小时前";
+    }
+    // 否则，返回“x天前”
+    return Math.floor(diff / (24 * 60 * 60 * 1000)) + "天前";
+  }
+  // 给按钮添加点击事件监听器
+  toastBtn.addEventListener("click", function () {
+    // 每次点击按钮，计数器加一
+    toastCount++;
+    // 克隆模板元素，生成一个新的弹窗元素
+    var newToast = toastTemplate.content.cloneNode(true);
+    // 给新的弹窗元素添加一个id属性，用于区分不同的弹窗
+    newToast.querySelector(".toast").id = "toast-" + toastCount;
+    // 给新的弹窗元素添加一个data-time属性，用于记录创建时间
+    newToast.querySelector(".toast").dataset.time = Date.now();
+    // 把新的弹窗元素添加到容器元素中
+    toastContainer.appendChild(newToast);
+    // 获取新的弹窗元素
+    var toastEl = document.getElementById("toast-" + toastCount);
+    // 初始化新的弹窗元素，并设置autohide选项为false
+    var toast = new bootstrap.Toast(toastEl, { autohide: false });
+    // 显示新的弹窗元素
+    toast.show();
+    //渐入
+    $(".toast").fadeIn(1000);
+    $('.toast-container').stop().animate({ opacity: 1 }, 500)
+  });
+  // 定义一个函数，用于更新所有弹窗的时间
+  function updateTime() {
+    // 获取所有的弹窗元素
+    var toasts = document.querySelectorAll(".toast");
+    // 遍历每个弹窗元素
+    for (var i = 0; i < toasts.length; i++) {
+      // 获取当前弹窗元素
+      var toast = toasts[i];
+      // 获取当前弹窗的创建时间
+      var time = toast.dataset.time;
+      // 获取当前弹窗的时间元素
+      var timeEl = toast.querySelector("#time");
+      // 更新时间元素的内容，用格式化后的时间替换原来的内容
+      timeEl.textContent = formatTime(time);
+    }
+  }
+  // 设置一个定时器，每隔1秒调用一次更新时间的函数
+  setInterval(updateTime, 1000);
+
+  $(".div").focus(function (e) {
+    event.preventDefault();
+  });
+</script>
+
+<script>
+  // 获取按钮元素
+  var toastBtn = document.getElementById("register-btn");
+  // 获取容器元素
+  var toastContainer = document.getElementById("toast-container");
+  // 获取模板元素
+  var toastTemplate = document.getElementById("toast-template");
+  // 定义一个计数器，用于记录弹窗的数量
+  var toastCount = 0;
+  // 定义一个函数，用于格式化时间
+  function formatTime(time) {
+    // 获取当前时间和给定时间的差值（毫秒）
+    var diff = Date.now() - time;
+    // 如果差值小于1分钟，返回“刚刚”
+    if (diff < 60 * 1000) {
+      return "刚刚";
+    }
+    // 如果差值小于1小时，返回“x分钟前”
+    if (diff < 60 * 60 * 1000) {
+      return Math.floor(diff / (60 * 1000)) + "分钟前";
+    }
+    // 如果差值小于1天，返回“x小时前”
+    if (diff < 24 * 60 * 60 * 1000) {
+      return Math.floor(diff / (60 * 60 * 1000)) + "小时前";
+    }
+    // 否则，返回“x天前”
+    return Math.floor(diff / (24 * 60 * 60 * 1000)) + "天前";
+  }
+  // 给按钮添加点击事件监听器
+  toastBtn.addEventListener("click", function () {
+    // 每次点击按钮，计数器加一
+    toastCount++;
+    // 克隆模板元素，生成一个新的弹窗元素
+    var newToast = toastTemplate.content.cloneNode(true);
+    // 给新的弹窗元素添加一个id属性，用于区分不同的弹窗
+    newToast.querySelector(".toast").id = "toast-" + toastCount;
+    // 给新的弹窗元素添加一个data-time属性，用于记录创建时间
+    newToast.querySelector(".toast").dataset.time = Date.now();
+    // 把新的弹窗元素添加到容器元素中
+    toastContainer.appendChild(newToast);
+    // 获取新的弹窗元素
+    var toastEl = document.getElementById("toast-" + toastCount);
+    // 初始化新的弹窗元素，并设置autohide选项为false
+    var toast = new bootstrap.Toast(toastEl, { autohide: false });
+    // 显示新的弹窗元素
+    toast.show();
+    //渐入
+    $(".toast").fadeIn(1000);
+    $('.toast-container').stop().animate({ opacity: 1 }, 500)
+  });
+  // 定义一个函数，用于更新所有弹窗的时间
+  function updateTime() {
+    // 获取所有的弹窗元素
+    var toasts = document.querySelectorAll(".toast");
+    // 遍历每个弹窗元素
+    for (var i = 0; i < toasts.length; i++) {
+      // 获取当前弹窗元素
+      var toast = toasts[i];
+      // 获取当前弹窗的创建时间
+      var time = toast.dataset.time;
+      // 获取当前弹窗的时间元素
+      var timeEl = toast.querySelector("#time");
+      // 更新时间元素的内容，用格式化后的时间替换原来的内容
+      timeEl.textContent = formatTime(time);
+    }
+  }
+  // 设置一个定时器，每隔1秒调用一次更新时间的函数
+  setInterval(updateTime, 1000);
+
+  $(".div").focus(function (e) {
+    event.preventDefault();
+  });
+</script>
