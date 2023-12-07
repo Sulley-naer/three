@@ -92,8 +92,7 @@ a {
 :root {
   --head-bg: rgba(3, 21, 75, 0.137);
   --head-bg-hover: rgba(3, 21, 75, 0.3);
-  --text-gray: #9f9f9f;
-  --text-gray-hover: #ffffff;
+  --text-gray: #9f9f9f --text-gray-hover: #ffffff;
   --text-lighter: #d2d2d2;
   --header-bg-down: #000000b5;
   --bili-pink: #ff3272;
@@ -124,6 +123,9 @@ header .logo {
 header .navbar {
   align-content: space-around;
 }
+header .navbar .container-fluid {
+  justify-content: end;
+}
 header .act {
   align-content: baseline;
 }
@@ -146,6 +148,7 @@ header nav .collapse > ul > li {
   padding: 29px 0;
   display: flex;
   align-items: center;
+  color: #cccccc9d;
 }
 header nav .collapse > ul,
 header nav .collapse > li {
@@ -185,6 +188,7 @@ header nav .collapse > ul .dropdown-menu > li,
 header nav .collapse > li .dropdown-menu > li {
   width: max-content;
   margin: 0;
+  color: #cccccc;
 }
 header nav .collapse > ul .dropdown-menu dl,
 header nav .collapse > li .dropdown-menu dl {
@@ -230,6 +234,7 @@ header nav .collapse > ul > li:focus {
 }
 header nav .collapse > ul > li > a {
   text-align: center;
+  width: 100%;
   min-width: 4em;
   height: 3.5rem;
   line-height: 2.5rem;
