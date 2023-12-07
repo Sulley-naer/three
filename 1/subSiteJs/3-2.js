@@ -1,13 +1,20 @@
 $('.summary main > div .content div[class*="col-"]').mouseenter(function () {
-  $(this).attr("class", "col-md-6").css("align-items", "center");
-  $(this).siblings().attr("class", "col-md-3");
+  $(this).attr("class", "col-6").css("align-items", "center");
+  $(this).siblings().attr("class", "col-3");
+  if ($(window).width() < 800) {
+    $('.summary main > div .content div[class*="col-"] .msgbox').hide();
+  }
+  $(this).find(".msgbox").show();
 });
 
 $(".summary main > div .content").mouseleave(function () {
   $(this)
     .find('div[class*="col-"]')
-    .attr("class", "col-md-4")
+    .attr("class", "col-4")
     .css("align-items", "flex-start");
+  if ($(window).width() < 800) {
+    $('.summary main > div .content div[class*="col-"] .msgbox').hide();
+  }
 });
 
 $(document).ready(function () {
@@ -37,7 +44,7 @@ $("body").ready(function () {
 
   if (key !== undefined) {
     $('main[class*="body"] .head .content span')
-      .eq(key-1)
+      .eq(key - 1)
       .addClass("act")
       .siblings()
       .removeClass("act");
