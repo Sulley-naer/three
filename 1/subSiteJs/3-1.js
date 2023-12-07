@@ -1,7 +1,7 @@
 $(document).ready(function () {
   function qh(pageText) {
     $('main[class*="body"] main').load(
-      "3-1-" + pageText + ".html",
+      "SmartEducation-" + pageText + ".html",
       function () {
         pc();
       }

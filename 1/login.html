@@ -35,14 +35,14 @@
           <div class="card-body">
             <h5 class="card-title">欢迎登陆</h5>
             <p class="card-text">重庆AI智能科技智慧云视ACV平台</p>
-            <form action="login.php" method="post" class="card-text">
+            <form action="login.php" method="post" class="card-text was-validated">
               <div class="input-group">
                 <span class="input-group-text iconfont icon-user" id="inputGroup-sizing-default"></span>
-                <input type="text" class="form-control" placeholder="用户名/账号" name="username" minlength="6" />
+                <input type="text" class="form-control" placeholder="用户名/账号" name="username" minlength="6" required/>
               </div>
               <div class="input-group">
                 <span class="input-group-text iconfont icon-suoding" id="inputGroup-sizing-default"></span>
-                <input type="password" class="form-control" placeholder="密码" name="password" pattern="^\S+$" />
+                <input type="password" class="form-control" placeholder="密码" name="password" pattern="^\S+$" required/>
               </div>
               <button type="submit" class="btn btn-primary" id="toast-btn">
                 登陆

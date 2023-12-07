@@ -7,7 +7,7 @@ $(document).ready(function () {
   function qh(pageText) {
     if (pageText !== undefined) {
       $('main[class*="body"] main').load(
-        "3-3-" + pageText + ".html",
+        "protection-" + pageText + ".html",
         function () {
           pc();
         }

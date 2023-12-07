@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 function qh(pageText) {
   if (pageText !== undefined) {
-    $(".terminal main").load("3-4-" + pageText + ".html", function () {
+    $(".terminal main").load("lawEnforcement-" + pageText + ".html", function () {
       pc();
     });
   }

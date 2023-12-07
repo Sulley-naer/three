@@ -21,7 +21,7 @@ $(document).ready(function () {
   function qh(pageText) {
     if (pageText !== undefined) {
       $('main[class*="body"] main').load(
-        "3-2-" + pageText + ".html",
+        "smartCity-" + pageText + ".html",
         function () {
           pc();
         }

@@ -21,10 +21,10 @@ $(document).ready(function () {
 
 function qh(pageText) {
   if (pageText !== undefined) {
-    $(".AiTechnology .main").load("5-" + pageText + ".html", function () {
+    $(".AiTechnology .main").load("productService-" + pageText + ".html", function () {
       pc(), pb();
     });
-    $(".programme").load("5-" + pageText + "-1.html", function () {
+    $(".programme").load("productService-" + pageText + "-1.html", function () {
       pc(), pb();
     });
   }
