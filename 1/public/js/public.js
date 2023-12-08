@@ -119,7 +119,7 @@ $(document).ready(function () {
     if ($(document).scrollTop() >= 100) {
       $("header,.dropdown-menu").css("background", "var(--header-bg-down)");
     } else {
-      $("header,.dropdown-menu").css("background", "var(--head-bg)");
+      $("header,.dropdown-menu").css("background", "#0000009a");
     }
   });
 

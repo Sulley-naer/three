@@ -172,6 +172,7 @@
   border-radius: 25px;
   overflow: hidden;
   background: #fff;
+  padding: 8px;
 }
 .AiTechnology .head-button::before {
   content: "";
@@ -194,8 +195,14 @@
   z-index: -1;
   border-radius: 33px;
 }
+.AiTechnology .head-button:hover {
+  color: #eaeaea;
+}
 .AiTechnology .head-button:hover::before {
   background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
+.AiTechnology .head-button:hover::after {
+  display: none;
 }
 .AiTechnology:nth-child(1) {
   padding-bottom: 0;

@@ -13,7 +13,7 @@
 }
 @media screen and (max-width: 1300px) {
   .programme main[class*="body"] main .content .page > div {
-    width: calc(90%/2) !important;
+    width: calc(90% / 2) !important;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -31,7 +31,7 @@
     justify-content: center;
   }
   .programme main[class*="body"] main .content .page > div {
-    width: calc(90%/1) !important;
+    width: calc(90% / 1) !important;
   }
   .summary main > div .content div[class*="col-"] .msgbox {
     display: none;
@@ -494,8 +494,14 @@
   z-index: -1;
   border-radius: 33px;
 }
+.head-button:hover {
+  color: #eaeaea;
+}
 .head-button:hover::before {
   background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
+.head-button:hover::after {
+  display: none;
 }
 .introduce {
   height: max-content;

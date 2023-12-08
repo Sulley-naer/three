@@ -669,6 +669,12 @@ main[class*="body"] main .content .page-2 .lg {
   z-index: -1;
   border-radius: 33px;
 }
+.head-button:hover {
+  color: #eaeaea;
+}
 .head-button:hover::before {
   background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
+.head-button:hover::after {
+  display: none;
 }

@@ -310,8 +310,14 @@
   overflow: hidden;
   background: #fff;
 }
+.AiTechnology .head-button:hover {
+  color: #eaeaea;
+}
 .AiTechnology .head-button:hover::before {
   background-image: linear-gradient(to right, var(--blue-gray), var(--bili-blue));
+}
+.AiTechnology .head-button:hover::after {
+  display: none;
 }
 .AiTechnology .head-button::before {
   content: "";

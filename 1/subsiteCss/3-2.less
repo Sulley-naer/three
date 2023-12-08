@@ -770,10 +770,14 @@ main[class*="body"] {
   }
 
   &:hover {
+    color: #eaeaea;
     &::before {
       background-image: linear-gradient(to right,
           var(--blue-gray),
           var(--bili-blue));
+    }
+    &::after{
+      display: none;
     }
   }
 }
