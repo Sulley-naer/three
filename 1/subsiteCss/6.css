@@ -253,7 +253,7 @@
   color: #86b7fe;
 }
 .serve {
-  padding: 4rem 10% 0;
+  padding: 4rem 10% 3rem;
   position: relative;
   text-align: center;
   background: linear-gradient(to bottom, #fff 45%, #0d1c5a 45%, #0d1c5a 100%);
