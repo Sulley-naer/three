@@ -318,6 +318,7 @@
   border: 1px solid #00000017;
 }
 .serve .serve-body .serve-body-contents .serve-body-content:hover .serve-body-text {
+  transition: all 0.5s;
   height: 95%;
 }
 .serve .serve-body .serve-body-contents .serve-body-content .serve-body-text {
