@@ -60,9 +60,8 @@ if (sessionStorage.getItem("high") == 0) {
 }
 
 $(document).ready(function () {
-  //隐藏子元素
   $(function () {
-    $(".AiTechnology-introduce").hide();
+    $(".AiTechnology-introduce").stop().hide();
   });
   //隐藏span
   function AiTechnologyIntroduceBorderNone() {
@@ -128,20 +127,20 @@ $(document).ready(function () {
         "background",
         "linear-gradient(160deg,rgb(16,52,117),rgb(33,67,193))"
       );
-      $(".AiTechnology-img").click(function () {
+      $(".AiTechnology-img").mouseenter(function () {
         $(this).find('div[class="AiTechnology-introduce"').css("opacity", "1");
         $(".AiTechnology-introduce").stop().fadeOut(200);
         $(this).children(".AiTechnology-introduce").stop().fadeIn(200);
-        $(this).find("span").eq(0).stop().animate({ width: "100%" }, 1000);
-        $(this).find("span").eq(1).stop().animate({ width: "100%" }, 1000);
-        $(this).find("span").eq(2).stop().animate({ height: "100%" }, 1000);
-        $(this).find("span").eq(3).stop().animate({ height: "100%" }, 1000);
+        $(this).find("span").eq(0).stop().animate({ width: "100%" }, 500);
+        $(this).find("span").eq(1).stop().animate({ width: "100%" }, 500);
+        $(this).find("span").eq(2).stop().animate({ height: "100%" }, 500);
+        $(this).find("span").eq(3).stop().animate({ height: "100%" }, 500);
       });
     },
     function () {
-      $(this).find("span").eq(0).stop().animate({ width: "0%" }, 1000);
-      $(this).find("span").eq(1).stop().animate({ width: "0%" }, 1000);
-      $(this).find("span").eq(2).stop().animate({ height: "0%" }, 1000);
+      $(this).find("span").eq(0).stop().animate({ width: "0%" }, 500);
+      $(this).find("span").eq(1).stop().animate({ width: "0%" }, 500);
+      $(this).find("span").eq(2).stop().animate({ height: "0%" }, 500);
       $(this)
         .find("span")
         .eq(3)
@@ -151,6 +150,7 @@ $(document).ready(function () {
         });
       $(this)
         .find("div[class='AiTechnology-introduce']")
+        .stop()
         .animate({ opacity: 0 }, 1000);
       $(this).children("p").css("color", "var(--text-gray)");
       $(this).css(

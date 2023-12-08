@@ -172,7 +172,7 @@
   border-radius: 25px;
   overflow: hidden;
   background: #fff;
-  padding: 8px;
+  padding: 8px !important;
 }
 .AiTechnology .head-button::before {
   content: "";

@@ -6,6 +6,6 @@ $(document).ready(function () {
   });
 
   $(".head-button").on('click',function(){
-location.href = "6.html";
+location.href = "about-me.html";
   })
 });

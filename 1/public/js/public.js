@@ -130,4 +130,12 @@ $(document).ready(function () {
     );
   });
   pc();
+
+  // 获取所有的 <img> 元素
+  var imgElements = document.querySelectorAll("img");
+
+  // 遍历每个 <img> 元素并将其 draggable 属性设置为 false
+  imgElements.forEach(function (imgElement) {
+    imgElement.draggable = false;
+  });
 });
