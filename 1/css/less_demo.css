@@ -31,6 +31,14 @@
     top: 7%;
     left: 0%;
   }
+  .card {
+    width: 160% !important;
+    max-width: none !important;
+    /* left: revert-layer !important; */
+  }
+  .card-l {
+    right: revert-layer !important;
+  }
 }
 @media screen and (max-width: 835px) {
   .AiTechnology-img {
@@ -472,6 +480,9 @@ li {
 }
 .banner .container-fluid .left .card li:first-child {
   margin-top: -0.5em;
+}
+.banner .container-fluid .left .card-l {
+  right: 0;
 }
 .banner .container-fluid .md {
   width: calc(100% / 3);
